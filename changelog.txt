@@ -1,0 +1,4 @@
+changelog of the Scilab Computer Vision toolbox
+
+0.1: initial version (prototype)
+

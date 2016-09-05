@@ -1,0 +1,71 @@
+
+
+function [scicvlib] = startModule()
+
+  TOOLBOX_NAME  = "scicv";
+  TOOLBOX_TITLE = "Scilab Computer Vision";
+
+  mprintf("Start " + TOOLBOX_TITLE + "\n");
+
+  if isdef("scicvlib") then
+      warning("Scilab Computer Vision is already loaded");
+      return;
+  end
+
+  etc_tlbx  = get_absolute_file_path("scicv.start");
+  etc_tlbx  = getshortpathname(etc_tlbx);
+  tlbx_root_dir = strncpy(etc_tlbx, length(etc_tlbx)-length("\etc\"));
+
+// Load macros
+// =============================================================================
+  mprintf("\tLoad macros\n");
+  pathmacros = fullfile(tlbx_root_dir, "macros");
+  scicvlib = lib(pathmacros);
+
+// Load thirdparties
+// =============================================================================
+  verboseMode = ilib_verbose();
+  ilib_verbose(0);
+
+  mprintf("\tLoad thirdparties\n");
+
+  [version, opts] = getversion();
+  arch = opts(2);
+  if getos() == "Windows" then
+      bin_path = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");    
+      // opencv_ilib = link(fullfile(tlbx_root_dir, "thirdparty/Linux", arch, ""));
+  else
+      lib_path = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
+      opencv_lib = link(fullfile(lib_path, "libopencv_core.so"));
+      link(fullfile(lib_path, "libopencv_highgui.so"));
+      link(fullfile(lib_path, "libopencv_imgproc.so"));      
+      link(fullfile(lib_path, "libopencv_objdetect.so"));
+      link(fullfile(lib_path, "libopencv_photo.so"));
+      link(fullfile(lib_path, "libopencv_video.so"));
+      link(fullfile(lib_path, "libopencv_features2d.so"));
+      link(fullfile(lib_path, "libopencv_contrib.so"));
+  end
+
+// Load gateways
+// =============================================================================
+  mprintf("\tLoad gateways\n");
+  exec(fullfile(tlbx_root_dir, "sci_gateway/loader_gateway.sce"));
+  ilib_verbose(verboseMode);
+
+// Load localization
+// =============================================================================
+  addlocalizationdomain(TOOLBOX_NAME, fullfile(tlbx_root_dir, "locales"));
+
+// Load help
+// =============================================================================
+  if or(getscilabmode() == ["NW";"STD"]) then
+      mprintf("\tLoad help\n");
+      path_addchapter = fullfile(tlbx_root_dir, "jar");
+      if (isdir(path_addchapter) <> []) then
+          add_help_chapter(TOOLBOX_NAME, path_addchapter, %F);
+      end
+  end
+endfunction
+
+[scicvlib] = startModule();
+clear startModule; 

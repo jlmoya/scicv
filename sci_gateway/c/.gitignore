@@ -1,0 +1,15 @@
+configure
+Makefile
+config.*
+config.status
+autom4te.cache/
+
+libscicv.*
+
+*.o
+
+Makelib.mak
+Makelib
+
+Debug
+Release

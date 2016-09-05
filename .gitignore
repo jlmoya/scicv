@@ -1,0 +1,20 @@
+#
+# Generated files (common)
+#
+loader.sce
+unloader.sce
+cleaner.sce
+loader_gateway.sce
+cleaner_gateway.sce
+jar/
+*.bin
+macros/lib
+macros/names
+#
+# Generated files (Windows)
+#
+master_help.xml
+scilab_*_help
+#
+# Generated files (Linux)
+#
