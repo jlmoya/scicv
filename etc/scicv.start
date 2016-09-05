@@ -32,17 +32,19 @@ function [scicvlib] = startModule()
   [version, opts] = getversion();
   arch = opts(2);
   if getos() == "Windows" then
-      bin_path = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");    
+      bin_path = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
       // opencv_ilib = link(fullfile(tlbx_root_dir, "thirdparty/Linux", arch, ""));
   else
       lib_path = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
       opencv_lib = link(fullfile(lib_path, "libopencv_core.so"));
       link(fullfile(lib_path, "libopencv_highgui.so"));
-      link(fullfile(lib_path, "libopencv_imgproc.so"));      
+      link(fullfile(lib_path, "libopencv_imgproc.so"));
       link(fullfile(lib_path, "libopencv_objdetect.so"));
       link(fullfile(lib_path, "libopencv_photo.so"));
       link(fullfile(lib_path, "libopencv_video.so"));
-      link(fullfile(lib_path, "libopencv_features2d.so"));
+      link(fullfile(lib_path, "libopencv_gpu.so"));
+      link(fullfile(lib_path, "libopencv_ocl.so"));
+      link(fullfile(lib_path, "libopencv_nonfree.so"));
       link(fullfile(lib_path, "libopencv_contrib.so"));
   end
 
@@ -68,4 +70,4 @@ function [scicvlib] = startModule()
 endfunction
 
 [scicvlib] = startModule();
-clear startModule; 
+clear startModule;
