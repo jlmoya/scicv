@@ -13,7 +13,7 @@ using std::vector;
 %ignore CvObjectDetection;
 %ignore LatentSvmDetector;
 %ignore Data;
-
+%ignore cv::linemod::colormap;
 %rename (HaarStgClsf) CvHaarStageClassifier;
 %rename (HaarClsfrCasd) CvHaarClassifierCascade;
 %rename (LSVMFilterPos) CvLSVMFilterPosition;
