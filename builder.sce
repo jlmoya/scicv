@@ -31,7 +31,6 @@ function main_builder()
 
     tbx_builder_macros(toolbox_dir);
     tbx_builder_gateway(toolbox_dir);
-    tbx_build_localization(TOOLBOX_NAME, toolbox_dir);
 
     if (getscilabmode() == 'STD') | (getscilabmode() == 'NW') then
       tbx_builder_help(toolbox_dir);
