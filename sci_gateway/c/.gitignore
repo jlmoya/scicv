@@ -1,15 +1,9 @@
-configure
 Makefile
-config.*
-config.status
-autom4te.cache/
-
 libscicv.*
-
 *.o
 
+scicv.*
 Makelib.mak
 Makelib
-
 Debug
 Release
