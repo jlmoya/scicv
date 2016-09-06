@@ -28,24 +28,18 @@ function [scicvlib] = startModule()
   ilib_verbose(0);
 
   mprintf("\tLoad thirdparties\n");
-
   [version, opts] = getversion();
   arch = opts(2);
+  libs = "opencv_" + ["core"; "highgui"; "imgproc"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "calib3d"; "gpu"; "ml"; "ocl"; "contrib"];
   if getos() == "Windows" then
-      bin_path = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
-      // opencv_ilib = link(fullfile(tlbx_root_dir, "thirdparty/Linux", arch, ""));
+      bin_dir = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
+      lib_paths = fullpath(bin_dir + "\" + libs + "2413.dll");
   else
-      lib_path = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
-      opencv_lib = link(fullfile(lib_path, "libopencv_core.so"));
-      link(fullfile(lib_path, "libopencv_highgui.so"));
-      link(fullfile(lib_path, "libopencv_imgproc.so"));
-      link(fullfile(lib_path, "libopencv_objdetect.so"));
-      link(fullfile(lib_path, "libopencv_photo.so"));
-      link(fullfile(lib_path, "libopencv_video.so"));
-      link(fullfile(lib_path, "libopencv_gpu.so"));
-      link(fullfile(lib_path, "libopencv_ocl.so"));
-      link(fullfile(lib_path, "libopencv_nonfree.so"));
-      link(fullfile(lib_path, "libopencv_contrib.so"));
+      lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
+      lib_paths = fullpath(lib_dir + "lib" + libs + ".so");
+  end
+  for lib_path=lib_paths'
+      link(lib_path);
   end
 
 // Load gateways
@@ -63,7 +57,7 @@ function [scicvlib] = startModule()
   if or(getscilabmode() == ["NW";"STD"]) then
       mprintf("\tLoad help\n");
       path_addchapter = fullfile(tlbx_root_dir, "jar");
-      if (isdir(path_addchapter) <> []) then
+      if isdir(path_addchapter) then
           add_help_chapter(TOOLBOX_NAME, path_addchapter, %F);
       end
   end
