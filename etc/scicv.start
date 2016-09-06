@@ -30,13 +30,13 @@ function [scicvlib] = startModule()
   mprintf("\tLoad thirdparties\n");
   [version, opts] = getversion();
   arch = opts(2);
-  libs = "opencv_" + ["core"; "highgui"; "imgproc"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "calib3d"; "gpu"; "ml"; "ocl"; "contrib"];
+  libs = "opencv_" + ["core"; "highgui"; "imgproc"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "calib3d"; "gpu"; "ml"; "ocl"; "nonfree"; "contrib"];
   if getos() == "Windows" then
       bin_dir = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
       lib_paths = fullpath(bin_dir + "\" + libs + "2413.dll");
   else
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
-      lib_paths = fullpath(lib_dir + "lib" + libs + ".so");
+      lib_paths = fullpath(lib_dir + "/" + "lib" + libs + ".so");
   end
   for lib_path=lib_paths'
       link(lib_path);
