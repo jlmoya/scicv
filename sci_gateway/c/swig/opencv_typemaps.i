@@ -1,4 +1,4 @@
-// Scilab: Mat pointer <=> OpenCV: Input array & OutputArray 
+// Scilab: Mat pointer <=> OpenCV: Input array & OutputArray
 
 %{
 int SWIG_SciPtr_AsMat(void *pvApiCtx, SwigSciObject iVar, cv::Mat **mat, char *fname) {
@@ -19,7 +19,7 @@ int SWIG_SciPtr_AsMat(void *pvApiCtx, SwigSciObject iVar, cv::Mat **mat, char *f
     return SWIG_ERROR;
   }
 
-  if (iType == sci_tlist) {
+  if (iType == sci_mlist) {
     int iItemCount = 0;
     void *pvTypeinfo = NULL;
 
@@ -46,7 +46,7 @@ int SWIG_SciPtr_AsMat(void *pvApiCtx, SwigSciObject iVar, cv::Mat **mat, char *f
       printError(&sciErr, 0);
       return SWIG_ERROR;
     }
-    
+
     *mat = static_cast<Mat*>(pvPtr);
 
     return SWIG_OK;
@@ -57,65 +57,57 @@ int SWIG_SciPtr_AsMat(void *pvApiCtx, SwigSciObject iVar, cv::Mat **mat, char *f
 }
 %}
 
-%typemap(typecheck, precedence=SWIG_TYPECHECK_POINTER) cv::InputArray, cv::OutputArray {
+%typemap(typecheck, precedence=SWIG_TYPECHECK_POINTER) cv::InputArray {
   cv::Mat *mat = NULL;
   $1 = SWIG_SciPtr_AsMat(pvApiCtx, $input, &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
 }
 
 %typemap(in, noblock=1) cv::InputArray {
-  cv::Mat *mat$input = NULL;
-  if (SWIG_SciPtr_AsMat(pvApiCtx, $input, &mat$input, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  cv::Mat *inputMat$input = NULL;
+  if (SWIG_SciPtr_AsMat(pvApiCtx, $input, &inputMat$input, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  $1 = new cv::_InputArray(*mat$input);
+  $1 = new cv::_InputArray(*inputMat$input);
 }
 
-%typemap(in, noblock=1) cv::OutputArray {
-  cv::Mat *mat$input = NULL;
-  if (SWIG_SciPtr_AsMat(pvApiCtx, $input, &mat$input, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  $1 = new cv::_OutputArray(*mat$input);
-}
-
-%typemap(freearg, noblock=1) cv::InputArray, cv::OutputArray {
+%typemap(freearg, noblock=1) cv::InputArray {
   delete $1;
 }
 
 %{
 int SWIG_SciPtr_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat, char *fname) {
   SciErr sciErr;
-  swig_type_info *descriptor = NULL; 
+  swig_type_info *descriptor = NULL;
 
   if (mat == NULL) {
     return SWIG_ERROR;
-  } 
-  
-  descriptor = SWIG_TypeQuery("p_cv__Mat");
+  }
+
+  descriptor = SWIG_TypeQuery("cv::Mat *");
   if (descriptor) {
-    int *piTListAddr = NULL;
+    int *piMListAddr = NULL;
     const char *pstString = NULL;
 
-    sciErr = createTList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, 3, &piTListAddr);
+    sciErr = createMList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, 3, &piMListAddr);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
       return SWIG_ERROR;
     }
 
     pstString = SWIG_TypeName(descriptor);
-    sciErr = createMatrixOfStringInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piTListAddr, 1, 1, 1, &pstString);
+    sciErr = createMatrixOfStringInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piMListAddr, 1, 1, 1, &pstString);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
       return SWIG_ERROR;
     }
 
-    sciErr = createPointerInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piTListAddr, 2, descriptor);
+    sciErr = createPointerInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piMListAddr, 2, descriptor);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
       return SWIG_ERROR;
     }
 
-    sciErr = createPointerInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piTListAddr, 3, mat);
+    sciErr = createPointerInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piMListAddr, 3, mat);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
       return SWIG_ERROR;
@@ -132,6 +124,25 @@ int SWIG_SciPtr_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat, cha
 }
 %}
 
+%typemap(in, numinputs=0, noblock=1) cv::OutputArray {
+}
+
+%typemap(arginit, noblock=1) cv::OutputArray {
+  cv::Mat *outputMat$argnum = new Mat();
+  $1 = new cv::_OutputArray(*outputMat$argnum);
+}
+
+%typemap(argout, noblock=1) cv::OutputArray {
+  if (SWIG_SciPtr_FromMat(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outputMat$argnum, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+}
+
+%typemap(freearg, noblock=1) cv::OutputArray {
+  delete $1;
+}
+
 
 // Scilab: double 1x2 <=> OpenCV Point
 
@@ -143,23 +154,23 @@ int SWIG_SciDoubleOrInt32_AsPoint(void *pvApiCtx, SwigSciObject iVar, cv::Point 
   if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, iVar, &iRows, &iCols, &piValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  
-  if (iRows * iCols == 2) {      
+
+  if (iRows * iCols == 2) {
     point->x = piValues[0];
     point->y = piValues[1];
     return SWIG_OK;
-  } 
+  }
   else {
     return SWIG_ERROR;
   }
 }
 %}
- 
+
 // TODO: fix precedence
 %typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE) cv::Point, const cv::Point& {
   cv::Point point;
   $1 = SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, $input, &point, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-} 
+}
 
 %typemap(in, noblock=1) cv::Point {
   if (SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -184,23 +195,23 @@ int SWIG_SciDoubleOrInt32_AsSize(void *pvApiCtx, SwigSciObject iVar, cv::Size *s
   if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, iVar, &iRows, &iCols, &piValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  
-  if (iRows * iCols == 2) {      
+
+  if (iRows * iCols == 2) {
     size->width = piValues[0];
     size->height = piValues[1];
     return SWIG_OK;
-  } 
+  }
   else {
     return SWIG_ERROR;
   }
 }
 %}
- 
+
 // TODO: fix precedence
 %typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE) cv::Size, const cv::Size& {
   cv::Size size;
   $1 = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, $input, &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-} 
+}
 
 %typemap(in, noblock=1) cv::Size {
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -224,25 +235,25 @@ int SWIG_SciDoubleOrInt32_AsRect(void *pvApiCtx, SwigSciObject iVar, cv::Rect *r
   if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, iVar, &iRows, &iCols, &piValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  
-  if (iRows * iCols == 4) {  
+
+  if (iRows * iCols == 4) {
     rect->x = piValues[0];
-    rect->y = piValues[1];    
+    rect->y = piValues[1];
     rect->width = piValues[2];
     rect->height = piValues[3];
     return SWIG_OK;
-  } 
+  }
   else {
     return SWIG_ERROR;
   }
 }
 %}
- 
+
 // TODO: fix precedence
 %typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE) cv::Rect, const cv::Rect& {
   cv::Rect rect;
   $1 = SWIG_SciDoubleOrInt32_AsRect(pvApiCtx, $input, &rect, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-} 
+}
 
 %typemap(in, noblock=1) cv::Rect {
   if (SWIG_SciDoubleOrInt32_AsRect(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -268,7 +279,7 @@ int SWIG_SciDoubleOrInt32_AsRect(void *pvApiCtx, SwigSciObject iVar, cv::Rect *r
   int *piListAddr = NULL;
   int nbElements = $1->size();
   int iVarOut =  SWIG_Scilab_GetOutputPosition();
-  
+
   sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
   if (sciErr.iErr) {
     printError(&sciErr, 0);
@@ -277,7 +288,7 @@ int SWIG_SciDoubleOrInt32_AsRect(void *pvApiCtx, SwigSciObject iVar, cv::Rect *r
 
   for (int i = 0; i<nbElements; i++) {
     cv::Rect_<int> rect = $1->at(i);
-    double pdRect[4] = { rect.x, rect.y, rect.width, rect.height };  
+    double pdRect[4] = { rect.x, rect.y, rect.width, rect.height };
     sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
@@ -299,7 +310,7 @@ int SWIG_SciDoubleOrInt32_AsRect(void *pvApiCtx, SwigSciObject iVar, cv::Rect *r
   int *piListAddr = NULL;
   int nbElements = $1->size();
   int iVarOut =  SWIG_Scilab_GetOutputPosition();
-  
+
   sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
   if (sciErr.iErr) {
     printError(&sciErr, 0);
@@ -308,7 +319,7 @@ int SWIG_SciDoubleOrInt32_AsRect(void *pvApiCtx, SwigSciObject iVar, cv::Rect *r
 
   for (int i = 0; i<nbElements; i++) {
     cv::KeyPoint keypoint = $1->at(i);
-    double pdKeyPoint[7] = { keypoint.pt, keypoint.size, keypoint.angle, keypoint.response, keypoint.octave, keypoint.class_id };  
+    double pdKeyPoint[7] = { keypoint.pt, keypoint.size, keypoint.angle, keypoint.response, keypoint.octave, keypoint.class_id };
     sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 6, &pdKeyPoint[0]);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
@@ -320,9 +331,6 @@ int SWIG_SciDoubleOrInt32_AsRect(void *pvApiCtx, SwigSciObject iVar, cv::Rect *r
 }
 */
 
-
-
-
 /*
 // Scilab: double 1x7 <=> OpenCV KeyPoint
 %{
@@ -333,10 +341,10 @@ int SWIG_SciDoubleOrInt32_AsKeyPoint(void *pvApiCtx, SwigSciObject iVar, cv::Key
   if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, iVar, &iRows, &iCols, &piValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  
-  if (iRows * iCols == 7) {  
+
+  if (iRows * iCols == 7) {
     keypoint->x = piValues[0];
-    keypoint->y = piValues[1];    
+    keypoint->y = piValues[1];
     keypoint->size = piValues[2];
     keypoint->angle = piValues[3];
     keypoint->response = piValues[4];
@@ -344,18 +352,18 @@ int SWIG_SciDoubleOrInt32_AsKeyPoint(void *pvApiCtx, SwigSciObject iVar, cv::Key
     keypoint->class_id =piValues[6];
 
     return SWIG_OK;
-  } 
+  }
   else {
     return SWIG_ERROR;
   }
 }
 %}
- 
+
 // TODO: fix precedence
 %typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE) cv::KeyPoint, const cv::KeyPoint& {
   cv::KeyPoint keypoint;
   $1 = SWIG_SciDoubleOrInt32_AsKeyPoint(pvApiCtx, $input, &keypoint, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-} 
+}
 
 %typemap(in, noblock=1) cv::KeyPoint {
   if (SWIG_SciDoubleOrInt32_AsKeyPoint(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -371,11 +379,11 @@ int SWIG_SciDoubleOrInt32_AsKeyPoint(void *pvApiCtx, SwigSciObject iVar, cv::Key
 }
 */
 
-// Scilab: double matrix <=> OpenCV float** ranges 
+// Scilab: double matrix <=> OpenCV float** ranges
 %typemap(typecheck, noblock=0) float** ranges {
   int *piAddr;
   SciErr sciErr = getVarAddressFromPosition(pvApiCtx, $input, &piAddr);
-  if (sciErr.iErr) {	
+  if (sciErr.iErr) {
      printError(&sciErr, 0);
      return SWIG_ERROR;
   }
