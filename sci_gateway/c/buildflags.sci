@@ -4,7 +4,7 @@ function cflags = getCompilationFlags()
     arch = opts(2);
     cflags = "-I" + fullpath(fullfile("../../thirdparty", os, arch, "include"));
     if os <> "Windows" then
-        cflags = cflags + " -g";
+        cflags = cflags + " -g" + " -D_GLIBCXX_USE_CXX11_ABI=0";
     end
 endfunction
 
