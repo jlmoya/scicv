@@ -34,6 +34,7 @@ function [scicvlib] = startModule()
   if getos() == "Windows" then
       bin_dir = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
       lib_paths = fullpath(bin_dir + "\" + libs + "2413.dll");
+      link(fullpath(bin_dir + "\opencv_ffmpeg2413_64.dll"));
   else
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
       lib_paths = fullpath(lib_dir + "/" + "lib" + libs + ".so");
