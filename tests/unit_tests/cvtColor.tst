@@ -1,0 +1,11 @@
+scicv_Init();
+
+img=imread('Data/images/Puffin.png');
+rows_img=Mat_rows_get(img);
+assert_checkfalse(Mat_empty(img));
+
+gray = cvtColor(img, COLOR_BGR2GRAY);
+rows_gray = Mat_rows_get(gray);
+
+assert_checkfalse(Mat_empty(gray));
+assert_checkequal(rows_img,rows_gray);
