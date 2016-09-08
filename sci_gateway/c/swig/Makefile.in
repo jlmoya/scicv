@@ -11,7 +11,7 @@ INCLUDES   = -I./include -I$(OPENCV_INC)
 build:
 	$(SWIG) -scilab -c++ -builder $(INCLUDES) -builderflagscript buildflags.sci -builderverbositylevel 2 $(INTERFACE) 
 	sed 's/builder/builder_gateway_c/' <builder.sce >builder_gateway_c.sce
-        mv builder_gateway_c.sce ..
+	mv builder_gateway_c.sce ..
 	mv $(TARGET)_wrap.cxx ..	
 												    
 clean:
