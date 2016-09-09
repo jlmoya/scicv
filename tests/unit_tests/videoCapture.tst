@@ -1,7 +1,7 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
 
-cap = new_VideoCapture("Data/videos/video.mpg");
+cap = new_VideoCapture("data/videos/video.mpg");
 
 assert_checktrue(VideoCapture_isOpened(cap));
 

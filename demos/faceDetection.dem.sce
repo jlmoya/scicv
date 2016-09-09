@@ -1,8 +1,8 @@
-m=imread("Data/images/ScilabTeam.png");
+m=imread("data/images/ScilabTeam.png");
 
 clsf=new_CascadeClassifier();
 
-CascadeClassifier_load(clsf,'Data/haarcascades/haarcascade_frontalface_alt.xml');
+CascadeClassifier_load(clsf,'data/haarcascades/haarcascade_frontalface_alt.xml');
 
 faces = CascadeClassifier_detect(clsf, m, 1.3, 2,CV_HAAR_SCALE_IMAGE,[30 30]); 
 

@@ -1,6 +1,6 @@
 scicv_Init();
 
-img=imread('Data/images/Puffin.png');
+img=imread('data/images/Puffin.png');
 rows_img=Mat_rows_get(img);
 assert_checkfalse(Mat_empty(img));
 

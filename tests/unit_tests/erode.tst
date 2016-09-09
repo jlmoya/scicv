@@ -1,7 +1,7 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
 
-img = imread('Data/images/Puffin.png', CV_LOAD_IMAGE_GRAYSCALE);
+img = imread('data/images/Puffin.png', CV_LOAD_IMAGE_GRAYSCALE);
 //morphological opening (remove small objects from the foreground)
 out = erode(img,getStructuringElement(MORPH_ELLIPSE, [10 10]));
 

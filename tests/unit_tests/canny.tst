@@ -1,7 +1,7 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
 
-img=imread('Data/images/Puffin.png',CV_LOAD_IMAGE_GRAYSCALE);
+img=imread('data/images/Puffin.png',CV_LOAD_IMAGE_GRAYSCALE);
 assert_checkequal(Mat_channels(img),1);
 out=new_Mat();
 out=Canny(img,50,100);

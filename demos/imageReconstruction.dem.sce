@@ -1,6 +1,6 @@
-image=imread('Data/images/OpenCV_Logo_B.png');
+image=imread('data/images/OpenCV_Logo_B.png');
 mat_image=cvMatExtract(image);
-image_mask=imread('Data/images/OpenCV_Logo_C.png',CV_LOAD_IMAGE_GRAYSCALE); // must be one channal image
+image_mask=imread('data/images/OpenCV_Logo_C.png',CV_LOAD_IMAGE_GRAYSCALE); // must be one channal image
 mat_image_mask=cvMatExtract(image_mask);
 out_TELEA=inpaint(image,image_mask,3,INPAINT_TELEA); // image reconstruction  (first algorithm)
 

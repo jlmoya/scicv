@@ -1,6 +1,6 @@
-img=imread("Data/images/street.png");
+img=imread("data/images/street.png");
 clsf=new_CascadeClassifier();
-CascadeClassifier_load(clsf,"Data/hogcascades/hogcascade_pedestrians.xml")
+CascadeClassifier_load(clsf,"data/hogcascades/hogcascade_pedestrians.xml")
 if (~Mat_empty(img))   
       pedestrians= CascadeClassifier_detect(clsf,img, 1.2,6,1,[90 120]); 
       numberOfpedestrians=size(pedestrians);

@@ -1,4 +1,4 @@
-image=imread('Data/images/lena.jpg',CV_LOAD_IMAGE_GRAYSCALE);
+image=imread('data/images/lena.jpg',CV_LOAD_IMAGE_GRAYSCALE);
 mat=cvMatExtract(image);
 A=zeros(Mat_rows_get(image),Mat_cols_get(image));
 

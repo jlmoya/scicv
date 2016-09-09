@@ -1,4 +1,4 @@
-cap=new_VideoCapture("Data/videos/pedestrian.avi");
+cap=new_VideoCapture("data/videos/pedestrian.avi");
 s=new_Scalar(0,255,0); //BGR 
 myVideo=new_VideoWriter("Sci_BackgroundSubPedes.avi",CV_FOURCC('D', 'I', 'V', '3'),10,[1536 576]);   
 merged_frame=new_Mat(576,1536,CV_8UC3);
