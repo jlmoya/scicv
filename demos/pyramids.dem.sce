@@ -1,4 +1,4 @@
-img= imread("../Data/images/lena.jpg");
+img= imread("Data/images/lena.jpg");
 mat_img=cvMatExtract(img);
 // Pyramid down
 down=pyrDown(img,[(Mat_cols_get(img))/2  (Mat_rows_get(img))/2]);

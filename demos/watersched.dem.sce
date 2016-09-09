@@ -1,7 +1,7 @@
-image=imread('../Data/images/water_coins.jpg',CV_LOAD_IMAGE_GRAYSCALE);
+image=imread('Data/images/water_coins.jpg',CV_LOAD_IMAGE_GRAYSCALE);
 mat_Gray=cvMatExtract(image);
 
-image_Orig=imread('../Data/images/water_coins.jpg');
+image_Orig=imread('Data/images/water_coins.jpg');
 mat_orig=cvMatExtract(image_Orig);
 
 [res,image]=threshold(image,0,255,THRESH_BINARY_INV+THRESH_OTSU);

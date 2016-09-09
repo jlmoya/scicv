@@ -1,4 +1,4 @@
-img=imread('../Data/images/lena.jpg');
+img=imread('Data/images/lena.jpg');
 blur_lena=medianBlur(img,5);
 mat=cvMatExtract(blur_lena)
 matplot(mat)

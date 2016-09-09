@@ -49,6 +49,15 @@ function [scicvlib] = startModule()
   exec(fullfile(tlbx_root_dir, "sci_gateway/loader_gateway.sce"));
   ilib_verbose(verboseMode);
 
+// Load demos
+// =============================================================================
+  if or(getscilabmode() == ["NW";"STD"]) then
+    mprintf("\tLoad demos\n");
+    pathdemos = pathconvert(tlbx_root_dir+"/demos/scicv.dem.gateway.sce", %F, %T);
+    add_demo(TOOLBOX_TITLE, pathdemos);
+  end
+
+
 // Load localization
 // =============================================================================
   addlocalizationdomain(TOOLBOX_NAME, fullfile(tlbx_root_dir, "locales"));

@@ -1,5 +1,5 @@
-img=imread('../Data/images/Puffin.png');
-templ=imread('../Data/images/puffineTemplate.png');
+img=imread('Data/images/Puffin.png');
+templ=imread('Data/images/puffineTemplate.png');
 img_display=new_Mat();
 img_display=Mat_clone(img);
 result_cols=Mat_cols_get(img)+Mat_cols_get(templ)+1;

@@ -1,8 +1,8 @@
-cap=new_VideoCapture("../image_video_samples/pedestrian.avi");
+cap=new_VideoCapture("Data/videos/pedestrian.avi");
 
 s=new_Scalar(0,255,0); //BGR 
 clsf=new_CascadeClassifier();
-CascadeClassifier_load(clsf,'../MyFilter/haarcascade_fullbody.xml');
+CascadeClassifier_load(clsf,'Data/haarcascades/haarcascade_fullbody.xml');
 
 myVideo=new_VideoWriter("Sci_Pedestrian_detection.avi",CV_FOURCC('D', 'I', 'V', '3'),10,[768 576]);    
 while (1) 
