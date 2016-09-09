@@ -1,6 +1,7 @@
 // OpenCV OutputArray => Scilab Mlist Mat
 
-%{
+%fragment("SWIG_SciPtr_FromMat", "header") {
+
 int SWIG_SciPtr_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat, char *fname) {
   SciErr sciErr;
   swig_type_info *descriptor = NULL;
@@ -48,7 +49,7 @@ int SWIG_SciPtr_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat, cha
   }
   return SWIG_OK;
 }
-%}
+}
 
 %typemap(in, numinputs=0, noblock=1) cv::OutputArray {
 }
@@ -58,7 +59,7 @@ int SWIG_SciPtr_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat, cha
   $1 = new cv::_OutputArray(*outputMat$argnum);
 }
 
-%typemap(argout, noblock=1) cv::OutputArray {
+%typemap(argout, noblock=1, fragment="SWIG_SciPtr_FromMat") cv::OutputArray {
   if (SWIG_SciPtr_FromMat(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outputMat$argnum, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }

@@ -259,6 +259,9 @@ using namespace cv::ogl;
 
 
 %include carrays.i
+
+%include "../typemaps/opencv_typemaps.i"
+
 %include "opencv2/core/types_c.h"
 %include "opencv2/core/mat.hpp"
 %import "opencv2/core/opengl_interop_deprecated.hpp"

@@ -2,7 +2,8 @@
 
 // Scilab: Mat pointer <=> OpenCV: Input array & OutputArray
 
-%{
+%fragment("SWIG_SciPtr_AsMat", "header") {
+
 int SWIG_SciPtr_AsMat(void *pvApiCtx, SwigSciObject iVar, cv::Mat **mat, char *fname) {
   SciErr sciErr;
   int *piAddrVar = NULL;
@@ -57,7 +58,8 @@ int SWIG_SciPtr_AsMat(void *pvApiCtx, SwigSciObject iVar, cv::Mat **mat, char *f
     return SWIG_ERROR;
   }
 }
-%}
+
+}
 
 %typemap(typecheck, precedence=SWIG_TYPECHECK_POINTER) cv::InputArray {
   cv::Mat *mat = NULL;

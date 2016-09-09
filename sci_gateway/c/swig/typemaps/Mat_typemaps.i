@@ -1,17 +1,12 @@
-%{
+// OpenCV Mat => Scilab hypermat
+
+%fragment("SWIG_SciHypermat_FromMat", "header") {
 
 #define copy_row_major_pixel_to_column_major_planar_data(src, dst) \
   for (int c = 0; c<nbchannels; c++) \
     for (int i = 0; i<height; i++) \
       for (int j = 0; j<width; j++) \
         dst[c*width*height + j*height + i] = src[c + nbchannels*(i*width + j)]
-
-#define copy_column_major_planar_to_row_major_pixel_data(src, dst) \
-  for (int c = 0; c<nbchannels; c++) \
-    for (int i = 0; i<height; i++) \
-      for (int j = 0; j<width; j++) \
-        dst[c + nbchannels*(i*width + j)] = src[c*width*height + j*height + i]
-
 
 int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat, char *fname) {
   int width = mat->cols;
@@ -115,9 +110,9 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat
   return SWIG_OK;
 }
 
-%}
+}
 
-%typemap(in, noblock=1) cv::Mat& matIn {
+%typemap(in, noblock=1, fragment="SWIG_SciPtr_AsMat") cv::Mat& matIn {
   if (SWIG_SciPtr_AsMat(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
@@ -127,7 +122,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat
     $1 = &tmpMat;
 }
 
-%typemap(argout, noblock=1) cv::Mat* matOut {
+%typemap(argout, noblock=1, fragment="SWIG_SciHypermat_FromMat") cv::Mat* matOut {
   if (SWIG_SciHypermat_FromMat(pvApiCtx, SWIG_Scilab_GetOutputPosition(), $1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
     SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   }
@@ -136,11 +131,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat
   }
 }
 
-%inline %{
-void cvMatExtract(cv::Mat& matIn, cv::Mat* matOut) {
-    *matOut = matIn.clone();
-}
-%}
+
 
 
 

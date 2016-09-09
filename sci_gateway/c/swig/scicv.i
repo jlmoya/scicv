@@ -21,3 +21,9 @@
 %include modules/opencv_photo.i
 %include modules/opencv_video.i
 %include modules/opencv_features2d.i
+
+%inline %{
+void cvMatExtract(cv::Mat& matIn, cv::Mat* matOut) {
+    *matOut = matIn.clone();
+}
+%}

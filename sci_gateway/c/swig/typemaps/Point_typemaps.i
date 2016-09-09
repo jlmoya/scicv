@@ -1,6 +1,7 @@
-// OpenCV Point <=> Scilab: double 1x2
+// OpenCV Point => Scilab double 1x2
 
-%{
+%fragment("SWIG_SciDoubleOrInt32_AsPoint", "header") {
+
 int SWIG_SciDoubleOrInt32_AsPoint(void *pvApiCtx, SwigSciObject iVar, cv::Point *point, char *fname) {
   int *piValues = NULL;
   int iRows = 0;
@@ -18,21 +19,22 @@ int SWIG_SciDoubleOrInt32_AsPoint(void *pvApiCtx, SwigSciObject iVar, cv::Point 
     return SWIG_ERROR;
   }
 }
-%}
+
+}
 
 // TODO: fix precedence
-%typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE) cv::Point, const cv::Point& {
+%typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE, fragment="SWIG_SciDoubleOrInt32_AsPoint") cv::Point, cv::Point& {
   cv::Point point;
   $1 = SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, $input, &point, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
 }
 
-%typemap(in, noblock=1) cv::Point {
+%typemap(in, noblock=1, fragment="SWIG_SciDoubleOrInt32_AsPoint") cv::Point {
   if (SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
 }
 
-%typemap(in, noblock=1) cv::Point& (cv::Point tmpPoint)  {
+%typemap(in, noblock=1, fragment="SWIG_SciDoubleOrInt32_AsPoint") cv::Point& (cv::Point tmpPoint)  {
   $1 = &tmpPoint;
   if (SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, $input, $1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
