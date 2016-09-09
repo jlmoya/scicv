@@ -11,7 +11,7 @@
 %include operators.i
 
 %include opencv_core.i
-%include opencv_typemaps.i
+%include typemaps/opencv_typemaps.i
 %include opencv_highgui.i
 %include opencv_imgproc.i
 %include opencv_contrib.i
