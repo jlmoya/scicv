@@ -1,0 +1,22 @@
+img=imread("Data/images/street.png");
+clsf=new_CascadeClassifier();
+CascadeClassifier_load(clsf,"Data/hogcascades/hogcascade_pedestrians.xml")
+if (~Mat_empty(img))   
+      pedestrians= CascadeClassifier_detect(clsf,img, 1.2,6,1,[90 120]); 
+      numberOfpedestrians=size(pedestrians);
+      s=new_Scalar(0,255,0); //(B,G,R)
+      for i=1 : numberOfpedestrians
+        pedestrian = pedestrians(i);
+        point_1=[pedestrian(1), pedestrian(2)] // x,y
+        point_2=[pedestrian(1)+pedestrian(3), pedestrian(2)+pedestrian(4)] //x+height, y+width
+        rectangle(img, point_1, point_2, s, 2, 8, 0);
+      end
+                
+else 
+        disp('image vide')
+end
+mat_pedestrians=cvMatExtract(img)  ;
+matplot(mat_pedestrians) 
+title('full body detection using hogcascade' )
+
+
