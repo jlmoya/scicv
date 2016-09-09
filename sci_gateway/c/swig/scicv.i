@@ -10,14 +10,14 @@
 
 %include operators.i
 
-%include opencv_core.i
-%include typemaps/opencv_typemaps.i
-%include opencv_highgui.i
-%include opencv_imgproc.i
-%include opencv_contrib.i
-%include opencv_objectdetect.i
-%include opencv_photo.i
-%include opencv_video.i
-%include opencv_features2d.i
-   
+%include modules/opencv_core.i
 
+%include typemaps/opencv_typemaps.i
+
+%include modules/opencv_highgui.i
+%include modules/opencv_imgproc.i
+%include modules/opencv_contrib.i
+%include modules/opencv_objectdetect.i
+%include modules/opencv_photo.i
+%include modules/opencv_video.i
+%include modules/opencv_features2d.i
