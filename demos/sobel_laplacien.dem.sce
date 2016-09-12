@@ -1,4 +1,5 @@
-img=imread('data/images/sudoku.jpg',CV_LOAD_IMAGE_GRAYSCALE);
+img=imread('/data/images/sudoku.jpg',CV_LOAD_IMAGE_GRAYSCALE);
+
 mat_img=cvMatExtract(img);
 
 out=Laplacian(img,CV_16U, 3, 1, 0, BORDER_DEFAULT);
