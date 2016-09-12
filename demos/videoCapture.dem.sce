@@ -35,10 +35,10 @@ while ~stop
   end
   
   mat = cvMatExtract(frame);
-  delete_Mat(frame);
+  Mat_release(frame); //delete_Mat(frame);
   matplot(mat);  
 end
 
 VideoCapture_release(videoCapture);
-Mat_release(frame);
+
 
