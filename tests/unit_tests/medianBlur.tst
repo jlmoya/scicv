@@ -7,7 +7,7 @@ ksize2=1;
 
 out=medianBlur(m,ksize);
 assert_checktrue(ksize > 1);
-
+assert_checkfalse(Mat_empty(out));
 //out2=medianBlur(m,ksize2);
 //msg = "Error with medianBlur";
 //assert_checkerror("out2=medianBlur(m,ksize2)", msg);

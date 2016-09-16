@@ -8,3 +8,16 @@ Please see www.opencv.org for further details on the OpenCV library.
 This toolbox is currently in version 0.1.
 
 
+
+
+/**  VideoCapture() and VideoWiter() not working under Linux operation systems due to missing ffmpeg dependency.
+
+
+/** loading the toolbox:
+
+ - cd <path to the toolbox folder>
+ - exec builder
+ - exec loader
+ - scicv_Init
+
+
