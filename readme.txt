@@ -16,8 +16,8 @@ This toolbox is currently in version 0.1.
 /** loading the toolbox:
 
  - cd <path to the toolbox folder>
- - exec builder
- - exec loader
+ - exec builder.sce
+ - exec loader.sce
  - scicv_Init
 
 
