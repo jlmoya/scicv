@@ -1,4 +1,4 @@
-img=imread('/data/images/sudoku.jpg',CV_LOAD_IMAGE_GRAYSCALE);
+img=imread('data/images/sudoku.jpg',CV_LOAD_IMAGE_GRAYSCALE);
 
 mat_img=cvMatExtract(img);
 

@@ -1,7 +1,5 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
-Attention : Redéfinition de la fonction : BriefDescriptorExtractor. Utilisez funcprot(0) pour ne pas afficher ce message.
-
 m=imread("data/images/lena.jpg");
 ksize=3;
 ksize2=1;
