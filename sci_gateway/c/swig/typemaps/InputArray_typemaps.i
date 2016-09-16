@@ -1,6 +1,4 @@
-// OpenCV InputArray <= Scilab Mlist Mat
-
-// Scilab: Mat pointer <=> OpenCV: Input array & OutputArray
+// OpenCV InputArray <= Scilab mlist _p_cv_Mat
 
 %fragment("SWIG_SciPtr_AsMat", "header") {
 
@@ -61,12 +59,12 @@ int SWIG_SciPtr_AsMat(void *pvApiCtx, SwigSciObject iVar, cv::Mat **mat, char *f
 
 }
 
-%typemap(typecheck, precedence=SWIG_TYPECHECK_POINTER) cv::InputArray {
+%typemap(typecheck, fragment="SWIG_SciPtr_AsMat", precedence=SWIG_TYPECHECK_POINTER) cv::InputArray {
   cv::Mat *mat = NULL;
   $1 = SWIG_SciPtr_AsMat(pvApiCtx, $input, &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
 }
 
-%typemap(in, noblock=1) cv::InputArray {
+%typemap(in, noblock=1, fragment="SWIG_SciPtr_AsMat") cv::InputArray {
   cv::Mat *inputMat$input = NULL;
   if (SWIG_SciPtr_AsMat(pvApiCtx, $input, &inputMat$input, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;

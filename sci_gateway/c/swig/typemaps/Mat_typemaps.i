@@ -32,8 +32,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *mat
         dims, 3, (const unsigned char *)data);
       break;
     }
-    case CV_8S:
-    {
+    case CV_8S: {
       data = malloc(size * sizeof(int8_t));
       int8_t *src = (int8_t *)mat->data;
       int8_t *dst = (int8_t *)data;

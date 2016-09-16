@@ -1,4 +1,4 @@
-// OpenCV OutputArray => Scilab Mlist Mat
+// OpenCV OutputArray => Scilab mlist _p_cv_Mat
 
 %fragment("SWIG_SciPtr_FromMat", "header") {
 
