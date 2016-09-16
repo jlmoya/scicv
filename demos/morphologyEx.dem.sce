@@ -1,4 +1,4 @@
-img=imread('../data/images/lena.jpg');
+img=imread('data/images/lena.jpg');
 
 // Create a structuring element (SE)
 morph_size = 2;
