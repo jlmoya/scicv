@@ -15,6 +15,7 @@ _("sobel_laplacien")    , "sobel_laplacien.dem.sce"  ;
 _("imageReconstruction")    , "imageReconstruction.dem.sce"  ;
 _("fullBody_detection")     , "full_body_detection.dem.sce" ;
 _("videoCapture")           ,"videoCapture.dem.sce"  ;
+_("Morphology Transformations")  ,"morphologyEx.dem.sce"   ;
 _("pyramids")    , "pyramids.dem.sce"       ];
 
 subdemolist(:,2) = demopath + subdemolist(:,2);
