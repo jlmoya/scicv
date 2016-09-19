@@ -1,14 +1,12 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
 
-m=imread("data/images/lena.jpg");
-ksize=3;
-ksize2=1;
+img = imread("data/images/lena.jpg");
 
-out=medianBlur(m,ksize);
-assert_checktrue(ksize > 1);
-assert_checkfalse(Mat_empty(out));
-//out2=medianBlur(m,ksize2);
-//msg = "Error with medianBlur";
-//assert_checkerror("out2=medianBlur(m,ksize2)", msg);
+img_out = medianBlur(img, 3);
+
+assert_checkfalse(Mat_empty(img_out));
+
+Mat_release(img_out);
+Mat_release(img);
 
