@@ -1,0 +1,9 @@
+// <-- CLI SHELL MODE -->
+scicv_Init();
+
+img_gray = imread("data/images/scilab.png", CV_LOAD_IMAGE_GRAYSCALE);
+
+thresh = 100;
+canny_img = Canny(img_gray, thresh, thresh*2, 3);
+
+[img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
