@@ -15,14 +15,14 @@
 }
 
 %typemap(in, noblock=1, fragment="SWIG_SciMList_AsMat,SWIG_SciHypermat_AsMat") cv::InputOutputArray {
-  cv::Mat *pInMat$argnum = NULL;
-  cv::Mat inMat$argnum;
-  if (SWIG_SciMList_AsMat(pvApiCtx, $input, &pInMat$argnum, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    $1 = new cv::_OutputArray(*pInMat$argnum);
+  cv::Mat *pInOutMat$argnum = NULL;
+  if (SWIG_SciMList_AsMat(pvApiCtx, $input, &pInOutMat$argnum, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    $1 = new cv::_OutputArray(*pInOutMat$argnum);
   }
   else {
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, $input, &inMat$argnum, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-      $1 = new cv::_OutputArray(inMat$argnum);
+    pInOutMat$argnum = new Mat();
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, $input, pInOutMat$argnum, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+      $1 = new cv::_OutputArray(*pInOutMat$argnum);
     }
     else {
       return SWIG_ERROR;
@@ -34,7 +34,7 @@
 }
 
 %typemap(argout, noblock=1, fragment="SWIG_SciMList_FromMat") cv::InputOutputArray {
-  if (SWIG_SciMList_FromMat(pvApiCtx, SWIG_Scilab_GetOutputPosition(), &inMat$argnum, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciMList_FromMat(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pInOutMat$argnum, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
