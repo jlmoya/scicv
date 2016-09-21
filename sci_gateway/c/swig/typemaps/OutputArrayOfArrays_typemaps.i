@@ -15,13 +15,9 @@ int SWIG_SciMatrixList_FromVectorVectorPoints(void *pvApiCtx, SwigSciObject iVar
     return SWIG_ERROR;
   }
 
-  //printf("nbVectorPoints = %d\n", nbVectorPoints);
-
   for (int i = 0; i < nbVectorPoints; i++) {
     std::vector<cv::Point> vectorPoints = pVectorVectorPoints->at(i);
     int nbPoints = vectorPoints.size();
-
-    //printf("nbPoints = %d\n", nbPoints);
 
     double *pdValues = (double *) malloc(2 * nbPoints * sizeof(double));
     for (int j = 0; j < nbPoints; j++) {
@@ -30,7 +26,7 @@ int SWIG_SciMatrixList_FromVectorVectorPoints(void *pvApiCtx, SwigSciObject iVar
       pdValues[2*j+1] = pt.y;
     }
 
-    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 2, vectorPoints.size(), pdValues);
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 2, nbPoints, pdValues);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
       return SWIG_ERROR;
