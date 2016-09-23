@@ -8,4 +8,7 @@
 %include KeyPoint_typemaps.i
 %include VectorRect_typemaps.i
 %include float_ranges_typemaps.i
+
 %include Mat_typemaps.i
+%include VectorPoints_typemaps.i
+%include Points_typemaps.i

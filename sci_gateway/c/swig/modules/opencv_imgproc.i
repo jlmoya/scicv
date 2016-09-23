@@ -4,7 +4,7 @@
 %}
 
 %ignore FilterEngine;
-%ignore Algorithm; 
+%ignore Algorithm;
 %ignore Moments;
 %ignore CvConnectedComp;
 %ignore CvSubdiv2DPointLocation;
@@ -24,3 +24,19 @@
 
 %include "opencv2/imgproc/types_c.h"
 %include "opencv2/imgproc/imgproc.hpp"
+
+%inline %{
+
+void cvGetVectorPoints(VectorPoints& vectorPointsIn, VectorPoints* vectorPointsOut) {
+    *vectorPointsOut = vectorPointsIn;
+}
+
+void cvGetPoints(Points& pointsIn, Points* pointsOut) {
+    *pointsOut = pointsIn;
+}
+
+void cvGetPoints(VectorPoints& vectorPointsIn, int index, Points* points) {
+    *points = vectorPointsIn.at(index);
+}
+
+%}

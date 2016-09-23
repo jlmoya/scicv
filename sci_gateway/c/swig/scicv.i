@@ -12,6 +12,8 @@
 
 %include modules/opencv_core.i
 
+%include scicv_datatypes.i
+
 %include typemaps/opencv_typemaps.i
 
 %include modules/opencv_highgui.i

@@ -34,9 +34,9 @@ int SWIG_SciDoubleOrInt32_AsPoint(void *pvApiCtx, SwigSciObject iVar, cv::Point 
   }
 }
 
-%typemap(in, noblock=1, fragment="SWIG_SciDoubleOrInt32_AsPoint") cv::Point& (cv::Point tmpPoint)  {
-  $1 = &tmpPoint;
-  if (SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, $input, $1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-}
+//%typemap(in, noblock=1, fragment="SWIG_SciDoubleOrInt32_AsPoint") cv::Point& (cv::Point tmpPoint)  {
+//  $1 = &tmpPoint;
+//  if (SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, $input, $1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+//    return SWIG_ERROR;
+//  }
+//}
