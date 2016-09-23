@@ -1,5 +1,8 @@
-%typemap(in, noblock=1, fragment="SWIG_SciMList_AsMat") cv::Mat& matIn {
-  if (SWIG_SciMList_AsMat(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+// OpenCV InputArray <= Scilab mlist _p_cv_Mat
+//                   => Scilab hypermat
+
+%typemap(in, noblock=1) cv::Mat& matIn {
+  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&$1, SWIG_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
 }

@@ -1,7 +1,5 @@
 // OpenCV OutputArray => Scilab mlist _p_cv_Mat
 
-%include Mat_sciMList.swg
-
 %typemap(in, numinputs=0, noblock=1) cv::OutputArray {
 }
 
@@ -10,8 +8,8 @@
   $1 = new cv::_OutputArray(*pOutMat$argnum);
 }
 
-%typemap(argout, noblock=1, fragment="SWIG_SciMList_FromMat") cv::OutputArray {
-  if (SWIG_SciMList_FromMat(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat$argnum, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+%typemap(argout, noblock=1) cv::OutputArray {
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat$argnum, SWIG_TypeQuery("cv::Mat *"), 0) != SWIG_OK) {
     return SWIG_ERROR;
   }
   SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
