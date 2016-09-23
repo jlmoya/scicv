@@ -22,6 +22,11 @@
 %ignore CvConnectedComp;
 %ignore CvLSHOperations;
 
+%apply cv::InputArray points { cv::InputArray contour };
+%apply cv::InputArray points { cv::InputArray curve };
+%apply cv::InputArray points { cv::InputArray contour1 };
+%apply cv::InputArray points { cv::InputArray contour2 };
+
 %include "opencv2/imgproc/types_c.h"
 %include "opencv2/imgproc/imgproc.hpp"
 

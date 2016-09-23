@@ -1,3 +1,23 @@
+// OpenCV InputArray contour, points <= Scilab mlist contours
+
+%typemap(typecheck, precedence=SWIG_TYPECHECK_POINTER) cv::InputArray points {
+  $1 = SwigScilabCheckPtr(pvApiCtx, $input, SWIG_TypeQuery("Points *"), SWIG_Scilab_GetFuncName());
+}
+
+%typemap(in, noblock=1) cv::InputArray points {
+  Points *pInPoints$input = NULL;
+  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&pInPoints$input, SWIG_TypeQuery("Points *"), 0, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    $1 = new cv::_InputArray(*pInPoints$input);
+  }
+  else {
+    return SWIG_ERROR;
+  }
+}
+
+%typemap(freearg, noblock=1) cv::InputArray points {
+  delete $1;
+}
+
 // OpenCV InputArray <= Scilab mlist _p_cv_Mat or hypermat
 
 %include Mat_sciHypermat.swg
