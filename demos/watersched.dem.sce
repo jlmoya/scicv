@@ -5,14 +5,14 @@ scicv_Init();
 
 img = imread('data/images/water_coins.jpg');
 
-// convert to black/white
+// convert to black&white
 img_gray = imread('data/images/water_coins.jpg', CV_LOAD_IMAGE_GRAYSCALE);
 [res, img_bw] = threshold(img_gray, 0, 255, THRESH_BINARY_INV+THRESH_OTSU);
 
 // Remove noise and small objects with opening
 img_open = morphologyEx(img_bw, MORPH_OPEN, ones(3, 3), [-1, -1], 2);
 
-// sure bacckground area
+// sure background area
 img_sure_bg = dilate(img_open, ones(3, 3), [-1,-1], 3);
 
 // sure foreground area
@@ -35,46 +35,34 @@ mat_markers = cvMatExtract(img_markers);
 mat_markers = mat_markers + 1;
 mat_markers(find(mat_unknown == 255)) = 0;
 
-img_markers = watershed(img, markers);
+img_markers_watershed = watershed(img, int32(mat_markers));
 
-// display
-mat_orig = cvMatExtract(image_Orig);
+scf();
 
-mat_gray = cvMatExtract(image);
-
-mat_bw = cvMatExtract(img_bw);
-
-markers = Mat_convertTo(markers, CV_32SC1, 1, 0);
-markers = watershed(image_Orig);
-markersMat_convertTo(markers, CV_32SC3, 1, 0);
-mat_watershed = cvMatExtract(markers);
-
-scf(1);
-subplot(2,4,1);
+subplot(4,2,1);
 title('original image');
-matplot(mat_orig);
+matplot(cvMatExtract(img));
 
-subplot(2,4,2);
-title('gray image');
-matplot(mat_Gray);
+subplot(4,2,2);
+title('image bw');
+matplot(cvMatExtract(img_bw));
 
-subplot(2,4,3);
-title('thresholding OTSU');
-matplot(mat_thresh);
+subplot(4,2,3);
+title('opening');
+matplot(cvMatExtract(img_open));
 
-subplot(2,4,4);
-title('erode');
-matplot(mat_erode);
-
-subplot(2,4,5); // premiére colonne, deuxiémme ligne
+subplot(4,2,4); 
 title('dilate');
-matplot(mat_dilate);
+matplot(cvMatExtract(img_sure_bg));
 
-subplot(2,4,6); // premiére colonne, deuxiémme ligne, deuxiémme colonne
-title('markers');
-matplot(mat_markers);
+subplot(4,2,5); 
+title('distance transform');
+matplot(cvMatExtract(img_dist));
 
-subplot(2,4,7);
-title('watershed');
-matplot(mat_watershed);
+subplot(4,2,6);
+title('distance transform threshold');
+matplot(cvMatExtract(img_sure_fg));
 
+subplot(4,2,7);
+title('markers image after watershed');
+matplot(cvMatExtract(img_markers_watershed));
