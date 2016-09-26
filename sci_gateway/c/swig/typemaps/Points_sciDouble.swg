@@ -3,7 +3,7 @@
 %fragment("SWIG_SciDouble_FromPoints", "header", fragment="SWIG_SciDouble_FromDoubleArrayAndSize") {
 
 int SWIG_SciDouble_FromPoints(void *pvApiCtx, SwigSciObject iVarOut, Points *pPoints, char *fname) {
-  int pointsCount = pPoints->size();
+  int pointsCount = (int) pPoints->size();
   double* pdValues = (double *) malloc(2 * pointsCount * sizeof(double));
   for (int i = 0; i < pointsCount; i++) {
     cv::Point pt = pPoints->at(i);

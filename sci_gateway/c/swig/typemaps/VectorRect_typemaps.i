@@ -7,7 +7,7 @@
 %typemap(argout, noblock=0) vector<cv::Rect_<int>>& {
   SciErr sciErr;
   int *piListAddr = NULL;
-  int nbElements = $1->size();
+  int nbElements = (int) $1->size();
   int iVarOut =  SWIG_Scilab_GetOutputPosition();
 
   sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
