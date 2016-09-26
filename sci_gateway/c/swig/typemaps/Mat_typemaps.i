@@ -1,4 +1,4 @@
-// OpenCV InputArray <= Scilab mlist _p_cv_Mat
+// OpenCV InputArray <= Scilab mlist Mat
 //                   => Scilab hypermat
 
 %typemap(in, noblock=1) cv::Mat& matIn {
@@ -18,4 +18,13 @@
   else {
     return SWIG_ERROR;
   }
+}
+
+// OpenCV Mat => Scilab mlist Mat
+
+%typemap(out, noblock=1) cv::Mat {
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), new cv::Mat(result), SWIG_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
 }

@@ -1,4 +1,4 @@
-// OpenCV OutputArrayOfArrays => Scilab mlist Vector Vector Points
+// OpenCV OutputArrayOfArrays => Scilab mlist VecPoints
 
 %typemap(in, numinputs=0, noblock=1) cv::OutputArrayOfArrays contours {
 }
@@ -9,7 +9,7 @@
 }
 
 %typemap(argout, noblock=1) cv::OutputArrayOfArrays contours {
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pContours$argnum, SWIG_TypeQuery("VectorPoints *"), 0) != SWIG_OK) {
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pContours$argnum, SWIG_TypeQuery("VectorPoints *"), 0, "VecPoints") != SWIG_OK) {
     return SWIG_ERROR;
   }
   SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());

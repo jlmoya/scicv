@@ -34,7 +34,7 @@
 }
 
 %typemap(argout, noblock=1) Points* {
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), $1, SWIG_TypeQuery("Points *"), 0) == SWIG_OK) {
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), $1, SWIG_TypeQuery("Points *"), 0, "Points") == SWIG_OK) {
     SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   }
   else {
