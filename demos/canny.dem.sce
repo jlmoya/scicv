@@ -1,6 +1,7 @@
-img=imread('data/images/Puffin.png',CV_LOAD_IMAGE_GRAYSCALE);
-out=Canny(img,150,100);
-mat=cvMatExtract(out)
-matplot(mat)
-title('canny')
+scicv_Init();
 
+img = imread('data/images/Puffin.png',CV_LOAD_IMAGE_GRAYSCALE);
+img_canny = Canny(img, 100, 150);
+
+matplot(img_canny);
+title('canny');

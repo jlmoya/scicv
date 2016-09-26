@@ -1,6 +1,7 @@
-img=imread('data/images/lena.jpg');
-blur_lena=medianBlur(img,5);
-mat=cvMatExtract(blur_lena)
-matplot(mat)
-title('median blur')   
+scicv_Init();
 
+img = imread('data/images/lena.jpg');
+img_blur = medianBlur(img, 5);
+
+matplot(img_blur);
+title('median blur');

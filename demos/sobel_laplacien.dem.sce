@@ -1,32 +1,28 @@
-img=imread('data/images/sudoku.jpg',CV_LOAD_IMAGE_GRAYSCALE);
+scicv_Init();
 
-mat_img=cvMatExtract(img);
+img = imread('data/images/sudoku.jpg',CV_LOAD_IMAGE_GRAYSCALE);
 
-out=Laplacian(img,CV_16U, 3, 1, 0, BORDER_DEFAULT);
-out=convertScaleAbs(out)
-mat=cvMatExtract(out);
+img_laplacian = Laplacian(img, CV_16U, 3, 1, 0, BORDER_DEFAULT);
+img_laplacian_abs = convertScaleAbs(img_laplacian);
 
-sobelx = Sobel(img,CV_16S,1,0,ksize=3);
-sobelx=convertScaleAbs(sobelx)
-mat_sobelx=cvMatExtract(sobelx);
+img_sobel_x = Sobel(img, CV_16S, 1, 0, 3);
+img_sobel_x_abs = convertScaleAbs(img_sobel_x);
 
-sobely = Sobel(img,CV_16S,0,1,ksize=3);
-sobely=convertScaleAbs(sobely)
-mat_sobely=cvMatExtract(sobely);
+img_sobel_y = Sobel(img, CV_16S, 0, 1, 3);
+img_sobel_y_abs = convertScaleAbs(img_sobel_y);
 
-subplot(2,2,1)
-title('image originale')
-matplot(mat_img)
+subplot(2,2,1);
+matplot(img);
+title('image');
 
+subplot(2,2,2);
+matplot(img_laplacian_abs);
+title('laplacian');
 
-subplot(2,2,2)
-title('Laplacien')
-matplot(mat)
+subplot(2,2,3);
+matplot(img_sobel_x_abs);
+title('sobel x');
 
-subplot(2,2,3)
-title('sobel_x')
-matplot(mat_sobelx)
-
-subplot(2,2,4)
-title('sobel_y')
-matplot(mat_sobely)
+subplot(2,2,4);
+matplot(img_sobel_y_abs);
+title('sobel y');

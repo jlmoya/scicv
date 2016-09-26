@@ -41,28 +41,28 @@ scf();
 
 subplot(4,2,1);
 title('original image');
-matplot(cvMatExtract(img));
+matplot(img);
 
 subplot(4,2,2);
 title('image bw');
-matplot(cvMatExtract(img_bw));
+matplot(img_bw);
 
 subplot(4,2,3);
 title('opening');
-matplot(cvMatExtract(img_open));
+matplot(img_open);
 
 subplot(4,2,4); 
 title('dilate');
-matplot(cvMatExtract(img_sure_bg));
+matplot(img_sure_bg);
 
 subplot(4,2,5); 
 title('distance transform');
-matplot(cvMatExtract(img_dist));
+matplot(img_dist);
 
 subplot(4,2,6);
 title('distance transform threshold');
-matplot(cvMatExtract(img_sure_fg));
+matplot(img_sure_fg);
 
 subplot(4,2,7);
 title('markers image after watershed');
-matplot(cvMatExtract(img_markers_watershed));
+matplot(img_markers_watershed);

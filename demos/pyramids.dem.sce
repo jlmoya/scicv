@@ -1,19 +1,21 @@
-img= imread("data/images/lena.jpg");
-mat_img=cvMatExtract(img);
+scicv_Init();
+
+img = imread("data/images/lena.jpg");
+
 // Pyramid down
-down=pyrDown(img,[(Mat_cols_get(img))/2  (Mat_rows_get(img))/2]);
-mat_down=cvMatExtract(down);
-//pyramid up
-up=pyrUp(img, [(Mat_cols_get(img))*2  (Mat_rows_get(img))*2]);
-mat_up=cvMatExtract(up);
-subplot(131)
-title('image originale')
-matplot(mat_img)
+img_down = pyrDown(img, [(Mat_cols_get(img))/2  (Mat_rows_get(img))/2]);
 
-subplot(132)
-title('pyramid_Up')
-matplot(mat_up)
+// Pyramid up
+img_up = pyrUp(img, [(Mat_cols_get(img))*2  (Mat_rows_get(img))*2]);
 
-subplot(133)
-title('pyramid_Down')
-matplot(mat_down)
+subplot(131);
+matplot(img);
+title('image');
+
+subplot(132);
+matplot(img_up);
+title('pyramid_Up');
+
+subplot(133);
+matplot(img_down);
+title('pyramid_Down');
