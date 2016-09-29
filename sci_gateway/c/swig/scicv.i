@@ -26,7 +26,7 @@
 
 %inline %{
 void cvMatExtract(cv::Mat& matIn, cv::Mat* matOut) {
-    *matOut = matIn.clone();
+    *matOut = matIn;
 }
 
 std::string getImageType(cv::Mat& matIn) {

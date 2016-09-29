@@ -297,6 +297,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       sciErr = createHypermatOfUnsignedInteger8(pvApiCtx,
         SWIG_NbInputArgument(pvApiCtx) + iVarOut,
         dims, 3, (const unsigned char *)dst);
+      free(dst);
       break;
     }
     case CV_8S: {
@@ -306,6 +307,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       sciErr = createHypermatOfInteger8(pvApiCtx,
         SWIG_NbInputArgument(pvApiCtx) + iVarOut,
         dims, 3, (const char*)dst);
+      free(dst);
       break;
     }
     case CV_16U: {
@@ -315,6 +317,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       sciErr = createHypermatOfUnsignedInteger32(pvApiCtx,
         SWIG_NbInputArgument(pvApiCtx) + iVarOut,
         dims, 3, (const unsigned int *)dst);
+      free(dst);
       break;
     }
     case CV_16S: {
@@ -324,6 +327,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       sciErr = createHypermatOfInteger16(pvApiCtx,
         SWIG_NbInputArgument(pvApiCtx) + iVarOut,
         dims, 3, (const short *)dst);
+      free(dst);
       break;
     }
     case CV_32S: {
@@ -333,6 +337,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       sciErr = createHypermatOfInteger32(pvApiCtx,
         SWIG_NbInputArgument(pvApiCtx) + iVarOut,
         dims, 3, (const int *)dst);
+      free(dst);
       break;
     }
     case CV_32F: {
@@ -342,6 +347,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       sciErr = createHypermatOfDouble(pvApiCtx,
         SWIG_NbInputArgument(pvApiCtx) + iVarOut,
         dims, 3, (const double *)dst);
+      free(dst);
       break;
     }
     case CV_64F: {
@@ -351,6 +357,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       sciErr = createHypermatOfDouble(pvApiCtx,
         SWIG_NbInputArgument(pvApiCtx) + iVarOut,
         dims, 3, (const double *)dst);
+      free(dst);
       break;
     }
     default: {
