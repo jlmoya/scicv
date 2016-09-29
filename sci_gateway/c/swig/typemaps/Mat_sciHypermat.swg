@@ -275,13 +275,13 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
   for (int c = 0; c<nbchannels; c++) \
     for (int i = 0; i<height; i++) \
       for (int j = 0; j<width; j++) \
-        dst[c*width*height + j*height + i] = src[c + nbchannels*(i*width + j)]
+        dst[(nbchannels-1-c)*size + j*height + i] = src[c + nbchannels*(i*width + j)]
 
 int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMat, char *fname) {
   int width = pMat->cols;
   int height = pMat->rows;
   int nbchannels = pMat->channels();
-  int size = width * height * nbchannels;
+  int size = width * height;
 
   int dims[3];
   dims[0] = height;
@@ -291,7 +291,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
   SciErr sciErr;
   switch(pMat->depth()) {
     case CV_8U: {
-      uint8_t *dst = (uint8_t *) malloc(size * sizeof(uint8_t));
+      uint8_t *dst = (uint8_t *) malloc(size * nbchannels * sizeof(uint8_t));
       uint8_t *src = (uint8_t *) pMat->data;
       copy_row_major_pixel_to_column_major_planar_data(src, dst);
       sciErr = createHypermatOfUnsignedInteger8(pvApiCtx,
@@ -301,7 +301,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       break;
     }
     case CV_8S: {
-      int8_t *dst = (int8_t *) malloc(size * sizeof(int8_t));
+      int8_t *dst = (int8_t *) malloc(size * nbchannels * sizeof(int8_t));
       int8_t *src = (int8_t *) pMat->data;
       copy_row_major_pixel_to_column_major_planar_data(src, dst);
       sciErr = createHypermatOfInteger8(pvApiCtx,
@@ -311,7 +311,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       break;
     }
     case CV_16U: {
-      uint16_t *dst = (uint16_t *) malloc(size * sizeof(uint16_t));
+      uint16_t *dst = (uint16_t *) malloc(size * nbchannels * sizeof(uint16_t));
       uint16_t *src = (uint16_t *) pMat->data;
       copy_row_major_pixel_to_column_major_planar_data(src, dst);
       sciErr = createHypermatOfUnsignedInteger32(pvApiCtx,
@@ -321,7 +321,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       break;
     }
     case CV_16S: {
-      int16_t *dst = (int16_t *) malloc(size * sizeof(int16_t));
+      int16_t *dst = (int16_t *) malloc(size * nbchannels * sizeof(int16_t));
       int16_t *src = (int16_t *) pMat->data;
       copy_row_major_pixel_to_column_major_planar_data(src, dst);
       sciErr = createHypermatOfInteger16(pvApiCtx,
@@ -331,7 +331,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       break;
     }
     case CV_32S: {
-      int32_t *dst = (int32_t *) malloc(size * sizeof(int32_t));
+      int32_t *dst = (int32_t *) malloc(size * nbchannels * sizeof(int32_t));
       int32_t *src = (int32_t *) pMat->data;
       copy_row_major_pixel_to_column_major_planar_data(src, dst);
       sciErr = createHypermatOfInteger32(pvApiCtx,
@@ -341,7 +341,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       break;
     }
     case CV_32F: {
-      double *dst = (double *) malloc(size * sizeof(double));
+      double *dst = (double *) malloc(size * nbchannels * sizeof(double));
       float *src = (float *) pMat->data;
       copy_row_major_pixel_to_column_major_planar_data(src, dst);
       sciErr = createHypermatOfDouble(pvApiCtx,
@@ -351,7 +351,7 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
       break;
     }
     case CV_64F: {
-      double *dst = (double *) malloc(size * sizeof(double));
+      double *dst = (double *) malloc(size * nbchannels * sizeof(double));
       double *src = (double *) pMat->data;
       copy_row_major_pixel_to_column_major_planar_data(src, dst);
       sciErr = createHypermatOfDouble(pvApiCtx,

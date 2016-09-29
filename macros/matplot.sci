@@ -1,16 +1,21 @@
-function matplot(I)   
-    if typeof(I) == 'Mat' then
-      I = I(:);
+function matplot(img, varargin)
+	// convert Mat type
+	if typeof(img) == 'Mat' then
+        I = uint8(img(:));
+    else
+	    I = uint8(img);
+	end
+	// get handle argument
+	h = [];
+	if size(varargin) > 0
+	    if type(varargin(1)) == 9
+	        h = varargin(1);
+		end
     end
-    sz = size(I);
-    // multi channels ? 
-    if size(sz, 'c') > 2 & sz(1, 3) > 1 then        
-        // Convert BGR to RBG
-        J(:,:,1) = I(:,:,3);
-        J(:,:,2) = I(:,:,2);
-        J(:,:,3) = I(:,:,1);
-        Matplot(uint8(J), frameflag=4);
-    else        
-        Matplot(uint8(I), frameflag=4);
-    end    
+	// Only update matplot data if handle provided, otherwise new Matplot
+	if h <> []
+		h.data = I;
+	else
+		Matplot(I, frameflag=4);
+	end
 endfunction
