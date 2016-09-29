@@ -21,5 +21,8 @@ using std::vector;
 %rename (LatentSvmDet) CvLatentSvmDetector;
 //%rename (HOGDesc) HOGDescriptor;
 
+%clear cv::Mat& image;
+%apply cv::Mat& matIn { const cv::Mat& image };
+
 %include "opencv2/objdetect/objdetect.hpp"
 

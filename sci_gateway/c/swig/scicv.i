@@ -25,8 +25,8 @@
 %include modules/opencv_features2d.i
 
 %inline %{
-void cvMatExtract(cv::Mat& matIn, cv::Mat* matOut) {
-    *matOut = matIn;
+void cvMatExtract(cv::Mat& matIn, cv::Mat* hypermatOut) {
+    *hypermatOut = matIn;
 }
 
 std::string getImageType(cv::Mat& matIn) {
