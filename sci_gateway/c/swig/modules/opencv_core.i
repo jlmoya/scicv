@@ -2,7 +2,7 @@
 #undef SKIP_INCLUDES
 #undef REAL
 #undef Rhs
-#include  "opencv2/core/types_c.h"                    
+#include  "opencv2/core/types_c.h"
 #include "opencv2/core/core.hpp"
 #include "opencv2/core/gpumat.hpp"
 #include "opencv2/core/mat.hpp"
@@ -50,9 +50,9 @@ using namespace cv::ogl;
 
 // ignore some structures
 %ignore Param;
-%rename(Param) ::Param(); 
+%rename(Param) ::Param();
 %ignore Mat::MStep;
-%rename(MStepe) Mat::MStep; 
+%rename(MStepe) Mat::MStep;
 
 //rename some method, variables or operators
 %rename (cv_double) operator double;
@@ -80,10 +80,10 @@ using namespace cv::ogl;
 %ignore Cv64suf_u;
 %ignore Cv64suf_f;
 %ignore Cv64suf_f;
-%ignore cvRound; 
+%ignore cvRound;
 %ignore cvFloor;
 %ignore cvCeil;
-%ignore cvIsNaN; 
+%ignore cvIsNaN;
 %ignore cvIsInf;
 %ignore cvRNG;
 %ignore cvRandInt;
@@ -91,7 +91,7 @@ using namespace cv::ogl;
 %ignore _IplImage;
 %ignore _IplTileInfo;
 %ignore CvMat;
-%ignore cvMat; 
+%ignore cvMat;
 %ignore cvmGet;
 %ignore cvmSet;
 %ignore cvIplDepth;
@@ -102,27 +102,27 @@ using namespace cv::ogl;
 %ignore CvRect;
 %ignore cvRectToROI;
 %ignore cvROIToRect;
-%ignore cvTermCriteria; 
+%ignore cvTermCriteria;
 %ignore CvPoint_x;
 %ignore CvPoint_x;
 %ignore CvPoint_y;
 %ignore CvPoint_y;
-%ignore cvPoint; 
-%ignore cvPoint2D32f; 
-%ignore cvPointTo32f; 
-%ignore cvPointFrom32f; 
+%ignore cvPoint;
+%ignore cvPoint2D32f;
+%ignore cvPointTo32f;
+%ignore cvPointFrom32f;
 %ignore CvPoint3D32fx;
 %ignore CvPoint3D32fz;
 %ignore CvPoint3D32fz;
-%ignore cvPoint3D32f; 
+%ignore cvPoint3D32f;
 %ignore CvPoint2D64f;
 %ignore cvPoint3D64f;
-%ignore CvSize; 
+%ignore CvSize;
 %ignore cvSize2D32f;
 %ignore CvBox2D;
 %ignore cvSlice;
 %ignore cvScalar;
-%ignore cvRealScalar; 
+%ignore cvRealScalar;
 %ignore cvScalarAll;
 %ignore CvMemBlock;
 %ignore CvMemStorage;
@@ -139,7 +139,7 @@ using namespace cv::ogl;
 %ignore CvContour;
 %ignore CvSeqWriter;
 %ignore CvSeqReader;
-%ignore cvAttrList; 
+%ignore cvAttrList;
 %ignore CvString;
 %ignore CvStringHashNode;
 %ignore CvFileNode;
@@ -258,8 +258,6 @@ using namespace cv::ogl;
 %ignore CvHaarClassifier;
 
 
-%include carrays.i
-
 %include "../typemaps/opencv_typemaps.i"
 
 %include "opencv2/core/types_c.h"
@@ -275,8 +273,13 @@ using namespace cv::ogl;
 
 //%template(vecOfRect) std::vector<cv::Rect_<int>>;
 
+%include carrays.i
+
 %array_functions( double, double_array )
 %array_functions( float, float_array )
 %array_functions( int, int_array )
 
+%include cpointer.i
+
+%pointer_functions(int, intp);
 
