@@ -2,20 +2,21 @@ scicv_Init();
 
 cap = new_VideoCapture("data/videos/pedestrian.avi");
 
-s = new_Scalar(0,255,0); //BGR
+
 clsf = new_CascadeClassifier();
 CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_fullbody.xml");
 
 videoWriter = new_VideoWriter("Sci_Pedestrian_detection.avi",CV_FOURCC('D', 'I', 'V', '3'), 10, [768 576]);
 
-while %T
+s = [0, 255, 0]; //BGR
+while %t
     frame = new_Mat();
     VideoCapture_read(cap, frame); // stock video images in a frame
 
     if (~Mat_empty(frame))
-        pedestrians = CascadeClassifier_detect(clsf, frame, 1.1, 2, CV_HAAR_SCALE_IMAGE,[20 40])
+        pedestrians = CascadeClassifier_detect(clsf, frame, 1.1, 2, CV_HAAR_SCALE_IMAGE, [20 40])
         numberOfpedestrians = size(pedestrians);
-        disp(numberOfpedestrians, "number of pedestrians:")
+        disp(numberOfpedestrians, "number of pedestrians:");
         for i=1:numberOfpedestrians
             pedestrian = pedestrians(i);
             point_1 = [pedestrian(1), pedestrian(2)]; // x,y
@@ -25,7 +26,7 @@ while %T
 
         VideoWriter_write(videoWriter, frame);
     else
-        disp('video end')
+        disp('video end');
         VideoWriter_release(videoWriter);
         break;
     end

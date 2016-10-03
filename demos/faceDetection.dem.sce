@@ -6,7 +6,7 @@ clsf = new_CascadeClassifier();
 CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_frontalface_alt.xml");
 faces = CascadeClassifier_detect(clsf, img, 1.3, 2,CV_HAAR_SCALE_IMAGE,[30 30]);
 
-s = new_Scalar(0, 255, 0); //BGR
+s = [0, 255, 0]; // BGR
 for i=1:size(faces)
     face = faces(i);
     point_1 = [face(1), face(2)] // x,y

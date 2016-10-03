@@ -7,7 +7,7 @@ CascadeClassifier_load(clsf, "data/hogcascades/hogcascade_pedestrians.xml");
 
 pedestrians = CascadeClassifier_detect(clsf,img, 1.2,6,1,[90 120]);
 numberOfpedestrians = size(pedestrians);
-s = new_Scalar(0, 255, 0); //(B,G,R)
+s = [0, 255, 0]; // BGR
 
 for i=1:numberOfpedestrians
     pedestrian = pedestrians(i);
