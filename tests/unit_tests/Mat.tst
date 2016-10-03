@@ -1,0 +1,16 @@
+ // <-- CLI SHELL MODE -->
+scicv_Init();
+
+img = new_Mat(2, 4, CV_8UC3, [1, 128, 255]);
+
+assert_checkequal(typeof(img), "Mat");
+
+assert_checkfalse(Mat_empty(img));
+
+o = uint8(ones(2, 4));
+mat = img(:);
+assert_checkequal(mat(:,:,1), 255*o); 
+assert_checkequal(mat(:,:,2), 128*o);
+assert_checkequal(mat(:,:,3), o);
+
+delete_Mat(img);
