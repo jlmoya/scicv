@@ -5,6 +5,7 @@
 %include Point_typemaps.i
 %include Rect_typemaps.i
 %include Size_typemaps.i
+%include Scalar_typemaps.i
 %include KeyPoint_typemaps.i
 %include VectorRect_typemaps.i
 %include float_ranges_typemaps.i
