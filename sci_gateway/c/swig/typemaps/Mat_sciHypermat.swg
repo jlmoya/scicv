@@ -18,7 +18,11 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
     return sciErr.iErr;
   }
 
-  if (isHypermatType(pvApiCtx, piAddrVar)) {
+  if (isEmptyMatrix(pvApiCtx, piAddrVar)) {
+    *pMat = cv::Mat();
+    return SWIG_OK;
+  }
+  else if (isHypermatType(pvApiCtx, piAddrVar)) {
     int htype = 0;
     int iPrec = 0;
     int ndims = 0;
