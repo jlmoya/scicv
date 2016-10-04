@@ -2,13 +2,18 @@
 %include OutputArrayOfArrays_typemaps.i
 %include InputArray_typemaps.i
 %include OutputArray_typemaps.i
+
 %include Point_typemaps.i
 %include Rect_typemaps.i
 %include Size_typemaps.i
 %include Scalar_typemaps.i
 %include KeyPoint_typemaps.i
+
 %include VectorRect_typemaps.i
+
+%include intPtr_typemaps.i
 %include float_ranges_typemaps.i
+%include MatPtr_typemaps.i
 
 %include Mat_typemaps.i
 %include VectorPoints_typemaps.i
