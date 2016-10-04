@@ -1,0 +1,14 @@
+// <-- CLI SHELL MODE -->
+scicv_Init();
+
+img = imread("data/images/lena.jpg");
+
+imgs = list(img);
+channels = [0 1 2];
+mask = [];
+hist_sizes = [32, 32, 32];
+ranges = [[0; 256], [0; 256], [0; 256]];
+
+hist = calcHist(imgs, 1, channels, mask, 3, hist_sizes, ranges);
+
+assert_checkfalse(Mat_empty(hist));
