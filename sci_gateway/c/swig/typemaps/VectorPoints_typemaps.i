@@ -3,7 +3,7 @@
 %include VectorPoints_sciMatrixList.swg
 
 %typemap(in, noblock=1) VectorPoints& vectorPointsIn {
-  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&$1, SWIG_TypeQuery("VectorPoints *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&$1, SWIG_Scilab_TypeQuery("VectorPoints *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
 }

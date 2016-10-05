@@ -3,7 +3,7 @@
 %include Points_sciDouble.swg
 
 %typemap(in, noblock=1) Points& pointsIn {
-  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&$1, SWIG_TypeQuery("Points *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&$1, SWIG_Scilab_TypeQuery("Points *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
 }
@@ -34,7 +34,7 @@
 }
 
 %typemap(argout, noblock=1) Points* {
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), $1, SWIG_TypeQuery("Points *"), 0, "Points") == SWIG_OK) {
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), $1, SWIG_Scilab_TypeQuery("Points *"), 0, "Points") == SWIG_OK) {
     SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   }
   else {
