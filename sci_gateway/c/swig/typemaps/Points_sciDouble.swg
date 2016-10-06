@@ -13,6 +13,7 @@ int SWIG_SciDouble_FromPoints(void *pvApiCtx, SwigSciObject iVarOut, Points *pPo
   if (SWIG_SciDouble_FromDoubleArrayAndSize(pvApiCtx, iVarOut, 2, pointsCount, pdValues) != SWIG_OK) {
     return SWIG_ERROR;
   }
+  free(pdValues);
   return SWIG_OK;
 }
 
