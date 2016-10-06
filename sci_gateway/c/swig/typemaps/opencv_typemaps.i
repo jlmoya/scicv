@@ -7,8 +7,7 @@
 %include Rect_typemaps.i
 %include Size_typemaps.i
 %include Scalar_typemaps.i
-%include KeyPoint_typemaps.i
-
+%include KeyPoints_typemaps.i
 %include VectorRect_typemaps.i
 
 %include intPtr_typemaps.i

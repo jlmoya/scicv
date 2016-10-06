@@ -4,7 +4,6 @@
 using namespace cv;
 %}
 
-
 %ignore FlannBasedMatcher;
 %ignore HammingMultilevel;
 %ignore BOWTrainer;
@@ -14,5 +13,12 @@ using namespace cv;
 %ignore VectorDescriptorMatcher;
 %ignore FREAK;
 
+%apply KeyPoints* { vector<cv::KeyPoint>& keypoints };
 
 %include "opencv2/features2d/features2d.hpp"
+
+%inline %{
+void cvGetKeyPoints(KeyPoints& keyPointsIn, KeyPoints* keyPointsMatrixOut) {
+    *keyPointsMatrixOut = keyPointsIn;
+}
+%}
