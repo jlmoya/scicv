@@ -30,17 +30,21 @@ function [scicvlib] = startModule()
   mprintf("\tLoad thirdparties\n");
   [version, opts] = getversion();
   arch = opts(2);
-  libs = "opencv_" + ["core"; "imgproc"; "highgui"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "calib3d"; "ml"; "legacy"; "gpu"; "ocl"; "nonfree"; "contrib"];
+
+  opencv_libs = "opencv_" + ["core"; "imgproc"; "highgui"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "calib3d"; "ml"; "legacy"; "gpu"; "ocl"; "nonfree"; "contrib"];
   if getos() == "Windows" then
       bin_dir = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
-      lib_paths = fullpath(bin_dir + "\" + libs + "2413.dll");
+      thirdparty_lib_paths = fullpath(bin_dir + "\" + opencv_libs + "2413.dll");
       link(fullpath(bin_dir + "\opencv_ffmpeg2413_64.dll"));
   else
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
-      lib_paths = fullpath(lib_dir + "/" + "lib" + libs + ".so");
+      codec_libs = ["x264"; "x265"; "fdk-aac"; "mp3lame"; "opus"; "ogg"; "vorbis"; "vorbisenc"; "vpx"];
+      ffmpeg_libs = ["avutil"; "swresample"; "swscale"; "postproc"; "avresample"; "avcodec"; "avformat"; "avfilter"; "avdevice"];
+      thirdparty_libs = [codec_libs; ffmpeg_libs; opencv_libs];
+      thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".so");
   end
-  for lib_path=lib_paths'
-      link(lib_path);
+  for thirdparty_lib_path = thirdparty_lib_paths'
+      link(thirdparty_lib_path);
   end
 
 // Load gateways
@@ -56,7 +60,6 @@ function [scicvlib] = startModule()
     pathdemos = pathconvert(tlbx_root_dir+"/demos/scicv.dem.gateway.sce", %F, %T);
     add_demo(TOOLBOX_TITLE, pathdemos);
   end
-
 
 // Load localization
 // =============================================================================
