@@ -40,7 +40,9 @@ function [scicvlib] = startModule()
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
       codec_libs = ["x264"; "x265"; "fdk-aac"; "mp3lame"; "opus"; "ogg"; "vorbis"; "vorbisenc"; "vpx"];
       ffmpeg_libs = ["avutil"; "swresample"; "swscale"; "postproc"; "avresample"; "avcodec"; "avformat"; "avfilter"; "avdevice"];
-      thirdparty_libs = [codec_libs; ffmpeg_libs; opencv_libs];
+      gstreamer_libs = ["gstreamer"; "gstbase"] + "-0.10";
+      gstreamer_plugins_libs = ["gstinterfaces"; "gstvideo"; "gstaudio"; "gstapp"; "gsttag"; "gstriff"; "gstpbutils"] + "-0.10";
+      thirdparty_libs = [codec_libs; ffmpeg_libs; gstreamer_libs; gstreamer_plugins_libs; opencv_libs];
       thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".so");
   end
   for thirdparty_lib_path = thirdparty_lib_paths'
