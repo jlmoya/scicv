@@ -1,7 +1,6 @@
 scicv_Init();
 
 function closed = closeFigure()
-    close(f);
     closed = %t;
 endfunction
 
@@ -29,21 +28,21 @@ h = a.children(1);
 while ~closed
     [ret, frame] = VideoCapture_read(videoCapture);
     if ret then
-    faces = CascadeClassifier_detect(clsf, frame, 1.3, 2, CV_HAAR_SCALE_IMAGE, [10 10]);
-    for i=1:size(faces)
-        face = faces(i);
-        point_1 = [face(1), face(2)] // x,y
-        point_2 = [face(1)+face(4), face(2)+face(3)] //x+height, y+width
-        rectangle(frame, point_1, point_2, s, 2, 8, 0);
-    end
-
+        faces = CascadeClassifier_detect(clsf, frame, 1.3, 2, CV_HAAR_SCALE_IMAGE, [10 10]);
+        for i=1:size(faces)
+            face = faces(i);
+            point_1 = [face(1), face(2)] // x,y
+            point_2 = [face(1)+face(4), face(2)+face(3)] //x+height, y+width
+            rectangle(frame, point_1, point_2, s, 2, 8, 0);
+        end
         matplot(frame, h);
         delete_Mat(frame);
     else
-		disp("Capture is closed.");
-		break;
+        disp("Capture is closed.");
+        break;
     end
 end
 
+close(f);
 VideoCapture_release(videoCapture);
 
