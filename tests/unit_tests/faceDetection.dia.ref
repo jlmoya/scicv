@@ -1,8 +1,6 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
-Attention : Redéfinition de la fonction : BriefDescriptorExtractor. Utilisez funcprot(0) pour ne pas afficher ce message.
-
-img = imread("data/images/ScilabTeam.png");
+img = imread(getSampleImage("ScilabTeam.png"));
 cascadeClassifier = new_CascadeClassifier();
 res = CascadeClassifier_load(cascadeClassifier, "data/haarcascades/haarcascade_frontalface_alt.xml");
 assert_checktrue(res);

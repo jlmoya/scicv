@@ -1,7 +1,7 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
 
-img_gray = imread("data/images/scilab.png", CV_LOAD_IMAGE_GRAYSCALE);
+img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);
 
 thresh = 100;
 canny_img = Canny(img_gray, thresh, thresh*2, 3);

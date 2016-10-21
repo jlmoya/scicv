@@ -5,7 +5,7 @@ img_name = "Puffin.png";
 
 check_img_proc(img_name, "color", "cvtColor", COLOR_BGR2GRAY);
 
-structuring_element = getStructuringElement(MORPH_ELLIPSE, [10 10]);
+structuring_element = getStructuringElement(MORPH_RECT, [5 5]);
 check_img_proc(img_name, "gray", "dilate", structuring_element);
 check_img_proc(img_name, "gray", "erode", structuring_element);
 

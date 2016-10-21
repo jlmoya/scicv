@@ -1,13 +1,7 @@
 scicv_Init();
 
-root_path = fullpath(get_absolute_file_path("test_utils.sci") + "/..");
-
-function img_path = get_image_path(img_name)
-    img_path = fullfile(root_path, "data/images", img_name);
-endfunction
-
 function img_out = img_proc(img_name, load_mode, img_proc_func, varargin)
-    img_path = get_image_path(img_name);
+    img_path = getSampleImage(img_name);
     if load_mode == "color"
         img_in = imread(img_path, CV_LOAD_IMAGE_COLOR);
     elseif load_mode == "gray"

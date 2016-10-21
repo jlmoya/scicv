@@ -1,8 +1,8 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
-Attention : Redéfinition de la fonction : BriefDescriptorExtractor. Utilisez funcprot(0) pour ne pas afficher ce message.
-
-img=imread('data/images/Puffin.png', CV_LOAD_IMAGE_GRAYSCALE);
-assert_checkequal(Mat_channels(img),1);
-[res,out]=threshold(img,127, 255, THRESH_BINARY);
-assert_checkfalse(Mat_empty(out));
+img = imread(getSampleImage("Puffin.png"), CV_LOAD_IMAGE_GRAYSCALE);
+assert_checkequal(Mat_channels(img), 1);
+[res, img_out] = threshold(img, 127, 255, THRESH_BINARY);
+assert_checkfalse(Mat_empty(img_out));
+delete_Mat(img);
+delete_Mat(img_out);

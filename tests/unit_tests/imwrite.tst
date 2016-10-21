@@ -1,7 +1,9 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
 
-img = imread("data/images/lena.jpg");
+img = imread(getSampleImage("lena.jpg"));
 
 res = imwrite(fullfile(TMPDIR, "lena_imwrite.jpg"), img);
 assert_checktrue(res);
+
+delete_Mat(img);
