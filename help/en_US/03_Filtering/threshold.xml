@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="threshold">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>threshold</refname>
+    <refpurpose>Calculates the derivatives of an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = threshold(img_in, threshold_value, max_value, thresholding_type)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (single channel) (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>threshold_value</term>
+        <listitem>
+          <para>Threshold value (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>max_value</term>
+        <listitem>
+          <para>Maximum value used with <literal>THRESH_BINARY</literal> and <literal>THRESH_BINARY_INV</literal> method. (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>thresholding_type</term>
+        <listitem>
+          <para>Thresholding type, see below (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>threshold</function> transforms a grayscale image into a a binary image, using a specified method:</para>
+    <itemizedlist>
+      <member>THRESH_BINARY</member>
+      <member>THRESH_BINARY_INV</member>
+      <member>THRESH_TRUNC</member>
+      <member>THRESH_TOZERO</member>
+      <member>THRESH_TOZERO_INV</member>
+      <member>THRESH_OTSU</member>
+    </itemizedlist>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("/puffin.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
+
+    [thresh, img_bw] = threshold(img, 100, 255, THRESH_BINARY);
+
+    matplot(img_bw);
+ ]]></programlisting>
+  </refsection>
+</refentry>

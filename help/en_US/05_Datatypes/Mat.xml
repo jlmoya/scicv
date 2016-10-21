@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="Mat">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>Mat</refname>
+    <refpurpose>Image type</refpurpose>
+  </refnamediv>
+  <refsection>
+    <title>Description</title>
+    <para><literal>Mat</literal> is the equivalent in Scilab of the OpenCV type of same name <link linkend="http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html#mat">Mat</link>.</para>
+    <para>When a function outputs an image (such as <link linkend="imread">imread</link> for example), internally OpenCV allocates a <link linkend="http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html#mat">Mat</link> object, and a Scilab <literal>Mat</literal> object is returned, containing a reference to the underlying OpenCV  <link linkend="http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html#mat">Mat</link> object.</para>
+
+    <!-- TODO fix operators support (and remove or will be) -->
+    <para>Therefore a Scilab <literal>Mat</literal> object is not a Scilab matrix (it is a <link linkend="mlist">mlist</link>), but it can be manipulated so. The following operators are (or will be) available:</para>
+    <itemizedlist>
+      <member>extraction: syntax is the same a the usual Scilab extraction, and returns a Scilab matrix, which type depends on the image type, see details below.</member>
+      <member>insertion: syntax is the same a the usual Scilab insertion, and accepts a Scilab matrix in input (not yet available).</member>
+      <member>concatenation: syntax is the same a the usual Scilab concatenation (not yet available).</member>
+    </itemizedlist>
+
+    <para>The full extraction <literal>(:)</literal> is the only one available operator for the moment. The whole image is returned as a Scilab matrix (if the image has a single channel) or a hypermatrix (one matrix for each channel if the image has several channels, such as a RGB image).
+    Note: OpenCV stores the RBG channels in reverse order, but Scilab rearranges in the standard order.</para>
+
+    <para>There are many functions available for the <literal>Mat</literal> type. Following is a very small list:</para>
+    <itemizedlist>
+      <member>constructor: <literal>new_Mat()</literal> to create a new <literal>Mat</literal> object. There are several forms of this function, specifying for example the dimensions of the new image, etc.</member>
+      <member>destructor: <literal>delete_Mat()</literal> to destroy an existing <literal>Mat</literal> object. Scilab does not manage the life cycle of <literal>Mat</literal> objects, they have to be destroyed manually.</member>
+      <member><literal>Mat_empty()</literal> to check an image is not empty. It is very useful since <link linkend="imread">imread</link> does not throw errors when it cannot find an image, but returns an empty image.</member>
+      <member><literal>Mat_rows_get()</literal> and <literal>Mat_cols_get()</literal> to get rows and columns of the image.</member>
+      <member><literal>getImageType()</literal> to get a string (formated with the OpenCV convention CV_&lt;pixel type&gt;C&lt;number of channels&gt;) giving informations on the type of pixel, or the number of channels of the image.</member>
+    </itemizedlist>
+
+    <para>Note: functions getting as input <literal>Mat</literal> objects accept also Scilab matrixes, conversion to <literal>Mat</literal> is automatically done by Scilab.</para>
+  </refsection>
+  <refsection>
+    <title>Exemples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    // Create an image
+    img = new_Mat();
+    disp("Is a new image empty ?");
+    disp(Mat_empty(img));
+    delete_Mat(img);
+
+    // Load an image and give its dimensions
+    disp("Load Lena image...");
+    img = imread("data/images/lena.jpg");
+
+    disp("Image type:");
+    disp(getImageType(img));
+
+    disp("Number of cols:");
+    disp(Mat_cols_get(img));
+
+    disp("Number of rows:");
+    disp(Mat_rows_get(img));
+
+    delete_Mat(img);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html#mat">Mat</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

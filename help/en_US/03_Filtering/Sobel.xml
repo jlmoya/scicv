@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="Sobel">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>Sobel</refname>
+    <refpurpose>Calculates the derivatives of an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = Sobel(img_in, depth, dx, dy, ksize, scale, delta, borderType)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>depth</term>
+        <listitem>
+          <para>Depth of output image (double), -1 specifies the output image has the same depth as the input image.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>dx</term>
+        <listitem>
+          <para>Order of the derivative x (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>dy</term>
+        <listitem>
+          <para>Order of the derivative y (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ksize</term>
+        <listitem>
+          <para>Kernel size, can be 1,3,5 or 7 (default <literal>3</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>scale</term>
+        <listitem>
+          <para>Scale factor for the computed derivated values (double) (default <literal>1</literal>).</para>
+        </listitem>
+      </varlistentry>
+     <varlistentry>
+        <term>delta</term>
+        <listitem>
+          <para>Value added to the filtered pixels (double) (default <literal>0</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>borderType</term>
+        <listitem>
+          <para>Pixel extrapolation methodd (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>sobel</function> calculates the derivatives of a given order (up to 7), on a specific direction (or both directions), of an image using the Sobel operator.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"));
+    ksize = 3;
+
+    // First order derivative on x
+    dx = 1;
+    dy = 0;
+    img_grad_x = Sobel(img, CV_16S, dx, dy, ksize);
+
+    // First order derivative on y
+    dx = 0;
+    dy = 1;
+    img_grad_y = Sobel(img, CV_16S, dx, dy, ksize);
+
+    delete_Mat(img);
+    delete_Mat(img_grad_x);
+    delete_Mat(img_grad_y);
+ ]]></programlisting>
+  </refsection>
+</refentry>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="cvtColor">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>cvtColor</refname>
+    <refpurpose>Converts an image from one color space to another.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = cvtColor(img_in, code, nchannels)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>code</term>
+        <listitem>
+          <para>Color space conversion code (double matrix).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>nchannels</term>
+        <listitem>
+          <para>number of channels of the output image (double matrix) (default 0, the number of channels is deduced from the input image and the code).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>cvtColor</function> convert an input image from one color space to another.</para>
+    <para>The conversion code name format is <literal>CV_&lt;colorspace_src&gt;2&lt;colorspace_dst&gt;</literal>. Some typical examples:</para>
+    <itemizedlist>
+      <member>CV_BGR2GRAY: convert a RBG color image to a grayscale image (OpenCV channels have the BGR order).</member>
+      <member>CV_GRAY2BGR: reverse of the previous conversion.</member>
+      <member>CV_BGR2HSV: convert a RBG color image to a HSV color image.</member>
+    </itemizedlist>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"));
+
+    img_gray = cvtColor(img, CV_BGR2GRAY);
+
+    matplot(img_gray);
+
+    delete_Mat(img);
+    delete_Mat(img_gray);
+ ]]></programlisting>
+  </refsection>
+</refentry>

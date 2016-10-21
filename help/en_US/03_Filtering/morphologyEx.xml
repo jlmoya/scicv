@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="morphologyEx">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>morphologyEx</refname>
+    <refpurpose>Applies a morphological filter on an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = morphologyEx(img_in, op, element, anchor, interations, borderType, borderValue)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+       </varlistentry>
+       <varlistentry>
+        <term>op</term>
+        <listitem>
+          <para>Type of morphological operation:</para>
+          <listitem>
+            <member>MORPH_OPEN: opening operation.</member>
+            <member>MORPH_CLOSE: closing operation.</member>
+            <member>MORPH_GRADIENT: morphological gradient.</member>
+            <member>MORPH_TOPHAT: "top hat".</member>
+            <member>MORPH_BLACKHAT: "black hat".</member>
+            <member>MORPH_HITORMISS: "hit or miss".</member>
+          </listitem>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>element</term>
+        <listitem>
+          <para>Structuring element used for filtering (double matrix) (default 3x3 matrix).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>anchor</term>
+        <listitem>
+          <para>Position of the anchor in the element (double 1x2 matrix) (default the anchor is at the element center).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>iterations</term>
+        <listitem>
+          <para>number of times dilation/erosion is applied (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>borderType</term>
+        <listitem>
+          <para>Pixel extrapolation method (double) (default <literal>BORDER_DEFAULT</literal>).</para>
+        </listitem>
+      </varlistentry>
+       <varlistentry>
+        <term>borderValue</term>
+        <listitem>
+          <para>Border value (double matrix 1xn n=1..4).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>morphologyEx</function> performs a specified morphological filter on the image.:</para>
+    <para>The available morphological filters can be summarized like this:</para>
+    <listitem>
+      <member>Opening: <literal>open(img) = dilate(erode(img))</literal>.</member>
+      <member>Closing: <literal>close(img) = erode(dilate(img))</literal>.</member>
+      <member>Gradient: <literal>gradient(img) = dilate(img) - erode(img)</literal>.</member>
+      <member>"Top hat": <literal>top_hat(img) = img - open(image)</literal>.</member>
+      <member>"Black cat": <literal>black_hat = close(img) - img</literal>.</member>
+      <!-- TODO Hit or Miss -->
+    </listitem>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    // Remove noise with an opening filter
+    img = imread(getSampleImage("noise.png"), CV_LOAD_IMAGE_GRAYSCALE);
+
+    // convert to black/white and reverse, image information is white pixels (value 1) but we want to filter black pixels (value 0)
+    [res, img_bw] = threshold(img, 128, 255, THRESH_BINARY_INV);
+
+    element = getStructuringElement(MORPH_RECT, [5 5])
+    img_open = morphologyEx(img_bw, MORPH_OPEN, element);
+
+    // we need to reverse again before display
+    img_open_reverse = bitwise_not(img_open);
+    matplot(img_open_reverse);
+
+    delete_Mat(img);
+    delete_Mat(img_bw);
+    delete_Mat(img_open);
+    delete_Mat(img_open_reverse);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="dilate">dilate</link>
+        <link linkend="erode">erode</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

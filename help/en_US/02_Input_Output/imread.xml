@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
 <refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
   xml:lang="fr" xml:id="imread">
   <info>
@@ -17,24 +23,24 @@
       <varlistentry>
         <term>filename</term>
         <listitem>
-          <para>Path of file to be loaded.</para>
+          <para>Path of file to be loaded (<literal>string</literal>).</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>flags</term>
         <listitem>
-          <para>Flag specifying the color type of the loaded image, can be:</para>
-		  <itemizedlist>
-		    <member>CV_LOAD_IMAGE_ANYDEPTH: return a 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.</member>
-	        <member>CV_LOAD_IMAGE_COLOR: convert to a color image.</member>
-		    <member>CV_LOAD_IMAGE_GRAYSCALE: convert to a grayscale image.</member>
+          <para>Flag specifying the color type of the loaded image (<literal>int</literal>):</para>
+          <itemizedlist>
+            <member>CV_LOAD_IMAGE_ANYDEPTH: return a 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.</member>
+            <member>CV_LOAD_IMAGE_COLOR: convert to a color image.</member>
+            <member>CV_LOAD_IMAGE_GRAYSCALE: convert to a grayscale image.</member>
           </itemizedlist>
-		</listitem>
+    </listitem>
       </varlistentry>
       <varlistentry>
         <term>img</term>
         <listitem>
-          <para>Mat</para>
+          <para>Loaded image (<link linkend="Mat">Mat</link>).</para>
         </listitem>
       </varlistentry>
     </variablelist>
@@ -50,7 +56,12 @@
 
     img = imread("data/images/puffin.png");
 
-	gray_lena = imread("data/images/lena.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+    img_gray = imread("data/images/lena.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+    
+    matplot(img_gray);
+    
+    delete_Mat(img);
+    delete_Mat(img_gray);
  ]]></programlisting>
   </refsection>
   <refsection>
@@ -58,6 +69,7 @@
     <simplelist type="inline">
       <member>
         <link linkend="imwrite">imwrite</link>
+        <link linkend="Mat">Mat</link>
       </member>
     </simplelist>
   </refsection>

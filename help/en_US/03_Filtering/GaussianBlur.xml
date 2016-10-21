@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="gaussianBlur">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>GaussianBlur</refname>
+    <refpurpose>Blurs an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = GaussianBlur(img_in, ksize, sigmaX, sigmaY, borderType)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ksize</term>
+        <listitem>
+          <para>Kernel size (double 1x2 matrix).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>sigmaX</term>
+        <listitem>
+          <para>Gaussian kernel standard deviation in X direction (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>sigmaY</term>
+        <listitem>
+          <para>Gaussian kernel standard deviation in Y direction (double) (default 0, in that case <term>sigmaY</term> equals to <term>sigmaX</term>)</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>borderType</term>
+        <listitem>
+          <para>Pixel extrapolation method (double) (default BORDER_DEFAULT).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>GaussianBlur</function> blurs an image using a Gaussian filter.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread("data/images/lena.jpg");
+
+    sigma = 1.0;
+    img_blur = GaussianBlur(img, [5, 5], sigma);
+    
+    matplot(img_blur);
+    
+    delete_Mat(img);
+    delete_Mat(img_blur);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="blur">blur</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="Getting_started">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>Getting_started</refname>
+    <refpurpose>Getting started with sciCV</refpurpose>
+  </refnamediv>
+  <refsection>
+    <title>Introduction</title>
+
+    <para>sciCV is the Scilab interface to the OpenCV library (in version 2.4.13). It gives access to almost all the functions of OpenCV in Scilab in a friendly manner.
+    The OpenCV functions are available under the same name in Scilab, with some changes mostly on the argument passing (since Scilab does not accept reference passing). These changes will be resumed in this documentation (not yet documented).</para>
+
+    <para>The following platforms (for now) are supported:
+    <itemizedlist>
+    <member>Linux (64 bits)</member>
+    <member>Windows (64 bits)</member>
+    </itemizedlist>
+    </para>
+
+    <para>No prerequisites are needed to use sciCV.</para>
+
+    <para>Once loaded in Scilab the only instruction needed is to initialize the module with <literal>scicv_Init()</literal>.</para>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="http://opencv.org">OpenCV</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

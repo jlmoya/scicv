@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="findContours">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>Sobel</refname>
+    <refpurpose>Calculates the derivatives of an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>[img_out, contours] = findContours(img_in, mode, method, offset)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (single channel 8-bit, or 32-bit if <term>mode</term> is <literal>CV_RETR_CCOMP</literal> or <literal>CV_RETR_FLOODFILL</literal>) (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <!-- TODO
+      <varlistentry>
+        <term>hierarchy</term>
+        <listitem>
+          <para></para>
+        </listitem>
+      </varlistentry>
+       -->
+      <varlistentry>
+        <term>mode</term>
+        <listitem>
+          <para>Contour retrieval mode (double):</para>
+          <itemizedlist>
+            <member><literal>CV_RETR_EXTERNAL</literal>: returns only the outer contours.</member>
+            <member><literal>CV_RETR_LIST</literal>: returns all the contours.</member>
+            <member><literal>CV_CCOMP</literal>: returns a two level hierarchy in which the top level contains the outer boundaries of components, and the second level contains the holes.</member>
+            <member><literal>CV_RETR_TREE</literal>: returns full hierarchy of contours.</member>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>method</term>
+        <listitem>
+          <para>Contour approximation method (double).</para>
+          <itemizedlist>
+            <member><literal>CV_CHAIN_APPROX_ONE</literal>: stores all the contour points.</member>
+            <member><literal>CV_RETR_LIST</literal>: stores only end points of (horizontal/vertical/diagonal) segments.</member>
+            <member><literal>CV_CHAIN_APPROX_TC89_L1, CV_CHAIN_APPROX_TC89_KCOS</literal>: used the the Tech-Chin algorithm to store points.</member>
+          </itemizedlist>    
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>offset</term>
+        <listitem>
+          <para>Optional offset by which every contour point is shifted (default <literal>[0, 0]</literal>).</para>
+        </listitem>
+      </varlistentry>      
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Contour image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>contours</term>
+        <listitem>
+          <para>List of detected contours (<link linkend="VecPoints">VecPoints</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>findContours</function> retrieves the contours from a binary image.</para>    
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img_gray = imread("data/images/shapes.png", CV_LOAD_IMAGE_GRAYSCALE);
+
+    thresh = 100;
+    canny_img = Canny(img_gray, thresh, thresh*2, 3);
+
+    [img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="VecPoints">VecPoints</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="boxFilter">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>boxFilter</refname>
+    <refpurpose>Blurs an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = boxFilter(img_in, ksize, anchor, normalize, borderType)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ksize</term>
+        <listitem>
+          <para>Kernel size (double 1x2 matrix).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>anchor</term>
+        <listitem>
+          <para>Position of the anchor in the element (double 1x2 matrix) (default the anchor is at the element center).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>normalize</term>
+        <listitem>
+          <para>flag specifying whether the kernel is normalized or not (boolean) (default <literal>%t</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>borderType</term>
+        <listitem>
+          <para>Pixel extrapolation methodd (double) (default <literal>BORDER_DEFAULT</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>boxFilter</function> blurs an image using the box filter.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"));
+
+    img_box_filter = boxFilter(img, -1, [5, 5]);
+
+    matplot(img_box_filter);
+
+    delete_Mat(img);
+    delete_Mat(img_box_filter);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="blur">blur</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

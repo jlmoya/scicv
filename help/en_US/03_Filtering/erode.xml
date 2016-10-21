@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="erode">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>erode</refname>
+    <refpurpose>Erodes an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = erode(img_src, element, anchor, iterations, borderType, borderValue)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>element</term>
+        <listitem>
+          <para>Structuring element used for erosion (double matrix) (default 3x3 matrix).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>anchor</term>
+        <listitem>
+          <para>Position of the anchor in the element (double 1x2 matrix) (default the anchor is at the element center).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>iterations</term>
+        <listitem>
+          <para>number of times erosion is applied (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>borderType</term>
+        <listitem>
+          <para>Pixel extrapolation method (double) (default <literal>BORDER_DEFAULT</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>borderValue</term>
+        <listitem>
+          <para>Border value (double matrix 1xn n=1..4).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>erode</function> erodes an image using the specified structuring element giving the pixel neighborhood over which the minimum is taken.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("letter.tif", CV_LOAD_IMAGE_GRAYSCALE);
+
+    // convert to black/white and reverse, image information is white pixels (value 1) but we want to erode black pixels (value 0)
+    [res, img_bw] = threshold(img, 127, 255, THRESH_BINARY_INV);
+
+    element = getStructuringElement(MORPH_RECT, [5 5]);
+    img_erode = erode(img_bw, element);
+
+    // we need to reverse again before display
+    img_erode_reverse = bitwise_not(img_erode);
+    matplot(img_erode_reverse);
+
+    delete_Mat(img);
+    delete_Mat(img_bw);
+    delete_Mat(img_erode);
+    delete_Mat(img_erode_reverse);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="dilate">dilate</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>
