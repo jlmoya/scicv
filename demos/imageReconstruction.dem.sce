@@ -45,3 +45,10 @@ subplot(224);
 title('NS reconstruction algorithm');
 matplot(img_NS);
 
+delete_Mat(img);
+delete_Mat(img_mask);
+delete_Mat(img_TELEA);
+delete_Mat(img_NS);
+delete_Mat(merged_frame);
+delete_Mat(img_mask_gray);
+

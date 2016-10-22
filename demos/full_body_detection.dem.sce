@@ -18,3 +18,5 @@ end
 
 matplot(img);
 title('full body detection using hogcascade');
+
+delete_Mat(img);

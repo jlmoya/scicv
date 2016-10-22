@@ -17,3 +17,5 @@ title('gray_image');
 subplot(122);
 histplot(255, A);
 title('histogram');
+
+delete_Mat(img);

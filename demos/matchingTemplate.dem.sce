@@ -1,12 +1,11 @@
 scicv_Init();
 
-img = imread('data/images/puffins.png');
+img = imread(getSampleImage("puffins.png"));
 
-templ = imread('data/images/puffineTemplate.png');
-img_display = new_Mat();
+img_template = imread(getSampleImage("puffinTemplate.png"));
 img_display = Mat_clone(img);
-result_cols = Mat_cols_get(img)+Mat_cols_get(templ)+1;
-result_rows = Mat_rows_get(img)-Mat_rows_get(templ)+1;
+result_cols = Mat_cols_get(img)+Mat_cols_get(img_template)+1;
+result_rows = Mat_rows_get(img)-Mat_rows_get(img_template)+1;
 result = new_Mat(result_rows, result_cols, CV_8UC3);
 
 //match_method=[CV_TM_SQDIFF, CV_TM_SQDIFF_NORMED, CV_TM_CCOEFF, CV_TM_CCOEFF_NORMED, CV_TM_CCORR, CV_TM_CCORR_NORMED];
@@ -16,7 +15,7 @@ s1 = [0, 255, 0];
 s2 = [255, 0, 0];
 
 for k=1:6
-    result = matchTemplate(img_display, templ, match_method(k));
+    result = matchTemplate(img_display, img_template, match_method(k));
     result = normalize(result, 0, 1, NORM_MINMAX, -1);
     minLoc = new_Point();
     maxLoc = new_Point();
@@ -32,7 +31,7 @@ for k=1:6
         matchLoc = maxLoc;
     end
 
-    p2 = new_Point(Point_x_get(matchLoc) + Mat_cols_get(templ), Point_y_get(matchLoc) + Mat_rows_get(templ));
+    p2 = new_Point(Point_x_get(matchLoc) + Mat_cols_get(img_template), Point_y_get(matchLoc) + Mat_rows_get(img_template));
 
     // conversion Point(x, y) <--> [x y])
     point = [ Point_x_get(p2), Point_y_get(p2)] ;
@@ -40,8 +39,18 @@ for k=1:6
 
     rectangle(img_display, Point_matchLoc, point, s1, 2, 8, 0);
     rectangle(result, Point_matchLoc, point, s2, 2, 8, 0);
+	
+	delete_Point(minLoc);
+	delete_Point(maxLoc);
+	delete_Point(matchLoc);
+	delete_Point(p2);
 end
 
 matplot(img);
 title('matching template');
+
+delete_Mat(img);
+delete_Mat(img_template);
+delete_Mat(img_display);
+delete_Mat(result);
 

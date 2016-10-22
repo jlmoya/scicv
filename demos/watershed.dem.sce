@@ -66,3 +66,12 @@ matplot(img_sure_fg);
 subplot(4,2,7);
 title('markers image after watershed');
 matplot(img_markers_watershed);
+
+delete_Mat(img);
+delete_Mat(img_bw);
+delete_Mat(img_open);
+delete_Mat(img_sure_bg);
+delete_Mat(img_sure_fg);
+delete_Mat(img_dist);
+delete_Mat(img_markers_watershed);
+

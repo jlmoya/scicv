@@ -19,3 +19,7 @@ title('pyramid_Up');
 subplot(133);
 matplot(img_down);
 title('pyramid_Down');
+
+delete_Mat(img);
+delete_Mat(img_down);
+delete_Mat(img_up);

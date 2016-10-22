@@ -1,9 +1,10 @@
 scicv_Init();
 
-img = imread("data/images/ScilabTeam.png");
+img = imread(getSampleImage("ScilabTeam.png"));
 
 clsf = new_CascadeClassifier();
-CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_frontalface_alt.xml");
+haarcades_file_path = fullfile(get_scicv_path(), "haarcascades", "haarcascade_frontalface_alt.xml");
+CascadeClassifier_load(clsf, haarcades_file_path);
 faces = CascadeClassifier_detect(clsf, img, 1.3, 2,CV_HAAR_SCALE_IMAGE,[30 30]);
 
 s = [0, 255, 0]; // BGR
@@ -16,3 +17,6 @@ end
 
 matplot(img);
 title('face detection');
+
+delete_CascadeClassifier(clsf);
+delete_Mat(img);

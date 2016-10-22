@@ -1,21 +1,23 @@
-// Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+
 // Copyright (C) 2016 - Scilab Enterprises -
 
 demopath = get_absolute_file_path("scicv.dem.gateway.sce");
 
-subdemolist = [                                   ..
-_("canny")      , "canny.dem.sce"    ; ..
-_("faceDetection")    , "faceDetection.dem.sce"       ; ..
-_("histogram")    , "histogram.dem.sce"       ;
-_("threshold")    , "threshold.dem.sce"       ;
-_("medianBlur")    , "medianBlur.dem.sce"  ;
-_("matchingTemplate")    , "matchingTemplate.dem.sce"  ;
-_("sobel_laplacien")    , "sobel_laplacien.dem.sce"  ;
-_("imageReconstruction")    , "imageReconstruction.dem.sce"  ;
-_("fullBody_detection")     , "full_body_detection.dem.sce" ;
-_("videoCapture")           ,"videoCapture.dem.sce"  ;
-_("Morphology Transformations")  ,"morphologyEx.dem.sce"   ;
-_("pyramids")    , "pyramids.dem.sce"       ];
+subdemolist = [ ..
+_("Blur"), "medianBlur.dem.sce"; ..
+_("Pyramids"), "pyramids.dem.sce"; ..
+_("Morphological filters"), "morphologyEx.dem.sce"; ..
+_("Canny"), "Canny.dem.sce"; ..
+_("Sobel"), "Sobel.dem.sce"; ..
+_("Contour extaction"), "findContours.dem.sce"; ..
+_("Thresholding"), "threshold.dem.sce"; ..
+_("Histogram"), "histogram.dem.sce"; ..
+_("Watershed"), "watershed.dem.sce"; ..
+_("Image reconstruction"), "imageReconstruction.dem.sce"; ..
+_("Face detection"), "faceDetection.dem.sce"; ..
+_("Template matching"), "matchingTemplate.dem.sce"; ..
+_("Body detection"), "full_body_detection.dem.sce"; ..
+_("Video capture"), "videoCapture.dem.sce"];
 
 subdemolist(:,2) = demopath + subdemolist(:,2);
 clear demopath;
