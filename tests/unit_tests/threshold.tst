@@ -1,7 +1,7 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
 
-img = imread(getSampleImage("Puffin.png"), CV_LOAD_IMAGE_GRAYSCALE);
+img = imread(getSampleImage("puffin.png"), CV_LOAD_IMAGE_GRAYSCALE);
 assert_checkequal(Mat_channels(img), 1);
 
 [res, img_out] = threshold(img, 127, 255, THRESH_BINARY);
