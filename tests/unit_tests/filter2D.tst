@@ -1,0 +1,5 @@
+// <-- CLI SHELL MODE -->
+exec(fullfile(get_scicv_path(), "tests", "test_utils.sci"));
+
+blur_kernel = ones(5,5) / 25;
+check_img_proc("puffin.png", "", "filter2D", -1, blur_kernel);
