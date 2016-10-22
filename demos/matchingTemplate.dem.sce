@@ -1,6 +1,6 @@
 scicv_Init();
 
-img = imread('data/images/Puffin.png');
+img = imread('data/images/puffins.png');
 
 templ = imread('data/images/puffineTemplate.png');
 img_display = new_Mat();
