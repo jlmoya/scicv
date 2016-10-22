@@ -4,6 +4,11 @@ scicv_Init();
 img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);
 
 thresh = 100;
-canny_img = Canny(img_gray, thresh, thresh*2, 3);
+img_canny = Canny(img_gray, thresh, thresh*2, 3);
 
-[img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
+[img_contours, contours] = findContours(img_canny, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
+
+delete_Mat(img);
+delete_Mat(img_canny);
+delete_Mat(img_contours);
+
