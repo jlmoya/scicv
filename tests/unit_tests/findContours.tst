@@ -8,7 +8,7 @@ img_canny = Canny(img_gray, thresh, thresh*2, 3);
 
 [img_contours, contours] = findContours(img_canny, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
 
-delete_Mat(img);
+delete_Mat(img_gray);
 delete_Mat(img_canny);
 delete_Mat(img_contours);
 
