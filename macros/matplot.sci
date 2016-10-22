@@ -17,5 +17,7 @@ function matplot(img, varargin)
 		h.data = I;
 	else
 		Matplot(I, frameflag=4);
+		a = gca();
+		a.axes_visible = "off";
 	end
 endfunction
