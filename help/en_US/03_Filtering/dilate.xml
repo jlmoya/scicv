@@ -83,10 +83,11 @@
 
     // we need to reverse again before display
     img_dilate_reverse = bitwise_not(img_dilate);
-    matplot(img_dilate_reverse));
+    matplot(img_dilate_reverse);
 
     delete_Mat(img);
     delete_Mat(img_bw);
+    delete_Mat(element);
     delete_Mat(img_dilate);
     delete_Mat(img_dilate_reverse);
  ]]></programlisting>

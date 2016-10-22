@@ -73,7 +73,7 @@
     <programlisting role="example"><![CDATA[
     scicv_Init();
 
-    img = imread(getSampleImage("letter.tif", CV_LOAD_IMAGE_GRAYSCALE);
+    img = imread(getSampleImage("letter.tif"), CV_LOAD_IMAGE_GRAYSCALE);
 
     // convert to black/white and reverse, image information is white pixels (value 1) but we want to erode black pixels (value 0)
     [res, img_bw] = threshold(img, 127, 255, THRESH_BINARY_INV);
@@ -87,6 +87,7 @@
 
     delete_Mat(img);
     delete_Mat(img_bw);
+    delete_Mat(element);
     delete_Mat(img_erode);
     delete_Mat(img_erode_reverse);
  ]]></programlisting>

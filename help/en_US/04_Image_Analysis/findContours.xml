@@ -10,7 +10,7 @@
     <pubdate>$LastChangedDate$</pubdate>
   </info>
   <refnamediv>
-    <refname>Sobel</refname>
+    <refname>findContours</refname>
     <refpurpose>Calculates the derivatives of an image</refpurpose>
   </refnamediv>
   <refsynopsisdiv>
@@ -54,7 +54,7 @@
             <member><literal>CV_CHAIN_APPROX_ONE</literal>: stores all the contour points.</member>
             <member><literal>CV_RETR_LIST</literal>: stores only end points of (horizontal/vertical/diagonal) segments.</member>
             <member><literal>CV_CHAIN_APPROX_TC89_L1, CV_CHAIN_APPROX_TC89_KCOS</literal>: used the the Tech-Chin algorithm to store points.</member>
-          </itemizedlist>    
+          </itemizedlist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -62,7 +62,7 @@
         <listitem>
           <para>Optional offset by which every contour point is shifted (default <literal>[0, 0]</literal>).</para>
         </listitem>
-      </varlistentry>      
+      </varlistentry>
       <varlistentry>
         <term>img_out</term>
         <listitem>
@@ -79,7 +79,7 @@
   </refsection>
   <refsection>
     <title>Description</title>
-    <para><function>findContours</function> retrieves the contours from a binary image.</para>    
+    <para><function>findContours</function> retrieves the contours from a binary image.</para>
   </refsection>
   <refsection>
     <title>Examples</title>
@@ -91,7 +91,13 @@
     thresh = 100;
     canny_img = Canny(img_gray, thresh, thresh*2, 3);
 
-    [img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
+    [img_contours, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
+
+    matplot(img_contours);
+
+    delete_Mat(img);
+    delete_Mat(canny_img);
+    delete_Mat(img_contours);
  ]]></programlisting>
   </refsection>
   <refsection>

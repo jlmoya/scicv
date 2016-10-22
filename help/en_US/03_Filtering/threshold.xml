@@ -74,6 +74,9 @@
     [thresh, img_bw] = threshold(img, 100, 255, THRESH_BINARY);
 
     matplot(img_bw);
+
+    delete_Mat(img);
+    delete_Mat(img_bw);
  ]]></programlisting>
   </refsection>
 </refentry>

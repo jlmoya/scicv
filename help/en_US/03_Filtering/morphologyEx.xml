@@ -111,6 +111,7 @@
 
     delete_Mat(img);
     delete_Mat(img_bw);
+    delete_Mat(element);
     delete_Mat(img_open);
     delete_Mat(img_open_reverse);
  ]]></programlisting>
