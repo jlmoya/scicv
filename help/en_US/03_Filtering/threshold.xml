@@ -69,7 +69,7 @@
     <programlisting role="example"><![CDATA[
     scicv_Init();
 
-    img = imread(getSampleImage("/puffin.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
+    img = imread(getSampleImage("puffin.png"), CV_LOAD_IMAGE_GRAYSCALE);
 
     [thresh, img_bw] = threshold(img, 100, 255, THRESH_BINARY);
 
