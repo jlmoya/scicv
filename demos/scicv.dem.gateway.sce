@@ -11,7 +11,6 @@ _("Canny"), "Canny.dem.sce"; ..
 _("Sobel"), "Sobel.dem.sce"; ..
 _("Contour extaction"), "findContours.dem.sce"; ..
 _("Thresholding"), "threshold.dem.sce"; ..
-_("Histogram"), "histogram.dem.sce"; ..
 _("Watershed"), "watershed.dem.sce"; ..
 _("Image reconstruction"), "imageReconstruction.dem.sce"; ..
 _("Face detection"), "faceDetection.dem.sce"; ..

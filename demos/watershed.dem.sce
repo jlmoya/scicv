@@ -3,7 +3,7 @@
 
 scicv_Init();
 
-img = imread('data/images/water_coins.jpg');
+img = imread(getSampleImage("water_coins.jpg"));
 
 // convert to black&white
 img_gray = imread('data/images/water_coins.jpg', CV_LOAD_IMAGE_GRAYSCALE);

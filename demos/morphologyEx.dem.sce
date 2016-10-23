@@ -1,6 +1,6 @@
 scicv_Init();
 
-img = imread('data/images/lena.jpg');
+img = imread(getSampleImage("lena.jpg"));
 
 // Create a structuring element (SE)
 morph_size = 2;
@@ -15,7 +15,7 @@ title('image');
 
 subplot(122);
 matplot(img_tophat);
-title('top hat filter');
+title("top hat filter");
 
 Mat_release(element);
 Mat_release(img);

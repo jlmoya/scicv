@@ -1,10 +1,9 @@
 scicv_Init();
 
-cap = new_VideoCapture("data/videos/pedestrian.avi");
-
+cap = new_VideoCapture(getSampleVideo("pedestrian.avi"));
 
 clsf = new_CascadeClassifier();
-CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_fullbody.xml");
+CascadeClassifier_load(clsf, fullfile(get_scicv_path(), "haarcascades", "haarcascade_fullbody.xml"));
 
 videoWriter = new_VideoWriter("Sci_Pedestrian_detection.avi",CV_FOURCC('D', 'I', 'V', '3'), 10, [768 576]);
 
@@ -26,13 +25,13 @@ while %t
         VideoWriter_write(videoWriter, frame);
 
     else
-        disp('video end');
+        disp("video end");
         VideoWriter_release(videoWriter);
         break;
     end
 end
 
+delete_VideoCapture(videoCapture);
 delete_Mat(frame);
 delete_CascadeClassifier(clsf);
-delete_VideoWriter(videoWriter);
 

@@ -1,6 +1,6 @@
 scicv_Init();
 
-img = imread("data/images/lena.jpg");
+img = imread(getSampleImage("lena.jpg"));
 
 // Pyramid down
 img_down = pyrDown(img, [(Mat_cols_get(img))/2  (Mat_rows_get(img))/2]);

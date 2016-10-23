@@ -2,7 +2,7 @@ scicv_Init();
 
 img = imread(getSampleImage("puffins.png"));
 
-img_template = imread(getSampleImage("puffinTemplate.png"));
+img_template = imread(getSampleImage("puffin_pattern.png"));
 img_display = Mat_clone(img);
 result_cols = Mat_cols_get(img)+Mat_cols_get(img_template)+1;
 result_rows = Mat_rows_get(img)-Mat_rows_get(img_template)+1;
@@ -17,37 +17,36 @@ s2 = [255, 0, 0];
 for k=1:6
     result = matchTemplate(img_display, img_template, match_method(k));
     result = normalize(result, 0, 1, NORM_MINMAX, -1);
-    minLoc = new_Point();
-    maxLoc = new_Point();
+    pt_minLoc = new_Point();
+    pt_maxLoc = new_Point();
 
     minVal = new_double_array(1);
     maxVal = new_double_array(1);
 
-    minMaxLoc(result, minVal, maxVal, minLoc, maxLoc, new_Mat());
-    matchLoc = new_Point();
+    minMaxLoc(result, minVal, maxVal, pt_minLoc, pt_maxLoc, new_Mat());
+    pt_matchLoc = new_Point();
     if (match_method(k) == CV_TM_SQDIFF | match_method(k) == CV_TM_SQDIFF_NORMED)
-        matchLoc = minLoc;
+        pt_matchLoc = pt_minLoc;
     else
-        matchLoc = maxLoc;
+        pt_matchLoc = pt_maxLoc;
     end
 
-    p2 = new_Point(Point_x_get(matchLoc) + Mat_cols_get(img_template), Point_y_get(matchLoc) + Mat_rows_get(img_template));
+    point = [Point_x_get(pt_matchLoc) + Mat_cols_get(img_template), ..
+	  Point_y_get(pt_matchLoc) + Mat_rows_get(img_template)];
 
-    // conversion Point(x, y) <--> [x y])
-    point = [ Point_x_get(p2), Point_y_get(p2)] ;
-    Point_matchLoc = [Point_x_get(matchLoc),Point_y_get(matchLoc)];
+	// conversion to vector, needed for rectangle (does not accept Point* => TODO fix typemap)
+	point_matchLoc = [Point_x_get(pt_matchLoc), Point_y_get(pt_matchLoc)];
 
-    rectangle(img_display, Point_matchLoc, point, s1, 2, 8, 0);
-    rectangle(result, Point_matchLoc, point, s2, 2, 8, 0);
-	
-	delete_Point(minLoc);
-	delete_Point(maxLoc);
-	delete_Point(matchLoc);
-	delete_Point(p2);
+    rectangle(img_display, point_matchLoc, point, s1, 2, 8, 0);
+    rectangle(result, point_matchLoc, point, s2, 2, 8, 0);
+
+	delete_Point(pt_minLoc);
+	delete_Point(pt_maxLoc);
+	delete_Point(pt_matchLoc);
 end
 
-matplot(img);
-title('matching template');
+matplot(img_display);
+title("Template matching");
 
 delete_Mat(img);
 delete_Mat(img_template);

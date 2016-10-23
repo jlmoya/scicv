@@ -1,11 +1,12 @@
 scicv_Init();
 
-img = imread("data/images/street.png");
+img = imread(getSampleImage("street.png"));
 
 clsf = new_CascadeClassifier();
-CascadeClassifier_load(clsf, "data/hogcascades/hogcascade_pedestrians.xml");
+hogcascades_file = fullfile(get_scicv_path(), "data", "hogcascades", "hogcascade_pedestrians.xml")
+CascadeClassifier_load(clsf, hogcascades_file);
 
-pedestrians = CascadeClassifier_detect(clsf,img, 1.2,6,1,[90 120]);
+pedestrians = CascadeClassifier_detect(clsf, img, 1.2, 6, 1, [90 120]);
 numberOfpedestrians = size(pedestrians);
 s = [0, 255, 0]; // BGR
 
@@ -17,6 +18,7 @@ for i=1:numberOfpedestrians
 end
 
 matplot(img);
-title('full body detection using hogcascade');
+title("full body detection using hogcascade");
 
+delete_CascadeClassifier(clsf);
 delete_Mat(img);
