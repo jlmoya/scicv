@@ -1,22 +1,43 @@
 scicv_Init();
 
-img = imread(getSampleImage("lena.jpg"));
+img = imread(getSampleImage("noise.png"));
+[res, img_bw] = threshold(img, 127, 255, THRESH_BINARY_INV);
 
-// Create a structuring element (SE)
 morph_size = 2;
-element = getStructuringElement( MORPH_RECT, [2*morph_size + 1, 2*morph_size+1 ], [morph_size, morph_size ]);
+element = getStructuringElement(MORPH_RECT, [2*morph_size + 1, 2*morph_size+1 ], [morph_size, morph_size]);
 
-// Apply the specified morphology operation
-img_tophat = morphologyEx( img, MORPH_TOPHAT, element);
+img_dilate = dilate(img_bw, element);
 
-subplot(121);
+img_erode = erode(img_bw, element);
+
+img_open = morphologyEx(img_bw, MORPH_OPEN, element);
+
+subplot(221);
 matplot(img);
-title('image');
+title("image");
 
-subplot(122);
-matplot(img_tophat);
-title("top hat filter");
+subplot(222);
+img_dilate_reverse = bitwise_not(img_dilate);
+matplot(img_dilate_reverse);
+title("dilate");
 
-Mat_release(element);
-Mat_release(img);
-Mat_release(img_tophat);
+subplot(223);
+img_erode_reverse = bitwise_not(img_erode);
+matplot(img_erode_reverse);
+title("erode");
+
+subplot(224);
+img_open_reverse = bitwise_not(img_open);
+matplot(img_open_reverse);
+title("open");
+
+delete_Mat(img);
+delete_Mat(img_bw);
+delete_Mat(element);
+delete_Mat(img_dilate);
+delete_Mat(img_dilate_reverse);
+delete_Mat(img_erode);
+delete_Mat(img_erode_reverse);
+delete_Mat(img_open);
+delete_Mat(img_open_reverse);
+

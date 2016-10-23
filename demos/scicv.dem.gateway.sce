@@ -4,7 +4,7 @@
 demopath = get_absolute_file_path("scicv.dem.gateway.sce");
 
 subdemolist = [ ..
-_("Blur"), "medianBlur.dem.sce"; ..
+_("Blur"), "blur.dem.sce"; ..
 _("Pyramids"), "pyramids.dem.sce"; ..
 _("Morphological filters"), "morphologyEx.dem.sce"; ..
 _("Canny"), "Canny.dem.sce"; ..
