@@ -67,7 +67,7 @@
     <programlisting role="example"><![CDATA[
     scicv_Init();
 
-    img = imread("data/images/lena.jpg");
+    img = imread(getSampleImage("lena.jpg"));
 
     sigma = 1.0;
     img_blur = GaussianBlur(img, [5, 5], sigma);
