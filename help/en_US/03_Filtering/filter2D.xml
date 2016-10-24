@@ -6,89 +6,83 @@
 -->
 <refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
 xml:lang="fr" xml:id="filter2D">
-<info>
-<pubdate>$LastChangedDate$</pubdate>
-</info>
-<refnamediv>
-<refname>filter2D</refname>
-<refpurpose>Convolves an image with a kernel</refpurpose>
-</refnamediv>
-<refsynopsisdiv>
-<title>Syntax</title>
-<synopsis>img_out = filter2D(img_in, depth, kernel, anchor, delta, borderType)</synopsis>
-</refsynopsisdiv>
-<refsection>
-<title>Parameters</title>
-<variablelist>
-<varlistentry>
-<term>img_in</term>
-<listitem>
-<para>Input image (<link linkend="Mat">Mat</link>).</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term>depth</term>
-<listitem>
-<para>Depth of output image (double) (-1 specifies the output image has the same depth as the input image).</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term>kernel</term>
-<listitem>
-<para>Convolution kernel (double matrix).</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term>anchor</term>
-<listitem>
-<para>Position of the anchor in the element (double 1x2 matrix) (default the anchor is at the element center).</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term>delta</term>
-<listitem>
-<para>Value added to the filtered pixels (double) (default <literal>0</literal>).</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term>borderType</term>
-<listitem>
-<para>Pixel extrapolation method (double) (default <literal>BORDER_DEFAULT</literal>).</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term>img_out</term>
-<listitem>
-<para>Output image (<link linkend="Mat">Mat</link>).</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term>img_out</term>
-<listitem>
-<para>Output image (<link linkend="Mat">Mat</link>).</para>
-</listitem>
-</varlistentry>
-</variablelist>
-</refsection>
-<refsection>
-<title>Description</title>
-<para><function>filter2D</function> convolves an image with a kernel.</para>
-</refsection>
-<refsection>
-<title>Examples</title>
-<programlisting role="example"><![CDATA[
-scicv_Init();
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>filter2D</refname>
+    <refpurpose>Convolves an image with a kernel</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = filter2D(img_in, depth, kernel, anchor, delta, borderType)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+  <title>Parameters</title>
+  <variablelist>
+    <varlistentry>
+      <term>img_in</term>
+      <listitem>
+      <para>Input image (<link linkend="Mat">Mat</link>).</para>
+      </listitem>
+      </varlistentry>
+    <varlistentry>
+      <term>depth</term>
+      <listitem>
+      <para>Depth of output image (double) (-1 specifies the output image has the same depth as the input image).</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>kernel</term>
+      <listitem>
+      <para>Convolution kernel (double matrix or <link linkend="Mat">Mat</link>).</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>anchor</term>
+      <listitem>
+      <para>Position of the anchor in the element (double 1x2 matrix) (default the anchor is at the element center).</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>delta</term>
+      <listitem>
+      <para>Value added to the filtered pixels (double) (default <literal>0</literal>).</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>borderType</term>
+      <listitem>
+      <para>Pixel extrapolation method (double) (default <literal>BORDER_DEFAULT</literal>).</para>
+      </listitem>
+    </varlistentry>    
+    <varlistentry>
+      <term>img_out</term>
+      <listitem>
+      <para>Output image (<link linkend="Mat">Mat</link>).</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>filter2D</function> convolves an image with a kernel.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+  scicv_Init();
 
-img = imread(getSampleImage("lena.jpg"));
+  img = imread(getSampleImage("lena.jpg"));
 
-// Blur filter
-blur_kernel = ones(5, 5) / 25;
-img_blur = filter2D(img, -1, blur_kernel);
+  // Blur filter
+  blur_kernel = ones(5, 5) / 25;
+  img_blur = filter2D(img, -1, blur_kernel);
 
-matplot(img_blur);
+  matplot(img_blur);
 
-delete_Mat(img);
-delete_Mat(img_blur);
-]]></programlisting>
-</refsection>
+  delete_Mat(img);
+  delete_Mat(img_blur);
+  ]]></programlisting>
+  </refsection>
 </refentry>

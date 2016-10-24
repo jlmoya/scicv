@@ -43,7 +43,7 @@
       <varlistentry>
         <term>element</term>
         <listitem>
-          <para>Structuring element used for filtering (double matrix) (default 3x3 matrix).</para>
+          <para>Structuring element used for filtering (double matrix or <link linkend="Mat">Mat</link>) (default 3x3 matrix).</para>
         </listitem>
       </varlistentry>
       <varlistentry>
