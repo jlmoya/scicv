@@ -1,6 +1,6 @@
 scicv_Init();
 
-img = imread("data/images/shapes.png");
+img = imread(getSampleImage("shapes.png"));
 nb_rows = Mat_rows_get(img);
 
 img_gray = cvtColor(img, COLOR_BGR2GRAY);
@@ -10,6 +10,7 @@ img_canny = Canny(img_gray, thresh, thresh*2, 3);
 
 [img_contours, contours] = findContours(img_canny, CV_RETR_LIST, CV_CHAIN_APPROX_NONE, [0, 0]);
 
+contou
 subplot(2, 2, 1);
 matplot(img);
 title("image");
