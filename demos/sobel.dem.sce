@@ -1,6 +1,6 @@
 scicv_Init();
 
-img = imread('data/images/sudoku.jpg',CV_LOAD_IMAGE_GRAYSCALE);
+img = imread(getSampleImage("data/images/sudoku.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
 
 img_laplacian = Laplacian(img, CV_16U, 3, 1, 0, BORDER_DEFAULT);
 img_laplacian_abs = convertScaleAbs(img_laplacian);
@@ -13,16 +13,16 @@ img_sobel_y_abs = convertScaleAbs(img_sobel_y);
 
 subplot(2,2,1);
 matplot(img);
-title('image');
+title("image");
 
 subplot(2,2,2);
 matplot(img_laplacian_abs);
-title('laplacian');
+title("laplacian");
 
 subplot(2,2,3);
 matplot(img_sobel_x_abs);
-title('sobel x');
+title("sobel x");
 
 subplot(2,2,4);
 matplot(img_sobel_y_abs);
-title('sobel y');
+title("sobel y");

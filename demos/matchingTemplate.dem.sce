@@ -32,17 +32,17 @@ for k=1:6
     end
 
     point = [Point_x_get(pt_matchLoc) + Mat_cols_get(img_template), ..
-	  Point_y_get(pt_matchLoc) + Mat_rows_get(img_template)];
+      Point_y_get(pt_matchLoc) + Mat_rows_get(img_template)];
 
-	// conversion to vector, needed for rectangle (does not accept Point* => TODO fix typemap)
-	point_matchLoc = [Point_x_get(pt_matchLoc), Point_y_get(pt_matchLoc)];
+    // conversion to vector, needed for rectangle (does not accept Point* => TODO fix typemap)
+    point_matchLoc = [Point_x_get(pt_matchLoc), Point_y_get(pt_matchLoc)];
 
     rectangle(img_display, point_matchLoc, point, s1, 2, 8, 0);
     rectangle(result, point_matchLoc, point, s2, 2, 8, 0);
 
-	delete_Point(pt_minLoc);
-	delete_Point(pt_maxLoc);
-	delete_Point(pt_matchLoc);
+    delete_Point(pt_minLoc);
+    delete_Point(pt_maxLoc);
+    delete_Point(pt_matchLoc);
 end
 
 matplot(img_display);

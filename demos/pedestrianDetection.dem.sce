@@ -5,7 +5,7 @@ cap = new_VideoCapture(getSampleVideo("pedestrian.avi"));
 clsf = new_CascadeClassifier();
 CascadeClassifier_load(clsf, fullfile(get_scicv_path(), "haarcascades", "haarcascade_fullbody.xml"));
 
-videoWriter = new_VideoWriter("Sci_Pedestrian_detection.avi",CV_FOURCC('D', 'I', 'V', '3'), 10, [768 576]);
+videoWriter = new_VideoWriter("Sci_Pedestrian_detection.avi", CV_FOURCC('D', 'I', 'V', '3'), 10, [768 576]);
 
 s = [0, 255, 0]; //BGR
 frame = new_Mat();

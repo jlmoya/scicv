@@ -1,8 +1,8 @@
 scicv_Init();
 
-img = imread('data/images/OpenCV_Logo_B.png');
+img = imread(getSampleImage("data/images/OpenCV_Logo_B.png"));
 
-img_mask = imread('data/images/OpenCV_Logo_C.png',CV_LOAD_IMAGE_GRAYSCALE); // must be one channal image
+img_mask = imread(getSampleImage("data/images/OpenCV_Logo_C.png"),CV_LOAD_IMAGE_GRAYSCALE); // must be one channal image
 
 img_TELEA = inpaint(img, img_mask, 3, INPAINT_TELEA); // image reconstruction  (first algorithm)
 
@@ -30,19 +30,19 @@ roi_4 = new_Mat(merged_frame, rect_4);
 roi_4 = Mat_copyTo(img_NS );
 
 subplot(221);
-title('image with noise');
+title("image with noise");
 matplot(img);
 
 subplot(222);
-title('mask');
+title("mask");
 matplot(img_mask);
 
 subplot(223);
-title('TELEA reconstruction algorithm');
+title("TELEA reconstruction algorithm");
 matplot(img_TELEA);
 
 subplot(224);
-title('NS reconstruction algorithm');
+title("NS reconstruction algorithm");
 matplot(img_NS);
 
 delete_Mat(img);

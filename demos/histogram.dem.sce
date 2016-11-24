@@ -6,10 +6,10 @@ A = img(:);
 
 subplot(121);
 matplot(img);
-title('gray_image');
+title("gray_image");
 
 subplot(122);
 histplot(255, A);
-title('histogram');
+title("histogram");
 
 delete_Mat(img);

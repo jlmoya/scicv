@@ -16,7 +16,7 @@ for i=1:size(faces)
 end
 
 matplot(img);
-title('face detection');
+title("face detection");
 
 delete_CascadeClassifier(clsf);
 delete_Mat(img);

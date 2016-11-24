@@ -6,7 +6,7 @@ scicv_Init();
 img = imread(getSampleImage("water_coins.jpg"));
 
 // convert to black&white
-img_gray = imread('data/images/water_coins.jpg', CV_LOAD_IMAGE_GRAYSCALE);
+img_gray = imread(getSampleImage("data/images/water_coins.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
 [res, img_bw] = threshold(img_gray, 0, 255, THRESH_BINARY_INV+THRESH_OTSU);
 
 // Remove noise and small objects with opening
@@ -40,31 +40,31 @@ img_markers_watershed = watershed(img, int32(mat_markers));
 scf();
 
 subplot(4,2,1);
-title('original image');
+title("original image");
 matplot(img);
 
 subplot(4,2,2);
-title('image bw');
+title("image bw");
 matplot(img_bw);
 
 subplot(4,2,3);
-title('opening');
+title("opening");
 matplot(img_open);
 
 subplot(4,2,4); 
-title('dilate');
+title("dilate");
 matplot(img_sure_bg);
 
 subplot(4,2,5); 
-title('distance transform');
+title("distance transform");
 matplot(img_dist);
 
 subplot(4,2,6);
-title('distance transform threshold');
+title("distance transform threshold");
 matplot(img_sure_fg);
 
 subplot(4,2,7);
-title('markers image after watershed');
+title("markers image after watershed");
 matplot(img_markers_watershed);
 
 delete_Mat(img);
