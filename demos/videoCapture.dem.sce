@@ -31,9 +31,9 @@ while ~closed
         faces = CascadeClassifier_detect(clsf, frame, 1.3, 2, CV_HAAR_SCALE_IMAGE, [10 10]);
         for i=1:size(faces)
             face = faces(i);
-            point_1 = [face(1), face(2)] // x,y
-            point_2 = [face(1)+face(4), face(2)+face(3)] //x+height, y+width
-            rectangle(frame, point_1, point_2, s, 2, 8, 0);
+            leftTopPt = [face(1), face(2)];
+            rightBottomPt = [face(1)+face(4), face(2)+face(3)];
+            rectangle(frame, leftTopPt, rightBottomPt, s, 2, 8, 0);
         end
         matplot(frame, h);
         delete_Mat(frame);

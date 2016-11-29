@@ -6,7 +6,7 @@ scicv_Init();
 img = imread(getSampleImage("water_coins.jpg"));
 
 // convert to black&white
-img_gray = imread(getSampleImage("data/images/water_coins.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
+img_gray = imread(getSampleImage("water_coins.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
 [res, img_bw] = threshold(img_gray, 0, 255, THRESH_BINARY_INV+THRESH_OTSU);
 
 // Remove noise and small objects with opening
@@ -17,7 +17,7 @@ img_sure_bg = dilate(img_open, ones(3, 3), [-1,-1], 3);
 
 // sure foreground area
 [img_dist, labels] = distanceTransform(img_open, CV_DIST_L2, 5);
-mat_dist = cvMatExtract(img_dist);
+mat_dist = img_dist(:)
 max_dist = max(mat_dist);
 [res, img_sure_fg] = threshold(img_dist, 0.7*max_dist, 255, 0);
 

@@ -1,8 +1,8 @@
 scicv_Init();
 
-img = imread(getSampleImage("data/images/OpenCV_Logo_B.png"));
+img = imread(getSampleImage("OpenCV_Logo_B.png"));
 
-img_mask = imread(getSampleImage("data/images/OpenCV_Logo_C.png"),CV_LOAD_IMAGE_GRAYSCALE); // must be one channal image
+img_mask = imread(getSampleImage("OpenCV_Logo_C.png"),CV_LOAD_IMAGE_GRAYSCALE); // must be one channal image
 
 img_TELEA = inpaint(img, img_mask, 3, INPAINT_TELEA); // image reconstruction  (first algorithm)
 

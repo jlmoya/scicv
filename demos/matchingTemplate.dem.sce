@@ -4,7 +4,7 @@ img = imread(getSampleImage("puffins.png"));
 
 img_template = imread(getSampleImage("puffin_pattern.png"));
 img_display = Mat_clone(img);
-result_cols = Mat_cols_get(img)+Mat_cols_get(img_template)+1;
+result_cols = Mat_cols_get(img)-Mat_cols_get(img_template)+1;
 result_rows = Mat_rows_get(img)-Mat_rows_get(img_template)+1;
 result = new_Mat(result_rows, result_cols, CV_8UC3);
 
@@ -42,7 +42,6 @@ for k=1:6
 
     delete_Point(pt_minLoc);
     delete_Point(pt_maxLoc);
-    delete_Point(pt_matchLoc);
 end
 
 matplot(img_display);

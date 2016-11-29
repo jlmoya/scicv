@@ -1,6 +1,6 @@
 scicv_Init();
 
-img = imread(getSampleImage("data/images/sudoku.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
+img = imread(getSampleImage("sudoku.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
 
 img_laplacian = Laplacian(img, CV_16U, 3, 1, 0, BORDER_DEFAULT);
 img_laplacian_abs = convertScaleAbs(img_laplacian);

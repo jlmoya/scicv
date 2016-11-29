@@ -9,7 +9,7 @@ _("Pyramids"), "pyramids.dem.sce"; ..
 _("Morphological filters"), "morphologyEx.dem.sce"; ..
 _("Canny"), "Canny.dem.sce"; ..
 _("Sobel"), "Sobel.dem.sce"; ..
-_("Contour extaction"), "findContours.dem.sce"; ..
+_("Contour extraction"), "findContours.dem.sce"; ..
 _("Thresholding"), "threshold.dem.sce"; ..
 _("Watershed"), "watershed.dem.sce"; ..
 _("Image reconstruction"), "imageReconstruction.dem.sce"; ..
