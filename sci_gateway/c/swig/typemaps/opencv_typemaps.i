@@ -15,5 +15,5 @@
 %include MatPtr_typemaps.i
 
 %include Mat_typemaps.i
-%include VectorPoints_typemaps.i
-%include Points_typemaps.i
+%include PtList_typemaps.i
+%include PtLists_typemaps.i

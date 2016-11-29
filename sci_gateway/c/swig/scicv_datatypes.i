@@ -1,6 +1,6 @@
 %inline %{
-typedef std::vector<cv::Point> Points;
-typedef std::vector<Points> VectorPoints;
+typedef std::vector<cv::Point> PtList;
+typedef std::vector<PtList> PtLists;
 %}
 
 

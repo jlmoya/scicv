@@ -32,16 +32,16 @@
 
 %inline %{
 
-void cvGetVectorPoints(VectorPoints& vectorPointsIn, VectorPoints* vectorPointsOut) {
-    *vectorPointsOut = vectorPointsIn;
+void cvGetPtLists(PtLists& ptListsIn, PtLists* ptListsOut) {
+    *ptListsOut = ptListsIn;
 }
 
-void cvGetPoints(Points& pointsIn, Points* pointsOut) {
-    *pointsOut = pointsIn;
+void cvGetPtList(PtList& ptListIn, PtList* ptListOut) {
+    *ptListOut = ptListIn;
 }
 
-void cvGetPoints(VectorPoints& vectorPointsIn, int index, Points* points) {
-    *points = vectorPointsIn.at(index);
+void cvGetPtList(PtLists& ptListsIn, int index, PtList* ptList) {
+    *ptList = ptListsIn.at(index);
 }
 
 %}

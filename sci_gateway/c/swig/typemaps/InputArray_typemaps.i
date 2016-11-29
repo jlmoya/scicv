@@ -1,13 +1,13 @@
 // OpenCV InputArray contour, points <= Scilab mlist Points
 
 %typemap(typecheck, precedence=SWIG_TYPECHECK_POINTER) cv::InputArray points {
-  $1 = SwigScilabCheckPtr(pvApiCtx, $input, SWIG_Scilab_TypeQuery("Points *"), SWIG_Scilab_GetFuncName());
+  $1 = SwigScilabCheckPtr(pvApiCtx, $input, SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName());
 }
 
 %typemap(in, noblock=1) cv::InputArray points {
-  Points *pInPoints$input = NULL;
-  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&pInPoints$input, SWIG_Scilab_TypeQuery("Points *"), 0, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    $1 = new cv::_InputArray(*pInPoints$input);
+  PtList *pInPtList$input = NULL;
+  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&pInPtList$input, SWIG_Scilab_TypeQuery("PtList *"), 0, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    $1 = new cv::_InputArray(*pInPtList$input);
   }
   else {
     return SWIG_ERROR;
