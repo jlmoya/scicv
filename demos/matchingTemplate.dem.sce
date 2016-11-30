@@ -17,31 +17,22 @@ s2 = [255, 0, 0];
 for k=1:6
     result = matchTemplate(img_display, img_template, match_method(k));
     result = normalize(result, 0, 1, NORM_MINMAX, -1);
-    pt_minLoc = new_Point();
-    pt_maxLoc = new_Point();
 
     minVal = new_double_array(1);
     maxVal = new_double_array(1);
 
-    minMaxLoc(result, minVal, maxVal, pt_minLoc, pt_maxLoc, new_Mat());
-    pt_matchLoc = new_Point();
+    [pt_minLoc, pt_maxLoc] = minMaxLoc(result, minVal, maxVal, new_Mat());
     if (match_method(k) == CV_TM_SQDIFF | match_method(k) == CV_TM_SQDIFF_NORMED)
         pt_matchLoc = pt_minLoc;
     else
         pt_matchLoc = pt_maxLoc;
     end
 
-    point = [Point_x_get(pt_matchLoc) + Mat_cols_get(img_template), ..
-      Point_y_get(pt_matchLoc) + Mat_rows_get(img_template)];
+    pt_matchLoc_2 = [pt_matchLoc[1] + Mat_cols_get(img_template), ..
+      pt_matchLoc[2] + Mat_rows_get(img_template)];
 
-    // conversion to vector, needed for rectangle (does not accept Point* => TODO fix typemap)
-    point_matchLoc = [Point_x_get(pt_matchLoc), Point_y_get(pt_matchLoc)];
-
-    rectangle(img_display, point_matchLoc, point, s1, 2, 8, 0);
-    rectangle(result, point_matchLoc, point, s2, 2, 8, 0);
-
-    delete_Point(pt_minLoc);
-    delete_Point(pt_maxLoc);
+    rectangle(img_display, pt_matchLoc, pt_matchLoc_2, s1, 2, 8, 0);
+    rectangle(result, pt_matchLoc, pt_matchLoc_2, s2, 2, 8, 0);
 end
 
 matplot(img_display);

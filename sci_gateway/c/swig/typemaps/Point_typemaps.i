@@ -1,26 +1,6 @@
-// OpenCV Point => Scilab double 1x2
+%include Point_SciDouble.swg
 
-%fragment("SWIG_SciDoubleOrInt32_AsPoint", "header") {
-
-int SWIG_SciDoubleOrInt32_AsPoint(void *pvApiCtx, SwigSciObject iVar, cv::Point *point, char *fname) {
-  int *piValues = NULL;
-  int iRows = 0;
-  int iCols = 0;
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, iVar, &iRows, &iCols, &piValues, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-
-  if (iRows * iCols == 2) {
-    point->x = piValues[0];
-    point->y = piValues[1];
-    return SWIG_OK;
-  }
-  else {
-    return SWIG_ERROR;
-  }
-}
-
-}
+// OpenCV Point <= Scilab double 1x2
 
 // TODO: fix precedence
 %typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE, fragment="SWIG_SciDoubleOrInt32_AsPoint") cv::Point, cv::Point& {
@@ -33,3 +13,19 @@ int SWIG_SciDoubleOrInt32_AsPoint(void *pvApiCtx, SwigSciObject iVar, cv::Point 
     return SWIG_ERROR;
   }
 }
+
+// OpenCV Point => Scilab double 1x2
+%typemap(in, numinputs=0, noblock=1) cv::Point* {
+}
+
+%typemap(arginit, noblock=1) cv::Point* (cv::Point tmpPoint) {
+  $1 = &tmpPoint;
+}
+
+%typemap(argout, noblock=1, fragment="SWIG_SciDouble_FromPoint") cv::Point* {
+  if (SWIG_SciDouble_FromPoint(pvApiCtx, SWIG_Scilab_GetOutputPosition(), $1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+}
+
