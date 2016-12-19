@@ -1,45 +1,40 @@
 scicv_Init();
 
 img = imread(getSampleImage("puffins.png"));
-
 img_template = imread(getSampleImage("puffin_pattern.png"));
-img_display = Mat_clone(img);
-result_cols = Mat_cols_get(img)-Mat_cols_get(img_template)+1;
-result_rows = Mat_rows_get(img)-Mat_rows_get(img_template)+1;
-result = new_Mat(result_rows, result_cols, CV_8UC3);
 
-//match_method=[CV_TM_SQDIFF, CV_TM_SQDIFF_NORMED, CV_TM_CCOEFF, CV_TM_CCOEFF_NORMED, CV_TM_CCORR, CV_TM_CCORR_NORMED];
-match_method = [4, 5, 1, 0, 2, 3];
+match_method = CV_TM_SQDIFF;
+img_match = matchTemplate(img, img_template, match_method);
+img_match = normalize(img_match, 0, 1, NORM_MINMAX, -1);
 
-s1 = [0, 255, 0];
-s2 = [255, 0, 0];
+green = [0, 255, 0];
+delta = 5;
 
-for k=1:6
-    result = matchTemplate(img_display, img_template, match_method(k));
-    result = normalize(result, 0, 1, NORM_MINMAX, -1);
-
-    minVal = new_double_array(1);
-    maxVal = new_double_array(1);
-
-    [pt_minLoc, pt_maxLoc] = minMaxLoc(result, minVal, maxVal, new_Mat());
-    if (match_method(k) == CV_TM_SQDIFF | match_method(k) == CV_TM_SQDIFF_NORMED)
-        pt_matchLoc = pt_minLoc;
+while %t
+    [min_match_value, max_match_value, min_match_pt, max_match_pt] = minMaxLoc(img_match);
+    if (match_method == CV_TM_SQDIFF | match_method == CV_TM_SQDIFF_NORMED)
+        match_ok = min_match_value < 0.15;
+        match_pt = min_match_pt;
+        erase_value = 1.0;
     else
-        pt_matchLoc = pt_maxLoc;
+        match_ok = max_match_value > 0.85;
+        match_pt = max_match_pt;
+        erase_value = 0.0;
     end
 
-    pt_matchLoc_2 = [pt_matchLoc[1] + Mat_cols_get(img_template), ..
-      pt_matchLoc[2] + Mat_rows_get(img_template)];
-
-    rectangle(img_display, pt_matchLoc, pt_matchLoc_2, s1, 2, 8, 0);
-    rectangle(result, pt_matchLoc, pt_matchLoc_2, s2, 2, 8, 0);
+    if match_ok then
+        match_pt = match_pt - delta;
+        match_pt2 = match_pt + size(img_template) + delta;
+        rectangle(img, match_pt, match_pt2, green, 2, 8, 0);
+        rectangle(img_match, match_pt - 10, match_pt2, erase_value, -1);
+    else
+        break
+    end
 end
 
-matplot(img_display);
+matplot(img);
 title("Template matching");
 
 delete_Mat(img);
+delete_Mat(img_match);
 delete_Mat(img_template);
-delete_Mat(img_display);
-delete_Mat(result);
-
