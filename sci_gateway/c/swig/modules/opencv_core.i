@@ -260,6 +260,9 @@ using namespace cv::ogl;
 
 %include "../typemaps/opencv_typemaps.i"
 
+%apply double *OUTPUT { double *minVal };
+%apply double *OUTPUT { double *maxVal };
+
 %include "opencv2/core/types_c.h"
 %include "opencv2/core/mat.hpp"
 %import "opencv2/core/opengl_interop_deprecated.hpp"
