@@ -11,6 +11,7 @@ using namespace cv;
 %ignore BOWImgDescriptorExtractor;
 %ignore GenericDescriptorMatcher;
 %ignore VectorDescriptorMatcher;
+%ignore BriefDescriptorExtractor;
 %ignore FREAK;
 
 %apply KeyPoints* { vector<cv::KeyPoint>& keypoints };

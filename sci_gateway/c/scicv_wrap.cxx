@@ -100439,215 +100439,6 @@ int _wrap_delete_OpponentColorDescriptorExtractor(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_new_BriefDescriptorExtractor__SWIG_0(SWIG_GatewayParameters) {
-  int arg1 ;
-  int val1 ;
-  int ecode1 = 0 ;
-  cv::BriefDescriptorExtractor *result = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  ecode1 = SWIG_AsVal_int(1, &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_BriefDescriptorExtractor" "', argument " "1"" of type '" "int""'");
-  } 
-  arg1 = (int)(val1);
-  result = (cv::BriefDescriptorExtractor *)new cv::BriefDescriptorExtractor(arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_cv__BriefDescriptorExtractor, 1 |  0 , NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_new_BriefDescriptorExtractor__SWIG_1(SWIG_GatewayParameters) {
-  cv::BriefDescriptorExtractor *result = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  result = (cv::BriefDescriptorExtractor *)new cv::BriefDescriptorExtractor();
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_cv__BriefDescriptorExtractor, 1 |  0 , NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_new_BriefDescriptorExtractor(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[1] = {
-    1
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 0) {
-    return _wrap_new_BriefDescriptorExtractor__SWIG_1(SWIG_GatewayArguments);
-  }
-  if (argc == 1) {
-    int _v;
-    {
-      _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[0], SCI_INT32);
-    }
-    if (_v) {
-      return _wrap_new_BriefDescriptorExtractor__SWIG_0(SWIG_GatewayArguments);
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
-}
-
-
-int _wrap_BriefDescriptorExtractor_read(SWIG_GatewayParameters) {
-  cv::BriefDescriptorExtractor *arg1 = (cv::BriefDescriptorExtractor *) 0 ;
-  cv::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BriefDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BriefDescriptorExtractor_read" "', argument " "1"" of type '" "cv::BriefDescriptorExtractor *""'"); 
-  }
-  arg1 = (cv::BriefDescriptorExtractor *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "BriefDescriptorExtractor_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "BriefDescriptorExtractor_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  arg2 = (cv::FileNode *)(argp2);
-  (arg1)->read((cv::FileNode const &)*arg2);
-  
-  return SWIG_OK;
-}
-
-
-int _wrap_BriefDescriptorExtractor_write(SWIG_GatewayParameters) {
-  cv::BriefDescriptorExtractor *arg1 = (cv::BriefDescriptorExtractor *) 0 ;
-  cv::FileStorage *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BriefDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BriefDescriptorExtractor_write" "', argument " "1"" of type '" "cv::BriefDescriptorExtractor const *""'"); 
-  }
-  arg1 = (cv::BriefDescriptorExtractor *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileStorage,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "BriefDescriptorExtractor_write" "', argument " "2"" of type '" "cv::FileStorage &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "BriefDescriptorExtractor_write" "', argument " "2"" of type '" "cv::FileStorage &""'"); 
-  }
-  arg2 = (cv::FileStorage *)(argp2);
-  ((cv::BriefDescriptorExtractor const *)arg1)->write(*arg2);
-  
-  return SWIG_OK;
-}
-
-
-int _wrap_BriefDescriptorExtractor_descriptorSize(SWIG_GatewayParameters) {
-  cv::BriefDescriptorExtractor *arg1 = (cv::BriefDescriptorExtractor *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BriefDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BriefDescriptorExtractor_descriptorSize" "', argument " "1"" of type '" "cv::BriefDescriptorExtractor const *""'"); 
-  }
-  arg1 = (cv::BriefDescriptorExtractor *)(argp1);
-  result = (int)((cv::BriefDescriptorExtractor const *)arg1)->descriptorSize();
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_int((int)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_BriefDescriptorExtractor_descriptorType(SWIG_GatewayParameters) {
-  cv::BriefDescriptorExtractor *arg1 = (cv::BriefDescriptorExtractor *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BriefDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BriefDescriptorExtractor_descriptorType" "', argument " "1"" of type '" "cv::BriefDescriptorExtractor const *""'"); 
-  }
-  arg1 = (cv::BriefDescriptorExtractor *)(argp1);
-  result = (int)((cv::BriefDescriptorExtractor const *)arg1)->descriptorType();
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_int((int)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_BriefDescriptorExtractor_info(SWIG_GatewayParameters) {
-  cv::BriefDescriptorExtractor *arg1 = (cv::BriefDescriptorExtractor *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  cv::AlgorithmInfo *result = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BriefDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BriefDescriptorExtractor_info" "', argument " "1"" of type '" "cv::BriefDescriptorExtractor const *""'"); 
-  }
-  arg1 = (cv::BriefDescriptorExtractor *)(argp1);
-  result = (cv::AlgorithmInfo *)((cv::BriefDescriptorExtractor const *)arg1)->info();
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_cv__AlgorithmInfo, 0 |  0 , NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_delete_BriefDescriptorExtractor(SWIG_GatewayParameters) {
-  cv::BriefDescriptorExtractor *arg1 = (cv::BriefDescriptorExtractor *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BriefDescriptorExtractor, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_BriefDescriptorExtractor" "', argument " "1"" of type '" "cv::BriefDescriptorExtractor *""'"); 
-  }
-  arg1 = (cv::BriefDescriptorExtractor *)(argp1);
-  delete arg1;
-  
-  return SWIG_OK;
-}
-
-
 int _wrap_Hamming___funcall__(SWIG_GatewayParameters) {
   cv::Hamming *arg1 = (cv::Hamming *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -106295,6 +106086,7 @@ static swig_type_info _swigt__p_cv__Algorithm = {"_p_cv__Algorithm", "cv::Algori
 static swig_type_info _swigt__p_cv__DenseOpticalFlow = {"_p_cv__DenseOpticalFlow", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_cv__FREAK = {"_p_cv__FREAK", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_cv__FaceRecognizer = {"_p_cv__FaceRecognizer", 0, 0, 0, 0, 0};
+static swig_type_info _swigt__p_cv__BriefDescriptorExtractor = {"_p_cv__BriefDescriptorExtractor", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_cv__AlgorithmInfo = {"_p_cv__AlgorithmInfo", "cv::AlgorithmInfo *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cv__BFMatcher = {"_p_cv__BFMatcher", "cv::BFMatcher *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cv__BOWKMeansTrainer = {"_p_cv__BOWKMeansTrainer", "cv::BOWKMeansTrainer *", 0, 0, (void*)0, 0};
@@ -106307,7 +106099,6 @@ static swig_type_info _swigt__p_cv__BackgroundSubtractorMOG2 = {"_p_cv__Backgrou
 static swig_type_info _swigt__p_cv__BaseColumnFilter = {"_p_cv__BaseColumnFilter", "cv::BaseColumnFilter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cv__BaseFilter = {"_p_cv__BaseFilter", "cv::BaseFilter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cv__BaseRowFilter = {"_p_cv__BaseRowFilter", "cv::BaseRowFilter *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_cv__BriefDescriptorExtractor = {"_p_cv__BriefDescriptorExtractor", "cv::BriefDescriptorExtractor *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cv__CLAHE = {"_p_cv__CLAHE", "cv::CLAHE *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cv__CascadeClassifier = {"_p_cv__CascadeClassifier", "cv::CascadeClassifier *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cv__ComplexT_double_t = {"_p_cv__ComplexT_double_t", "cv::Complexd *|cv::Complex< double > *", 0, 0, (void*)0, 0};
@@ -106906,6 +106697,7 @@ static swig_cast_info _swigc__p_cv__AdjusterAdapter[] = {  {&_swigt__p_cv__FastA
 static swig_cast_info _swigc__p_cv__DenseOpticalFlow[] = {{&_swigt__p_cv__DenseOpticalFlow, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__FREAK[] = {{&_swigt__p_cv__FREAK, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__FaceRecognizer[] = {{&_swigt__p_cv__FaceRecognizer, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_cv__BriefDescriptorExtractor[] = {{&_swigt__p_cv__BriefDescriptorExtractor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__Algorithm[] = {  {&_swigt__p_cv__BackgroundSubtractorGMG, _p_cv__BackgroundSubtractorGMGTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__DescriptorMatcher, _p_cv__DescriptorMatcherTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__BFMatcher, _p_cv__BFMatcherTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__CLAHE, _p_cv__CLAHETo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__FastAdjuster, _p_cv__FastAdjusterTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__StarAdjuster, _p_cv__StarAdjusterTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__SurfAdjuster, _p_cv__SurfAdjusterTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__MSER, _p_cv__MSERTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__Algorithm, 0, 0, 0},  {&_swigt__p_cv__ORB, _p_cv__ORBTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__BackgroundSubtractorMOG, _p_cv__BackgroundSubtractorMOGTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__AdjusterAdapter, _p_cv__AdjusterAdapterTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__DenseOpticalFlow, _p_cv__DenseOpticalFlowTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__FREAK, _p_cv__FREAKTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__BRISK, _p_cv__BRISKTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__FaceRecognizer, _p_cv__FaceRecognizerTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__DescriptorExtractor, _p_cv__DescriptorExtractorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__OpponentColorDescriptorExtractor, _p_cv__OpponentColorDescriptorExtractorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__BriefDescriptorExtractor, _p_cv__BriefDescriptorExtractorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__BackgroundSubtractor, _p_cv__BackgroundSubtractorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__GeneralizedHough, _p_cv__GeneralizedHoughTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__Feature2D, _p_cv__Feature2DTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__BackgroundSubtractorMOG2, _p_cv__BackgroundSubtractorMOG2To_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__FeatureDetector, _p_cv__FeatureDetectorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__SimpleBlobDetector, _p_cv__SimpleBlobDetectorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__DenseFeatureDetector, _p_cv__DenseFeatureDetectorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__GridAdaptedFeatureDetector, _p_cv__GridAdaptedFeatureDetectorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__PyramidAdaptedFeatureDetector, _p_cv__PyramidAdaptedFeatureDetectorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__DynamicAdaptedFeatureDetector, _p_cv__DynamicAdaptedFeatureDetectorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__GFTTDetector, _p_cv__GFTTDetectorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__FastFeatureDetector, _p_cv__FastFeatureDetectorTo_p_cv__Algorithm, 0, 0},  {&_swigt__p_cv__StarDetector, _p_cv__StarDetectorTo_p_cv__Algorithm, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__AlgorithmInfo[] = {  {&_swigt__p_cv__AlgorithmInfo, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__BFMatcher[] = {  {&_swigt__p_cv__BFMatcher, 0, 0, 0},{0, 0, 0, 0}};
@@ -106919,7 +106711,6 @@ static swig_cast_info _swigc__p_cv__BackgroundSubtractorMOG2[] = {  {&_swigt__p_
 static swig_cast_info _swigc__p_cv__BaseColumnFilter[] = {  {&_swigt__p_cv__BaseColumnFilter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__BaseFilter[] = {  {&_swigt__p_cv__BaseFilter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__BaseRowFilter[] = {  {&_swigt__p_cv__BaseRowFilter, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_cv__BriefDescriptorExtractor[] = {  {&_swigt__p_cv__BriefDescriptorExtractor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__CLAHE[] = {  {&_swigt__p_cv__CLAHE, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__CascadeClassifier[] = {  {&_swigt__p_cv__CascadeClassifier, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cv__ComplexT_double_t[] = {  {&_swigt__p_cv__ComplexT_double_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -112056,14 +111847,6 @@ int SWIG_CreateScilabVariables(void *_pvApiCtx) {
 
 
   if (SWIG_CreateScilabVariable_double(pvApiCtx, "FastFeatureDetector_TYPE", cv::FastFeatureDetector::TYPE_9_16) != SWIG_OK)
-    return SWIG_ERROR;
-
-
-  if (SWIG_CreateScilabVariable_int(pvApiCtx, "BriefDescriptorExtractor", cv::BriefDescriptorExtractor::PATCH_SIZE) != SWIG_OK)
-    return SWIG_ERROR;
-
-
-  if (SWIG_CreateScilabVariable_int(pvApiCtx, "BriefDescriptorExtractor", cv::BriefDescriptorExtractor::KERNEL_SIZE) != SWIG_OK)
     return SWIG_ERROR;
 
 
