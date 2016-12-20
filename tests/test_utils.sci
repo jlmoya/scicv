@@ -12,14 +12,14 @@ function img_out = img_proc(img_name, load_mode, img_proc_func, varargin)
 
     if ~Mat_empty(img_in)
         execstr(msprintf("img_out = %s(img_in, varargin(:));", img_proc_func));
-		Mat_release(img_in);
+        Mat_release(img_in);
     else
         Mat_release(img_in);
-		error(msprintf("Error loading image %s", img_name));
+    error(msprintf("Error loading image %s", img_name));
     end
 endfunction
 
-function check_img_proc(img_name, load_mode, img_proc_func, varargin)
+function img_out = check_img_proc(img_name, load_mode, img_proc_func, varargin)
     img_out = img_proc(img_name, load_mode, img_proc_func, varargin(:));
-    assert_checkfalse(Mat_empty(img_out));	
+    assert_checkfalse(Mat_empty(img_out));
 endfunction
