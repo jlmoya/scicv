@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="resize">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>resize</refname>
+    <refpurpose>Resizes an image.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = resize(img_in, size, scale_x, scale_y, interpolation)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>size</term>
+        <listitem>
+          <para>Output image dimensions (double matrix <literal>[width, height]</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>scale_x</term>
+          <listitem>
+            <para>Scale factor along the X axis (double matrix) (default 0).</para>
+          </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>scale_x</term>
+        <listitem>
+          <para>Scale factor along the Y axis (double matrix) (default 0).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>interpolation</term>
+        <listitem>
+          <para>Interpolation method (double matrix):</para>
+            <itemizedlist>
+              <member><literal>INTER_NEAREST</literal>: a nearest-neighbor interpolation.</member>
+              <member><literal>INTER_LINEAR</literal>: a bilinear interpolation (default).</member>
+              <member><literal>INTER_AREA</literal>: resampling using pixel area relation.</member>
+              <member><literal>INTER_CUBIC</literal>: a bicubic interpolation over 4x4 pixel neighborhood.</member>
+              <member><literal>INTER_LANCZOS4</literal>: a Lanczos interpolation over 8x8 pixel neighborhood.</member>
+            </itemizedlist>
+          </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>resize</function> resizes an image, either to the specified size <term>size</term>, or by using the scale factors <term>scale_x</term> and <term>scale_y</term>.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"));
+
+    // Resize to a [100, 100] pixels image
+    img_100x100 = resize(img, [100, 100]);
+    scf();
+    matplot(img_100x100);
+
+    // Resize to a half size image
+    img_half = resize(img, 0, 0.5, 0.5);
+    scf();
+    matplot(img_half);
+
+    delete_Mat(img);
+    delete_Mat(img_100x100);
+    delete_Mat(img_half);
+ ]]></programlisting>
+  </refsection>
+</refentry>
