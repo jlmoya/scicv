@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="warpAffine">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>warpAffine</refname>
+    <refpurpose>Applies an affine transformation to an image.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = warpAffine(img_in, M, size, flags, borderType, borderValue)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>M</term>
+        <listitem>
+          <para>Transformation matrix (2x3 double matrix).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>flags</term>
+        <listitem>
+          <para>Can be a combination of:</para>
+          <itemizedlist>
+              <member>interpolation method flag (see <link linkend="resize">resize</link>).</member>
+              <member>optional flag <literal>CV_WARP_INVERSE_MAP</literal> to specify an inverse transformation.</member>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>borderType</term>
+        <listitem>
+          <para>Pixel extrapolation method (double) (default <literal>BORDER_DEFAULT</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>borderValue</term>
+        <listitem>
+          <para>Border value (double matrix 1xn n=1..4).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>warpAffine</function> transforms the source image using the specified matrix <term>M</term>warpAffines an image, either to the specified size <term>size</term>, or by using the scale factors <term>scale_x</term> and <term>scale_y</term>.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("puffin.png"));
+
+    // Translation (20,20)
+    trans = [1 0 20; ..
+         0 1 20];
+    img_translate = warpAffine(img, trans, size(img));
+    scf();
+    matplot(img_translate);
+
+    // Rotation PI/8
+    rot = getRotationMatrix2D(size(img)/2, %pi/8, 1.0);
+    img_rotate = warpAffine(img, rot, size(img));
+    scf();
+    matplot(img_rotate);
+
+    delete_Mat(img);
+    delete_Mat(img_translate);
+    delete_Mat(img_rotate);
+ ]]></programlisting>
+  </refsection>
+</refentry>

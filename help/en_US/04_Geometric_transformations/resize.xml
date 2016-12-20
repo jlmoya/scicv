@@ -39,7 +39,7 @@
           </listitem>
       </varlistentry>
       <varlistentry>
-        <term>scale_x</term>
+        <term>scale_y</term>
         <listitem>
           <para>Scale factor along the Y axis (double matrix) (default 0).</para>
         </listitem>
