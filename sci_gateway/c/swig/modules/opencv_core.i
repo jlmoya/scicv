@@ -269,10 +269,10 @@ using namespace cv::ogl;
 %include "opencv2/core/core.hpp"
 %import "opencv2/core/operations.hpp"
 
-%template(Point) cv::Point_<int>;
-%template(Size) cv::Size_<int>;
-%template(Rect) cv::Rect_<int>;
-%template(Scalar) cv::Scalar_<double>;
+%template() cv::Point_<int>;
+%template() cv::Size_<int>;
+%template() cv::Rect_<int>;
+%template() cv::Scalar_<double>;
 
 //%template(vecOfRect) std::vector<cv::Rect_<int>>;
 
