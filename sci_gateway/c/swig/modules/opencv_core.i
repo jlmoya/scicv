@@ -270,6 +270,7 @@ using namespace cv::ogl;
 %import "opencv2/core/operations.hpp"
 
 %template() cv::Point_<int>;
+%template() cv::Point_<float>;
 %template() cv::Size_<int>;
 %template() cv::Rect_<int>;
 %template() cv::Scalar_<double>;
