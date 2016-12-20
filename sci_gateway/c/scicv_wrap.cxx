@@ -3576,7 +3576,6 @@ int SWIG_SciDoubleOrInt32_AsScalar(void *pvApiCtx, SwigSciObject iVar, cv::Scala
 
 
 
-
 int SWIG_SciDoubleOrInt32_AsSize(void *pvApiCtx, SwigSciObject iVar, cv::Size *size, char *fname) {
   int *piValues = NULL;
   int iRows = 0;
@@ -3590,11 +3589,23 @@ int SWIG_SciDoubleOrInt32_AsSize(void *pvApiCtx, SwigSciObject iVar, cv::Size *s
     size->height = piValues[1];
     return SWIG_OK;
   }
+  else if (iRows * iCols == 1) {
+    size->width = piValues[0];
+    size->height = piValues[0];
+    return SWIG_OK;
+  }
   else {
     return SWIG_ERROR;
   }
 }
 
+
+int SWIG_Check_Size(void *pvApiCtx, SwigSciObject iVar, char *fname) {
+  int *piValues = NULL;
+  int iRows = 0;
+  int iCols = 0;
+  return (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, iVar, &iRows, &iCols, &piValues, fname) == SWIG_OK) ? 1 : 0;
+}
 
 
 
@@ -12325,8 +12336,7 @@ int _wrap_new_Mat(SWIG_GatewayParameters) {
   if (argc == 2) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -12401,8 +12411,7 @@ int _wrap_new_Mat(SWIG_GatewayParameters) {
   if (argc == 3) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -12421,8 +12430,7 @@ int _wrap_new_Mat(SWIG_GatewayParameters) {
   if (argc == 3) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -12548,8 +12556,7 @@ int _wrap_new_Mat(SWIG_GatewayParameters) {
   if (argc == 4) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -14510,8 +14517,7 @@ int _wrap_Mat_zeros(SWIG_GatewayParameters) {
   if (argc == 2) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -14680,8 +14686,7 @@ int _wrap_Mat_ones(SWIG_GatewayParameters) {
   if (argc == 2) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -14814,8 +14819,7 @@ int _wrap_Mat_eye(SWIG_GatewayParameters) {
   if (argc == 2) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -14983,8 +14987,7 @@ int _wrap_Mat_create(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -34714,8 +34717,7 @@ int _wrap_ellipse(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -34774,8 +34776,7 @@ int _wrap_ellipse(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -34839,8 +34840,7 @@ int _wrap_ellipse(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -34909,8 +34909,7 @@ int _wrap_ellipse(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -37787,8 +37786,7 @@ int _wrap_clipLine(SWIG_GatewayParameters) {
   if (argc == 3) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -45894,8 +45892,7 @@ int _wrap_new_VideoWriter(SWIG_GatewayParameters) {
         }
         if (_v) {
           {
-            cv::Size size;
-            _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[3], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+            _v = SWIG_Check_Size(pvApiCtx, argv[3], SWIG_Scilab_GetFuncName());
           }
           if (_v) {
             return _wrap_new_VideoWriter__SWIG_2(SWIG_GatewayArguments);
@@ -45924,8 +45921,7 @@ int _wrap_new_VideoWriter(SWIG_GatewayParameters) {
         }
         if (_v) {
           {
-            cv::Size size;
-            _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[3], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+            _v = SWIG_Check_Size(pvApiCtx, argv[3], SWIG_Scilab_GetFuncName());
           }
           if (_v) {
             {
@@ -46122,8 +46118,7 @@ int _wrap_VideoWriter_open(SWIG_GatewayParameters) {
           }
           if (_v) {
             {
-              cv::Size size;
-              _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[4], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
             }
             if (_v) {
               return _wrap_VideoWriter_open__SWIG_1(SWIG_GatewayArguments);
@@ -46157,8 +46152,7 @@ int _wrap_VideoWriter_open(SWIG_GatewayParameters) {
           }
           if (_v) {
             {
-              cv::Size size;
-              _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[4], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
             }
             if (_v) {
               {
@@ -49399,8 +49393,7 @@ int _wrap_createGaussianFilter(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -49425,8 +49418,7 @@ int _wrap_createGaussianFilter(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -49462,8 +49454,7 @@ int _wrap_createGaussianFilter(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -50543,8 +50534,7 @@ int _wrap_createBoxFilter(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           return _wrap_createBoxFilter__SWIG_3(SWIG_GatewayArguments);
@@ -50563,8 +50553,7 @@ int _wrap_createBoxFilter(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -50589,8 +50578,7 @@ int _wrap_createBoxFilter(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -50626,8 +50614,7 @@ int _wrap_createBoxFilter(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -50856,8 +50843,7 @@ int _wrap_getGaborKernel(SWIG_GatewayParameters) {
   if (argc == 5) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -50910,8 +50896,7 @@ int _wrap_getGaborKernel(SWIG_GatewayParameters) {
   if (argc == 6) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -50975,8 +50960,7 @@ int _wrap_getGaborKernel(SWIG_GatewayParameters) {
   if (argc == 7) {
     int _v;
     {
-      cv::Size size;
-      _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[0], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      _v = SWIG_Check_Size(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
     }
     if (_v) {
       {
@@ -52040,8 +52024,7 @@ int _wrap_getStructuringElement(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         return _wrap_getStructuringElement__SWIG_1(SWIG_GatewayArguments);
@@ -52055,8 +52038,7 @@ int _wrap_getStructuringElement(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -52561,8 +52543,7 @@ int _wrap_GaussianBlur(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -52590,8 +52571,7 @@ int _wrap_GaussianBlur(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -52630,8 +52610,7 @@ int _wrap_GaussianBlur(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -53150,8 +53129,7 @@ int _wrap_adaptiveBilateralFilter(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -53179,8 +53157,7 @@ int _wrap_adaptiveBilateralFilter(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -53219,8 +53196,7 @@ int _wrap_adaptiveBilateralFilter(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -53265,8 +53241,7 @@ int _wrap_adaptiveBilateralFilter(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -53565,8 +53540,7 @@ int _wrap_boxFilter(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           return _wrap_boxFilter__SWIG_3(SWIG_GatewayArguments);
@@ -53588,8 +53562,7 @@ int _wrap_boxFilter(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -53617,8 +53590,7 @@ int _wrap_boxFilter(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -53657,8 +53629,7 @@ int _wrap_boxFilter(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -53850,8 +53821,7 @@ int _wrap_blur(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         return _wrap_blur__SWIG_2(SWIG_GatewayArguments);
@@ -53868,8 +53838,7 @@ int _wrap_blur(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -53892,8 +53861,7 @@ int _wrap_blur(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -62470,8 +62438,7 @@ int _wrap_resize(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         return _wrap_resize__SWIG_3(SWIG_GatewayArguments);
@@ -62488,8 +62455,7 @@ int _wrap_resize(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -62517,8 +62483,7 @@ int _wrap_resize(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -62557,8 +62522,7 @@ int _wrap_resize(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -62892,8 +62856,7 @@ int _wrap_warpAffine(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           return _wrap_warpAffine__SWIG_3(SWIG_GatewayArguments);
@@ -62918,8 +62881,7 @@ int _wrap_warpAffine(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -62949,8 +62911,7 @@ int _wrap_warpAffine(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -62985,8 +62946,7 @@ int _wrap_warpAffine(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -63310,8 +63270,7 @@ int _wrap_warpPerspective(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           return _wrap_warpPerspective__SWIG_3(SWIG_GatewayArguments);
@@ -63336,8 +63295,7 @@ int _wrap_warpPerspective(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -63367,8 +63325,7 @@ int _wrap_warpPerspective(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -63403,8 +63360,7 @@ int _wrap_warpPerspective(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -64504,8 +64460,7 @@ int _wrap_getRectSubPix(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         void *vptr = 0;
@@ -64527,8 +64482,7 @@ int _wrap_getRectSubPix(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         void *vptr = 0;
@@ -66471,8 +66425,7 @@ int _wrap_pyrDown(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         return _wrap_pyrDown__SWIG_1(SWIG_GatewayArguments);
@@ -66489,8 +66442,7 @@ int _wrap_pyrDown(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -66668,8 +66620,7 @@ int _wrap_pyrUp(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         return _wrap_pyrUp__SWIG_1(SWIG_GatewayArguments);
@@ -66686,8 +66637,7 @@ int _wrap_pyrUp(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -67485,8 +67435,7 @@ int _wrap_initWideAngleProjMap(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -67521,8 +67470,7 @@ int _wrap_initWideAngleProjMap(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -67562,8 +67510,7 @@ int _wrap_initWideAngleProjMap(SWIG_GatewayParameters) {
       }
       if (_v) {
         {
-          cv::Size size;
-          _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[2], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          _v = SWIG_Check_Size(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
@@ -67744,8 +67691,7 @@ int _wrap_getDefaultNewCameraMatrix(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         return _wrap_getDefaultNewCameraMatrix__SWIG_1(SWIG_GatewayArguments);
@@ -67762,8 +67708,7 @@ int _wrap_getDefaultNewCameraMatrix(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -70746,8 +70691,7 @@ int _wrap_createCLAHE(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         return _wrap_createCLAHE__SWIG_0(SWIG_GatewayArguments);
@@ -79872,8 +79816,7 @@ int _wrap_groupRectangles_meanshift(SWIG_GatewayParameters) {
           }
           if (_v) {
             {
-              cv::Size size;
-              _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[4], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
             }
             if (_v) {
               return _wrap_groupRectangles_meanshift__SWIG_0(SWIG_GatewayArguments);
@@ -80882,8 +80825,7 @@ int _wrap_CascadeClassifier_detectMultiScale(SWIG_GatewayParameters) {
             }
             if (_v) {
               {
-                cv::Size size;
-                _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[5], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+                _v = SWIG_Check_Size(pvApiCtx, argv[5], SWIG_Scilab_GetFuncName());
               }
               if (_v) {
                 return _wrap_CascadeClassifier_detectMultiScale__SWIG_1(SWIG_GatewayArguments);
@@ -80923,13 +80865,11 @@ int _wrap_CascadeClassifier_detectMultiScale(SWIG_GatewayParameters) {
             }
             if (_v) {
               {
-                cv::Size size;
-                _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[5], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+                _v = SWIG_Check_Size(pvApiCtx, argv[5], SWIG_Scilab_GetFuncName());
               }
               if (_v) {
                 {
-                  cv::Size size;
-                  _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[6], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+                  _v = SWIG_Check_Size(pvApiCtx, argv[6], SWIG_Scilab_GetFuncName());
                 }
                 if (_v) {
                   return _wrap_CascadeClassifier_detectMultiScale__SWIG_0(SWIG_GatewayArguments);
@@ -88273,8 +88213,7 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -88296,8 +88235,7 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -88330,8 +88268,7 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -88369,8 +88306,7 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -88413,8 +88349,7 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        cv::Size size;
-        _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[1], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        _v = SWIG_Check_Size(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -89244,8 +89179,7 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
           }
           if (_v) {
             {
-              cv::Size size;
-              _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[4], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
             }
             if (_v) {
               return _wrap_calcOpticalFlowPyrLK__SWIG_4(SWIG_GatewayArguments);
@@ -89286,8 +89220,7 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
           }
           if (_v) {
             {
-              cv::Size size;
-              _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[4], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
             }
             if (_v) {
               {
@@ -89333,8 +89266,7 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
           }
           if (_v) {
             {
-              cv::Size size;
-              _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[4], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
             }
             if (_v) {
               {
@@ -89385,8 +89317,7 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
           }
           if (_v) {
             {
-              cv::Size size;
-              _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[4], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
             }
             if (_v) {
               {
@@ -89442,8 +89373,7 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
           }
           if (_v) {
             {
-              cv::Size size;
-              _v = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, argv[4], &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
             }
             if (_v) {
               {

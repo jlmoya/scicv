@@ -1,7 +1,15 @@
 // Scilab: double 1x2 <=> OpenCV Size
 
-%fragment("SWIG_SciDoubleOrInt32_AsSize", "header") {
+%fragment("SWIG_Check_Size", "header") {
+int SWIG_Check_Size(void *pvApiCtx, SwigSciObject iVar, char *fname) {
+  int *piValues = NULL;
+  int iRows = 0;
+  int iCols = 0;
+  return (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, iVar, &iRows, &iCols, &piValues, fname) == SWIG_OK) ? 1 : 0;
+}
+}
 
+%fragment("SWIG_SciDoubleOrInt32_AsSize", "header") {
 int SWIG_SciDoubleOrInt32_AsSize(void *pvApiCtx, SwigSciObject iVar, cv::Size *size, char *fname) {
   int *piValues = NULL;
   int iRows = 0;
@@ -15,17 +23,20 @@ int SWIG_SciDoubleOrInt32_AsSize(void *pvApiCtx, SwigSciObject iVar, cv::Size *s
     size->height = piValues[1];
     return SWIG_OK;
   }
+  else if (iRows * iCols == 1) {
+    size->width = piValues[0];
+    size->height = piValues[0];
+    return SWIG_OK;
+  }
   else {
     return SWIG_ERROR;
   }
 }
-
 }
 
 // TODO: fix precedence
-%typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE, fragment="SWIG_SciDoubleOrInt32_AsSize") cv::Size, const cv::Size& {
-  cv::Size size;
-  $1 = SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, $input, &size, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+%typemap(typecheck, precedence=SWIG_TYPECHECK_DOUBLE, fragment="SWIG_Check_Size") cv::Size, const cv::Size& {
+  $1 = SWIG_Check_Size(pvApiCtx, $input, SWIG_Scilab_GetFuncName());
 }
 
 %typemap(in, noblock=1, fragment="SWIG_SciDoubleOrInt32_AsSize") cv::Size {
