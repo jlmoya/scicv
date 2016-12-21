@@ -1,4 +1,5 @@
 %include InputOutputArray_typemaps.i
+%include InputArrayOfArrays_typemaps.i
 %include OutputArrayOfArrays_typemaps.i
 %include InputArray_typemaps.i
 %include OutputArray_typemaps.i

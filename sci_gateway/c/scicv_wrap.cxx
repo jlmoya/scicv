@@ -65764,6 +65764,7 @@ int _wrap_drawContours__SWIG_0(SWIG_GatewayParameters) {
   cv::_InputArray *arg7 = 0 ;
   int arg8 ;
   cv::Point arg9 ;
+  PtLists *ptLists2 ;
   int val3 ;
   int ecode3 = 0 ;
   cv::Scalar tmpScalar4 ;
@@ -65792,9 +65793,11 @@ int _wrap_drawContours__SWIG_0(SWIG_GatewayParameters) {
       return SWIG_ERROR;
     }
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 2, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  ptLists2 = new std::vector<std::vector<cv::Point> >();
+  if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&ptLists2, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
+  arg2 = new cv::_InputArray(*ptLists2);
   ecode3 = SWIG_AsVal_int(3, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "drawContours" "', argument " "3"" of type '" "int""'");
@@ -65848,6 +65851,7 @@ int _wrap_drawContours__SWIG_1(SWIG_GatewayParameters) {
   int arg6 ;
   cv::_InputArray *arg7 = 0 ;
   int arg8 ;
+  PtLists *ptLists2 ;
   int val3 ;
   int ecode3 = 0 ;
   cv::Scalar tmpScalar4 ;
@@ -65876,9 +65880,11 @@ int _wrap_drawContours__SWIG_1(SWIG_GatewayParameters) {
       return SWIG_ERROR;
     }
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 2, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  ptLists2 = new std::vector<std::vector<cv::Point> >();
+  if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&ptLists2, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
+  arg2 = new cv::_InputArray(*ptLists2);
   ecode3 = SWIG_AsVal_int(3, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "drawContours" "', argument " "3"" of type '" "int""'");
@@ -65928,6 +65934,7 @@ int _wrap_drawContours__SWIG_2(SWIG_GatewayParameters) {
   int arg5 ;
   int arg6 ;
   cv::_InputArray *arg7 = 0 ;
+  PtLists *ptLists2 ;
   int val3 ;
   int ecode3 = 0 ;
   cv::Scalar tmpScalar4 ;
@@ -65954,9 +65961,11 @@ int _wrap_drawContours__SWIG_2(SWIG_GatewayParameters) {
       return SWIG_ERROR;
     }
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 2, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  ptLists2 = new std::vector<std::vector<cv::Point> >();
+  if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&ptLists2, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
+  arg2 = new cv::_InputArray(*ptLists2);
   ecode3 = SWIG_AsVal_int(3, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "drawContours" "', argument " "3"" of type '" "int""'");
@@ -66000,6 +66009,7 @@ int _wrap_drawContours__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar *arg4 = 0 ;
   int arg5 ;
   int arg6 ;
+  PtLists *ptLists2 ;
   int val3 ;
   int ecode3 = 0 ;
   cv::Scalar tmpScalar4 ;
@@ -66026,9 +66036,11 @@ int _wrap_drawContours__SWIG_3(SWIG_GatewayParameters) {
       return SWIG_ERROR;
     }
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 2, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  ptLists2 = new std::vector<std::vector<cv::Point> >();
+  if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&ptLists2, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
+  arg2 = new cv::_InputArray(*ptLists2);
   ecode3 = SWIG_AsVal_int(3, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "drawContours" "', argument " "3"" of type '" "int""'");
@@ -66067,6 +66079,7 @@ int _wrap_drawContours__SWIG_4(SWIG_GatewayParameters) {
   int arg3 ;
   cv::Scalar *arg4 = 0 ;
   int arg5 ;
+  PtLists *ptLists2 ;
   int val3 ;
   int ecode3 = 0 ;
   cv::Scalar tmpScalar4 ;
@@ -66091,9 +66104,11 @@ int _wrap_drawContours__SWIG_4(SWIG_GatewayParameters) {
       return SWIG_ERROR;
     }
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 2, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  ptLists2 = new std::vector<std::vector<cv::Point> >();
+  if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&ptLists2, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
+  arg2 = new cv::_InputArray(*ptLists2);
   ecode3 = SWIG_AsVal_int(3, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "drawContours" "', argument " "3"" of type '" "int""'");
@@ -66126,6 +66141,7 @@ int _wrap_drawContours__SWIG_5(SWIG_GatewayParameters) {
   cv::_InputArray *arg2 = 0 ;
   int arg3 ;
   cv::Scalar *arg4 = 0 ;
+  PtLists *ptLists2 ;
   int val3 ;
   int ecode3 = 0 ;
   cv::Scalar tmpScalar4 ;
@@ -66148,9 +66164,11 @@ int _wrap_drawContours__SWIG_5(SWIG_GatewayParameters) {
       return SWIG_ERROR;
     }
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 2, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  ptLists2 = new std::vector<std::vector<cv::Point> >();
+  if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&ptLists2, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
+  arg2 = new cv::_InputArray(*ptLists2);
   ecode3 = SWIG_AsVal_int(3, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "drawContours" "', argument " "3"" of type '" "int""'");
@@ -66190,10 +66208,7 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-        }
+        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtLists *"), SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -66221,10 +66236,7 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-        }
+        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtLists *"), SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -66257,10 +66269,7 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-        }
+        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtLists *"), SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -66298,10 +66307,7 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-        }
+        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtLists *"), SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -66347,10 +66353,7 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-        }
+        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtLists *"), SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
@@ -66401,10 +66404,7 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     }
     if (_v) {
       {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-        }
+        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtLists *"), SWIG_Scilab_GetFuncName());
       }
       if (_v) {
         {
