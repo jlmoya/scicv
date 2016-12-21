@@ -1,6 +1,6 @@
 scicv_Init();
 
-img = imread(getSampleImage("ScilabTeam.png"));
+img = imread(getSampleImage("faces.jpg"));
 
 clsf = new_CascadeClassifier();
 haarcades_file_path = fullfile(get_scicv_path(), "data", "haarcascades", "haarcascade_frontalface_alt.xml");
