@@ -5,30 +5,45 @@
  *
  -->
 <refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
-  xml:lang="fr" xml:id="Points">
+  xml:lang="fr" xml:id="PtList">
   <info>
     <pubdate>$LastChangedDate$</pubdate>
   </info>
   <refnamediv>
-    <refname>Points</refname>
+    <refname>PtList</refname>
     <refpurpose>Type for a list of points</refpurpose>
   </refnamediv>
   <refsection>
     <title>Description</title>
-    <para><literal>Points</literal> is the type used to store a list of points.</para>
+    <para><literal>PtList</literal> is the type used to store a list of points.</para>
     <para>This type is taken as input of several functions, such as as <literal>contourArea</literal> for example.</para>    
    
-    <para>A <literal>VecPoints</literal> object is not a Scilab matrix (it is a <link linkend="mlist">mlist</link>), but its content can to be extracted with the extraction operator.</para>
+    <para>A <literal>PtList</literal> object is not a Scilab matrix (it is a <link linkend="mlist">mlist</link>), but its content can to be extracted with the extraction operator.</para>
     <itemizedlist>
       <member>Full extraction <literal>(:)</literal>: it returns a Scilab 2xn matrix containing all the coordinates of the points.</member>
       <member>Extraction with index <literal>(i)</literal>: it returns the coordinates of a point stored at the given index (not yet available).</member>
     </itemizedlist>        
   </refsection>
   <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    // <-- CLI SHELL MODE -->
+    scicv_Init();
+
+    img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);    
+    canny_img = Canny(img_gray, 100, 100*2, 3);
+
+    [img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
+
+    contour = contours(1);
+    disp(typeof(contour));
+ ]]></programlisting>
+  </refsection>
+  <refsection>
     <title>See also</title>
     <simplelist type="inline">
       <member>
-        <link linkend="VecPoints">VecPoints</link>
+        <link linkend="PtLists">PtLists</link>
       </member>
     </simplelist>
   </refsection>

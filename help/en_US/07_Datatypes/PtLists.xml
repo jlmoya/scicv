@@ -5,20 +5,20 @@
  *
  -->
 <refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
-  xml:lang="fr" xml:id="VecPoints">
+  xml:lang="fr" xml:id="PtLists">
   <info>
     <pubdate>$LastChangedDate$</pubdate>
   </info>
   <refnamediv>
-    <refname>VecPoints</refname>
+    <refname>PtLists</refname>
     <refpurpose>Type for a list of <link linkend="Points">Points</link></refpurpose>
   </refnamediv>
   <refsection>
     <title>Description</title>
-    <para><literal>VecPoints</literal> is the type used to store a list of <link linkend="Points">Points</link> objects (a <link linkend="Points">Points</link> is a list of points).</para>
+    <para><literal>PtLists</literal> is the type used to store a list of <link linkend="Points">Points</link> objects (a <link linkend="Points">Points</link> is a list of points).</para>
     <para>Such objects are returned from shape analysis functions, such as <link linkend="findContours">findContours</link> for example, which returns several lists of points, each of one for each detected contour.</para>
 
-    <para>A <literal>VecPoints</literal> object is not a Scilab matrix (it is a <link linkend="mlist">mlist</link>), but its content can be extracted with the extraction operator:</para>
+    <para>A <literal>PtLists</literal> object is not a Scilab matrix (it is a <link linkend="mlist">mlist</link>), but its content can be extracted with the extraction operator:</para>
     <itemizedlist>
       <member>Full extraction <literal>(:)</literal>: it returns a Scilab list, each item of this list is a Scilab 2xn matrix containing the coordinates of one list of points (<link linkend="Points">Points</link>).</member>
       <member>Extraction with index <literal>(i)</literal>: it returns the <link linkend="Points">Points</link> object stored at the given index.</member>
@@ -28,14 +28,14 @@
     <title>Examples</title>
     <programlisting role="example"><![CDATA[
     // <-- CLI SHELL MODE -->
-scicv_Init();
+    scicv_Init();
 
-img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);
+    img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);   
+    canny_img = Canny(img_gray, 100, 100*2, 3);
 
-thresh = 100;
-canny_img = Canny(img_gray, thresh, thresh*2, 3);
+    [img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
 
-[img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
+    disp(typeof(contours));
  ]]></programlisting>
   </refsection>
   <refsection>
