@@ -1,5 +1,3 @@
 // <-- CLI SHELL MODE -->
 exec(fullfile(get_scicv_path(), "tests", "test_utils.sci"));
-Attention : Redéfinition de la fonction : BriefDescriptorExtractor. Utilisez funcprot(0) pour ne pas afficher ce message.
-
-check_img_proc("puffin.png", "color", "Sobel", CV_16S, 1, 1, 3);
+check_img_proc("puffin.png", "Sobel", CV_16S, 1, 1, 3);

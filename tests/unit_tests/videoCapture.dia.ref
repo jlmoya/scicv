@@ -1,7 +1,5 @@
 // <-- CLI SHELL MODE -->
 scicv_Init();
-Attention : Redéfinition de la fonction : BriefDescriptorExtractor. Utilisez funcprot(0) pour ne pas afficher ce message.
-
 cap = new_VideoCapture(getSampleVideo("video.mpg"));
 assert_checktrue(VideoCapture_isOpened(cap));
 fps_video = VideoCapture_get(cap, CV_CAP_PROP_FPS);

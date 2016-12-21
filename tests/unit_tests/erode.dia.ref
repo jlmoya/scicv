@@ -1,7 +1,5 @@
 // <-- CLI SHELL MODE -->
 exec(fullfile(get_scicv_path(), "tests", "test_utils.sci"));
-Attention : Redéfinition de la fonction : BriefDescriptorExtractor. Utilisez funcprot(0) pour ne pas afficher ce message.
-
 element = getStructuringElement(MORPH_RECT, [5 5]);
-check_img_proc("puffin.png", "gray", "dilate", element);
+check_img_proc("puffin.png", "dilate", "gray", element);
 delete_Mat(element);
