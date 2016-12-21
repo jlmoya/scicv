@@ -8,10 +8,12 @@ int SWIG_SciMListMatOrHypermat_AsInputArray(void *pvApiCtx, SwigSciObject iVar, 
   cv::Mat inMat$input;
   if (SwigScilabPtrToObject(pvApiCtx, iVar, (void**)&pInMat$input, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
     *pInputArray = new cv::_InputArray(*pInMat$input);
+    return SWIG_OK;
   }
   else {
     if (SWIG_SciHypermat_AsMat(pvApiCtx, iVar, &inMat$input, fname) == SWIG_OK) {
       *pInputArray = new cv::_InputArray(inMat$input);
+      return SWIG_OK;
     }
     else {
       return SWIG_ERROR;
