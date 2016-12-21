@@ -1,4 +1,5 @@
 // <-- CLI SHELL MODE -->
+// <-- NOT FIXED -->
 scicv_Init();
 
 img = imread(getSampleImage("lena.jpg"));
