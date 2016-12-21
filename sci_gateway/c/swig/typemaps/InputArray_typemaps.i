@@ -20,8 +20,6 @@
 
 // OpenCV InputArray <= Scilab mlist Mat or hypermat
 
-%include Mat_sciHypermat.swg
-
 %typemap(typecheck, fragment="SWIG_SciHypermat_AsMat", precedence=SWIG_TYPECHECK_POINTER) cv::InputArray {
   if (!($1 = SwigScilabCheckPtr(pvApiCtx, $input, SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
     cv::Mat mat;
@@ -29,20 +27,12 @@
   }
 }
 
-%typemap(in, noblock=1, fragment="SWIG_SciHypermat_AsMat") cv::InputArray {
-  cv::Mat *pInMat$input = NULL;
-  cv::Mat inMat$input;
-  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&pInMat$input, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    $1 = new cv::_InputArray(*pInMat$input);
-  }
-  else {
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, $input, &inMat$input, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-      $1 = new cv::_InputArray(inMat$input);
-    }
-    else {
-      return SWIG_ERROR;
-    }
-  }
+%include InputArray_SciMListMatOrHypermat.swg
+
+%typemap(in, noblock=1, fragment="SWIG_SciMListMatOrHypermat_AsInputArray") cv::InputArray {
+  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+	  return SWIG_ERROR;
+	}
 }
 
 %typemap(freearg, noblock=1) cv::InputArray {
