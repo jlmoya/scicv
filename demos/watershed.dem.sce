@@ -22,8 +22,8 @@ max_dist = max(mat_dist);
 [res, img_sure_fg] = threshold(img_dist, 0.7*max_dist, 255, 0);
 
 // finding unknown area
-mat_sure_fg = uint8(cvMatExtract(img_sure_fg));
-mat_sure_bg = uint8(cvMatExtract(img_sure_bg));
+mat_sure_fg = uint8(img_sure_fg(:));
+mat_sure_bg = uint8(img_sure_bg(:));
 mat_unknown = mat_sure_bg - mat_sure_fg;
 
 img_sure_fg_uint8 = Mat_convertTo(img_sure_fg, CV_8UC1);
