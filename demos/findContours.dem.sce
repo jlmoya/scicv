@@ -1,14 +1,14 @@
 scicv_Init();
 
 img = imread(getSampleImage("shapes.png"));
-nb_rows = Mat_rows_get(img);
 
 img_gray = cvtColor(img, COLOR_BGR2GRAY);
+[ret, img_bw] = threshold(img_gray, 25, 255, 0);
 
-thresh = 100;
-img_canny = Canny(img_gray, thresh, thresh*2, 3);
+thresh = 90;
+img_canny = Canny(img_bw, thresh, thresh*2, 3);
 
-[img_contours, contours] = findContours(img_canny, CV_RETR_LIST, CV_CHAIN_APPROX_NONE, [0, 0]);
+[img_contours_bmp, contours] = findContours(img_canny, CV_RETR_LIST, CV_CHAIN_APPROX_NONE, [0, 0]);
 
 subplot(2, 2, 1);
 matplot(img);
@@ -19,24 +19,19 @@ matplot(img_canny);
 title("canny");
 
 subplot(2, 2, 3);
-matplot(img_contours);
+matplot(img_contours_bmp);
 title("contour image");
 
 subplot(2, 2, 4);
-plot2d([], []);
-a = gca();
-a.axes_visible = "off";
-for i=1:size(contours)
-    contour = contours(i);
-    xpoly(contour(1,:), nb_rows-contour(2,:), "lines");
-    e = gce();
-    set(e,"foreground", i);
-    set(e,"closed", "off");
-end
+img_contours = new_Mat(size(img, 'c'), size(img, 'r'), 0);
+img_contours_out = drawContours(img_contours, contours, -1, [255, 0, 0], -1);
+matplot(img_contours_out);
 title("contours");
 
 delete_Mat(img);
 delete_Mat(img_gray);
+delete_Mat(img_bw);
 delete_Mat(img_canny);
 delete_Mat(img_contours);
+delete_Mat(img_contours_bmp);
 
