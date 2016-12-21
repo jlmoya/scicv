@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="VideoWriter_write">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>VideoWriter_write</refname>
+    <refpurpose>Writes the next video frame.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>ret = VideoWriter_write(videoWriter, frame)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>videoWriter</term>
+        <listitem>
+          <para>Video writer object (<link linkend="VideoWriter">VideoWriter</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>frame</term>
+        <listitem>
+          <para>The frame to write (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>VideoWriter_write</function> writes a frame to a video.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"));
+
+    videoWriter = new_VideoWriter("video.avi", CV_FOURCC('M', 'P', '4', '2'), 4, size(img));
+
+    if ~VideoWriter_isOpened(videoWriter) then
+        disp("Cannot create video file: " + filename);
+    end
+
+    for x=1:200
+        VideoWriter_write(videoWriter, img);
+    end;
+
+    delete_VideoWriter(videoWriter);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="new_videoWriter">new_VideoWriter</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

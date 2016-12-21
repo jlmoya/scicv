@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="VideoWriter_isOpened">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>VideoWriter_isOpened</refname>
+    <refpurpose>Returns the video writer opening status.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>ret = VideoWriter_isOpened(videoWriter)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>videoCapture</term>
+        <listitem>
+          <para>Video writer object (<link linkend="VideoWriter">VideoWriter</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ret</term>
+        <listitem>
+          <para>Status (boolean).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>VideoWriter_isOpened</function> returns <literal>%T</literal> if the output video has been successfully opened.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    // Create a video file
+    videoWriter = new_VideoWriter(fullfile(TMPDIR, "video.mpeg"));
+
+    disp(VideoWriter_isOpened(videoWriter));
+
+    delete_VideoWriter(videoWriter);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="new_VideoWriter">delete_VideoWriter</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

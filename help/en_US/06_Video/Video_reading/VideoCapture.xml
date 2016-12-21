@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="VideoCapture">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>VideoCapture</refname>
+    <refpurpose>Class for video capturing (from a capturing device, or a video file).</refpurpose>
+  </refnamediv>
+  <refsection>
+    <title>Description</title>
+    <para><function>VideoCapture</function> is the class to read video files, capture video from devices.</para>
+    <para>A <function>VideoCapture</function> object is constructed with <link linkend="new_VideoCapture">new_VideoCapture</link>.
+    The instance returned is used as argument of each of the <function>VideoCapture</function> functions, such as <link linkend="VideoCapture_read">VideoCapture_read</link>, etc.
+    A <function>VideoCapture</function> object must be deleted with <link linkend="delete_VideoCapture">delete_VideoCapture</link>.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    videoCapture = new_VideoCapture(getSampleVideo("video.mpg"));
+
+    ret = %t;
+    while ret
+        [ret, frame] = VideoCapture_read(videoCapture);
+        imshow("video.mpg", frame);
+        if waitKey(40) <> -1 then
+            break;
+        end
+        delete_Mat(frame);
+    end
+
+    destroyAllWindows();
+    delete_VideoCapture(videoCapture);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member><link linkend="new_VideoCapture">new_VideoCapture</link></member>
+      <member><link linkend="VideoCapture_isOpened">VideoCapture_isOpened</link></member>
+      <member><link linkend="VideoCapture_read">VideoCapture_read</link></member>
+      <member><link linkend="delete_VideoCapture">delete_VideoCapture</link></member>
+    </simplelist>
+  </refsection>
+</refentry>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="new_VideoCapture">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>new_VideoCapture</refname>
+    <refpurpose>Create a new video capturing object.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>videoCapture = new_VideoCapture()</synopsis>
+    <synopsis>videoCapture = new_VideoCapture(filename)</synopsis>
+    <synopsis>videoCapture = new_VideoCapture(device)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <para>Path of the video file (string).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>device</term>
+        <listitem>
+          <para>Id of the opened video capturing device (camera index) (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>videoCapture</term>
+        <listitem>
+          <para>Created video capture object (<link linkend="VideoCapture">VideoCapture</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>new_VideoCapture</function> creates an <link linkend="VideoCapture">VideoCapture</link> object from a video file or a capturing device such as a camera.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    videoCapture = new_VideoCapture(getSampleVideo("video.mpg"));
+
+    disp(typeof(videoCapture));
+
+    delete_VideoCapture(videoCapture);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="delete_videoCapture">delete_VideoCapture</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

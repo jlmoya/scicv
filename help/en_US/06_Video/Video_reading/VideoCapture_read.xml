@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="VideoCapture_read">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>VideoCapture_read</refname>
+    <refpurpose>Grabs and returns the next video frame.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>[ret, frame] = VideoCapture_read(videoCapture)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>videoCapture</term>
+        <listitem>
+          <para>Video capture object (<link linkend="VideoCapture">VideoCapture</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ret</term>
+        <listitem>
+          <para>Status (boolean).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>frame</term>
+        <listitem>
+          <para>The captured frame (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>VideoCapture_read</function> grabs, and returns the next video frame. If no frame can be grabbed (camera disconnected, end of video file) the status <term>ret</term> is <literal>%F</literal>.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    videoCapture = new_VideoCapture(getSampleVideo("video.mpg"));
+
+    ret = %t;
+    while ret
+        [ret, frame] = VideoCapture_read(videoCapture);
+        imshow("video.mpg", frame);
+        if waitKey(40) <> -1 then
+            break;
+        end
+        delete_Mat(frame);
+    end
+
+    destroyAllWindows();
+    delete_VideoCapture(videoCapture);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="new_videoCapture">new_VideoCapture</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

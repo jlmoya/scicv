@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="new_VideoWriter">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>new_VideoWriter</refname>
+    <refpurpose>Create a new video writer object.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>videoWriter = new_VideoWriter()</synopsis> 
+    <synopsis>videoWriter = new_VideoWriter(filename, fourcc, fps, frameSize)</synopsis>    
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <para>Path of the video file (string).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>fourcc</term>
+        <listitem>
+          <para>Code of codec used to compress the frames (double).</para>          
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>fps</term>
+        <listitem>
+          <para>Number of frames per second (double).</para>          
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>frameSize</term>
+        <listitem>
+          <para>Width and height of the frame (double 1x2).</para>          
+        </listitem>
+      </varlistentry>      
+      <varlistentry>
+        <term>videoWriter</term>
+        <listitem>
+          <para>Created video writer object (<link linkend="VideoWriter">VideoWriter</link>).</para>          
+        </listitem>
+      </varlistentry>     
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>new_VideoWriter</function> creates an <link linkend="VideoWriter">VideoWriter</link> object.</para>
+    
+    <para>The code of codec can be computed from a 4-character code using the <literal>CV_FOURCC</literal> function.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    // Create a 640x480 MP4 file (20 FPS)
+    videoCapture = new_VideoWriter(getSampleVideo("video.mpg"), CV_FOURCC('M', 'P', '4', '2'), 20, [640, 480]);
+            
+    delete_VideoWriter(videoCapture);    
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="delete_videoWriter">delete_VideoWriter</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

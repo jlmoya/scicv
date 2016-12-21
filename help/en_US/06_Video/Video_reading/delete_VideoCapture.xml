@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="delete_VideoCapture">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>delete_VideoCapture</refname>
+    <refpurpose>Destroys a video capturing object.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>delete_VideoCapture(videoCapture)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>videoCapture</term>
+        <listitem>
+          <para>Video capture object to destroy (<link linkend="VideoCapture">VideoCapture</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>delete_VideoCapture</function> closes the capturing resource (file or device) opened by a <link linkend="VideoCapture">VideoCapture</link> object and releases this one from memory.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    videoCapture = new_VideoCapture(getSampleVideo("video.mpg"));
+
+    delete_VideoCapture(videoCapture);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="new_videoCapture">delete_VideoCapture</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

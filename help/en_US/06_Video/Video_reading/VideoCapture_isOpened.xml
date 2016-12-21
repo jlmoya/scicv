@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="VideoCapture_isOpened">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>VideoCapture_isOpened</refname>
+    <refpurpose>Returns the video capturing opening status.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>ret = VideoCapture_isOpened(videoCapture)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>videoCapture</term>
+        <listitem>
+          <para>Video capture object (<link linkend="VideoCapture">VideoCapture</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ret</term>
+        <listitem>
+          <para>Status (boolean).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>VideoCapture_isOpened</function> returns <literal>%T</literal> if video capturing has been successfully initialized and opened.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    // First capturing device connected
+    videoCapture = new_VideoCapture(0);
+
+    if ~VideoCapture_isOpened(videoCapture) then
+        disp("Capturing device #0 cannot be opened. Please plug a camera.")
+    end
+
+    delete_VideoCapture(videoCapture);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="new_videoCapture">delete_VideoCapture</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

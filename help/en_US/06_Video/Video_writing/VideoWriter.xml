@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="VideoWriter">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>VideoWriter</refname>
+    <refpurpose>Class for writing videos</refpurpose>
+  </refnamediv>
+  <refsection>
+    <title>Description</title>
+    <para><function>VideoWriter</function> is the class to write video files.</para>
+    <para>A <function>VideoWriter</function> object is constructed with <link linkend="new_VideoWriter">new_VideoWriter</link>.
+    The instance returned is used as argument of each of the <function>VideoWriter</function> functions, such as <link linkend="VideoWriter_read">VideoWriter_read</link>, etc.
+    A <function>VideoWriter</function> object must be deleted with <link linkend="delete_VideoWriter">delete_VideoWriter</link>.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"));
+
+    videoWriter = new_VideoWriter("video.avi", CV_FOURCC('M', 'P', '4', '2'), 4, size(img));
+
+    if ~VideoWriter_isOpened(videoWriter) then
+        disp("Cannot create video file: " + filename);
+    end
+
+    for x=1:200
+        VideoWriter_write(videoWriter, img);
+    end;
+
+    delete_VideoWriter(videoWriter);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member><link linkend="new_VideoWriter">new_VideoWriter</link></member>
+      <member><link linkend="VideoWriter_isOpened">VideWriter_isOpened</link></member>
+      <member><link linkend="VideoWriter_write">VideoWriter_write</link></member>
+      <member><link linkend="delete_VideoWriter">delete_VideoWriter</link></member>
+    </simplelist>
+  </refsection>
+</refentry>
