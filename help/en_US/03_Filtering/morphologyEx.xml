@@ -119,10 +119,8 @@
   <refsection>
     <title>See also</title>
     <simplelist type="inline">
-      <member>
-        <link linkend="dilate">dilate</link>
-        <link linkend="erode">erode</link>
-      </member>
+      <member><link linkend="dilate">dilate</link></member>
+      <member><link linkend="erode">erode</link></member>
     </simplelist>
   </refsection>
 </refentry>

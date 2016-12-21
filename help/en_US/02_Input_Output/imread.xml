@@ -73,10 +73,8 @@
   <refsection>
     <title>See also</title>
     <simplelist type="inline">
-      <member>
-        <link linkend="imwrite">imwrite</link>
-        <link linkend="Mat">Mat</link>
-      </member>
+      <member><link linkend="imwrite">imwrite</link></member>
+      <member><link linkend="Mat">Mat</link></member>
     </simplelist>
   </refsection>
 </refentry>
