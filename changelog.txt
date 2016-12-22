@@ -1,4 +1,6 @@
 changelog of the Scilab Computer Vision toolbox
 
-0.1: initial version (prototype)
+0.1: initial version - prototype
+
+0.2: first release - alpha1 version
 
