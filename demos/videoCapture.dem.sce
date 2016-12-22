@@ -8,7 +8,7 @@ endfunction
 videoCapture = new_VideoCapture(0);
 
 if ~VideoCapture_isOpened(videoCapture)
-    error("Cannot open camera.");
+    error("Cannot open capture device #0. Please plug a camera.");
 end
 
 clsf = new_CascadeClassifier();
