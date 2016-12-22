@@ -10,25 +10,13 @@
   }
 }
 
-//%typemap(in, noblock=1, fragment="SWIG_SciMListMatOrHypermat_AsInputArray") cv::InputOutputArray {
-//  if (SWIG_SciMListMatOrHypermat_AsOutputArray(pvApiCtx, $input, &$1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-//	  return SWIG_ERROR;
-//	}
-//}
+%include OutputArray_SciMListMatOrHypermat.swg
 
 %typemap(in, noblock=1, fragment="SWIG_SciMListMatOrHypermat_AsOutputArray") cv::InputOutputArray {
   cv::Mat *pInOutMat$argnum = NULL;
-  if (SwigScilabPtrToObject(pvApiCtx, $input, (void**)&pInOutMat$argnum, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    $1 = new cv::_OutputArray(*pInOutMat$argnum);
-  }
-  else {
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, $input, &pInOutMat$argnum, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-      $1 = new cv::_OutputArray(*pInOutMat$argnum);
-    }
-    else {
-      return SWIG_ERROR;
-    }
-  }
+  if (SWIG_SciMListMatOrHypermat_AsOutputArray(pvApiCtx, $input, &$1, &pInOutMat$argnum, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+	  return SWIG_ERROR;
+	}
 }
 
 %typemap(arginit, noblock=1) cv::InputOutputArray {
