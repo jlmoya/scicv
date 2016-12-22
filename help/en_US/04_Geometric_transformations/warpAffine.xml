@@ -75,20 +75,13 @@
 
     // Translation (20,20)
     trans = [1 0 20; ..
-         0 1 20];
+            0 1 20];
     img_translate = warpAffine(img, trans, size(img));
     scf();
     matplot(img_translate);
 
-    // Rotation PI/8
-    rot = getRotationMatrix2D(size(img)/2, %pi/8, 1.0);
-    img_rotate = warpAffine(img, rot, size(img));
-    scf();
-    matplot(img_rotate);
-
     delete_Mat(img);
     delete_Mat(img_translate);
-    delete_Mat(img_rotate);
  ]]></programlisting>
   </refsection>
 </refentry>

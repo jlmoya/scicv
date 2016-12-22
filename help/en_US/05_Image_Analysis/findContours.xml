@@ -95,9 +95,9 @@
 
     matplot(img_contours);
 
-    delete_Mat(img);
+    delete_Mat(img_gray);
     delete_Mat(img_canny);
-    delete_Mat(img_contours);
+    //delete_Mat(img_contours);
  ]]></programlisting>
   </refsection>
   <refsection>
