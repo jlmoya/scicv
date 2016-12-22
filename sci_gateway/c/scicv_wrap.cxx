@@ -3933,7 +3933,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
 int SWIG_SciMListMatOrHypermat_AsInputArray(void *pvApiCtx, SwigSciObject iVar, cv::_InputArray **pInputArray, char *fname) {
   cv::Mat *pInMat = NULL;
   if (SwigScilabPtrToObject(pvApiCtx, iVar, (void**)&pInMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
-    *pInputArray = new cv::_InputArray(*pInMat$input);
+    *pInputArray = new cv::_InputArray(*pInMat);
     return SWIG_OK;
   }
   else {
