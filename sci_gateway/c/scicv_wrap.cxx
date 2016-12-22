@@ -3666,7 +3666,7 @@ int SWIG_SciDoubleOrInt32_AsRect(void *pvApiCtx, SwigSciObject iVar, cv::Rect *r
 
 
 
-int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *fname) {
+int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *fname) {
   SciErr sciErr;
   int *piAddrVar = NULL;
 
@@ -3677,7 +3677,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
   }
 
   if (isEmptyMatrix(pvApiCtx, piAddrVar)) {
-    *pMat = cv::Mat();
+    *pMat = new cv::Mat();
     return SWIG_OK;
   }
   else if (isHypermatType(pvApiCtx, piAddrVar)) {
@@ -3812,7 +3812,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
       return sciErr.iErr;
     }
 
-    *pMat = cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
+    *pMat = new cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
 
     return SWIG_OK;
   }
@@ -3918,7 +3918,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
       return sciErr.iErr;
     }
 
-    *pMat = cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
+    *pMat = new cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
 
     return SWIG_OK;
   }
@@ -3931,15 +3931,14 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
 
 
 int SWIG_SciMListMatOrHypermat_AsInputArray(void *pvApiCtx, SwigSciObject iVar, cv::_InputArray **pInputArray, char *fname) {
-  cv::Mat *pInMat$input = NULL;
-  cv::Mat inMat$input;
-  if (SwigScilabPtrToObject(pvApiCtx, iVar, (void**)&pInMat$input, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+  cv::Mat *pInMat = NULL;
+  if (SwigScilabPtrToObject(pvApiCtx, iVar, (void**)&pInMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
     *pInputArray = new cv::_InputArray(*pInMat$input);
     return SWIG_OK;
   }
   else {
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, iVar, &inMat$input, fname) == SWIG_OK) {
-      *pInputArray = new cv::_InputArray(inMat$input);
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, iVar, &pInMat, fname) == SWIG_OK) {
+      *pInputArray = new cv::_InputArray(*pInMat);
       return SWIG_OK;
     }
     else {
@@ -13339,8 +13338,8 @@ int _wrap_Mat_copyTo(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -13854,8 +13853,8 @@ int _wrap_Mat_setTo(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -13871,15 +13870,15 @@ int _wrap_Mat_setTo(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -14276,8 +14275,8 @@ int _wrap_Mat_mul(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -14293,8 +14292,8 @@ int _wrap_Mat_mul(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -17754,8 +17753,8 @@ int _wrap_insertImageCOI(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -17771,8 +17770,8 @@ int _wrap_insertImageCOI(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -17920,15 +17919,15 @@ int _wrap_add(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -17940,22 +17939,22 @@ int _wrap_add(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -17968,22 +17967,22 @@ int _wrap_add(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -18128,15 +18127,15 @@ int _wrap_subtract(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18148,22 +18147,22 @@ int _wrap_subtract(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -18176,22 +18175,22 @@ int _wrap_subtract(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -18342,15 +18341,15 @@ int _wrap_multiply(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18362,15 +18361,15 @@ int _wrap_multiply(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18393,15 +18392,15 @@ int _wrap_multiply(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18640,15 +18639,15 @@ int _wrap_divide(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18670,8 +18669,8 @@ int _wrap_divide(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18683,15 +18682,15 @@ int _wrap_divide(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18724,8 +18723,8 @@ int _wrap_divide(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18742,15 +18741,15 @@ int _wrap_divide(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -18951,8 +18950,8 @@ int _wrap_addWeighted(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -18968,8 +18967,8 @@ int _wrap_addWeighted(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -19004,8 +19003,8 @@ int _wrap_addWeighted(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -19021,8 +19020,8 @@ int _wrap_addWeighted(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -19180,8 +19179,8 @@ int _wrap_convertScaleAbs(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -19192,8 +19191,8 @@ int _wrap_convertScaleAbs(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -19215,8 +19214,8 @@ int _wrap_convertScaleAbs(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -19334,15 +19333,15 @@ int _wrap_LUT(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -19354,15 +19353,15 @@ int _wrap_LUT(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -19500,8 +19499,8 @@ int _wrap_mean(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -19512,15 +19511,15 @@ int _wrap_mean(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -19624,8 +19623,8 @@ int _wrap_meanStdDev(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -19636,15 +19635,15 @@ int _wrap_meanStdDev(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -20251,15 +20250,15 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -20276,15 +20275,15 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -20306,15 +20305,15 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -20341,15 +20340,15 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -20367,8 +20366,8 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
             if (_v) {
               {
                 if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[5], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                  cv::Mat mat;
-                  _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[5], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                  cv::Mat *pMat = NULL;
+                  _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[5], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
                 }
               }
               if (_v) {
@@ -20384,15 +20383,15 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -20410,8 +20409,8 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
             if (_v) {
               {
                 if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[5], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                  cv::Mat mat;
-                  _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[5], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                  cv::Mat *pMat = NULL;
+                  _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[5], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
                 }
               }
               if (_v) {
@@ -20432,15 +20431,15 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -20458,8 +20457,8 @@ int _wrap_batchDistance(SWIG_GatewayParameters) {
             if (_v) {
               {
                 if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[5], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                  cv::Mat mat;
-                  _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[5], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                  cv::Mat *pMat = NULL;
+                  _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[5], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
                 }
               }
               if (_v) {
@@ -21218,8 +21217,8 @@ int _wrap_minMaxIdx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -21230,8 +21229,8 @@ int _wrap_minMaxIdx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -21247,8 +21246,8 @@ int _wrap_minMaxIdx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -21269,8 +21268,8 @@ int _wrap_minMaxIdx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -21284,8 +21283,8 @@ int _wrap_minMaxIdx(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -21406,8 +21405,8 @@ int _wrap_reduce(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -21428,8 +21427,8 @@ int _wrap_reduce(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -21575,8 +21574,8 @@ int _wrap_merge(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -21707,8 +21706,8 @@ int _wrap_split(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -21899,15 +21898,15 @@ int _wrap_mixChannels(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -22051,8 +22050,7 @@ int _wrap_insertChannel(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -22210,8 +22208,8 @@ int _wrap_repeat(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -22361,8 +22359,8 @@ int _wrap_hconcat(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -22373,15 +22371,15 @@ int _wrap_hconcat(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -22518,8 +22516,8 @@ int _wrap_vconcat(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -22530,15 +22528,15 @@ int _wrap_vconcat(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -22647,15 +22645,15 @@ int _wrap_bitwise_and(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -22667,22 +22665,22 @@ int _wrap_bitwise_and(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -22777,15 +22775,15 @@ int _wrap_bitwise_or(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -22797,22 +22795,22 @@ int _wrap_bitwise_or(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -22907,15 +22905,15 @@ int _wrap_bitwise_xor(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -22927,22 +22925,22 @@ int _wrap_bitwise_xor(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -23027,8 +23025,8 @@ int _wrap_bitwise_not(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -23039,15 +23037,15 @@ int _wrap_bitwise_not(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -23921,15 +23919,15 @@ int _wrap_polarToCart(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -23941,15 +23939,15 @@ int _wrap_polarToCart(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -24077,15 +24075,15 @@ int _wrap_cartToPolar(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -24097,15 +24095,15 @@ int _wrap_cartToPolar(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -24213,15 +24211,15 @@ int _wrap_phase(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -24233,15 +24231,15 @@ int _wrap_phase(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -24309,15 +24307,15 @@ int _wrap_magnitude(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -24544,8 +24542,8 @@ int _wrap_checkRange(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -24556,8 +24554,8 @@ int _wrap_checkRange(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -24579,8 +24577,8 @@ int _wrap_checkRange(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -24602,8 +24600,8 @@ int _wrap_checkRange(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -24636,8 +24634,8 @@ int _wrap_checkRange(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -24699,8 +24697,7 @@ int _wrap_patchNaNs__SWIG_0(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -24737,8 +24734,7 @@ int _wrap_patchNaNs__SWIG_1(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -24768,8 +24764,8 @@ int _wrap_patchNaNs(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -24780,8 +24776,8 @@ int _wrap_patchNaNs(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -24930,15 +24926,15 @@ int _wrap_gemm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -24954,8 +24950,8 @@ int _wrap_gemm(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -24980,15 +24976,15 @@ int _wrap_gemm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -25004,8 +25000,8 @@ int _wrap_gemm(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -25227,8 +25223,8 @@ int _wrap_mulTransposed(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25250,8 +25246,8 @@ int _wrap_mulTransposed(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25267,8 +25263,8 @@ int _wrap_mulTransposed(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -25281,8 +25277,8 @@ int _wrap_mulTransposed(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25298,8 +25294,8 @@ int _wrap_mulTransposed(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -25323,8 +25319,8 @@ int _wrap_mulTransposed(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25340,8 +25336,8 @@ int _wrap_mulTransposed(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -25479,8 +25475,7 @@ int _wrap_completeSymm__SWIG_0(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -25517,8 +25512,7 @@ int _wrap_completeSymm__SWIG_1(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -25548,8 +25542,8 @@ int _wrap_completeSymm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25560,8 +25554,8 @@ int _wrap_completeSymm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25600,8 +25594,7 @@ int _wrap_setIdentity__SWIG_0(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -25637,8 +25630,7 @@ int _wrap_setIdentity__SWIG_1(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -25668,8 +25660,8 @@ int _wrap_setIdentity(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25680,8 +25672,8 @@ int _wrap_setIdentity(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25815,8 +25807,8 @@ int _wrap_invert(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25827,8 +25819,8 @@ int _wrap_invert(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -25933,15 +25925,15 @@ int _wrap_solve(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -25953,15 +25945,15 @@ int _wrap_solve(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -26156,8 +26148,8 @@ int _wrap_solvePoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26168,8 +26160,8 @@ int _wrap_solvePoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26497,8 +26489,8 @@ int _wrap_eigen(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26509,8 +26501,8 @@ int _wrap_eigen(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26521,8 +26513,8 @@ int _wrap_eigen(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26538,8 +26530,8 @@ int _wrap_eigen(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26555,8 +26547,8 @@ int _wrap_eigen(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26578,8 +26570,8 @@ int _wrap_eigen(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26600,8 +26592,8 @@ int _wrap_eigen(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26857,8 +26849,8 @@ int _wrap_calcCovarMatrix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26874,8 +26866,8 @@ int _wrap_calcCovarMatrix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -26985,8 +26977,7 @@ int _wrap_PCACompute__SWIG_0(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -27038,8 +27029,7 @@ int _wrap_PCACompute__SWIG_1(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -27076,15 +27066,15 @@ int _wrap_PCACompute(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -27096,15 +27086,15 @@ int _wrap_PCACompute(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -27147,8 +27137,7 @@ int _wrap_PCAComputeVar(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -27327,8 +27316,8 @@ int _wrap_new_SVD(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -27339,8 +27328,8 @@ int _wrap_new_SVD(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -27435,8 +27424,8 @@ int _wrap_SVD___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -27452,8 +27441,8 @@ int _wrap_SVD___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -27647,8 +27636,8 @@ int _wrap_SVD_compute(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -27659,8 +27648,8 @@ int _wrap_SVD_compute(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -27671,8 +27660,8 @@ int _wrap_SVD_compute(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -27688,8 +27677,8 @@ int _wrap_SVD_compute(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -27826,8 +27815,8 @@ int _wrap_SVD_backSubst(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -27839,29 +27828,29 @@ int _wrap_SVD_backSubst(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -28169,8 +28158,8 @@ int _wrap_SVDecomp(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28181,8 +28170,8 @@ int _wrap_SVDecomp(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28416,8 +28405,8 @@ int _wrap_dft(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28428,8 +28417,8 @@ int _wrap_dft(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28445,8 +28434,8 @@ int _wrap_dft(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28585,8 +28574,8 @@ int _wrap_idft(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28597,8 +28586,8 @@ int _wrap_idft(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28614,8 +28603,8 @@ int _wrap_idft(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28711,8 +28700,8 @@ int _wrap_dct(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28723,8 +28712,8 @@ int _wrap_dct(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28815,8 +28804,8 @@ int _wrap_idct(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28827,8 +28816,8 @@ int _wrap_idct(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -28945,15 +28934,15 @@ int _wrap_mulSpectrums(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -28970,15 +28959,15 @@ int _wrap_mulSpectrums(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -29069,8 +29058,7 @@ int _wrap_kmeans__SWIG_0(SWIG_GatewayParameters) {
     arg3 = new cv::_OutputArray(*pInOutMat3);
   }
   else {
-    pInOutMat3 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, &pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg3 = new cv::_OutputArray(*pInOutMat3);
     }
     else {
@@ -29153,8 +29141,7 @@ int _wrap_kmeans__SWIG_1(SWIG_GatewayParameters) {
     arg3 = new cv::_OutputArray(*pInOutMat3);
   }
   else {
-    pInOutMat3 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, &pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg3 = new cv::_OutputArray(*pInOutMat3);
     }
     else {
@@ -29207,8 +29194,8 @@ int _wrap_kmeans(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -29218,8 +29205,8 @@ int _wrap_kmeans(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -29247,8 +29234,8 @@ int _wrap_kmeans(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -29258,8 +29245,8 @@ int _wrap_kmeans(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -29338,8 +29325,7 @@ int _wrap_randu(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -29381,8 +29367,7 @@ int _wrap_randn(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -29428,8 +29413,7 @@ int _wrap_randShuffle__SWIG_0(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -29474,8 +29458,7 @@ int _wrap_randShuffle__SWIG_1(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -29512,8 +29495,7 @@ int _wrap_randShuffle__SWIG_2(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -29543,8 +29525,8 @@ int _wrap_randShuffle(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -29555,8 +29537,8 @@ int _wrap_randShuffle(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -29578,8 +29560,8 @@ int _wrap_randShuffle(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -29624,8 +29606,7 @@ int _wrap_randShuffle___SWIG_0(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -29662,8 +29643,7 @@ int _wrap_randShuffle___SWIG_1(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -29693,8 +29673,8 @@ int _wrap_randShuffle_(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -29705,8 +29685,8 @@ int _wrap_randShuffle_(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -32933,8 +32913,7 @@ int _wrap_fillConvexPoly__SWIG_3(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -32994,8 +32973,7 @@ int _wrap_fillConvexPoly__SWIG_4(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -33047,8 +33025,7 @@ int _wrap_fillConvexPoly__SWIG_5(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -33110,8 +33087,8 @@ int _wrap_fillConvexPoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -33133,8 +33110,8 @@ int _wrap_fillConvexPoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -33216,8 +33193,8 @@ int _wrap_fillConvexPoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -33522,8 +33499,7 @@ int _wrap_fillPoly__SWIG_4(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -33585,8 +33561,7 @@ int _wrap_fillPoly__SWIG_5(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -33642,8 +33617,7 @@ int _wrap_fillPoly__SWIG_6(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -33691,8 +33665,7 @@ int _wrap_fillPoly__SWIG_7(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -33730,15 +33703,15 @@ int _wrap_fillPoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -33756,15 +33729,15 @@ int _wrap_fillPoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -33821,15 +33794,15 @@ int _wrap_fillPoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -33857,15 +33830,15 @@ int _wrap_fillPoly(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -34346,8 +34319,7 @@ int _wrap_polylines__SWIG_4(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -34419,8 +34391,7 @@ int _wrap_polylines__SWIG_5(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -34484,8 +34455,7 @@ int _wrap_polylines__SWIG_6(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -34541,8 +34511,7 @@ int _wrap_polylines__SWIG_7(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -34585,15 +34554,15 @@ int _wrap_polylines(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -34622,15 +34591,15 @@ int _wrap_polylines(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -34709,15 +34678,15 @@ int _wrap_polylines(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -34756,15 +34725,15 @@ int _wrap_polylines(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -35969,8 +35938,8 @@ int _wrap_minMaxLoc(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -35981,8 +35950,8 @@ int _wrap_minMaxLoc(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -35993,8 +35962,8 @@ int _wrap_minMaxLoc(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36005,8 +35974,8 @@ int _wrap_minMaxLoc(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36040,15 +36009,15 @@ int _wrap_minMaxLoc(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -36125,8 +36094,8 @@ int _wrap_norm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36137,15 +36106,15 @@ int _wrap_norm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -36157,8 +36126,8 @@ int _wrap_norm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36188,15 +36157,15 @@ int _wrap_norm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -36213,8 +36182,8 @@ int _wrap_norm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36224,8 +36193,8 @@ int _wrap_norm(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -36238,15 +36207,15 @@ int _wrap_norm(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -36256,8 +36225,8 @@ int _wrap_norm(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -36334,8 +36303,8 @@ int _wrap_normalize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36346,8 +36315,8 @@ int _wrap_normalize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36369,8 +36338,8 @@ int _wrap_normalize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36403,8 +36372,8 @@ int _wrap_normalize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36472,8 +36441,8 @@ int _wrap_normalize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36516,8 +36485,8 @@ int _wrap_normalize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -36551,8 +36520,8 @@ int _wrap_normalize(SWIG_GatewayParameters) {
             if (_v) {
               {
                 if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[5], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                  cv::Mat mat;
-                  _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[5], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                  cv::Mat *pMat = NULL;
+                  _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[5], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
                 }
               }
               if (_v) {
@@ -38683,8 +38652,8 @@ int _wrap_pointCloudShow(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -40011,8 +39980,8 @@ int _wrap_imwrite(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -40027,8 +39996,8 @@ int _wrap_imwrite(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -40126,8 +40095,8 @@ int _wrap_imdecode(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -40143,8 +40112,8 @@ int _wrap_imdecode(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -40280,8 +40249,8 @@ int _wrap_imencode(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -40301,8 +40270,8 @@ int _wrap_imencode(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -42317,8 +42286,8 @@ int _wrap_getLinearColumnFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -42349,8 +42318,8 @@ int _wrap_getLinearColumnFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -42392,8 +42361,8 @@ int _wrap_getLinearColumnFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -42629,8 +42598,8 @@ int _wrap_getLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -42651,8 +42620,8 @@ int _wrap_getLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -42679,8 +42648,8 @@ int _wrap_getLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -42718,8 +42687,8 @@ int _wrap_getLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -43113,15 +43082,15 @@ int _wrap_createSeparableLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -43143,15 +43112,15 @@ int _wrap_createSeparableLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -43179,15 +43148,15 @@ int _wrap_createSeparableLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -43226,15 +43195,15 @@ int _wrap_createSeparableLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -43278,15 +43247,15 @@ int _wrap_createSeparableLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -43335,15 +43304,15 @@ int _wrap_createSeparableLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -43719,8 +43688,8 @@ int _wrap_createLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -43741,8 +43710,8 @@ int _wrap_createLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -43769,8 +43738,8 @@ int _wrap_createLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -43808,8 +43777,8 @@ int _wrap_createLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -43852,8 +43821,8 @@ int _wrap_createLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -43901,8 +43870,8 @@ int _wrap_createLinearFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -46234,8 +46203,8 @@ int _wrap_getMorphologyFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -46256,8 +46225,8 @@ int _wrap_getMorphologyFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -46548,8 +46517,8 @@ int _wrap_createMorphologyFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -46570,8 +46539,8 @@ int _wrap_createMorphologyFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -46598,8 +46567,8 @@ int _wrap_createMorphologyFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -46631,8 +46600,8 @@ int _wrap_createMorphologyFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -46669,8 +46638,8 @@ int _wrap_createMorphologyFilter(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -46967,8 +46936,8 @@ int _wrap_copyMakeBorder(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47004,8 +46973,8 @@ int _wrap_copyMakeBorder(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47236,8 +47205,8 @@ int _wrap_GaussianBlur(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47264,8 +47233,8 @@ int _wrap_GaussianBlur(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47303,8 +47272,8 @@ int _wrap_GaussianBlur(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47470,8 +47439,8 @@ int _wrap_bilateralFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47509,8 +47478,8 @@ int _wrap_bilateralFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47762,8 +47731,8 @@ int _wrap_adaptiveBilateralFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47790,8 +47759,8 @@ int _wrap_adaptiveBilateralFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47829,8 +47798,8 @@ int _wrap_adaptiveBilateralFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -47874,8 +47843,8 @@ int _wrap_adaptiveBilateralFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48129,8 +48098,8 @@ int _wrap_boxFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48151,8 +48120,8 @@ int _wrap_boxFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48179,8 +48148,8 @@ int _wrap_boxFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48218,8 +48187,8 @@ int _wrap_boxFilter(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48384,8 +48353,8 @@ int _wrap_blur(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48401,8 +48370,8 @@ int _wrap_blur(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48424,8 +48393,8 @@ int _wrap_blur(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48661,8 +48630,8 @@ int _wrap_filter2D(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48672,8 +48641,8 @@ int _wrap_filter2D(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -48686,8 +48655,8 @@ int _wrap_filter2D(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48697,8 +48666,8 @@ int _wrap_filter2D(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -48717,8 +48686,8 @@ int _wrap_filter2D(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48728,8 +48697,8 @@ int _wrap_filter2D(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -48759,8 +48728,8 @@ int _wrap_filter2D(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -48770,8 +48739,8 @@ int _wrap_filter2D(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -49035,8 +49004,8 @@ int _wrap_sepFilter2D(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -49046,15 +49015,15 @@ int _wrap_sepFilter2D(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -49068,8 +49037,8 @@ int _wrap_sepFilter2D(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -49079,15 +49048,15 @@ int _wrap_sepFilter2D(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -49107,8 +49076,8 @@ int _wrap_sepFilter2D(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -49118,15 +49087,15 @@ int _wrap_sepFilter2D(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -49157,8 +49126,8 @@ int _wrap_sepFilter2D(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -49168,15 +49137,15 @@ int _wrap_sepFilter2D(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -49560,8 +49529,8 @@ int _wrap_Sobel(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -49587,8 +49556,8 @@ int _wrap_Sobel(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -49619,8 +49588,8 @@ int _wrap_Sobel(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -49662,8 +49631,8 @@ int _wrap_Sobel(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -49716,8 +49685,8 @@ int _wrap_Sobel(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50040,8 +50009,8 @@ int _wrap_Scharr(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50067,8 +50036,8 @@ int _wrap_Scharr(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50105,8 +50074,8 @@ int _wrap_Scharr(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50154,8 +50123,8 @@ int _wrap_Scharr(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50476,8 +50445,8 @@ int _wrap_Laplacian(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50493,8 +50462,8 @@ int _wrap_Laplacian(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50515,8 +50484,8 @@ int _wrap_Laplacian(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50548,8 +50517,8 @@ int _wrap_Laplacian(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50592,8 +50561,8 @@ int _wrap_Laplacian(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50807,8 +50776,8 @@ int _wrap_Canny(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50841,8 +50810,8 @@ int _wrap_Canny(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -50880,8 +50849,8 @@ int _wrap_Canny(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51072,8 +51041,8 @@ int _wrap_cornerMinEigenVal(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51089,8 +51058,8 @@ int _wrap_cornerMinEigenVal(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51111,8 +51080,8 @@ int _wrap_cornerMinEigenVal(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51261,8 +51230,8 @@ int _wrap_cornerHarris(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51294,8 +51263,8 @@ int _wrap_cornerHarris(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51475,8 +51444,8 @@ int _wrap_cornerEigenValsAndVecs(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51497,8 +51466,8 @@ int _wrap_cornerEigenValsAndVecs(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51615,8 +51584,8 @@ int _wrap_preCornerDetect(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51632,8 +51601,8 @@ int _wrap_preCornerDetect(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -51678,8 +51647,7 @@ int _wrap_cornerSubPix(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -52050,8 +52018,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52089,8 +52057,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52120,8 +52088,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
           if (_v) {
             {
               if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[4], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                cv::Mat mat;
-                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                cv::Mat *pMat = NULL;
+                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
               }
             }
             if (_v) {
@@ -52136,8 +52104,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52167,8 +52135,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
           if (_v) {
             {
               if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[4], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                cv::Mat mat;
-                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                cv::Mat *pMat = NULL;
+                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
               }
             }
             if (_v) {
@@ -52188,8 +52156,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52219,8 +52187,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
           if (_v) {
             {
               if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[4], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                cv::Mat mat;
-                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                cv::Mat *pMat = NULL;
+                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
               }
             }
             if (_v) {
@@ -52251,8 +52219,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52282,8 +52250,8 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
           if (_v) {
             {
               if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[4], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                cv::Mat mat;
-                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                cv::Mat *pMat = NULL;
+                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
               }
             }
             if (_v) {
@@ -52515,8 +52483,8 @@ int _wrap_HoughLines(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52554,8 +52522,8 @@ int _wrap_HoughLines(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52604,8 +52572,8 @@ int _wrap_HoughLines(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52855,8 +52823,8 @@ int _wrap_HoughLinesP(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52894,8 +52862,8 @@ int _wrap_HoughLinesP(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -52944,8 +52912,8 @@ int _wrap_HoughLinesP(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -53353,8 +53321,8 @@ int _wrap_HoughCircles(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -53392,8 +53360,8 @@ int _wrap_HoughCircles(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -53442,8 +53410,8 @@ int _wrap_HoughCircles(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -53503,8 +53471,8 @@ int _wrap_HoughCircles(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -53569,8 +53537,8 @@ int _wrap_HoughCircles(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -53868,8 +53836,8 @@ int _wrap_GeneralizedHough_setTemplate(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -53885,8 +53853,8 @@ int _wrap_GeneralizedHough_setTemplate(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -53907,22 +53875,22 @@ int _wrap_GeneralizedHough_setTemplate(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -53940,8 +53908,8 @@ int _wrap_GeneralizedHough_setTemplate(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -53968,22 +53936,22 @@ int _wrap_GeneralizedHough_setTemplate(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -54253,8 +54221,8 @@ int _wrap_GeneralizedHough_detect(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -54270,8 +54238,8 @@ int _wrap_GeneralizedHough_detect(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -54287,8 +54255,8 @@ int _wrap_GeneralizedHough_detect(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -54309,22 +54277,22 @@ int _wrap_GeneralizedHough_detect(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -54342,22 +54310,22 @@ int _wrap_GeneralizedHough_detect(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -54626,15 +54594,15 @@ int _wrap_erode(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -54646,15 +54614,15 @@ int _wrap_erode(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -54672,15 +54640,15 @@ int _wrap_erode(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -54703,15 +54671,15 @@ int _wrap_erode(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -54739,15 +54707,15 @@ int _wrap_erode(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -55016,15 +54984,15 @@ int _wrap_dilate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -55036,15 +55004,15 @@ int _wrap_dilate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -55062,15 +55030,15 @@ int _wrap_dilate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -55093,15 +55061,15 @@ int _wrap_dilate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -55129,15 +55097,15 @@ int _wrap_dilate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -55446,8 +55414,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -55457,8 +55425,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -55471,8 +55439,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -55482,8 +55450,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -55502,8 +55470,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -55513,8 +55481,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -55538,8 +55506,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -55549,8 +55517,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -55579,8 +55547,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -55590,8 +55558,8 @@ int _wrap_morphologyEx(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -55811,8 +55779,8 @@ int _wrap_resize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -55828,8 +55796,8 @@ int _wrap_resize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -55856,8 +55824,8 @@ int _wrap_resize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -55895,8 +55863,8 @@ int _wrap_resize(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -56142,15 +56110,15 @@ int _wrap_warpAffine(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -56167,15 +56135,15 @@ int _wrap_warpAffine(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -56197,15 +56165,15 @@ int _wrap_warpAffine(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -56232,15 +56200,15 @@ int _wrap_warpAffine(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -56476,15 +56444,15 @@ int _wrap_warpPerspective(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -56501,15 +56469,15 @@ int _wrap_warpPerspective(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -56531,15 +56499,15 @@ int _wrap_warpPerspective(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -56566,15 +56534,15 @@ int _wrap_warpPerspective(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -56777,22 +56745,22 @@ int _wrap_remap(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -56810,22 +56778,22 @@ int _wrap_remap(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -56848,22 +56816,22 @@ int _wrap_remap(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -57013,15 +56981,15 @@ int _wrap_convertMaps(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -57038,15 +57006,15 @@ int _wrap_convertMaps(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -57258,15 +57226,15 @@ int _wrap_getPerspectiveTransform(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -57332,15 +57300,15 @@ int _wrap_getAffineTransform(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -57443,8 +57411,8 @@ int _wrap_getRectSubPix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -57466,8 +57434,8 @@ int _wrap_getRectSubPix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -57753,8 +57721,8 @@ int _wrap_integral(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -57765,8 +57733,8 @@ int _wrap_integral(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -57777,8 +57745,8 @@ int _wrap_integral(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -57789,8 +57757,8 @@ int _wrap_integral(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -57806,8 +57774,8 @@ int _wrap_integral(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -57823,8 +57791,8 @@ int _wrap_integral(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -57860,8 +57828,7 @@ int _wrap_accumulate__SWIG_0(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -57902,8 +57869,7 @@ int _wrap_accumulate__SWIG_1(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -57934,15 +57900,15 @@ int _wrap_accumulate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -57954,22 +57920,22 @@ int _wrap_accumulate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -58002,8 +57968,7 @@ int _wrap_accumulateSquare__SWIG_0(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -58044,8 +58009,7 @@ int _wrap_accumulateSquare__SWIG_1(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -58076,15 +58040,15 @@ int _wrap_accumulateSquare(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -58096,22 +58060,22 @@ int _wrap_accumulateSquare(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -58148,8 +58112,7 @@ int _wrap_accumulateProduct__SWIG_0(SWIG_GatewayParameters) {
     arg3 = new cv::_OutputArray(*pInOutMat3);
   }
   else {
-    pInOutMat3 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, &pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg3 = new cv::_OutputArray(*pInOutMat3);
     }
     else {
@@ -58195,8 +58158,7 @@ int _wrap_accumulateProduct__SWIG_1(SWIG_GatewayParameters) {
     arg3 = new cv::_OutputArray(*pInOutMat3);
   }
   else {
-    pInOutMat3 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, &pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg3 = new cv::_OutputArray(*pInOutMat3);
     }
     else {
@@ -58228,22 +58190,22 @@ int _wrap_accumulateProduct(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -58256,29 +58218,29 @@ int _wrap_accumulateProduct(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -58315,8 +58277,7 @@ int _wrap_accumulateWeighted__SWIG_0(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -58365,8 +58326,7 @@ int _wrap_accumulateWeighted__SWIG_1(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -58402,15 +58362,15 @@ int _wrap_accumulateWeighted(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -58433,15 +58393,15 @@ int _wrap_accumulateWeighted(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -58457,8 +58417,8 @@ int _wrap_accumulateWeighted(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -58562,15 +58522,15 @@ int _wrap_phaseCorrelate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -58582,22 +58542,22 @@ int _wrap_phaseCorrelate(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -58689,22 +58649,22 @@ int _wrap_phaseCorrelateRes(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -58717,22 +58677,22 @@ int _wrap_phaseCorrelateRes(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -59018,8 +58978,8 @@ int _wrap_pyrDown(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -59030,8 +58990,8 @@ int _wrap_pyrDown(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -59047,8 +59007,8 @@ int _wrap_pyrDown(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -59183,8 +59143,8 @@ int _wrap_pyrUp(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -59195,8 +59155,8 @@ int _wrap_pyrUp(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -59212,8 +59172,8 @@ int _wrap_pyrUp(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -59325,8 +59285,8 @@ int _wrap_buildPyramid(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -59342,8 +59302,8 @@ int _wrap_buildPyramid(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -59456,22 +59416,22 @@ int _wrap_undistort(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -59484,29 +59444,29 @@ int _wrap_undistort(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -59813,15 +59773,15 @@ int _wrap_initWideAngleProjMap(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -59848,15 +59808,15 @@ int _wrap_initWideAngleProjMap(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -59888,15 +59848,15 @@ int _wrap_initWideAngleProjMap(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -60034,8 +59994,8 @@ int _wrap_getDefaultNewCameraMatrix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -60046,8 +60006,8 @@ int _wrap_getDefaultNewCameraMatrix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -60063,8 +60023,8 @@ int _wrap_getDefaultNewCameraMatrix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -60230,22 +60190,22 @@ int _wrap_undistortPoints(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -60258,29 +60218,29 @@ int _wrap_undistortPoints(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -60294,36 +60254,36 @@ int _wrap_undistortPoints(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
             {
               if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[4], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                cv::Mat mat;
-                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                cv::Mat *pMat = NULL;
+                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
               }
             }
             if (_v) {
@@ -60978,8 +60938,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -60989,8 +60949,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -61013,8 +60973,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -61024,8 +60984,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -61076,8 +61036,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -61131,8 +61091,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -61197,8 +61157,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -61257,8 +61217,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -61328,8 +61288,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -61405,8 +61365,8 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -61965,8 +61925,8 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -61976,8 +61936,8 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -62061,8 +62021,8 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -62102,8 +62062,8 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -62263,8 +62223,8 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -62398,15 +62358,15 @@ int _wrap_compareHist(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -62935,15 +62895,15 @@ int _wrap_EMD(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -62960,15 +62920,15 @@ int _wrap_EMD(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -62978,8 +62938,8 @@ int _wrap_EMD(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -62993,15 +62953,15 @@ int _wrap_EMD(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -63011,8 +62971,8 @@ int _wrap_EMD(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -63031,15 +62991,15 @@ int _wrap_EMD(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -63049,8 +63009,8 @@ int _wrap_EMD(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -63088,8 +63048,7 @@ int _wrap_watershed(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -63279,8 +63238,8 @@ int _wrap_pyrMeanShiftFiltering(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -63313,8 +63272,8 @@ int _wrap_pyrMeanShiftFiltering(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -63352,8 +63311,8 @@ int _wrap_pyrMeanShiftFiltering(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -63426,8 +63385,7 @@ int _wrap_grabCut__SWIG_0(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -63442,8 +63400,7 @@ int _wrap_grabCut__SWIG_0(SWIG_GatewayParameters) {
     arg4 = new cv::_OutputArray(*pInOutMat4);
   }
   else {
-    pInOutMat4 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, &pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg4 = new cv::_OutputArray(*pInOutMat4);
     }
     else {
@@ -63455,8 +63412,7 @@ int _wrap_grabCut__SWIG_0(SWIG_GatewayParameters) {
     arg5 = new cv::_OutputArray(*pInOutMat5);
   }
   else {
-    pInOutMat5 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 5, pInOutMat5, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 5, &pInOutMat5, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg5 = new cv::_OutputArray(*pInOutMat5);
     }
     else {
@@ -63523,8 +63479,7 @@ int _wrap_grabCut__SWIG_1(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -63539,8 +63494,7 @@ int _wrap_grabCut__SWIG_1(SWIG_GatewayParameters) {
     arg4 = new cv::_OutputArray(*pInOutMat4);
   }
   else {
-    pInOutMat4 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, &pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg4 = new cv::_OutputArray(*pInOutMat4);
     }
     else {
@@ -63552,8 +63506,7 @@ int _wrap_grabCut__SWIG_1(SWIG_GatewayParameters) {
     arg5 = new cv::_OutputArray(*pInOutMat5);
   }
   else {
-    pInOutMat5 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 5, pInOutMat5, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 5, &pInOutMat5, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg5 = new cv::_OutputArray(*pInOutMat5);
     }
     else {
@@ -63601,15 +63554,15 @@ int _wrap_grabCut(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -63620,15 +63573,15 @@ int _wrap_grabCut(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
             {
               if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[4], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                cv::Mat mat;
-                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                cv::Mat *pMat = NULL;
+                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
               }
             }
             if (_v) {
@@ -63648,15 +63601,15 @@ int _wrap_grabCut(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -63667,15 +63620,15 @@ int _wrap_grabCut(SWIG_GatewayParameters) {
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
             {
               if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[4], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                cv::Mat mat;
-                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                cv::Mat *pMat = NULL;
+                _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[4], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
               }
             }
             if (_v) {
@@ -63870,8 +63823,8 @@ int _wrap_distanceTransform(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -63892,8 +63845,8 @@ int _wrap_distanceTransform(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -63914,8 +63867,8 @@ int _wrap_distanceTransform(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -63967,8 +63920,7 @@ int _wrap_floodFill__SWIG_0(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64031,8 +63983,7 @@ int _wrap_floodFill__SWIG_1(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64089,8 +64040,7 @@ int _wrap_floodFill__SWIG_2(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64143,8 +64093,7 @@ int _wrap_floodFill__SWIG_3(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64191,8 +64140,7 @@ int _wrap_floodFill__SWIG_4(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64244,8 +64192,7 @@ int _wrap_floodFill__SWIG_5(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64257,8 +64204,7 @@ int _wrap_floodFill__SWIG_5(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -64329,8 +64275,7 @@ int _wrap_floodFill__SWIG_6(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64342,8 +64287,7 @@ int _wrap_floodFill__SWIG_6(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -64408,8 +64352,7 @@ int _wrap_floodFill__SWIG_7(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64421,8 +64364,7 @@ int _wrap_floodFill__SWIG_7(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -64483,8 +64425,7 @@ int _wrap_floodFill__SWIG_8(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64496,8 +64437,7 @@ int _wrap_floodFill__SWIG_8(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -64552,8 +64492,7 @@ int _wrap_floodFill__SWIG_9(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -64565,8 +64504,7 @@ int _wrap_floodFill__SWIG_9(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -64609,8 +64547,8 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -64633,15 +64571,15 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -64665,8 +64603,8 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -64694,15 +64632,15 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -64731,8 +64669,8 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -64766,15 +64704,15 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -64809,8 +64747,8 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -64850,15 +64788,15 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -64899,8 +64837,8 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -64945,15 +64883,15 @@ int _wrap_floodFill(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -65090,8 +65028,8 @@ int _wrap_cvtColor(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -65107,8 +65045,8 @@ int _wrap_cvtColor(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -65188,8 +65126,8 @@ int _wrap_moments(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -65200,8 +65138,8 @@ int _wrap_moments(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -65405,8 +65343,7 @@ int _wrap_findContours__SWIG_0(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -65477,8 +65414,7 @@ int _wrap_findContours__SWIG_1(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -65543,8 +65479,7 @@ int _wrap_findContours__SWIG_2(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -65605,8 +65540,7 @@ int _wrap_findContours__SWIG_3(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -65652,8 +65586,8 @@ int _wrap_findContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -65674,8 +65608,8 @@ int _wrap_findContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -65696,8 +65630,8 @@ int _wrap_findContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -65724,8 +65658,8 @@ int _wrap_findContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -65785,8 +65719,7 @@ int _wrap_drawContours__SWIG_0(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -65872,8 +65805,7 @@ int _wrap_drawContours__SWIG_1(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -65953,8 +65885,7 @@ int _wrap_drawContours__SWIG_2(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -66028,8 +65959,7 @@ int _wrap_drawContours__SWIG_3(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -66096,8 +66026,7 @@ int _wrap_drawContours__SWIG_4(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -66156,8 +66085,7 @@ int _wrap_drawContours__SWIG_5(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -66202,8 +66130,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -66230,8 +66158,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -66263,8 +66191,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -66301,8 +66229,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -66329,8 +66257,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
               if (_v) {
                 {
                   if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[6], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                    cv::Mat mat;
-                    _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[6], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                    cv::Mat *pMat = NULL;
+                    _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[6], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
                   }
                 }
                 if (_v) {
@@ -66347,8 +66275,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -66375,8 +66303,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
               if (_v) {
                 {
                   if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[6], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                    cv::Mat mat;
-                    _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[6], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                    cv::Mat *pMat = NULL;
+                    _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[6], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
                   }
                 }
                 if (_v) {
@@ -66398,8 +66326,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -66426,8 +66354,8 @@ int _wrap_drawContours(SWIG_GatewayParameters) {
               if (_v) {
                 {
                   if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[6], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-                    cv::Mat mat;
-                    _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[6], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+                    cv::Mat *pMat = NULL;
+                    _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[6], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
                   }
                 }
                 if (_v) {
@@ -67104,15 +67032,15 @@ int _wrap_intersectConvexConvex(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -67124,15 +67052,15 @@ int _wrap_intersectConvexConvex(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -73008,8 +72936,8 @@ int _wrap_findDataMatrix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -73025,8 +72953,8 @@ int _wrap_findDataMatrix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -73042,8 +72970,8 @@ int _wrap_findDataMatrix(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -73078,8 +73006,7 @@ int _wrap_drawDataMatrixCodes(SWIG_GatewayParameters) {
     arg1 = new cv::_OutputArray(*pInOutMat1);
   }
   else {
-    pInOutMat1 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &pInOutMat1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg1 = new cv::_OutputArray(*pInOutMat1);
     }
     else {
@@ -75629,8 +75556,8 @@ int _wrap_fastNlMeansDenoising(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -75641,8 +75568,8 @@ int _wrap_fastNlMeansDenoising(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -75664,8 +75591,8 @@ int _wrap_fastNlMeansDenoising(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -75692,8 +75619,8 @@ int _wrap_fastNlMeansDenoising(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -75953,8 +75880,8 @@ int _wrap_fastNlMeansDenoisingColored(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -75965,8 +75892,8 @@ int _wrap_fastNlMeansDenoisingColored(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -75988,8 +75915,8 @@ int _wrap_fastNlMeansDenoisingColored(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76022,8 +75949,8 @@ int _wrap_fastNlMeansDenoisingColored(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76061,8 +75988,8 @@ int _wrap_fastNlMeansDenoisingColored(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76338,8 +76265,8 @@ int _wrap_fastNlMeansDenoisingMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76360,8 +76287,8 @@ int _wrap_fastNlMeansDenoisingMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76393,8 +76320,8 @@ int _wrap_fastNlMeansDenoisingMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76431,8 +76358,8 @@ int _wrap_fastNlMeansDenoisingMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76782,8 +76709,8 @@ int _wrap_fastNlMeansDenoisingColoredMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76804,8 +76731,8 @@ int _wrap_fastNlMeansDenoisingColoredMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76837,8 +76764,8 @@ int _wrap_fastNlMeansDenoisingColoredMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76881,8 +76808,8 @@ int _wrap_fastNlMeansDenoisingColoredMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -76930,8 +76857,8 @@ int _wrap_fastNlMeansDenoisingColoredMulti(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -77397,8 +77324,7 @@ int _wrap_updateMotionHistory(SWIG_GatewayParameters) {
     arg2 = new cv::_OutputArray(*pInOutMat2);
   }
   else {
-    pInOutMat2 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 2, &pInOutMat2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg2 = new cv::_OutputArray(*pInOutMat2);
     }
     else {
@@ -77553,8 +77479,8 @@ int _wrap_calcMotionGradient(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -77587,8 +77513,8 @@ int _wrap_calcMotionGradient(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -79458,8 +79384,8 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -79480,8 +79406,8 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -79513,8 +79439,8 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -79551,8 +79477,8 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -79594,8 +79520,8 @@ int _wrap_buildOpticalFlowPyramid(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -79696,8 +79622,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_0(SWIG_GatewayParameters) {
     arg4 = new cv::_OutputArray(*pInOutMat4);
   }
   else {
-    pInOutMat4 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, &pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg4 = new cv::_OutputArray(*pInOutMat4);
     }
     else {
@@ -79803,8 +79728,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_1(SWIG_GatewayParameters) {
     arg4 = new cv::_OutputArray(*pInOutMat4);
   }
   else {
-    pInOutMat4 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, &pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg4 = new cv::_OutputArray(*pInOutMat4);
     }
     else {
@@ -79902,8 +79826,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_2(SWIG_GatewayParameters) {
     arg4 = new cv::_OutputArray(*pInOutMat4);
   }
   else {
-    pInOutMat4 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, &pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg4 = new cv::_OutputArray(*pInOutMat4);
     }
     else {
@@ -79993,8 +79916,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_3(SWIG_GatewayParameters) {
     arg4 = new cv::_OutputArray(*pInOutMat4);
   }
   else {
-    pInOutMat4 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, &pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg4 = new cv::_OutputArray(*pInOutMat4);
     }
     else {
@@ -80070,8 +79992,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_4(SWIG_GatewayParameters) {
     arg4 = new cv::_OutputArray(*pInOutMat4);
   }
   else {
-    pInOutMat4 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, &pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg4 = new cv::_OutputArray(*pInOutMat4);
     }
     else {
@@ -80141,8 +80062,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_5(SWIG_GatewayParameters) {
     arg4 = new cv::_OutputArray(*pInOutMat4);
   }
   else {
-    pInOutMat4 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 4, &pInOutMat4, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg4 = new cv::_OutputArray(*pInOutMat4);
     }
     else {
@@ -80187,29 +80107,29 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -80223,29 +80143,29 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -80264,29 +80184,29 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -80310,29 +80230,29 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -80361,29 +80281,29 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -80417,29 +80337,29 @@ int _wrap_calcOpticalFlowPyrLK(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
           {
             if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat mat;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+              cv::Mat *pMat = NULL;
+              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
             }
           }
           if (_v) {
@@ -80528,8 +80448,7 @@ int _wrap_calcOpticalFlowFarneback(SWIG_GatewayParameters) {
     arg3 = new cv::_OutputArray(*pInOutMat3);
   }
   else {
-    pInOutMat3 = new Mat();
-    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    if (SWIG_SciHypermat_AsMat(pvApiCtx, 3, &pInOutMat3, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
       arg3 = new cv::_OutputArray(*pInOutMat3);
     }
     else {
@@ -81144,8 +81063,8 @@ int _wrap_BackgrdSub___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -81161,8 +81080,8 @@ int _wrap_BackgrdSub___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -81519,8 +81438,8 @@ int _wrap_BackgrdSubMOG___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -81536,8 +81455,8 @@ int _wrap_BackgrdSubMOG___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -81878,8 +81797,8 @@ int _wrap_BackgrdSubMOG2___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -81895,8 +81814,8 @@ int _wrap_BackgrdSubMOG2___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -82194,8 +82113,8 @@ int _wrap_BackgrdSubGMG___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -82211,8 +82130,8 @@ int _wrap_BackgrdSubGMG___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
@@ -85668,15 +85587,15 @@ int _wrap_Feature2D___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -85693,15 +85612,15 @@ int _wrap_Feature2D___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -86152,15 +86071,15 @@ int _wrap_BRISK___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -86177,15 +86096,15 @@ int _wrap_BRISK___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -86202,15 +86121,15 @@ int _wrap_BRISK___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -87898,15 +87817,15 @@ int _wrap_ORB___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -87923,15 +87842,15 @@ int _wrap_ORB___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -87948,15 +87867,15 @@ int _wrap_ORB___funcall__(SWIG_GatewayParameters) {
     if (_v) {
       {
         if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat mat;
-          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          cv::Mat *pMat = NULL;
+          _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[1], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
         }
       }
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat mat;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
           }
         }
         if (_v) {
@@ -89558,8 +89477,8 @@ int _wrap_FAST(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {
@@ -89580,8 +89499,8 @@ int _wrap_FAST(SWIG_GatewayParameters) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat mat;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &mat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        cv::Mat *pMat = NULL;
+        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
       }
     }
     if (_v) {

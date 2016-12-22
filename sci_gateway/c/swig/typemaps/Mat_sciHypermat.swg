@@ -8,7 +8,7 @@
       for (int j = 0; j<w; j++) \
         dst[c + nc*(i*w + j)] = src[c*w*h + j*h + i]
 
-int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *fname) {
+int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *fname) {
   SciErr sciErr;
   int *piAddrVar = NULL;
 
@@ -19,7 +19,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
   }
 
   if (isEmptyMatrix(pvApiCtx, piAddrVar)) {
-    *pMat = cv::Mat();
+    *pMat = new cv::Mat();
     return SWIG_OK;
   }
   else if (isHypermatType(pvApiCtx, piAddrVar)) {
@@ -154,7 +154,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
       return sciErr.iErr;
     }
 
-    *pMat = cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
+    *pMat = new cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
 
     return SWIG_OK;
   }
@@ -260,7 +260,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat *pMat, char *f
       return sciErr.iErr;
     }
 
-    *pMat = cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
+    *pMat = new cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
 
     return SWIG_OK;
   }
