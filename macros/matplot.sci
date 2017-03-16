@@ -1,7 +1,7 @@
 function matplot(img, varargin)
     // convert Mat type
     if typeof(img) == 'Mat' then
-        I = uint8(img(:));
+        I = uint8(img(:,:));
     else
         I = uint8(img);
     end

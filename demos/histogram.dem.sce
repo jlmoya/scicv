@@ -2,7 +2,7 @@ scicv_Init();
 
 img = imread(getSampleImage("lena.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
 
-A = img(:);
+A = img(:,:);
 
 subplot(121);
 matplot(img);
