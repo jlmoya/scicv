@@ -1,16 +1,22 @@
  // <-- CLI SHELL MODE -->
 scicv_Init();
 
-img = new_Mat(2, 4, CV_8UC3, [1, 128, 255]);
+function check_img(img, expected_cols, expected_rows, expected_channels)
+    assert_checkequal(typeof(img), "Mat");
+    assert_checkfalse(Mat_empty(img));
+    assert_checkequal(Mat_cols_get(img), expected_cols);
+    assert_checkequal(Mat_rows_get(img), expected_rows);
+    assert_checkequal(Mat_channels_get(img), expected_channels);
+endfunction
 
-assert_checkequal(typeof(img), "Mat");
+img = new_Mat(2, 4);
+check_img(img, 2, 4, 3);
+delete_Mat(img);
 
-assert_checkfalse(Mat_empty(img));
+img = new_Mat(2, 4, CV_8UC3);
+check_img(img, 2, 4, 3);
+delete_Mat(img);
 
-o = uint8(ones(2, 4));
-mat = img(:);
-assert_checkequal(mat(:,:,1), 255*o); 
-assert_checkequal(mat(:,:,2), 128*o);
-assert_checkequal(mat(:,:,3), o);
-
+img = new_Mat(2, 4, CV_8UC1);
+check_img(img, 2, 4, 1);
 delete_Mat(img);
