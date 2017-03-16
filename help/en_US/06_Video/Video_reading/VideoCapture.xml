@@ -26,18 +26,23 @@
     scicv_Init();
 
     videoCapture = new_VideoCapture(getSampleVideo("video.mpg"));
+    cvStartWindowThread();
+    namedWindow("video.mpg");
 
-    ret = %t;
-    while ret
+    while %t
         [ret, frame] = VideoCapture_read(videoCapture);
-        imshow("video.mpg", frame);
-        if waitKey(40) <> -1 then
-            break;
+        if ret then
+            imshow("video.mpg", frame);
+            if waitKey(40) <> -1 then
+                break;
+            end
+            delete_Mat(frame);
+        else
+            break
         end
-        delete_Mat(frame);
     end
 
-    destroyAllWindows();
+    destroyWindow("video.mpg");
     delete_VideoCapture(videoCapture);
  ]]></programlisting>
   </refsection>
