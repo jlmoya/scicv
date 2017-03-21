@@ -1,8 +1,13 @@
 scicv_Init();
 
 img = imread(getSampleImage("puffin.png"), CV_LOAD_IMAGE_GRAYSCALE);
-img_canny = Canny(img, 100, 150);
+img_canny = Canny(img, 100, 160);
 
+subplot(1,2,1);
+matplot(img);
+title("image");
+
+subplot(1,2,2);
 matplot(img_canny);
 title("canny");
 
