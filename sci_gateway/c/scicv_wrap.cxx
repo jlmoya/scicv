@@ -3283,6 +3283,7 @@ namespace swig {
 #undef SKIP_INCLUDES
 #undef REAL
 #undef Rhs
+#undef round
 #include  "opencv2/core/types_c.h"
 #include "opencv2/core/core.hpp"
 #include "opencv2/core/gpumat.hpp"
