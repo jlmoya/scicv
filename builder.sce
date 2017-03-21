@@ -32,6 +32,18 @@ function main_builder()
     tbx_builder_macros(toolbox_dir);
     tbx_builder_gateway(toolbox_dir);
 
+	// manually load dependencies with link() does not work on Mac
+	// by default, OpenCV libs need to be in same folder as scicv lib
+	// -> change the path of dependecies in scicv lib (with install_name_tool) to look up in thirdparty folder
+	// Notice: relative paths must not be too long !!! otherwise error occurs suggesting use headerpad_max_install_names option, but it is ignored by libtool...)
+    scicv_dir = get_absolute_file_path("builder.sce");
+    if getos() == "Darwin" then
+        opencv_libs = "libopencv_" + ["core"; "imgproc"; "highgui"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "contrib"];
+        for opencv_lib = opencv_libs'
+            unix_w(sprintf("install_name_tool -change %s.2.4.dylib @loader_path/../../thirdparty/Mac/lib/%s.dylib %s/sci_gateway/c/libscicv.dylib", opencv_lib, opencv_lib, scicv_dir));
+        end
+    end
+
     if (getscilabmode() == 'STD') | (getscilabmode() == 'NW') then
       tbx_builder_help(toolbox_dir);
     end

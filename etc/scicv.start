@@ -32,11 +32,12 @@ function [scicvlib] = startModule()
   arch = opts(2);
 
   opencv_libs = "opencv_" + ["core"; "imgproc"; "highgui"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "calib3d"; "ml"; "legacy"; "gpu"; "ocl"; "nonfree"; "contrib"];
-  if getos() == "Windows" then
+  os = getos();
+  if os == "Windows" then
       bin_dir = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
       thirdparty_lib_paths = fullpath(bin_dir + "\" + opencv_libs + "2413.dll");
       link(fullpath(bin_dir + "\opencv_ffmpeg2413_64.dll"));
-  else
+  elseif os == "Linux"
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
       codec_libs = ["x264"; "x265"; "fdk-aac"; "mp3lame"; "opus"; "ogg"; "vorbis"; "vorbisenc"; "vpx"];
       ffmpeg_libs = ["avutil"; "swresample"; "swscale"; "postproc"; "avresample"; "avcodec"; "avformat"; "avfilter"; "avdevice"];
@@ -44,10 +45,24 @@ function [scicvlib] = startModule()
       gstreamer_plugins_libs = ["gstinterfaces"; "gstvideo"; "gstaudio"; "gstapp"; "gsttag"; "gstriff"; "gstpbutils"] + "-0.10";
       thirdparty_libs = [codec_libs; ffmpeg_libs; gstreamer_libs; gstreamer_plugins_libs; opencv_libs];
       thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".so");
+  elseif os == "Darwin"
+      lib_dir = fullfile(tlbx_root_dir, "thirdparty/Mac/lib");
+      orig_dir = pwd();
+      cd(lib_dir);
+      //codec_libs = ["x264"; "fdk-aac"; "mp3lame"; "opus"; "vorbis"; "vorbisenc"; "vpx"];
+      ffmpeg_libs = ["avutil"; "swresample"; "swscale"; "postproc"; "avresample"; "avcodec"; "avformat"; "avfilter"; "avdevice"];
+      gstreamer_libs = ["gstreamer"; "gstbase"] + "-0.10";
+      gstreamer_plugins_libs = ["gstinterfaces"; "gstvideo"; "gstaudio"; "gstapp"; "gsttag"; "gstriff"; "gstpbutils"] + "-0.10";
+      thirdparty_libs = [ffmpeg_libs; gstreamer_libs; gstreamer_plugins_libs; opencv_libs];
+      thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".dylib");
   end
   for thirdparty_lib_path = thirdparty_lib_paths'
       link(thirdparty_lib_path);
   end
+  if os == "Darwin"
+      cd(orig_dir);
+  end
+
 
 // Load gateways
 // =============================================================================
