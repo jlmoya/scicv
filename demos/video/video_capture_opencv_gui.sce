@@ -12,7 +12,7 @@ CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_frontalface_alt.xml"
 
 s = [0, 255, 0];
 
-cvStartWindowThread();
+startWindowThread();
 namedWindow("Capture");
 
 while %t
