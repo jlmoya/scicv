@@ -40,7 +40,7 @@ function main_builder()
     if getos() == "Darwin" then
         opencv_libs = "libopencv_" + ["core"; "imgproc"; "highgui"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "contrib"];
         for opencv_lib = opencv_libs'
-            unix_w(sprintf("install_name_tool -change %s.2.4.dylib @loader_path/../../thirdparty/Mac/lib/%s.dylib %s/sci_gateway/c/libscicv.dylib", opencv_lib, opencv_lib, scicv_dir));
+            unix_g(sprintf("install_name_tool -change %s.2.4.dylib @loader_path/../../thirdparty/Mac/lib/%s.dylib %s/sci_gateway/c/libscicv.dylib", opencv_lib, opencv_lib, scicv_dir));
         end
     end
 
