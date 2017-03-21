@@ -30,14 +30,14 @@
         <term>op</term>
         <listitem>
           <para>Type of morphological operation:</para>
-          <listitem>
+          <itemizedlist>
             <member>MORPH_OPEN: opening operation.</member>
             <member>MORPH_CLOSE: closing operation.</member>
             <member>MORPH_GRADIENT: morphological gradient.</member>
-            <member>MORPH_TOPHAT: "top hat".</member>
-            <member>MORPH_BLACKHAT: "black hat".</member>
-            <member>MORPH_HITORMISS: "hit or miss".</member>
-          </listitem>
+            <member>MORPH_TOPHAT: top hat.</member>
+            <member>MORPH_BLACKHAT: black hat.</member>
+            <member>MORPH_HITORMISS: hit or miss.</member>
+          </itemizedlist>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -82,14 +82,14 @@
     <title>Description</title>
     <para><function>morphologyEx</function> performs a specified morphological filter on the image.:</para>
     <para>The available morphological filters can be summarized like this:</para>
-    <listitem>
+    <itemizedlist>
       <member>Opening: <literal>open(img) = dilate(erode(img))</literal>.</member>
       <member>Closing: <literal>close(img) = erode(dilate(img))</literal>.</member>
       <member>Gradient: <literal>gradient(img) = dilate(img) - erode(img)</literal>.</member>
-      <member>"Top hat": <literal>top_hat(img) = img - open(image)</literal>.</member>
-      <member>"Black cat": <literal>black_hat = close(img) - img</literal>.</member>
+      <member>Top hat: <literal>top_hat(img) = img - open(image)</literal>.</member>
+      <member>Black cat: <literal>black_hat = close(img) - img</literal>.</member>
       <!-- TODO Hit or Miss -->
-    </listitem>
+    </itemizedlist>
   </refsection>
   <refsection>
     <title>Examples</title>
@@ -99,14 +99,19 @@
     // Remove noise with an opening filter
     img = imread(getSampleImage("noise.png"), CV_LOAD_IMAGE_GRAYSCALE);
 
+    subplot(1,2,1);
+    matplot(img);
+
     // convert to black/white and reverse, image information is white pixels (value 1) but we want to filter black pixels (value 0)
     [res, img_bw] = threshold(img, 128, 255, THRESH_BINARY_INV);
 
-    element = getStructuringElement(MORPH_RECT, [5 5])
+    element = getStructuringElement(MORPH_RECT, [5 5]);
     img_open = morphologyEx(img_bw, MORPH_OPEN, element);
 
     // we need to reverse again before display
     img_open_reverse = bitwise_not(img_open);
+
+    subplot(1,2,2);
     matplot(img_open_reverse);
 
     delete_Mat(img);

@@ -75,6 +75,9 @@
 
     img = imread(getSampleImage("letter.tif"), CV_LOAD_IMAGE_GRAYSCALE);
 
+    subplot(1,2,1);
+    matplot(img);
+
     // convert to black/white and reverse, image information is white pixels (value 1) but we want to erode black pixels (value 0)
     [res, img_bw] = threshold(img, 127, 255, THRESH_BINARY_INV);
 
@@ -83,6 +86,8 @@
 
     // we need to reverse again before display
     img_erode_reverse = bitwise_not(img_erode);
+
+    subplot(1,2,2);
     matplot(img_erode_reverse);
 
     delete_Mat(img);

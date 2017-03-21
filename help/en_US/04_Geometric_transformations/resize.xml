@@ -78,12 +78,14 @@
 
     // Resize to a [100, 100] pixels image
     img_100x100 = resize(img, [100, 100]);
-    scf();
+
+    subplot(1,2,1);
     matplot(img_100x100);
 
     // Resize to a half size image
     img_half = resize(img, 0, 0.5, 0.5);
-    scf();
+
+    subplot(1,2,2);
     matplot(img_half);
 
     delete_Mat(img);
