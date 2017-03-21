@@ -74,8 +74,7 @@ function [scicvlib] = startModule()
 // =============================================================================
   if or(getscilabmode() == ["NW";"STD"]) then
     mprintf("\tLoad demos\n");
-    pathdemos = pathconvert(tlbx_root_dir+"/demos/scicv.dem.gateway.sce", %F, %T);
-    add_demo(TOOLBOX_TITLE, pathdemos);
+    exec(fullfile(tlbx_root_dir, "demos/scicv.dem.gateway.sce"));
   end
 
 // Load localization
