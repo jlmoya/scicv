@@ -8,7 +8,8 @@ endfunction
 videoCapture = new_VideoCapture(0);
 
 if ~VideoCapture_isOpened(videoCapture)
-    error("Cannot open capture device #0. Please plug a camera.");
+    messagebox("Cannot open capture device #0. Please plug a camera.");
+    return
 end
 
 clsf = new_CascadeClassifier();
@@ -38,7 +39,6 @@ while ~closed
         matplot(frame, h);
         delete_Mat(frame);
     else
-        disp("Capture is closed.");
         break;
     end
 end
