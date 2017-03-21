@@ -2,7 +2,7 @@
 exec(fullfile(get_scicv_path(), "tests", "test_utils.sci"));
 
 function check_size(img)
-	assert_checkequal(size(img_out), [expected_w, expected_h]);
+    assert_checkequal(size(img_out), [expected_w, expected_h]);
 endfunction
 
 expected_w = 100;

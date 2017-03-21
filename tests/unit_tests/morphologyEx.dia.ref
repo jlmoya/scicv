@@ -1,6 +1,3 @@
 // <-- CLI SHELL MODE -->
 exec(fullfile(get_scicv_path(), "tests", "test_utils.sci"));
-kernel = ones(3, 3);
-Attention : Redéfinition de la fonction : kernel                  . Utilisez funcprot(0) pour ne pas afficher ce message.
-
 check_img_proc("puffin.png", "morphologyEx", MORPH_OPEN, ones(3, 3));
