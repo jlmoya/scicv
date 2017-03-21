@@ -1483,75 +1483,73 @@ int SWIG_ptr(SWIG_GatewayParameters) {
 #define SWIGTYPE_p_double swig_types[234]
 #define SWIGTYPE_p_f_int_a___p_char__int swig_types[235]
 #define SWIGTYPE_p_f_int_int_int_int_p_void__void swig_types[236]
-#define SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int swig_types[237]
-#define SWIGTYPE_p_f_int_p_void__void swig_types[238]
-#define SWIGTYPE_p_f_p_q_const__unsigned_char_size_t_p_q_const__unsigned_char_size_t_p_unsigned_char_size_t_cv__Size___int___p_void__void swig_types[239]
-#define SWIGTYPE_p_f_p_q_const__void_p_void_int__void swig_types[240]
-#define SWIGTYPE_p_f_p_q_const__void_p_void_int_double_double__void swig_types[241]
-#define SWIGTYPE_p_f_p_void__void swig_types[242]
-#define SWIGTYPE_p_float swig_types[243]
-#define SWIGTYPE_p_int swig_types[244]
-#define SWIGTYPE_p_int64_t swig_types[245]
-#define SWIGTYPE_p_p_CvHaarClassifierCascade swig_types[246]
-#define SWIGTYPE_p_p_CvKalman swig_types[247]
-#define SWIGTYPE_p_p_CvLSVMFilterObject swig_types[248]
-#define SWIGTYPE_p_p_CvLatentSvmDetector swig_types[249]
-#define SWIGTYPE_p_p_cv__Point_T_int_t swig_types[250]
-#define SWIGTYPE_p_p_cv___InputArray swig_types[251]
-#define SWIGTYPE_p_p_cv___OutputArray swig_types[252]
-#define SWIGTYPE_p_p_int swig_types[253]
-#define SWIGTYPE_p_p_unsigned_char swig_types[254]
-#define SWIGTYPE_p_p_void swig_types[255]
-#define SWIGTYPE_p_signed_char swig_types[256]
-#define SWIGTYPE_p_size_t swig_types[257]
-#define SWIGTYPE_p_std__basic_stringT_wchar_t_t swig_types[258]
-#define SWIGTYPE_p_std__dequeT_CvDataMatrixCode_t swig_types[259]
-#define SWIGTYPE_p_std__exception swig_types[260]
-#define SWIGTYPE_p_std__ostream swig_types[261]
-#define SWIGTYPE_p_std__string swig_types[262]
-#define SWIGTYPE_p_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[263]
-#define SWIGTYPE_p_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[264]
-#define SWIGTYPE_p_std__vectorT_cv__linemod__Feature_std__allocatorT_cv__linemod__Feature_t_t swig_types[265]
-#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[266]
-#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[267]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[268]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[269]
-#define SWIGTYPE_p_std__vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t swig_types[270]
-#define SWIGTYPE_p_swig__SciSwigIterator swig_types[271]
-#define SWIGTYPE_p_uint64_t swig_types[272]
-#define SWIGTYPE_p_unsigned_char swig_types[273]
-#define SWIGTYPE_p_unsigned_short swig_types[274]
-#define SWIGTYPE_p_value_type swig_types[275]
-#define SWIGTYPE_p_vectorT_char_std__allocatorT_char_t_t swig_types[276]
-#define SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t swig_types[277]
-#define SWIGTYPE_p_vectorT_cv__DMatch_t swig_types[278]
-#define SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[279]
-#define SWIGTYPE_p_vectorT_cv__KeyPoint_t swig_types[280]
-#define SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t swig_types[281]
-#define SWIGTYPE_p_vectorT_cv__Mat_t swig_types[282]
-#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t swig_types[283]
-#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_t swig_types[284]
-#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[285]
-#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_t swig_types[286]
-#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t swig_types[287]
-#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_t swig_types[288]
-#define SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t swig_types[289]
-#define SWIGTYPE_p_vectorT_double_t swig_types[290]
-#define SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t swig_types[291]
-#define SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t swig_types[292]
-#define SWIGTYPE_p_vectorT_int_t swig_types[293]
-#define SWIGTYPE_p_vectorT_std__string_std__allocatorT_std__string_t_t swig_types[294]
-#define SWIGTYPE_p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t swig_types[295]
-#define SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t swig_types[296]
-#define SWIGTYPE_p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t swig_types[297]
-#define SWIGTYPE_p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t swig_types[298]
-#define SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t swig_types[299]
-#define SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t swig_types[300]
-#define SWIGTYPE_p_vectorT_vectorT_cv__Point_T_int_t_t_t swig_types[301]
-#define SWIGTYPE_p_void swig_types[302]
-#define SWIGTYPE_std__invalid_argument swig_types[303]
-static swig_type_info *swig_types[305];
-static swig_module_info swig_module = {swig_types, 304, 0, 0, 0, 0};
+#define SWIGTYPE_p_f_int_p_void__void swig_types[237]
+#define SWIGTYPE_p_f_p_q_const__unsigned_char_size_t_p_q_const__unsigned_char_size_t_p_unsigned_char_size_t_cv__Size___int___p_void__void swig_types[238]
+#define SWIGTYPE_p_f_p_q_const__void_p_void_int__void swig_types[239]
+#define SWIGTYPE_p_f_p_q_const__void_p_void_int_double_double__void swig_types[240]
+#define SWIGTYPE_p_f_p_void__void swig_types[241]
+#define SWIGTYPE_p_float swig_types[242]
+#define SWIGTYPE_p_int swig_types[243]
+#define SWIGTYPE_p_int64_t swig_types[244]
+#define SWIGTYPE_p_p_CvHaarClassifierCascade swig_types[245]
+#define SWIGTYPE_p_p_CvKalman swig_types[246]
+#define SWIGTYPE_p_p_CvLSVMFilterObject swig_types[247]
+#define SWIGTYPE_p_p_CvLatentSvmDetector swig_types[248]
+#define SWIGTYPE_p_p_cv__Point_T_int_t swig_types[249]
+#define SWIGTYPE_p_p_cv___InputArray swig_types[250]
+#define SWIGTYPE_p_p_cv___OutputArray swig_types[251]
+#define SWIGTYPE_p_p_int swig_types[252]
+#define SWIGTYPE_p_p_unsigned_char swig_types[253]
+#define SWIGTYPE_p_signed_char swig_types[254]
+#define SWIGTYPE_p_size_t swig_types[255]
+#define SWIGTYPE_p_std__basic_stringT_wchar_t_t swig_types[256]
+#define SWIGTYPE_p_std__dequeT_CvDataMatrixCode_t swig_types[257]
+#define SWIGTYPE_p_std__exception swig_types[258]
+#define SWIGTYPE_p_std__ostream swig_types[259]
+#define SWIGTYPE_p_std__string swig_types[260]
+#define SWIGTYPE_p_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[261]
+#define SWIGTYPE_p_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[262]
+#define SWIGTYPE_p_std__vectorT_cv__linemod__Feature_std__allocatorT_cv__linemod__Feature_t_t swig_types[263]
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[264]
+#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[265]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[266]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[267]
+#define SWIGTYPE_p_std__vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t swig_types[268]
+#define SWIGTYPE_p_swig__SciSwigIterator swig_types[269]
+#define SWIGTYPE_p_uint64_t swig_types[270]
+#define SWIGTYPE_p_unsigned_char swig_types[271]
+#define SWIGTYPE_p_unsigned_short swig_types[272]
+#define SWIGTYPE_p_value_type swig_types[273]
+#define SWIGTYPE_p_vectorT_char_std__allocatorT_char_t_t swig_types[274]
+#define SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t swig_types[275]
+#define SWIGTYPE_p_vectorT_cv__DMatch_t swig_types[276]
+#define SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[277]
+#define SWIGTYPE_p_vectorT_cv__KeyPoint_t swig_types[278]
+#define SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t swig_types[279]
+#define SWIGTYPE_p_vectorT_cv__Mat_t swig_types[280]
+#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t swig_types[281]
+#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_t swig_types[282]
+#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[283]
+#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_t swig_types[284]
+#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t swig_types[285]
+#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_t swig_types[286]
+#define SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t swig_types[287]
+#define SWIGTYPE_p_vectorT_double_t swig_types[288]
+#define SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t swig_types[289]
+#define SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t swig_types[290]
+#define SWIGTYPE_p_vectorT_int_t swig_types[291]
+#define SWIGTYPE_p_vectorT_std__string_std__allocatorT_std__string_t_t swig_types[292]
+#define SWIGTYPE_p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t swig_types[293]
+#define SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t swig_types[294]
+#define SWIGTYPE_p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t swig_types[295]
+#define SWIGTYPE_p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t swig_types[296]
+#define SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t swig_types[297]
+#define SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t swig_types[298]
+#define SWIGTYPE_p_vectorT_vectorT_cv__Point_T_int_t_t_t swig_types[299]
+#define SWIGTYPE_p_void swig_types[300]
+#define SWIGTYPE_std__invalid_argument swig_types[301]
+static swig_type_info *swig_types[303];
+static swig_module_info swig_module = {swig_types, 302, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -10102,189 +10100,6 @@ int _wrap_Exception_line_get(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_error(SWIG_GatewayParameters) {
-  cv::Exception *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "error" "', argument " "1"" of type '" "cv::Exception const &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "error" "', argument " "1"" of type '" "cv::Exception const &""'"); 
-  }
-  arg1 = (cv::Exception *)(argp1);
-  cv::error((cv::Exception const &)*arg1);
-  
-  return SWIG_OK;
-}
-
-
-int _wrap_setBreakOnError(SWIG_GatewayParameters) {
-  bool arg1 ;
-  bool val1 ;
-  int ecode1 = 0 ;
-  bool result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  ecode1 = SWIG_AsVal_bool(1, &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "setBreakOnError" "', argument " "1"" of type '" "bool""'");
-  } 
-  arg1 = (bool)(val1);
-  result = (bool)cv::setBreakOnError(arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_bool((bool)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_redirectError__SWIG_0(SWIG_GatewayParameters) {
-  cv::ErrorCallback arg1 = (cv::ErrorCallback) 0 ;
-  void *arg2 = (void *) 0 ;
-  void **arg3 = (void **) 0 ;
-  int res2 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  cv::ErrorCallback result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  {
-    int res = SwigScilabPtrToObject(pvApiCtx, 1, (void**)(&arg1), SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, SWIG_Scilab_GetFuncName());
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "redirectError" "', argument " "1"" of type '" "cv::ErrorCallback""'"); 
-    }
-  }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, SWIG_as_voidptrptr(&arg2), 0, 0, SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "redirectError" "', argument " "2"" of type '" "void *""'"); 
-  }
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_p_void, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "redirectError" "', argument " "3"" of type '" "void **""'"); 
-  }
-  arg3 = (void **)(argp3);
-  result = (cv::ErrorCallback)cv::redirectError(arg1,arg2,arg3);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (void *)(result), SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_redirectError__SWIG_1(SWIG_GatewayParameters) {
-  cv::ErrorCallback arg1 = (cv::ErrorCallback) 0 ;
-  void *arg2 = (void *) 0 ;
-  int res2 ;
-  cv::ErrorCallback result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  {
-    int res = SwigScilabPtrToObject(pvApiCtx, 1, (void**)(&arg1), SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, SWIG_Scilab_GetFuncName());
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "redirectError" "', argument " "1"" of type '" "cv::ErrorCallback""'"); 
-    }
-  }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, SWIG_as_voidptrptr(&arg2), 0, 0, SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "redirectError" "', argument " "2"" of type '" "void *""'"); 
-  }
-  result = (cv::ErrorCallback)cv::redirectError(arg1,arg2);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (void *)(result), SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_redirectError__SWIG_2(SWIG_GatewayParameters) {
-  cv::ErrorCallback arg1 = (cv::ErrorCallback) 0 ;
-  cv::ErrorCallback result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  {
-    int res = SwigScilabPtrToObject(pvApiCtx, 1, (void**)(&arg1), SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, SWIG_Scilab_GetFuncName());
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "redirectError" "', argument " "1"" of type '" "cv::ErrorCallback""'"); 
-    }
-  }
-  result = (cv::ErrorCallback)cv::redirectError(arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (void *)(result), SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_redirectError(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[3] = {
-    1,2,3
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 1) {
-    int _v;
-    void *ptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &ptr, SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_redirectError__SWIG_2(SWIG_GatewayArguments);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *ptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &ptr, SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *ptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &ptr, 0, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_redirectError__SWIG_1(SWIG_GatewayArguments);
-      }
-    }
-  }
-  if (argc == 3) {
-    int _v;
-    void *ptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &ptr, SWIGTYPE_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *ptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &ptr, 0, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        {
-          _v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIGTYPE_p_p_void, SWIG_Scilab_GetFuncName());
-        }
-        if (_v) {
-          return _wrap_redirectError__SWIG_0(SWIG_GatewayArguments);
-        }
-      }
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
-}
-
-
 int _wrap_glob__SWIG_0(SWIG_GatewayParameters) {
   cv::String arg1 ;
   std::vector< cv::String,std::allocator< cv::String > > *arg2 = 0 ;
@@ -10545,46 +10360,6 @@ int _wrap_getNumberOfCPUs(SWIG_GatewayParameters) {
   result = (int)cv::getNumberOfCPUs();
   SWIG_Scilab_SetOutputPosition(1);
   if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_int((int)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_fastMalloc(SWIG_GatewayParameters) {
-  size_t arg1 ;
-  size_t val1 ;
-  int ecode1 = 0 ;
-  void *result = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  ecode1 = SWIG_AsVal_size_t(1, &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "fastMalloc" "', argument " "1"" of type '" "size_t""'");
-  } 
-  arg1 = (size_t)(val1);
-  result = (void *)cv::fastMalloc(arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_void, 0 |  0 , NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_fastFree(SWIG_GatewayParameters) {
-  void *arg1 = (void *) 0 ;
-  int res1 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "fastFree" "', argument " "1"" of type '" "void *""'"); 
-  }
-  cv::fastFree(arg1);
-  
   return SWIG_OK;
 }
 
@@ -98439,7 +98214,6 @@ static swig_type_info _swigt__p_cv__linemod__Template = {"_p_cv__linemod__Templa
 static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f_int_a___p_char__int = {"_p_f_int_a___p_char__int", "int (*)(int,char *[])", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f_int_int_int_int_p_void__void = {"_p_f_int_int_int_int_p_void__void", "void (*)(int,int,int,int,void *)|cv::MouseCallback", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int = {"_p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int", "int (*)(int,char const *,char const *,char const *,int,void *)|cv::ErrorCallback", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f_int_p_void__void = {"_p_f_int_p_void__void", "void (*)(int,void *)|cv::TrackbarCallback|cv::ButtonCallback", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f_p_q_const__unsigned_char_size_t_p_q_const__unsigned_char_size_t_p_unsigned_char_size_t_cv__Size___int___p_void__void = {"_p_f_p_q_const__unsigned_char_size_t_p_q_const__unsigned_char_size_t_p_unsigned_char_size_t_cv__Size___int___p_void__void", "cv::BinaryFunc|void (*)(unsigned char const *,size_t,unsigned char const *,size_t,unsigned char *,size_t,cv::Size_< int >,void *)", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f_p_q_const__void_p_void_int__void = {"_p_f_p_q_const__void_p_void_int__void", "cv::ConvertData|void (*)(void const *,void *,int)", 0, 0, (void*)0, 0};
@@ -98457,7 +98231,6 @@ static swig_type_info _swigt__p_p_cv___InputArray = {"_p_p_cv___InputArray", "cv
 static swig_type_info _swigt__p_p_cv___OutputArray = {"_p_p_cv___OutputArray", "cv::InputOutputArray *|cv::_OutputArray **|cv::OutputArrayOfArrays *|cv::InputOutputArrayOfArrays *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_int = {"_p_p_int", "int **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_unsigned_char = {"_p_p_unsigned_char", "unsigned char **|uchar **", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_p_void = {"_p_p_void", "void **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_signed_char = {"_p_signed_char", "schar *|signed char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_size_t = {"_p_size_t", "size_t *|CvSubdiv2DEdge *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__basic_stringT_wchar_t_t = {"_p_std__basic_stringT_wchar_t_t", "std::basic_string< wchar_t > *|cv::WString *", 0, 0, (void*)0, 0};
@@ -98745,7 +98518,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_double,
   &_swigt__p_f_int_a___p_char__int,
   &_swigt__p_f_int_int_int_int_p_void__void,
-  &_swigt__p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int,
   &_swigt__p_f_int_p_void__void,
   &_swigt__p_f_p_q_const__unsigned_char_size_t_p_q_const__unsigned_char_size_t_p_unsigned_char_size_t_cv__Size___int___p_void__void,
   &_swigt__p_f_p_q_const__void_p_void_int__void,
@@ -98763,7 +98535,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_p_cv___OutputArray,
   &_swigt__p_p_int,
   &_swigt__p_p_unsigned_char,
-  &_swigt__p_p_void,
   &_swigt__p_signed_char,
   &_swigt__p_size_t,
   &_swigt__p_std__basic_stringT_wchar_t_t,
@@ -99051,7 +98822,6 @@ static swig_cast_info _swigc__p_cv__linemod__Template[] = {  {&_swigt__p_cv__lin
 static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f_int_a___p_char__int[] = {  {&_swigt__p_f_int_a___p_char__int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f_int_int_int_int_p_void__void[] = {  {&_swigt__p_f_int_int_int_int_p_void__void, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int[] = {  {&_swigt__p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f_int_p_void__void[] = {  {&_swigt__p_f_int_p_void__void, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f_p_q_const__unsigned_char_size_t_p_q_const__unsigned_char_size_t_p_unsigned_char_size_t_cv__Size___int___p_void__void[] = {  {&_swigt__p_f_p_q_const__unsigned_char_size_t_p_q_const__unsigned_char_size_t_p_unsigned_char_size_t_cv__Size___int___p_void__void, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f_p_q_const__void_p_void_int__void[] = {  {&_swigt__p_f_p_q_const__void_p_void_int__void, 0, 0, 0},{0, 0, 0, 0}};
@@ -99069,7 +98839,6 @@ static swig_cast_info _swigc__p_p_cv___InputArray[] = {  {&_swigt__p_p_cv___Inpu
 static swig_cast_info _swigc__p_p_cv___OutputArray[] = {  {&_swigt__p_p_cv___OutputArray, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_int[] = {  {&_swigt__p_p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_unsigned_char[] = {  {&_swigt__p_p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_p_void[] = {  {&_swigt__p_p_void, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed_char[] = {  {&_swigt__p_signed_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_size_t[] = {  {&_swigt__p_size_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__basic_stringT_wchar_t_t[] = {  {&_swigt__p_std__basic_stringT_wchar_t_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -99357,7 +99126,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_double,
   _swigc__p_f_int_a___p_char__int,
   _swigc__p_f_int_int_int_int_p_void__void,
-  _swigc__p_f_int_p_q_const__char_p_q_const__char_p_q_const__char_int_p_void__int,
   _swigc__p_f_int_p_void__void,
   _swigc__p_f_p_q_const__unsigned_char_size_t_p_q_const__unsigned_char_size_t_p_unsigned_char_size_t_cv__Size___int___p_void__void,
   _swigc__p_f_p_q_const__void_p_void_int__void,
@@ -99375,7 +99143,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_p_cv___OutputArray,
   _swigc__p_p_int,
   _swigc__p_p_unsigned_char,
-  _swigc__p_p_void,
   _swigc__p_signed_char,
   _swigc__p_size_t,
   _swigc__p_std__basic_stringT_wchar_t_t,

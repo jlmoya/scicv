@@ -258,6 +258,12 @@ using namespace cv::ogl;
 %ignore Matx_TOp;
 %ignore CvHaarClassifier;
 
+%ignore error;
+%ignore setBreakOnError;
+%ignore redirectError;
+%ignore fastMalloc;
+%ignore fastFree;
+
 
 %include "../typemaps/opencv_typemaps.i"
 
