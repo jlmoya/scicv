@@ -23,7 +23,7 @@ matplot(img_contours_bmp);
 title("contour image");
 
 subplot(2, 2, 4);
-img_contours = new_Mat(size(img, 'c'), size(img, 'r'), 0);
+img_contours = new_Mat(size(img, 'c'), size(img, 'r'), CV_8UC1, 0);
 img_contours_out = drawContours(img_contours, contours, -1, [255, 0, 0], -1);
 matplot(img_contours_out);
 title("contours");
@@ -32,6 +32,6 @@ delete_Mat(img);
 delete_Mat(img_gray);
 delete_Mat(img_bw);
 delete_Mat(img_canny);
+//delete_Mat(img_contours_bmp);
 delete_Mat(img_contours);
-delete_Mat(img_contours_bmp);
-
+//delete_Mat(img_contours_out);
