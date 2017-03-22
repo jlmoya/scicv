@@ -4329,50 +4329,16 @@ int SWIG_SciMatList_AsMatPtr(void *pvApiCtx, SwigSciObject iVar, cv::Mat **pMatA
 
 
 
-void cvGetPtLists(PtLists& ptListsIn, PtLists* ptListsOut) {
-    *ptListsOut = ptListsIn;
-}
-
-void cvGetPtList(PtList& ptListIn, PtList* ptListOut) {
-    *ptListOut = ptListIn;
-}
-
 void cvGetPtList(PtLists& ptListsIn, int index, PtList* ptList) {
     *ptList = ptListsIn.at(index);
 }
 
+int cvGetPtListsSize(PtLists& ptListsIn) {
+    return ptListsIn.size();
+}
 
-
-
-int SWIG_SciMatrixList_FromPtLists(void *pvApiCtx, SwigSciObject iVarOut, PtLists *pPtLists, char *fname) {
-  SciErr sciErr;
-  int *piListAddr = NULL;
-  int ptListsCount = (int) pPtLists->size();
-
-  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, ptListsCount, &piListAddr);
-  if (sciErr.iErr) {
-    printError(&sciErr, 0);
-    return SWIG_ERROR;
-  }
-
-  for (int i = 0; i < ptListsCount; i++) {
-    PtList ptList = pPtLists->at(i);
-    int ptListSize = (int) ptList.size();
-
-    double *pdValues = (double *) malloc(2 * ptListSize * sizeof(double));
-    for (int j = 0; j < ptListSize; j++) {
-      cv::Point pt = ptList.at(j);
-      pdValues[2*j] = pt.x;
-      pdValues[2*j+1] = pt.y;
-    }
-
-    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 2, ptListsCount, pdValues);
-    if (sciErr.iErr) {
-      printError(&sciErr, 0);
-      return SWIG_ERROR;
-    }
-  }
-  return SWIG_OK;
+void cvPtListExtract(PtList& ptListIn, PtList* ptListOut) {
+    *ptListOut = ptListIn;
 }
 
 
@@ -66431,60 +66397,7 @@ int _wrap_pointPolygonTest(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_cvGetPtLists(SWIG_GatewayParameters) {
-  PtLists *arg1 = 0 ;
-  PtLists *arg2 = (PtLists *) 0 ;
-  PtLists tmpPtLists2 ;
-  
-  arg2 = &tmpPtLists2;
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  cvGetPtLists(*arg1,arg2);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SWIG_SciMatrixList_FromPtLists(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  return SWIG_OK;
-}
-
-
-int _wrap_cvGetPtList__SWIG_0(SWIG_GatewayParameters) {
-  PtList *arg1 = 0 ;
-  PtList *arg2 = (PtList *) 0 ;
-  PtList tmpPtList2 ;
-  
-  arg2 = &tmpPtList2;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("PtList *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  cvGetPtList(*arg1,arg2);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SWIG_SciDouble_FromPtList(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  return SWIG_OK;
-}
-
-
-int _wrap_cvGetPtList__SWIG_1(SWIG_GatewayParameters) {
+int _wrap_cvGetPtList(SWIG_GatewayParameters) {
   PtLists *arg1 = 0 ;
   int arg2 ;
   PtList *arg3 = (PtList *) 0 ;
@@ -66518,39 +66431,48 @@ int _wrap_cvGetPtList__SWIG_1(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_cvGetPtList(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[2] = {
-    1,2
-  };
+int _wrap_cvGetPtListsSize(SWIG_GatewayParameters) {
+  PtLists *arg1 = 0 ;
+  int result;
   
+  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_cvGetPtList__SWIG_0(SWIG_GatewayArguments);
-    }
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
   }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_std__vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        return _wrap_cvGetPtList__SWIG_1(SWIG_GatewayArguments);
-      }
-    }
-  }
+  result = (int)cvGetPtListsSize(*arg1);
+  SWIG_Scilab_SetOutputPosition(1);
+  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_int((int)(result))))) return SWIG_ERROR;
+  return SWIG_OK;
+}
+
+
+int _wrap_cvPtListExtract(SWIG_GatewayParameters) {
+  PtList *arg1 = 0 ;
+  PtList *arg2 = (PtList *) 0 ;
+  PtList tmpPtList2 ;
   
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
+  arg2 = &tmpPtList2;
+  
+  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("PtList *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  cvPtListExtract(*arg1,arg2);
+  
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SWIG_SciDouble_FromPtList(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  }
+  else {
+    return SWIG_ERROR;
+  }
+  return SWIG_OK;
 }
 
 

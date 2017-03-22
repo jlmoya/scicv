@@ -32,16 +32,16 @@
 
 %inline %{
 
-void cvGetPtLists(PtLists& ptListsIn, PtLists* ptListsOut) {
-    *ptListsOut = ptListsIn;
-}
-
-void cvGetPtList(PtList& ptListIn, PtList* ptListOut) {
-    *ptListOut = ptListIn;
-}
-
 void cvGetPtList(PtLists& ptListsIn, int index, PtList* ptList) {
     *ptList = ptListsIn.at(index);
+}
+
+int cvGetPtListsSize(PtLists& ptListsIn) {
+    return ptListsIn.size();
+}
+
+void cvPtListExtract(PtList& ptListIn, PtList* ptListOut) {
+    *ptListOut = ptListIn;
 }
 
 %}

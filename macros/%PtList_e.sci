@@ -1,7 +1,6 @@
-function ret = %PtList_e(indexs, pts)
-    if size(indexs) == [-1, -1]
-        ret = cvGetPtList(pts);
-    else
-        ret = [];
-    end
+function ret = %PtList_e(varargin)
+    ptList = varargin($);
+    ptListMat = cvPtListExtract(ptList);
+    subscript = varargin(1);
+    ret = ptListMat(:,subscript);
 endfunction
