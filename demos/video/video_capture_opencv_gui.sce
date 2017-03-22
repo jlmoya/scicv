@@ -4,31 +4,42 @@ scicv_Init();
 videoCapture = new_VideoCapture(0);
 
 if ~VideoCapture_isOpened(videoCapture)
-    error("Cannot open capture device #0. Please plug a camera.");
+    messagebox("Cannot open capture device #0. Please plug a camera.");
+    return
 end
 
 clsf = new_CascadeClassifier();
 CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_frontalface_alt.xml");
 
-s = [0, 255, 0];
-
 startWindowThread();
 namedWindow("Capture");
+
+faceDetection = %f;
 
 while %t
     [ret, frame] = VideoCapture_read(videoCapture);
     if ret then
-        faces = CascadeClassifier_detect(clsf, frame, 1.3, 2, CV_HAAR_SCALE_IMAGE, [10 10]);
-        for i=1:size(faces)
-            face = faces(i);
-            leftTopPt = [face(1), face(2)];
-            rightBottomPt = [face(1)+face(4), face(2)+face(3)];
-            rectangle(frame, leftTopPt, rightBottomPt, s, 2, 8, 0);
+        if faceDetection then
+            faces = CascadeClassifier_detect(clsf, frame, 1.3, 2, CV_HAAR_SCALE_IMAGE, [10 10]);
+            for i=1:size(faces)
+                face = faces(i);
+                leftTopPt = [face(1), face(2)];
+                rightBottomPt = [face(1)+face(4), face(2)+face(3)];
+                rectangle(frame, leftTopPt, rightBottomPt, [0, 255, 0], 2, 8, 0);
+            end
         end
+        putText(frame, "Press ''d'' to enable/disable face detection, and ''q'' to quit", ..
+            [10, 10], FONT_HERSHEY_PLAIN, 1.0, [0,255,0], 1);
         imshow("Capture", frame);
         delete_Mat(frame);
     else
         break;
+    end
+    b = waitKey(1);
+    if b == ascii('q') then
+        break
+    elseif b == ascii('d') then
+        faceDetection = ~faceDetection;
     end
 end
 
