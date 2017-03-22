@@ -1,22 +1,34 @@
- // <-- CLI SHELL MODE -->
+// <-- CLI SHELL MODE -->
+
 scicv_Init();
 
-function check_img(img, expected_cols, expected_rows, expected_channels)
+function check_img(img, expected_rows, expected_cols, expected_channels, varargin)
     assert_checkequal(typeof(img), "Mat");
     assert_checkfalse(Mat_empty(img));
     assert_checkequal(Mat_cols_get(img), expected_cols);
     assert_checkequal(Mat_rows_get(img), expected_rows);
-    assert_checkequal(Mat_channels_get(img), expected_channels);
+    assert_checkequal(Mat_channels(img), expected_channels);
+    if size(varargin) > 0 then
+        expected_value = varargin(1);
+        expected_data = ones(1,expected_rows*expected_cols*expected_channels)*expected_value;
+        warning("off");
+        assert_checkequal(double(img(:,:)), hypermat([expected_rows, expected_cols, expected_channels], expected_data));
+        warning("on");
+        delete_Mat(img);
+    end
 endfunction
 
-img = new_Mat(2, 4);
-check_img(img, 2, 4, 3);
-delete_Mat(img);
+rows = 10;
+cols = 15;
+imageType = CV_8UC3;
+channels = 3;
+val = 100;
+s = [val, val, val];
 
-img = new_Mat(2, 4, CV_8UC3);
-check_img(img, 2, 4, 3);
-delete_Mat(img);
+check_img(new_Mat(rows, cols, imageType), rows, cols, channels);
 
-img = new_Mat(2, 4, CV_8UC1);
-check_img(img, 2, 4, 1);
-delete_Mat(img);
+check_img(new_Mat([rows, cols], imageType), rows, cols, channels);
+
+check_img(new_Mat(rows, cols, imageType, s), rows, cols, channels, val);
+
+check_img(new_Mat([rows, cols], imageType, s), rows, cols, channels, val);
