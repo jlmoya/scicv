@@ -4,7 +4,7 @@ img = imread(getSampleImage("noise.png"));
 [res, img_bw] = threshold(img, 127, 255, THRESH_BINARY_INV);
 
 morph_size = 2;
-element = getStructuringElement(MORPH_RECT, [2*morph_size + 1, 2*morph_size+1 ], [morph_size, morph_size]);
+element = getStructuringElement(MORPH_RECT, [2*morph_size + 1, 2*morph_size+1], [morph_size, morph_size]);
 
 img_dilate = dilate(img_bw, element);
 

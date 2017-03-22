@@ -2,7 +2,7 @@ scicv_Init();
 
 cap = new_VideoCapture(getSampleVideo("pedestrian.avi"));
 
-videoWriter = new_VideoWriter("Sci_BackgroundSubPedes.avi",CV_FOURCC('D', 'I', 'V', '3'), 10, [1536 576]);
+videoWriter = new_VideoWriter("Sci_BackgroundSubPedes.avi",CV_FOURCC('D', 'I', 'V', '3'), 10, [576 1536]);
 merged_frame = new_Mat(576, 1536, CV_8UC3);
 rect_1 = [0,0,768,576]; // Rect(x,y,width,height)
 rect_2 = [768,0,768,576];

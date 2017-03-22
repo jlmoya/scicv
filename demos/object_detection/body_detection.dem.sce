@@ -6,7 +6,7 @@ clsf = new_CascadeClassifier();
 hogcascades_file = fullfile(get_scicv_path(), "data", "hogcascades", "hogcascade_pedestrians.xml")
 CascadeClassifier_load(clsf, hogcascades_file);
 
-pedestrians = CascadeClassifier_detect(clsf, img, 1.2, 6, 1, [90 120]);
+pedestrians = CascadeClassifier_detect(clsf, img, 1.2, 6, 1, [120 90]);
 numberOfpedestrians = size(pedestrians);
 s = [0, 255, 0]; // BGR
 

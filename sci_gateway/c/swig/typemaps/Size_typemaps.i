@@ -19,13 +19,13 @@ int SWIG_SciDoubleOrInt32_AsSize(void *pvApiCtx, SwigSciObject iVar, cv::Size *s
   }
 
   if (iRows * iCols == 2) {
-    size->width = piValues[0];
-    size->height = piValues[1];
+    size->height = piValues[0];
+    size->width = piValues[1];
     return SWIG_OK;
   }
   else if (iRows * iCols == 1) {
-    size->width = piValues[0];
     size->height = piValues[0];
+    size->width = piValues[1];
     return SWIG_OK;
   }
   else {
