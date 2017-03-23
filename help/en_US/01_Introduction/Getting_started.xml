@@ -17,24 +17,25 @@
     <title>Introduction</title>
 
     <para>sciCV is the Scilab interface to the OpenCV library (in version 2.4.13). It gives access to almost all the functions of OpenCV in Scilab in a friendly manner.
-    The OpenCV functions are available under the same name in Scilab, with some changes mostly on the argument passing (since Scilab does not accept reference passing). These changes will be resumed in this documentation (not yet documented).</para>
+    Almost all the OpenCV functions are available under the same name in Scilab. There are changes in the argument passing (as Scilab functions can return multiple values). These changes will be resumed in this documentation (not yet documented).</para>
 
-    <para>The following platforms (for now) are supported:
+    <para>The following platforms are supported:
     <itemizedlist>
     <member>Linux (64 bits)</member>
     <member>Windows (64 bits)</member>
+    <member>Mac OSx (64 bits)</member>
     </itemizedlist>
     </para>
 
     <para>No prerequisites are needed to use sciCV.</para>
 
-    <para>Once loaded in Scilab the only instruction needed is to initialize the module with <literal>scicv_Init()</literal>.</para>
+    <para>Once loaded in Scilab, the only instruction needed is to initialize the module with <literal>scicv_Init()</literal>.</para>
   </refsection>
   <refsection>
     <title>See also</title>
     <simplelist type="inline">
       <member>
-        <link linkend="http://opencv.org">OpenCV</link>
+        <ulink url="http://opencv.org">OpenCV</ulink>
       </member>
     </simplelist>
   </refsection>
