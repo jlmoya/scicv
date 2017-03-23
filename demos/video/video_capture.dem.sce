@@ -18,12 +18,6 @@ CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_frontalface_alt.xml"
 closed = %f;
 f = figure("closerequestfcn", "closed = closeFigure();");
 
-[ret, frame] = VideoCapture_read(videoCapture);
-matplot(frame);
-delete_Mat(frame);
-a = gca();
-h = a.children(1);
-
 while ~closed
     [ret, frame] = VideoCapture_read(videoCapture);
     if ret then
@@ -34,7 +28,7 @@ while ~closed
             rightBottomPt = [face(1)+face(4), face(2)+face(3)];
             rectangle(frame, leftTopPt, rightBottomPt, [0, 255, 0], 2, 8, 0);
         end
-        matplot(frame, h);
+        matplot(frame);
         delete_Mat(frame);
     else
         break
