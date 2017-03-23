@@ -1,7 +1,7 @@
 function ret = %Mat_size(mat, varargin)
     select argn(2)
     case 1 then
-        ret = [Mat_cols_get(mat), Mat_rows_get(mat)];
+        ret = [Mat_rows_get(mat), Mat_cols_get(mat)];
     case 2 then 
         arg = varargin(1);
         if arg == "*" then
