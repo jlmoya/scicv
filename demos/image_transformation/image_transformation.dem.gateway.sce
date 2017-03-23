@@ -3,6 +3,7 @@
 demopath = get_absolute_file_path("image_transformation.dem.gateway.sce");
 
 subdemolist = [ ..
+_("Image rotation"), "image_rotation.dem.sce"; ..
 _("Pyramid"), "pyramid.dem.sce"; ..
 ];
 
