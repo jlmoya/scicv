@@ -4,7 +4,9 @@ demopath = get_absolute_file_path("video.dem.gateway.sce");
 
 subdemolist = [ ..
 _("Video capture"), "video_capture.dem.sce"; ..
+_("Video capture - built-in GUI"), "video_capture_built-in_gui.dem.sce"; ..
 _("Video reading"), "video_reading.dem.sce"; ..
+_("Video reading - built-in GUI"), "video_reading_built-in_gui.dem.sce"; ..
 ];
 
 subdemolist(:,2) = demopath + subdemolist(:,2);
