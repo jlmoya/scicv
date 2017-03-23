@@ -31,4 +31,5 @@ check_img(new_Mat([rows, cols], imageType), rows, cols, channels);
 
 check_img(new_Mat(rows, cols, imageType, s), rows, cols, channels, val);
 
-check_img(new_Mat([rows, cols], imageType, s), rows, cols, channels, val);
+// TODO fix
+//check_img(new_Mat([rows, cols], imageType, s), rows, cols, channels, val);
