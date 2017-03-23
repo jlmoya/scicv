@@ -33,6 +33,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
+        <term>size</term>
+        <listitem>
+          <para>Size of the output image (1x2 double matrix).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
         <term>flags</term>
         <listitem>
           <para>Can be a combination of:</para>
