@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) 2016 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="matplot">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>matplot</refname>
+    <refpurpose>Displays an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img = matplot(img)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img</term>
+        <listitem>
+          <para>Image to be displayed (<literal>Mat</literal> or a 2D matrix).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>matplot</function> displays an image, which type can be:</para>
+    <itemizedlist>
+        <member><literal>Mat</literal>, containing a binary/gray color image.</member>
+        <member>2D <literal>double</literal>, <literal>int8</literal>, <literal>uint8</literal>, <literal>int16</literal>, <literal>uint16</literal>, <literal>int32</literal>, <literal>uint32</literal> gray or binary image.</member>
+        <member>3D <literal>double</literal>, <literal>int8</literal>, <literal>uint8</literal>, <literal>int16</literal>, <literal>uint16</literal>, <literal>int32</literal>, <literal>uint32</literal> color image.</member>
+        </itemizedlist>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"));
+
+    matplot(img);
+
+    delete_Mat(img);
+ ]]></programlisting>
+ <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img_gray = imread(getSampleImage("lena.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
+
+    matplot(img_gray);
+
+    delete_Mat(img_gray);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member><link linkend="imshow">imshow</link></member>
+      <member><link linkend="Mat">Mat</link></member>
+    </simplelist>
+  </refsection>
+</refentry>
