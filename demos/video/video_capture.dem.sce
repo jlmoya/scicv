@@ -15,8 +15,6 @@ end
 clsf = new_CascadeClassifier();
 CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_frontalface_alt.xml");
 
-s = [0, 255, 0];
-
 closed = %f;
 f = figure("closerequestfcn", "closed = closeFigure();");
 
@@ -34,12 +32,12 @@ while ~closed
             face = faces(i);
             leftTopPt = [face(1), face(2)];
             rightBottomPt = [face(1)+face(4), face(2)+face(3)];
-            rectangle(frame, leftTopPt, rightBottomPt, s, 2, 8, 0);
+            rectangle(frame, leftTopPt, rightBottomPt, [0, 255, 0], 2, 8, 0);
         end
         matplot(frame, h);
         delete_Mat(frame);
     else
-        break;
+        break
     end
 end
 

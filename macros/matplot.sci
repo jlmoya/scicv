@@ -1,6 +1,6 @@
 function matplot(img, varargin)
     // convert Mat type
-    if typeof(img) == 'Mat' then
+    if typeof(img) == "Mat" then
         I = uint8(img(:,:));
     else
         I = uint8(img);
@@ -16,8 +16,6 @@ function matplot(img, varargin)
     if h <> [] then
         h.data = I;
     else
-        Matplot(I, frameflag=4);
-        a = gca();
-        a.axes_visible = "off";
+        Matplot(I, "140");
     end
 endfunction
