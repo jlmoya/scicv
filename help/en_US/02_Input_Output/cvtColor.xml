@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = cvtColor(img_in, code, nchannels)</synopsis>
+    <synopsis>img_out = cvtColor(img_in, code[, nchannels])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>

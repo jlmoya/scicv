@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>[img_out, contours] = findContours(img_in, mode, method, offset)</synopsis>
+    <synopsis>[img_out, contours] = findContours(img_in, mode, method[, offset])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>

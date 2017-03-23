@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title></title>
-    <synopsis>imwrite(filename, img, params)</synopsis>
+    <synopsis>imwrite(filename, img[, params])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>

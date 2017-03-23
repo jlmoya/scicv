@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = Sobel(img_in, depth, dx, dy, ksize, scale, delta, borderType)</synopsis>
+    <synopsis>img_out = Sobel(img_in, depth, dx, dy[, ksize[, scale[, delta[, borderType]]]])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>

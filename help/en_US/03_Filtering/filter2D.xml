@@ -15,7 +15,7 @@ xml:lang="fr" xml:id="filter2D">
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = filter2D(img_in, depth, kernel, anchor, delta, borderType)</synopsis>
+    <synopsis>img_out = filter2D(img_in, depth, kernel[, anchor[, delta[, borderType]]])</synopsis>
   </refsynopsisdiv>
   <refsection>
   <title>Parameters</title>

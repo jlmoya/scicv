@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = dilate(img_in, element, anchor, iterations, borderType, borderValue)</synopsis>
+    <synopsis>img_out = dilate(img_in, element[, anchor[, iterations[, borderType[, borderValue]]]])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>

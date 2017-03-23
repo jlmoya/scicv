@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = warpAffine(img_in, M, size, flags, borderType, borderValue)</synopsis>
+    <synopsis>img_out = warpAffine(img_in, M, size[, flags[, borderType[, borderValue]]])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>

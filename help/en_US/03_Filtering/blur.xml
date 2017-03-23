@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = blur(img_in, ksize, anchor, borderType)</synopsis>
+    <synopsis>img_out = blur(img_in, ksize[, anchor[, borderType]])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>

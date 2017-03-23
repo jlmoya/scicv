@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = resize(img_in, size, scale_x, scale_y, interpolation)</synopsis>
+    <synopsis>img_out = resize(img_in, size[, scale_x[, scale_y[, interpolation]]])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>

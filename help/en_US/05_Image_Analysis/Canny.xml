@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = Canny(img_in, threshold1, threshold2, apertureSize, L2gradient)</synopsis>
+    <synopsis>img_out = Canny(img_in, threshold1, threshold2, apertureSize[, L2gradient])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>
