@@ -44,8 +44,6 @@ mat_markers(find(mat_unknown == 255)) = 0;
 
 img_markers_watershed = watershed(img, int32(mat_markers));
 
-scf();
-
 subplot(4,2,1);
 title("original image");
 matplot(img);
