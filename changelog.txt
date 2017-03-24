@@ -4,3 +4,10 @@ changelog of the Scilab Computer Vision toolbox
 
 0.2: first release - alpha1 version
 
+0.3: public release - alpha2 version
+    - fixed PNG issue on some Linux distributions
+    - added MacOSx support
+    - added demos, help pages
+    - implemented size & extraction operators
+    - fixed tests
+

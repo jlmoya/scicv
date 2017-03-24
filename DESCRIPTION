@@ -1,7 +1,7 @@
 Toolbox: scicv
 Title: Scilab Computer Vision
 Summary: Binding for the OpenCV library 
-Version: 0.2
+Version: 0.3
 Author: Simon Marchetto (simon.marchetto@scilab-enterprises.com) 
         Wael Elgazzah (wael.elgazzah@scilab-enterprises.com)
 Maintainer: Simon Marchetto (simon.marchetto@scilab-enterprises.com)
