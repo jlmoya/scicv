@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("image_rotation.dem.sce");
+
 img = imread(getSampleImage("puffin.png"));
 
 // Rotation 15 degrees to the left

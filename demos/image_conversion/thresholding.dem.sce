@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("thresholding.dem.sce");
+
 img = imread(getSampleImage("puffin.png"), CV_LOAD_IMAGE_GRAYSCALE);
 [res, img_threshold] = threshold(img, 125, 255, THRESH_BINARY);
 

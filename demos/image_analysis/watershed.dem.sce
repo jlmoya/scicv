@@ -3,6 +3,10 @@
 
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("watershed.dem.sce");
+
 img = imread(getSampleImage("water_coins.jpg"));
 
 // convert to black&white

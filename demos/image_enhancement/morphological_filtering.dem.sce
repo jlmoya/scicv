@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("morphological_filtering.dem.sce");
+
 img = imread(getSampleImage("noise.png"));
 [res, img_bw] = threshold(img, 127, 255, THRESH_BINARY_INV);
 

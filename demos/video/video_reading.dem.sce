@@ -1,8 +1,10 @@
 scicv_Init();
 
-videoCapture = new_VideoCapture(getSampleVideo("video.mpg"));
-
 f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("video_reading.dem.sce");
+
+videoCapture = new_VideoCapture(getSampleVideo("video.mpg"));
 
 while is_handle_valid(f)
     [ret, frame] = VideoCapture_read(videoCapture);

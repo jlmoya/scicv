@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("body_detection.dem.sce");
+
 img = imread(getSampleImage("street.png"));
 
 clsf = new_CascadeClassifier();

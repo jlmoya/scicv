@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("canny.dem.sce");
+
 img = imread(getSampleImage("puffin.png"), CV_LOAD_IMAGE_GRAYSCALE);
 img_canny = Canny(img, 100, 160);
 

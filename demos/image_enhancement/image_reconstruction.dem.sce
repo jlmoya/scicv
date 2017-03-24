@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("image_reconstruction.dem.sce");
+
 img = imread(getSampleImage("OpenCV_Logo_B.png"));
 
 img_mask = imread(getSampleImage("OpenCV_Logo_C.png"),CV_LOAD_IMAGE_GRAYSCALE); // must be one channal image

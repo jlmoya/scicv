@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("blur.dem.sce");
+
 img = imread(getSampleImage("lena.jpg"));
 
 img_blur = blur(img, [5 5]);

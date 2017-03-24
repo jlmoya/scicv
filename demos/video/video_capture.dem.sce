@@ -2,17 +2,18 @@ scicv_Init();
 
 // video capture from the camera
 videoCapture = new_VideoCapture(0);
-
 if ~VideoCapture_isOpened(videoCapture)
     messagebox("Cannot open capture device #0. Please plug a camera.", ..
         "sciCV - Video capture demo");
     return
 end
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("video_capture.dem.sce");
+
 clsf = new_CascadeClassifier();
 CascadeClassifier_load(clsf, "data/haarcascades/haarcascade_frontalface_alt.xml");
-
-f = scf();
 
 h_checkbox = uicontrol(f, "style", "checkbox", "string", "Face detection", ..
     "backgroundColor", [1,1,1], "position", [10,10,150,20]);

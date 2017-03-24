@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("template_matching.dem.sce");
+
 img = imread(getSampleImage("puffins.png"));
 img_template = imread(getSampleImage("puffin_pattern.png"));
 

@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("face_detection.dem.sce");
+
 img = imread(getSampleImage("faces.jpg"));
 
 clsf = new_CascadeClassifier();

@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("pyramid.dem.sce");
+
 img = imread(getSampleImage("lena.jpg"));
 
 // Pyramid down

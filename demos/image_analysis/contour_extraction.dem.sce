@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("contour_extraction.dem.sce");
+
 img = imread(getSampleImage("shapes.png"));
 
 img_gray = cvtColor(img, COLOR_BGR2GRAY);

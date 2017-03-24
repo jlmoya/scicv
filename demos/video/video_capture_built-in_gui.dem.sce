@@ -7,7 +7,7 @@ end
 
 scicv_Init();
 
-// video capture from the first device, supposed a camera
+// Video capture from the first device, supposed a camera
 videoCapture = new_VideoCapture(0);
 if ~VideoCapture_isOpened(videoCapture)
     messagebox("Cannot open capture device #0. Please plug a camera.", ..

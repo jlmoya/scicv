@@ -1,5 +1,9 @@
 scicv_Init();
 
+f = scf();
+toolbar(f.figure_id, "off");
+demo_viewCode("sobel.dem.sce");
+
 img = imread(getSampleImage("sudoku.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
 
 img_sobel_x = Sobel(img, CV_16S, 1, 0, 3);
