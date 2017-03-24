@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV Mat* <= Scilab Mat list
 
 %fragment("SWIG_SciMatList_AsMatPtr", "header") {

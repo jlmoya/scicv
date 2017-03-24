@@ -1,4 +1,8 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // <-- CLI SHELL MODE -->
+
 exec(fullfile(get_scicv_path(), "tests", "test_utils.sci"));
 
 function check_size(img)

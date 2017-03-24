@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 changelog of the Scilab Computer Vision toolbox
 
 0.1: initial version - prototype

@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 %fragment("SWIG_SciDouble_AsPoint2f", "header", fragment ="SWIG_SciDouble_AsFloatArrayAndSize") {
 int SWIG_SciDouble_AsPoint2f(void *pvApiCtx, SwigSciObject iVar, cv::Point2f *point2f, char *fname) {
   float *pfValues = NULL;

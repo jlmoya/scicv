@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV Mat& matIn <= Scilab mlist Mat
 
 %typemap(in, noblock=1) cv::Mat& matIn {

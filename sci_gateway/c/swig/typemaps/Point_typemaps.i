@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 %include Point_SciDouble.swg
 
 // OpenCV Point <= Scilab double 1x2

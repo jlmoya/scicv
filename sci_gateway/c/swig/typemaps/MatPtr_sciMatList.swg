@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 %fragment("SWIG_SciMatList_AsMatPtr", "header") {
 
 int SWIG_SciMatList_AsMatPtr(void *pvApiCtx, SwigSciObject iVar, cv::Mat **pMatArray, char *fname) {

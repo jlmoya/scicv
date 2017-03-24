@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 function ret = %Mat_p(mat)
     if ~Mat_empty(mat)
         disp(sprintf("%s [%d, %d]", ..

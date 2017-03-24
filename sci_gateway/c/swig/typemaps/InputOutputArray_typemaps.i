@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV InputOutputArray <= Scilab mlist Mat or hypermat
 //                         => Scilab mlist Mat
 

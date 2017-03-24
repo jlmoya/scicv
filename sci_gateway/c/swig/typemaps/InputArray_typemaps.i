@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV InputArray contour, points <= Scilab mlist Points
 
 %typemap(typecheck, precedence=SWIG_TYPECHECK_POINTER) cv::InputArray points {

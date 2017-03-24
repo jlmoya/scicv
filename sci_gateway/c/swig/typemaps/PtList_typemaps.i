@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV vector<cv::Point> (PtList) => Scilab double matrix
 
 %include PtList_sciDouble.swg

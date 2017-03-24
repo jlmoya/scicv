@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV InputArrayOfArrays <= Scilab mlist PtLists
 
 %typemap(typecheck, precedence=SWIG_TYPECHECK_POINTER) cv::InputArrayOfArrays contours {

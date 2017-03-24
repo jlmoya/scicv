@@ -1,10 +1,11 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 %{
 #undef SKIP_INCLUDES
 #include "opencv2/video/video.hpp"
 using namespace cv;
 %}
-
-
 
 %ignore CvKalman;
 %ignore DenseOpticalFlow;

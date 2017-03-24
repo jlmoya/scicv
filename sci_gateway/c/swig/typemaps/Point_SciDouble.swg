@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 %fragment("SWIG_SciDoubleOrInt32_AsPoint", "header", fragment ="SWIG_SciDoubleOrInt32_AsIntArrayAndSize") {
 
 int SWIG_SciDoubleOrInt32_AsPoint(void *pvApiCtx, SwigSciObject iVar, cv::Point *point, char *fname) {

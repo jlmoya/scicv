@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // Scilab: double 1x2 <=> OpenCV Size
 
 %fragment("SWIG_Check_Size", "header") {

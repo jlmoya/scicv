@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 //http://docs.opencv.org/3.1.0/d3/db4/tutorial_py_watershed.html
 //http://stackoverflow.com/questions/11435974/watershed-segmentation-opencv-xcode
 

@@ -1,23 +1,26 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 function quitModule()
-  TOOLBOX_NAME  = "scicv";
-  TOOLBOX_TITLE = "Scilab Computer Vision";
+    TOOLBOX_NAME  = "scicv";
+    TOOLBOX_TITLE = "Scilab Computer Vision";
 
-  [macros, tlbx_macros_dir] = libraryinfo("scicvlib");
-  tlbx_root_dir = fullpath(tlbx_macros_dir + '/..');
+    [macros, tlbx_macros_dir] = libraryinfo("scicvlib");
+    tlbx_root_dir = fullpath(tlbx_macros_dir + '/..');
 
-  mprintf("Quit " + TOOLBOX_TITLE + "\n");
+    mprintf("Quit " + TOOLBOX_TITLE + "\n");
 
-  mprintf("\tUnload help\n");
-  del_help_chapter(TOOLBOX_NAME);
+    mprintf("\tUnload help\n");
+    del_help_chapter(TOOLBOX_NAME);
 
-  mprintf("\tUnload gateways\n");
-  exec(fullfile(tlbx_root_dir , "sci_gateway/unloader_gateway.sce"));
+    mprintf("\tUnload gateways\n");
+    exec(fullfile(tlbx_root_dir , "sci_gateway/unloader_gateway.sce"));
 
-  mprintf("\tUnload libraries\n");
-  exec(fullfile(tlbx_root_dir , "src/c/unloader_c.sce"));
+    mprintf("\tUnload libraries\n");
+    exec(fullfile(tlbx_root_dir , "src/c/unloader_c.sce"));
 
-  mprintf("\tUnload thirdparties\n");
-  ulink(netcdf_ilib);
+    mprintf("\tUnload thirdparties\n");
+    ulink(netcdf_ilib);
 endfunction
 
 quitModule();

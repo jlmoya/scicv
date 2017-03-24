@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV Scalar => Scilab double 1x1 ... 1x4
 
 %fragment("SWIG_SciDoubleOrInt32_AsScalar", "header") {

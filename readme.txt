@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 README of Scilab Computer Vision toolbox
 ----------------------------------------
 

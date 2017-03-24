@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV PtList (<vector<cv::Point>) => Scilab double nx2
 
 %fragment("SWIG_SciDouble_FromPtList", "header", fragment="SWIG_SciDouble_FromDoubleArrayAndSize") {

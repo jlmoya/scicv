@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 %include InputOutputArray_typemaps.i
 %include InputArrayOfArrays_typemaps.i
 %include OutputArrayOfArrays_typemaps.i

@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 %{
 #undef SKIP_INCLUDES
 #include "opencv2/photo/photo.hpp"

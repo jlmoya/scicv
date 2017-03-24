@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV PtLists (vector<vector<cv::Point> >) <= Scilab mlist PtLists
 
 %typemap(in, noblock=1) PtLists& ptListsIn {

@@ -1,5 +1,9 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // <-- CLI SHELL MODE -->
 // <-- NOT FIXED -->
+
 scicv_Init();
 
 img = imread(getSampleImage("lena.jpg"));

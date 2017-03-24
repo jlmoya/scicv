@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV std::vector<Rect> => Scilab: list matrix[1,4]
 
 %typemap(in, numinputs=0, noblock=1) vector<cv::Rect_<int>>& (vector<cv::Rect_<int>> vRect) {

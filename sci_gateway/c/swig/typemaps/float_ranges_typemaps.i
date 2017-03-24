@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV float** ranges <= Scilab double matrix
 
 %typemap(typecheck, noblock=0) float** ranges {

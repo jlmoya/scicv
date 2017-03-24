@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 function matplot(img, varargin)
     // convert Mat type
     if typeof(img) == "Mat" then

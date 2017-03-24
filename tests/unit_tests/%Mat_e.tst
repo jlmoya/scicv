@@ -1,4 +1,8 @@
- // <-- CLI SHELL MODE -->
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
+// <-- CLI SHELL MODE -->
+
 scicv_Init();
 
 img = new_Mat(2, 3, CV_8UC3, [1, 128, 255]);

@@ -1,4 +1,5 @@
-// Copyright (C) 2016 - Scilab Enterprises -
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
 
 demopath = get_absolute_file_path("object_detection.dem.gateway.sce");
 

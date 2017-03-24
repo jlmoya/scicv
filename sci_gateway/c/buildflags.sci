@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 function cflags = getCompilationFlags()
     os = getos();
     if os <> "Darwin" then

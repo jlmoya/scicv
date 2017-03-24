@@ -1,4 +1,5 @@
-// This file is released under the 3-clause BSD license. See COPYING-BSD.
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
 
 function builder_gateway()
 

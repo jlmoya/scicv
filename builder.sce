@@ -1,3 +1,5 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
 
 mode(-1);
 lines(0);

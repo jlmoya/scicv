@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 %{
 #include "opencv2/objdetect/objdetect.hpp"
 using namespace cv;

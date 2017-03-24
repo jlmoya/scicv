@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 function ret = %Mat_size(mat, varargin)
     select argn(2)
     case 1 then

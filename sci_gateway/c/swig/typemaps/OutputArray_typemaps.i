@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV OutputArray => Scilab mlist Mat
 
 %typemap(in, numinputs=0, noblock=1) cv::OutputArray {

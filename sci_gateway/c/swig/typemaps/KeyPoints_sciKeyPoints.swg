@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // OpenCV Points (vector<KeyPoint>) => Scilab double nx2
 
 %fragment("SWIG_SciKeyPoints_FromKeyPoints", "header", fragment="SWIG_SciDouble_FromDoubleArrayAndSize") {

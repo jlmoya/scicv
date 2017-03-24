@@ -1,6 +1,5 @@
-%{
-
-%}
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
 
 %rename(__add__)              operator+;
 %rename(__pos__)              operator+();

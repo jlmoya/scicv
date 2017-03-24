@@ -1,3 +1,6 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 if getos() == "Darwin" then
     if messagebox("This demo does not work well on Mac OSx, do you want to continue ?", ..
         "sciCV - Video capture built-in GUI demo", "warning", ["OK", "Cancel"], "modal") <> 1 then

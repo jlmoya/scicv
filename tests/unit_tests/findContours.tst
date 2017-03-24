@@ -1,4 +1,8 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // <-- CLI SHELL MODE -->
+
 scicv_Init();
 
 img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);

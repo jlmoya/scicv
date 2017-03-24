@@ -1,4 +1,8 @@
+// Scilab Computer Vision Toolbox
+// Copyright (C) 2017 - Scilab Enterprises
+
 // <-- CLI SHELL MODE -->
+
 scicv_Init();
 
 cap = new_VideoCapture(getSampleVideo("video.mpg"));
