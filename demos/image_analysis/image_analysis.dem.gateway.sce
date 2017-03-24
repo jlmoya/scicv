@@ -7,7 +7,6 @@ _("Canny"), "canny.dem.sce"; ..
 _("Sobel"), "sobel.dem.sce"; ..
 _("Contour extraction"), "contour_extraction.dem.sce"; ..
 _("Watershed"), "watershed.dem.sce"; ..
-_("Histogram"), "histogram.dem.sce"; ..
 ];
 
 subdemolist(:,2) = demopath + subdemolist(:,2);
