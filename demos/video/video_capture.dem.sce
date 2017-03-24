@@ -4,7 +4,8 @@ scicv_Init();
 videoCapture = new_VideoCapture(0);
 
 if ~VideoCapture_isOpened(videoCapture)
-    messagebox("Cannot open capture device #0. Please plug a camera.");
+    messagebox("Cannot open capture device #0. Please plug a camera.", ..
+        "sciCV - Video capture demo");
     return
 end
 

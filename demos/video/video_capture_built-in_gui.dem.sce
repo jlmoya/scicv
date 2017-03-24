@@ -1,6 +1,6 @@
 if getos() == "Darwin" then
     if messagebox("This demo does not work well on Mac OSx, do you want to continue ?", ..
-        "sciCV - Video capture built-in GUI", "warning", ["OK", "Cancel"], "modal") <> 1 then
+        "sciCV - Video capture built-in GUI demo", "warning", ["OK", "Cancel"], "modal") <> 1 then
         return
     end
 end
@@ -10,7 +10,8 @@ scicv_Init();
 // video capture from the first device, supposed a camera
 videoCapture = new_VideoCapture(0);
 if ~VideoCapture_isOpened(videoCapture)
-    messagebox("Cannot open capture device #0. Please plug a camera.");
+    messagebox("Cannot open capture device #0. Please plug a camera.", ..
+        "sciCV - Video capture built-in GUI demo");
     return
 end
 
