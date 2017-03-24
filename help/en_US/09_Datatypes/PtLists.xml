@@ -11,18 +11,16 @@
   </info>
   <refnamediv>
     <refname>PtLists</refname>
-    <refpurpose>Type for a list of <link linkend="Points">Points</link></refpurpose>
+    <refpurpose>Collection of <link linkend="PtList">PtList</link> type</refpurpose>
   </refnamediv>
   <refsection>
     <title>Description</title>
-    <para><literal>PtLists</literal> is the type used to store a list of <link linkend="Points">Points</link> objects (a <link linkend="Points">Points</link> is a list of points).</para>
+    <para><literal>PtLists</literal> is the type used to store a collection of <link linkend="PtList">PtList</link> objects.</para>
     <para>Such objects are returned from shape analysis functions, such as <link linkend="findContours">findContours</link> for example, which returns several lists of points, each of one for each detected contour.</para>
 
-    <para>A <literal>PtLists</literal> object is not a Scilab matrix (it is a <link linkend="mlist">mlist</link>), but its content can be extracted with the extraction operator:</para>
-    <itemizedlist>
-      <member>Full extraction <literal>(:)</literal>: it returns a Scilab list, each item of this list is a Scilab 2xn matrix containing the coordinates of one list of points (<link linkend="Points">Points</link>).</member>
-      <member>Extraction with index <literal>(i)</literal>: it returns the <link linkend="Points">Points</link> object stored at the given index.</member>
-    </itemizedlist>
+    <para><literal>PtList</literal> supports the extraction operator <literal>(n:step:m)</literal>, returning a single or a list of <literal>PtList</literal>, depending on the size of the interval.</para>
+
+    <para><literal>PtList</literal> supports also the <literal>size</literal> function, returning the size of the list.</para>
   </refsection>
   <refsection>
     <title>Examples</title>
@@ -30,19 +28,22 @@
     // <-- CLI SHELL MODE -->
     scicv_Init();
 
-    img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);   
+    img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);
     canny_img = Canny(img_gray, 100, 100*2, 3);
 
     [img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
 
     disp(typeof(contours));
+
+    disp("Number of contours:");
+    disp(size(contours));
  ]]></programlisting>
   </refsection>
   <refsection>
     <title>See also</title>
     <simplelist type="inline">
       <member>
-        <link linkend="Points">Points</link>
+        <link linkend="PtList">PtList</link>
       </member>
     </simplelist>
   </refsection>

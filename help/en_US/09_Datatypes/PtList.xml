@@ -16,13 +16,9 @@
   <refsection>
     <title>Description</title>
     <para><literal>PtList</literal> is the type used to store a list of points.</para>
-    <para>This type is taken as input of several functions, such as as <literal>contourArea</literal> for example.</para>    
-   
-    <para>A <literal>PtList</literal> object is not a Scilab matrix (it is a <link linkend="mlist">mlist</link>), but its content can to be extracted with the extraction operator.</para>
-    <itemizedlist>
-      <member>Full extraction <literal>(:)</literal>: it returns a Scilab 2xn matrix containing all the coordinates of the points.</member>
-      <member>Extraction with index <literal>(i)</literal>: it returns the coordinates of a point stored at the given index (not yet available).</member>
-    </itemizedlist>        
+    <para>This type is taken as input parameter of several functions, such as as <literal>contourArea</literal> for example.</para>
+
+    <para><literal>PtList</literal> supports the extraction operator <literal>(n:step:m)</literal>, returning a matrix containing the point coordinates.</para>
   </refsection>
   <refsection>
     <title>Examples</title>
@@ -30,13 +26,17 @@
     // <-- CLI SHELL MODE -->
     scicv_Init();
 
-    img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);    
+    img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);
     canny_img = Canny(img_gray, 100, 100*2, 3);
 
     [img_out, contours] = findContours(canny_img, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
 
-    contour = contours(1);
-    disp(typeof(contour));
+    // First contour
+    cnt = contours(1);
+    disp(typeof(cnt));
+
+    // Contour point coordinates
+    disp(cnt(:));
  ]]></programlisting>
   </refsection>
   <refsection>
