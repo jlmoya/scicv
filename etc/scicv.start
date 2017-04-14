@@ -52,22 +52,12 @@ function [scicvlib] = startModule()
       thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".so");
   elseif os == "Darwin"
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Mac/lib");
-      orig_dir = pwd();
-      cd(lib_dir);
-      //codec_libs = ["x264"; "fdk-aac"; "mp3lame"; "opus"; "vorbis"; "vorbisenc"; "vpx"];
-      ffmpeg_libs = ["avutil"; "swresample"; "swscale"; "postproc"; "avresample"; "avcodec"; "avformat"; "avfilter"; "avdevice"];
-      gstreamer_libs = ["gstreamer"; "gstbase"] + "-0.10";
-      gstreamer_plugins_libs = ["gstinterfaces"; "gstvideo"; "gstaudio"; "gstapp"; "gsttag"; "gstriff"; "gstpbutils"] + "-0.10";
-      thirdparty_libs = [ffmpeg_libs; gstreamer_libs; gstreamer_plugins_libs; opencv_libs];
+      thirdparty_libs = opencv_libs;
       thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".dylib");
   end
   for thirdparty_lib_path = thirdparty_lib_paths'
       link(thirdparty_lib_path);
   end
-  if os == "Darwin"
-      cd(orig_dir);
-  end
-
 
 // Load gateways
 // =============================================================================
