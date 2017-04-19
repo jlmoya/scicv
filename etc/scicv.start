@@ -44,11 +44,10 @@ function [scicvlib] = startModule()
       thirdparty_lib_paths = fullpath(bin_dir + "\" + thirdparty_libs + ".dll");
   elseif os == "Linux"
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
-      codec_libs = ["x264"; "x265"; "fdk-aac"; "mp3lame"; "opus"; "ogg"; "vorbis"; "vorbisenc"; "vpx"];
-      ffmpeg_libs = ["avutil"; "swresample"; "swscale"; "postproc"; "avresample"; "avcodec"; "avformat"; "avfilter"; "avdevice"];
-      gstreamer_libs = ["gstreamer"; "gstbase"] + "-0.10";
-      gstreamer_plugins_libs = ["gstinterfaces"; "gstvideo"; "gstaudio"; "gstapp"; "gsttag"; "gstriff"; "gstpbutils"] + "-0.10";
-      thirdparty_libs = [codec_libs; ffmpeg_libs; gstreamer_libs; gstreamer_plugins_libs; opencv_libs];
+      image_codec_libs = ["png12"; "jpeg"];
+      video_codec_libs = ["openh264"];
+      ffmpeg_libs = ["avutil"; "swscale"; "avcodec"; "avformat"; "avfilter"; "avdevice"];      
+      thirdparty_libs = [image_codec_libs; video_codec_libs; ffmpeg_libs; opencv_libs];
       thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".so");
   elseif os == "Darwin"
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Mac/lib");
