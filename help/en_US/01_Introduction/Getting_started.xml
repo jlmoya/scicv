@@ -5,39 +5,65 @@
  *
  -->
 <refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
-  xml:lang="fr" xml:id="Getting_started">
+  xml:lang="fr" xml:id="Getting_started_with_scicv">
   <info>
     <pubdate>$LastChangedDate$</pubdate>
   </info>
   <refnamediv>
-    <refname>Getting_started</refname>
-    <refpurpose>Getting started with <literal>sciCV</literal></refpurpose>
+    <refname>Getting started with sciCV</refname>
+    <refpurpose>Getting started with the Scilab Computer Vision Module</refpurpose>
   </refnamediv>
   <refsection>
     <title>Introduction</title>
 
-    <para><literal>sciCV</literal> is the Scilab interface to the OpenCV library (in version 2.4.13). It gives access to almost all the functions of OpenCV in Scilab in a friendly manner.</para>
+    <para><literal>Scilab Computer Vision Module</literal> (<literal>sciCV</literal>) is the Scilab interface to the <ulink url="http://opencv.org">OpenCV</ulink> library (in version 2.4.13).</para>
 
-    <para>Almost all the OpenCV functions are available under the same name in Scilab. There are changes in the argument passing (as Scilab functions can return multiple values). These changes will be resumed in this documentation (not yet documented).</para>
+    <para>The purpose of this toolbox is to provide an access to all the functions and objects of OpenCV in Scilab.</para>
 
-    <para>The following platforms (for now) are supported:
-      <itemizedlist>
-      <member>Linux (64 bits)</member>
-      <member>Windows (64 bits)</member>
-      <member>Mac OSx (64 bits)</member>
+    <para>The following feature domains are (or will be) covered:
+    <itemizedlist>
+      <member>I/O and GUI (OpenCV module <literal>highgui</literal>)</member>
+      <member>Image processing (<literal>imgproc</literal>)</member>
+      <member>Object detection (<literal>objdetect</literal>)</member>
+      <member>2D feature detection (<literal>feature2d</literal>)</member>
+      <member>Video (<literal>video</literal>)</member>
+      <member>Computational photography (<literal>photo</literal>)</member>
+      <member>Camera calibration (<literal>calib3d</literal>)</member>
+      <member>Feature matching with Flann (<literal>flann</literal>)</member>
+      <member>Image stitching (<literal>stitching</literal>)</member>
+      <member>Video stabilization (<literal>videostab</literal>)</member>
+      <member>Super resolution (<literal>superres</literal>)</member>
+      <member>Machine learning (<literal>ml</literal>)</member>
+      <member>GPU (<literal>gpu</literal>)</member>
       </itemizedlist>
     </para>
 
-    <para>No installation of OpenCV, or system configuration are needed to use <literal>sciCV</literal>. The toolbox embeds all the necessary OpenCV binaries, whatever the platform is.</para>
+    <para>About video, the toolbox supports video reading/writing as it includes the <ulink url="https://ffmpeg.org/">FFmpeg</ulink> component (in its LGPL version), with the h264 <ulink url="http://www.openh264.org/">openh264</ulink> open source codec.</para>
 
-    <para>Once the toolbox loaded in Scilab, the only operation needed is to initialize the module with <literal>scicv_Init()</literal>.</para>
+    <para>The interface is the same (as much as possible) as the OpenCV API version 2, same function names and parameters, but adapted to Scilab. For example pointers are masked or their usage is avoided as much as possible. Argument passing is simplified, as Scilab support multi output argument.</para>
+
+    <para>This interface is also designed to combine performance and convenience.
+    Conversion to output Scilab objects is done only when it is necessary (i.e. without sacryfing performance).
+    For example an image read is not automatically converted to a Scilab matrix, but only when image data must be extracted, and further manipulated in Scilab.
+    Unconverted OpenCV objects can be manipulated as Scilab matrixes, to this end, standard operators (extraction, ...) are redefined.
+    On the other hand, conversion from Scilab objects to OpenCV objects (in input) is done automatically.</para>
+
+    <para>Installation is also simplified. No installation of OpenCV, or system configuration, are needed to use <literal>sciCV</literal>. The toolbox embeds (and loads) automatically all the necessary OpenCV binaries (whatever platform is).
+    Once the toolbox loaded in Scilab, the only needed operation is to initialize the module with <literal>scicv_Init()</literal>.</para>
+
+    <para>The following platforms are supported:
+    <itemizedlist>
+      <member>Linux (64 bits)</member>
+      <member>Windows (64 bits)</member>
+      <member>Mac OSx (64 bits)</member>
+    </itemizedlist>
+    </para>
   </refsection>
   <refsection>
     <title>See also</title>
     <simplelist type="inline">
-      <member>
-        <ulink url="http://opencv.org">OpenCV</ulink>
-      </member>
+      <member><ulink url="http://opencv.org">OpenCV</ulink></member>
+      <member><ulink url="https://ffmpeg.org/">FFmpeg</ulink></member>
     </simplelist>
   </refsection>
 </refentry>
