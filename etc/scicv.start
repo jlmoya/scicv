@@ -1,15 +1,15 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
 function [scicvlib] = startModule()
 
   TOOLBOX_NAME  = "scicv";
-  TOOLBOX_TITLE = "Scilab Computer Vision";
+  TOOLBOX_TITLE = "Scilab Computer Vision Module";
 
   mprintf("Start " + TOOLBOX_TITLE + "\n");
 
   if isdef("scicvlib") then
-      warning("Scilab Computer Vision is already loaded");
+      warning("Scilab Computer Vision Module is already loaded");
       return;
   end
 

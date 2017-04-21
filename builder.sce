@@ -1,4 +1,4 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
 mode(-1);
@@ -7,7 +7,7 @@ lines(0);
 function main_builder()
 
     TOOLBOX_NAME  = "scicv";
-    TOOLBOX_TITLE = "Scilab Computer Vision";
+    TOOLBOX_TITLE = "Scilab Computer Vision Module";
     toolbox_dir   = get_absolute_file_path("builder.sce");
 
     // Check Scilab's version

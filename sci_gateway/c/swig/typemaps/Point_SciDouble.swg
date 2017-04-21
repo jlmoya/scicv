@@ -1,4 +1,4 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
 %fragment("SWIG_SciDoubleOrInt32_AsPoint", "header", fragment ="SWIG_SciDoubleOrInt32_AsIntArrayAndSize") {

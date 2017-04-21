@@ -1,4 +1,4 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
 // OpenCV KeyPoints (vector<KeyPoint>) => Scilab double matrix

@@ -1,4 +1,4 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
 // OpenCV std::vector<Rect> => Scilab: list matrix[1,4]

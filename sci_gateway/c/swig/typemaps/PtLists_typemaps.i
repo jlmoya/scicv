@@ -1,4 +1,4 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
 // OpenCV PtLists (vector<vector<cv::Point> >) <= Scilab mlist PtLists

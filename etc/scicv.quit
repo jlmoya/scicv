@@ -1,9 +1,9 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
 function quitModule()
     TOOLBOX_NAME  = "scicv";
-    TOOLBOX_TITLE = "Scilab Computer Vision";
+    TOOLBOX_TITLE = "Scilab Computer Vision Module";
 
     [macros, tlbx_macros_dir] = libraryinfo("scicvlib");
     tlbx_root_dir = fullpath(tlbx_macros_dir + '/..');

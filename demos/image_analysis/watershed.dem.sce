@@ -1,4 +1,4 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
 //http://docs.opencv.org/3.1.0/d3/db4/tutorial_py_watershed.html

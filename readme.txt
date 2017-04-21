@@ -1,7 +1,7 @@
-// Scilab Computer Vision Toolbox
+// Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
 
-README of Scilab Computer Vision toolbox
+README of Scilab Computer Vision Module
 ----------------------------------------
 
 This toolbox is a binding from the OpenCV library (in version 2.4.13).
