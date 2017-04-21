@@ -8,7 +8,7 @@ Maintainer: Simon Marchetto (simon.marchetto@scilab-enterprises.com)
 Category: Image Processing
 Entity: Scilab Enterprises
 WebSite: http://forge.scilab.org/index.php/p/scicv/
-License: to be defined
+License: Creative Commons Attribution-ShareAlike 3.0
 ScilabVersion: >= 5.5
 Depends: 
 Date: 2017-04-21
