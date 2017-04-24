@@ -13,5 +13,5 @@ changelog of the Scilab Computer Vision Module
     - added demos, help pages
     - implemented size & extraction operators
     - fixed tests
-    - 3rd party  ibraries (OpenCV/FFMPEG) rebuilt to be not GPL licensed
+    - 3rd party libraries (OpenCV/FFMPEG) rebuilt to be not GPL licensed
 
