@@ -261,11 +261,30 @@ using namespace cv::ogl;
 %ignore Matx_TOp;
 %ignore CvHaarClassifier;
 
+
+// ignore functions that confict with Scilab
 %ignore error;
+%ignore abs;
+%ignore sum;
+%ignore mean;
+%ignore trace;
+%ignore dct;
+%ignore idct;
+%ignore norm;
+%ignore write;
+%ignore read;
+
+// ignore low level functions & classes
 %ignore setBreakOnError;
 %ignore redirectError;
 %ignore fastMalloc;
 %ignore fastFree;
+%ignore toUtf16;
+%ignore fromUtf16;
+%ignore glob;
+%ignore tempfile;
+%ignore alignSize;
+%ignore Mutex;
 
 
 %include "../typemaps/opencv_typemaps.i"
