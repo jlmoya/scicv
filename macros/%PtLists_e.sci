@@ -6,9 +6,9 @@ function ret = %PtLists_e(varargin)
     sizePtList = cvGetPtListsSize(ptLists);
     subscript = varargin(1);
     if type(subscript) == 1 then
-        if min(size(subscript)) <0 then
+        if min(size(subscript)) < 0 then
             // subscript is colon : (in Scilab 5)
-            idxs = 1:cvGetPtListSize(ptLists);
+            idxs = 1:cvGetPtListsSize(ptLists);
         else
             // subscript is a matrix
             idxs = round(subscript);
@@ -31,6 +31,6 @@ function ret = %PtLists_e(varargin)
             ret($+1) = cvGetPtList(ptLists, idx-1);
         end
     else
-        ret = cvGetPtList(ptLists, idxs);
+        ret = cvGetPtList(ptLists, idxs-1);
     end
 endfunction
