@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab Computer Vision Module
+ * Copyright (C) 2017 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="matchTemplate">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>matchTemplate</refname>
+    <refpurpose>Finds the locations of a template image in a larger image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>result = matchTemplate(img, img_template, method)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img</term>
+        <listitem>
+          <para>Image in which the template is searched (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_template</term>
+        <listitem>
+          <para>Searched template, must be of same data type as <term>img</term> (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>result</term>
+        <listitem>
+          <para>Map of matching results (32-bit floating point <link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>method</term>
+        <listitem>
+          <para>comparison method (double).</para>
+          <itemizedlist>
+            <member><literal>CV_TM_SQDIFF</literal>: square difference method, perfect match will be 0, bad match will be large.</member>
+            <member><literal>CV_TM_SQDIFF_NORMED</literal>: normalized version of the square difference method.</member>
+            <member><literal>CV_TM_CCORR</literal>: correlation method, perfect match will be large, bad match will be 0.</member>
+            <member><literal>CV_TM_CCORR_NORMED</literal>: normalized version of the correlation method.</member>
+            <member><literal>CV_TM_CCOEFF</literal>: correlation coefficient method (correlation of the template relative to its mean against the image relative to its mean), perfect match will be 1 perfect mismatch will be -1, 0 means no correlation.</member>
+            <member><literal>CV_TM_CCOEFF_NORMED</literal>: normalized version of the correlation coefficient method.</member>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para>The function slides through the image <term>image</term>, compares with template <term>template_img</term> using the specified method <term>method</term> and stores the comparison results in <term>result</term>.</para>
+    <para>Results are more accurate with correlation methods than simpler methods square difference method, but require more computations.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("puffins.png"));
+
+    img_template = imread(getSampleImage("puffin_pattern.png"));
+
+    result = matchTemplate(img, img_template, CV_TM_SQDIFF_NORMED);
+    
+    gcf().color_map = graycolormap(512);
+    colorbar(0,255);
+    matplot(result(:,:)*255);
+    
+    delete_Mat(img);
+    delete_Mat(img_template);
+    delete_Mat(result);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="minMaxLoc">minMaxLoc</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>
