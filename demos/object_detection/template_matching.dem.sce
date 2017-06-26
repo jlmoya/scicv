@@ -20,7 +20,7 @@ delta = 5;
 while %t
     [min_match_value, max_match_value, min_match_pt, max_match_pt] = minMaxLoc(img_match);
     if (match_method == CV_TM_SQDIFF | match_method == CV_TM_SQDIFF_NORMED)
-        match_ok = min_match_value < 0.15;
+        match_ok = min_match_value < 0.20;
         match_pt = min_match_pt;
         erase_value = 1.0;
     else
@@ -31,7 +31,7 @@ while %t
 
     if match_ok then
         match_pt = match_pt - delta;
-        match_pt2 = match_pt + size(img_template) + delta;
+        match_pt2 = match_pt + [size(img_template, "c"), size(img_template, "r")] + delta;
         rectangle(img, match_pt, match_pt2, green, 2, 8, 0);
         rectangle(img_match, match_pt - 10, match_pt2, erase_value, -1);
     else
