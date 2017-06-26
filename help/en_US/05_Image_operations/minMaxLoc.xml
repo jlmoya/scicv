@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab Computer Vision Module
+ * Copyright (C) 2017 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="minMaxLoc">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>minMaxLoc</refname>
+    <refpurpose>Finds the global minimum and maximum in an image.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>[min_value, max_value, min_value_loc, max_value_loc] = minMaxLoc(img);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img</term>
+        <listitem>
+          <para>Single channel image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>min_value</term>
+        <listitem>
+          <para>Minimal value of the image <term>img</term> (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>max_value</term>
+        <listitem>
+          <para>Maximal value of the image <term>img</term> (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>min_value_loc</term>
+        <listitem>
+          <para>Coordinates of the location of the minimal value (2x1 double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>max_value_loc</term>
+        <listitem>
+          <para>Coordinates of the location of the maximal value (2x1 double).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para>The function <function>minMaxLoc</function> find the minimum and maximum element values and their positions of an image. The function does not work with multi-channel images.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("puffins.png"));
+    img_template = imread(getSampleImage("puffin_pattern.png"));
+
+    result = matchTemplate(img, img_template, CV_TM_SQDIFF_NORMED);
+    [min_value, max_value, min_value_loc, max_value_loc] = minMaxLoc(result);
+
+    match_pt = min_value_loc - 5;
+    match_pt2 = match_pt + [size(img_template, "c"), size(img_template, "r")] + 5;
+    rectangle(img, match_pt, match_pt2, [0, 255, 0], 2, 8, 0);
+    matplot(img);
+
+    disp("Minimal square difference value between image and template:");
+    disp(min_value);
+
+    delete_Mat(img);
+    delete_Mat(img_template);
+    delete_Mat(result);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="minMaxLoc">minMaxLoc</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>
