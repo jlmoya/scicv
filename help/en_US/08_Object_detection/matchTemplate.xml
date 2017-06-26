@@ -70,8 +70,8 @@
 
     result = matchTemplate(img, img_template, CV_TM_SQDIFF_NORMED);
     
-    gcf().color_map = graycolormap(512);
-    colorbar(0,255);
+    gcf().color_map = graycolormap(255);
+    colorbar(0, 255);
     matplot(result(:,:)*255);
     
     delete_Mat(img);
