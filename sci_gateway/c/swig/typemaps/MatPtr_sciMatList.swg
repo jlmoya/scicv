@@ -3,7 +3,7 @@
 
 %fragment("SWIG_SciMatList_AsMatPtr", "header") {
 
-int SWIG_SciMatList_AsMatPtr(void *pvApiCtx, SwigSciObject iVar, cv::Mat **pMatArray, char *fname) {
+int SWIG_SciMatList_AsMatPtr(void *pvApiCtx, SwigSciObject iVar, cv::Mat **pMatArray, int *matArraySize, char *fname) {
   SciErr sciErr;
   int *piAddrVar = NULL;
   int iType = 0;
@@ -23,18 +23,18 @@ int SWIG_SciMatList_AsMatPtr(void *pvApiCtx, SwigSciObject iVar, cv::Mat **pMatA
   if (iType == sci_list) {
     int iItemCount = 0;
 
-    sciErr = getListItemNumber(pvApiCtx, piAddrVar, &iItemCount);
+    sciErr = getListItemNumber(pvApiCtx, piAddrVar, matArraySize);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
       return SWIG_ERROR;
     }
-    if (iItemCount < 1) {
+    if (*matArraySize < 1) {
       // TODO return error message
       return SWIG_ERROR;
     }
 
-    *pMatArray = new cv::Mat[iItemCount];
-    for (int i = 0; i < iItemCount; i++) {
+    *pMatArray = new cv::Mat[*matArraySize];
+    for (int i = 0; i < *matArraySize; i++) {
       cv::Mat *pMat = NULL;
       int *piItemAddr = NULL;
 

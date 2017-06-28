@@ -4262,7 +4262,7 @@ SWIG_SciString_AsChar(void *pvApiCtx, int iVar, char *pcValue, char *fname) {
 
 
 
-int SWIG_SciMatList_AsMatPtr(void *pvApiCtx, SwigSciObject iVar, cv::Mat **pMatArray, char *fname) {
+int SWIG_SciMatList_AsMatPtr(void *pvApiCtx, SwigSciObject iVar, cv::Mat **pMatArray, int *matArraySize, char *fname) {
   SciErr sciErr;
   int *piAddrVar = NULL;
   int iType = 0;
@@ -4282,18 +4282,18 @@ int SWIG_SciMatList_AsMatPtr(void *pvApiCtx, SwigSciObject iVar, cv::Mat **pMatA
   if (iType == sci_list) {
     int iItemCount = 0;
 
-    sciErr = getListItemNumber(pvApiCtx, piAddrVar, &iItemCount);
+    sciErr = getListItemNumber(pvApiCtx, piAddrVar, matArraySize);
     if (sciErr.iErr) {
       printError(&sciErr, 0);
       return SWIG_ERROR;
     }
-    if (iItemCount < 1) {
+    if (*matArraySize < 1) {
       // TODO return error message
       return SWIG_ERROR;
     }
 
-    *pMatArray = new cv::Mat[iItemCount];
-    for (int i = 0; i < iItemCount; i++) {
+    *pMatArray = new cv::Mat[*matArraySize];
+    for (int i = 0; i < *matArraySize; i++) {
       cv::Mat *pMat = NULL;
       int *piItemAddr = NULL;
 
@@ -58467,8 +58467,6 @@ int _wrap_calcHist__SWIG_0(SWIG_GatewayParameters) {
   float **arg8 = (float **) 0 ;
   bool arg9 ;
   bool arg10 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   int val6 ;
@@ -58485,34 +58483,33 @@ int _wrap_calcHist__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 9, 9);
+  SWIG_CheckInputArgument(pvApiCtx, 8, 8);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcHist" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode6 = SWIG_AsVal_int(5, &val6);
+  ecode6 = SWIG_AsVal_int(4, &val6);
   if (!SWIG_IsOK(ecode6)) {
     SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "calcHist" "', argument " "6"" of type '" "int""'");
   } 
   arg6 = (int)(val6);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 6, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 5, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 7, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 6, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg8 = (float**) malloc(iColCount8 * sizeof(float*));
@@ -58522,12 +58519,12 @@ int _wrap_calcHist__SWIG_0(SWIG_GatewayParameters) {
       arg8[i][j] = pfValues[i*iRowCount8 + j];
     }
   }
-  ecode9 = SWIG_AsVal_bool(8, &val9);
+  ecode9 = SWIG_AsVal_bool(7, &val9);
   if (!SWIG_IsOK(ecode9)) {
     SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "calcHist" "', argument " "9"" of type '" "bool""'");
   } 
   arg9 = (bool)(val9);
-  ecode10 = SWIG_AsVal_bool(9, &val10);
+  ecode10 = SWIG_AsVal_bool(8, &val10);
   if (!SWIG_IsOK(ecode10)) {
     SWIG_exception_fail(SWIG_ArgError(ecode10), "in method '" "calcHist" "', argument " "10"" of type '" "bool""'");
   } 
@@ -58555,8 +58552,6 @@ int _wrap_calcHist__SWIG_1(SWIG_GatewayParameters) {
   int *arg7 = (int *) 0 ;
   float **arg8 = (float **) 0 ;
   bool arg9 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   int val6 ;
@@ -58571,34 +58566,33 @@ int _wrap_calcHist__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 8, 8);
+  SWIG_CheckInputArgument(pvApiCtx, 7, 7);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcHist" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode6 = SWIG_AsVal_int(5, &val6);
+  ecode6 = SWIG_AsVal_int(4, &val6);
   if (!SWIG_IsOK(ecode6)) {
     SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "calcHist" "', argument " "6"" of type '" "int""'");
   } 
   arg6 = (int)(val6);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 6, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 5, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 7, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 6, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg8 = (float**) malloc(iColCount8 * sizeof(float*));
@@ -58608,7 +58602,7 @@ int _wrap_calcHist__SWIG_1(SWIG_GatewayParameters) {
       arg8[i][j] = pfValues[i*iRowCount8 + j];
     }
   }
-  ecode9 = SWIG_AsVal_bool(8, &val9);
+  ecode9 = SWIG_AsVal_bool(7, &val9);
   if (!SWIG_IsOK(ecode9)) {
     SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "calcHist" "', argument " "9"" of type '" "bool""'");
   } 
@@ -58635,8 +58629,6 @@ int _wrap_calcHist__SWIG_2(SWIG_GatewayParameters) {
   int arg6 ;
   int *arg7 = (int *) 0 ;
   float **arg8 = (float **) 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   int val6 ;
@@ -58649,34 +58641,33 @@ int _wrap_calcHist__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 7, 7);
+  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcHist" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode6 = SWIG_AsVal_int(5, &val6);
+  ecode6 = SWIG_AsVal_int(4, &val6);
   if (!SWIG_IsOK(ecode6)) {
     SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "calcHist" "', argument " "6"" of type '" "int""'");
   } 
   arg6 = (int)(val6);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 6, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 5, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 7, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 6, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg8 = (float**) malloc(iColCount8 * sizeof(float*));
@@ -58699,444 +58690,33 @@ int _wrap_calcHist__SWIG_2(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_calcHist__SWIG_3(SWIG_GatewayParameters) {
-  cv::Mat *arg1 = (cv::Mat *) 0 ;
-  int arg2 ;
-  int *arg3 = (int *) 0 ;
-  cv::_InputArray *arg4 = 0 ;
-  cv::SparseMat *arg5 = 0 ;
-  int arg6 ;
-  int *arg7 = (int *) 0 ;
-  float **arg8 = (float **) 0 ;
-  bool arg9 ;
-  bool arg10 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  void *argp5 = 0 ;
-  int res5 = 0 ;
-  int val6 ;
-  int ecode6 = 0 ;
-  int iRowCount7 ;
-  int iColCount7 ;
-  int iRowCount8 ;
-  int iColCount8 ;
-  bool val9 ;
-  int ecode9 = 0 ;
-  bool val10 ;
-  int ecode10 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 10, 10);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcHist" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "calcHist" "', argument " "5"" of type '" "cv::SparseMat &""'"); 
-  }
-  if (!argp5) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "5"" of type '" "cv::SparseMat &""'"); 
-  }
-  arg5 = (cv::SparseMat *)(argp5);
-  ecode6 = SWIG_AsVal_int(6, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "calcHist" "', argument " "6"" of type '" "int""'");
-  } 
-  arg6 = (int)(val6);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 7, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 8, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  arg8 = (float**) malloc(iColCount8 * sizeof(float*));
-  for (int i=0; i<iColCount8; i++) {
-    arg8[i] = (float *) malloc(iRowCount8 * sizeof(float));
-    for (int j=0; j<iRowCount8; j++) {
-      arg8[i][j] = pfValues[i*iRowCount8 + j];
-    }
-  }
-  ecode9 = SWIG_AsVal_bool(9, &val9);
-  if (!SWIG_IsOK(ecode9)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "calcHist" "', argument " "9"" of type '" "bool""'");
-  } 
-  arg9 = (bool)(val9);
-  ecode10 = SWIG_AsVal_bool(10, &val10);
-  if (!SWIG_IsOK(ecode10)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode10), "in method '" "calcHist" "', argument " "10"" of type '" "bool""'");
-  } 
-  arg10 = (bool)(val10);
-  cv::calcHist((cv::Mat const *)arg1,arg2,(int const *)arg3,(cv::_InputArray const &)*arg4,*arg5,arg6,(int const *)arg7,(float const **)arg8,arg9,arg10);
-  
-  delete arg4;
-  return SWIG_OK;
-}
-
-
-int _wrap_calcHist__SWIG_4(SWIG_GatewayParameters) {
-  cv::Mat *arg1 = (cv::Mat *) 0 ;
-  int arg2 ;
-  int *arg3 = (int *) 0 ;
-  cv::_InputArray *arg4 = 0 ;
-  cv::SparseMat *arg5 = 0 ;
-  int arg6 ;
-  int *arg7 = (int *) 0 ;
-  float **arg8 = (float **) 0 ;
-  bool arg9 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  void *argp5 = 0 ;
-  int res5 = 0 ;
-  int val6 ;
-  int ecode6 = 0 ;
-  int iRowCount7 ;
-  int iColCount7 ;
-  int iRowCount8 ;
-  int iColCount8 ;
-  bool val9 ;
-  int ecode9 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcHist" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "calcHist" "', argument " "5"" of type '" "cv::SparseMat &""'"); 
-  }
-  if (!argp5) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "5"" of type '" "cv::SparseMat &""'"); 
-  }
-  arg5 = (cv::SparseMat *)(argp5);
-  ecode6 = SWIG_AsVal_int(6, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "calcHist" "', argument " "6"" of type '" "int""'");
-  } 
-  arg6 = (int)(val6);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 7, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 8, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  arg8 = (float**) malloc(iColCount8 * sizeof(float*));
-  for (int i=0; i<iColCount8; i++) {
-    arg8[i] = (float *) malloc(iRowCount8 * sizeof(float));
-    for (int j=0; j<iRowCount8; j++) {
-      arg8[i][j] = pfValues[i*iRowCount8 + j];
-    }
-  }
-  ecode9 = SWIG_AsVal_bool(9, &val9);
-  if (!SWIG_IsOK(ecode9)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "calcHist" "', argument " "9"" of type '" "bool""'");
-  } 
-  arg9 = (bool)(val9);
-  cv::calcHist((cv::Mat const *)arg1,arg2,(int const *)arg3,(cv::_InputArray const &)*arg4,*arg5,arg6,(int const *)arg7,(float const **)arg8,arg9);
-  
-  delete arg4;
-  return SWIG_OK;
-}
-
-
-int _wrap_calcHist__SWIG_5(SWIG_GatewayParameters) {
-  cv::Mat *arg1 = (cv::Mat *) 0 ;
-  int arg2 ;
-  int *arg3 = (int *) 0 ;
-  cv::_InputArray *arg4 = 0 ;
-  cv::SparseMat *arg5 = 0 ;
-  int arg6 ;
-  int *arg7 = (int *) 0 ;
-  float **arg8 = (float **) 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  void *argp5 = 0 ;
-  int res5 = 0 ;
-  int val6 ;
-  int ecode6 = 0 ;
-  int iRowCount7 ;
-  int iColCount7 ;
-  int iRowCount8 ;
-  int iColCount8 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcHist" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "calcHist" "', argument " "5"" of type '" "cv::SparseMat &""'"); 
-  }
-  if (!argp5) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "5"" of type '" "cv::SparseMat &""'"); 
-  }
-  arg5 = (cv::SparseMat *)(argp5);
-  ecode6 = SWIG_AsVal_int(6, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "calcHist" "', argument " "6"" of type '" "int""'");
-  } 
-  arg6 = (int)(val6);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 7, &iRowCount7, &iColCount7, &arg7, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 8, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  arg8 = (float**) malloc(iColCount8 * sizeof(float*));
-  for (int i=0; i<iColCount8; i++) {
-    arg8[i] = (float *) malloc(iRowCount8 * sizeof(float));
-    for (int j=0; j<iRowCount8; j++) {
-      arg8[i][j] = pfValues[i*iRowCount8 + j];
-    }
-  }
-  cv::calcHist((cv::Mat const *)arg1,arg2,(int const *)arg3,(cv::_InputArray const &)*arg4,*arg5,arg6,(int const *)arg7,(float const **)arg8);
-  
-  delete arg4;
-  return SWIG_OK;
-}
-
-
-int _wrap_calcHist__SWIG_6(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  vector< int,std::allocator< int > > *arg2 = 0 ;
-  cv::_InputArray *arg3 = 0 ;
-  cv::_OutputArray *arg4 = 0 ;
-  vector< int,std::allocator< int > > *arg5 = 0 ;
-  vector< float,std::allocator< float > > *arg6 = 0 ;
-  bool arg7 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp5 ;
-  int res5 = 0 ;
-  void *argp6 ;
-  int res6 = 0 ;
-  bool val7 ;
-  int ecode7 = 0 ;
-  
-  cv::Mat *pOutMat4 = new Mat();
-  arg4 = new cv::_OutputArray(*pOutMat4);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "calcHist" "', argument " "2"" of type '" "vector< int,std::allocator< int > > const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "2"" of type '" "vector< int,std::allocator< int > > const &""'"); 
-  }
-  arg2 = (vector< int,std::allocator< int > > *)(argp2);
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 3, &arg3, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  res5 = SwigScilabPtrToObject(pvApiCtx, 4, &argp5, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "calcHist" "', argument " "5"" of type '" "vector< int,std::allocator< int > > const &""'"); 
-  }
-  if (!argp5) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "5"" of type '" "vector< int,std::allocator< int > > const &""'"); 
-  }
-  arg5 = (vector< int,std::allocator< int > > *)(argp5);
-  res6 = SwigScilabPtrToObject(pvApiCtx, 5, &argp6, SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res6)) {
-    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "calcHist" "', argument " "6"" of type '" "vector< float,std::allocator< float > > const &""'"); 
-  }
-  if (!argp6) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "6"" of type '" "vector< float,std::allocator< float > > const &""'"); 
-  }
-  arg6 = (vector< float,std::allocator< float > > *)(argp6);
-  ecode7 = SWIG_AsVal_bool(6, &val7);
-  if (!SWIG_IsOK(ecode7)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "calcHist" "', argument " "7"" of type '" "bool""'");
-  } 
-  arg7 = (bool)(val7);
-  cv::calcHist((cv::_InputArray const &)*arg1,(vector< int,std::allocator< int > > const &)*arg2,(cv::_InputArray const &)*arg3,(cv::_OutputArray const &)*arg4,(vector< int,std::allocator< int > > const &)*arg5,(vector< float,std::allocator< float > > const &)*arg6,arg7);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat4, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  delete arg1;
-  delete arg3;
-  delete arg4;
-  return SWIG_OK;
-}
-
-
-int _wrap_calcHist__SWIG_7(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  vector< int,std::allocator< int > > *arg2 = 0 ;
-  cv::_InputArray *arg3 = 0 ;
-  cv::_OutputArray *arg4 = 0 ;
-  vector< int,std::allocator< int > > *arg5 = 0 ;
-  vector< float,std::allocator< float > > *arg6 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp5 ;
-  int res5 = 0 ;
-  void *argp6 ;
-  int res6 = 0 ;
-  
-  cv::Mat *pOutMat4 = new Mat();
-  arg4 = new cv::_OutputArray(*pOutMat4);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "calcHist" "', argument " "2"" of type '" "vector< int,std::allocator< int > > const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "2"" of type '" "vector< int,std::allocator< int > > const &""'"); 
-  }
-  arg2 = (vector< int,std::allocator< int > > *)(argp2);
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 3, &arg3, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  res5 = SwigScilabPtrToObject(pvApiCtx, 4, &argp5, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "calcHist" "', argument " "5"" of type '" "vector< int,std::allocator< int > > const &""'"); 
-  }
-  if (!argp5) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "5"" of type '" "vector< int,std::allocator< int > > const &""'"); 
-  }
-  arg5 = (vector< int,std::allocator< int > > *)(argp5);
-  res6 = SwigScilabPtrToObject(pvApiCtx, 5, &argp6, SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res6)) {
-    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "calcHist" "', argument " "6"" of type '" "vector< float,std::allocator< float > > const &""'"); 
-  }
-  if (!argp6) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "calcHist" "', argument " "6"" of type '" "vector< float,std::allocator< float > > const &""'"); 
-  }
-  arg6 = (vector< float,std::allocator< float > > *)(argp6);
-  cv::calcHist((cv::_InputArray const &)*arg1,(vector< int,std::allocator< int > > const &)*arg2,(cv::_InputArray const &)*arg3,(cv::_OutputArray const &)*arg4,(vector< int,std::allocator< int > > const &)*arg5,(vector< float,std::allocator< float > > const &)*arg6);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat4, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  delete arg1;
-  delete arg3;
-  delete arg4;
-  return SWIG_OK;
-}
-
-
 int _wrap_calcHist(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[10] = {
-    1,2,3,4,5,6,7,8,9,10
+  int argv[8] = {
+    1,2,3,4,5,6,7,8
   };
   
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 5) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-      }
-    }
-    if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        {
-          if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat *pMat = NULL;
-            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-          }
-        }
-        if (_v) {
-          void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
-          _v = SWIG_CheckState(res);
-          if (_v) {
-            void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t, 0, SWIG_Scilab_GetFuncName());
-            _v = SWIG_CheckState(res);
-            if (_v) {
-              return _wrap_calcHist__SWIG_7(SWIG_GatewayArguments);
-            }
-          }
-        }
-      }
-    }
-  }
   if (argc == 6) {
     int _v;
     {
       if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
         cv::Mat *pMat = NULL;
-        _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
       }
     }
     if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
+      }
+      _v = isDoubleType(pvApiCtx, piAddr);
       if (_v) {
         {
           if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
@@ -59145,25 +58725,27 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
           }
         }
         if (_v) {
-          void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
-          _v = SWIG_CheckState(res);
+          {
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+          }
           if (_v) {
-            void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t, 0, SWIG_Scilab_GetFuncName());
-            _v = SWIG_CheckState(res);
+            int *piAddr = NULL;
+            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
+            if (sciErr.iErr) {
+              printError(&sciErr, 0);
+              return SWIG_ERROR;
+            }
+            _v = isDoubleType(pvApiCtx, piAddr);
             if (_v) {
-              {
-                int *piAddrVar = NULL;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddrVar);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isBooleanType(pvApiCtx, piAddrVar);
+              int *piAddr;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddr);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
               }
+              _v = isDoubleType(pvApiCtx, piAddr);
               if (_v) {
-                return _wrap_calcHist__SWIG_6(SWIG_GatewayArguments);
+                return _wrap_calcHist__SWIG_2(SWIG_GatewayArguments);
               }
             }
           }
@@ -59174,34 +58756,44 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
   if (argc == 7) {
     int _v;
     {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
+      }
     }
     if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
       }
+      _v = isDoubleType(pvApiCtx, piAddr);
       if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
+        {
+          if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          }
         }
-        _v = isDoubleType(pvApiCtx, piAddr);
         if (_v) {
           {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
           }
           if (_v) {
-            {
-              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
+            int *piAddr = NULL;
+            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
+            if (sciErr.iErr) {
+              printError(&sciErr, 0);
+              return SWIG_ERROR;
             }
+            _v = isDoubleType(pvApiCtx, piAddr);
             if (_v) {
-              int *piAddr = NULL;
+              int *piAddr;
               SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddr);
               if (sciErr.iErr) {
                 printError(&sciErr, 0);
@@ -59209,15 +58801,17 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
               }
               _v = isDoubleType(pvApiCtx, piAddr);
               if (_v) {
-                int *piAddr;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddr);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
+                {
+                  int *piAddrVar = NULL;
+                  SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddrVar);
+                  if (sciErr.iErr) {
+                    printError(&sciErr, 0);
+                    return SWIG_ERROR;
+                  }
+                  _v = isBooleanType(pvApiCtx, piAddrVar);
                 }
-                _v = isDoubleType(pvApiCtx, piAddr);
                 if (_v) {
-                  return _wrap_calcHist__SWIG_2(SWIG_GatewayArguments);
+                  return _wrap_calcHist__SWIG_1(SWIG_GatewayArguments);
                 }
               }
             }
@@ -59229,34 +58823,44 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
   if (argc == 8) {
     int _v;
     {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
+      }
     }
     if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
       }
+      _v = isDoubleType(pvApiCtx, piAddr);
       if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
+        {
+          if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          }
         }
-        _v = isDoubleType(pvApiCtx, piAddr);
         if (_v) {
           {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
           }
           if (_v) {
-            {
-              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
+            int *piAddr = NULL;
+            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
+            if (sciErr.iErr) {
+              printError(&sciErr, 0);
+              return SWIG_ERROR;
             }
+            _v = isDoubleType(pvApiCtx, piAddr);
             if (_v) {
-              int *piAddr = NULL;
+              int *piAddr;
               SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddr);
               if (sciErr.iErr) {
                 printError(&sciErr, 0);
@@ -59264,13 +58868,15 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
               }
               _v = isDoubleType(pvApiCtx, piAddr);
               if (_v) {
-                int *piAddr;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddr);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
+                {
+                  int *piAddrVar = NULL;
+                  SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddrVar);
+                  if (sciErr.iErr) {
+                    printError(&sciErr, 0);
+                    return SWIG_ERROR;
+                  }
+                  _v = isBooleanType(pvApiCtx, piAddrVar);
                 }
-                _v = isDoubleType(pvApiCtx, piAddr);
                 if (_v) {
                   {
                     int *piAddrVar = NULL;
@@ -59282,297 +58888,7 @@ int _wrap_calcHist(SWIG_GatewayParameters) {
                     _v = isBooleanType(pvApiCtx, piAddrVar);
                   }
                   if (_v) {
-                    return _wrap_calcHist__SWIG_1(SWIG_GatewayArguments);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 8) {
-    int _v;
-    {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
-          }
-          if (_v) {
-            void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
-            _v = SWIG_CheckState(res);
-            if (_v) {
-              {
-                _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[5], SCI_INT32);
-              }
-              if (_v) {
-                int *piAddr = NULL;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddr);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isDoubleType(pvApiCtx, piAddr);
-                if (_v) {
-                  int *piAddr;
-                  SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[7], &piAddr);
-                  if (sciErr.iErr) {
-                    printError(&sciErr, 0);
-                    return SWIG_ERROR;
-                  }
-                  _v = isDoubleType(pvApiCtx, piAddr);
-                  if (_v) {
-                    return _wrap_calcHist__SWIG_5(SWIG_GatewayArguments);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 9) {
-    int _v;
-    {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
-          }
-          if (_v) {
-            void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
-            _v = SWIG_CheckState(res);
-            if (_v) {
-              {
-                _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[5], SCI_INT32);
-              }
-              if (_v) {
-                int *piAddr = NULL;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddr);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isDoubleType(pvApiCtx, piAddr);
-                if (_v) {
-                  int *piAddr;
-                  SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[7], &piAddr);
-                  if (sciErr.iErr) {
-                    printError(&sciErr, 0);
-                    return SWIG_ERROR;
-                  }
-                  _v = isDoubleType(pvApiCtx, piAddr);
-                  if (_v) {
-                    {
-                      int *piAddrVar = NULL;
-                      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[8], &piAddrVar);
-                      if (sciErr.iErr) {
-                        printError(&sciErr, 0);
-                        return SWIG_ERROR;
-                      }
-                      _v = isBooleanType(pvApiCtx, piAddrVar);
-                    }
-                    if (_v) {
-                      return _wrap_calcHist__SWIG_4(SWIG_GatewayArguments);
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 9) {
-    int _v;
-    {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
-          }
-          if (_v) {
-            {
-              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
-            }
-            if (_v) {
-              int *piAddr = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddr);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isDoubleType(pvApiCtx, piAddr);
-              if (_v) {
-                int *piAddr;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddr);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isDoubleType(pvApiCtx, piAddr);
-                if (_v) {
-                  {
-                    int *piAddrVar = NULL;
-                    SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[7], &piAddrVar);
-                    if (sciErr.iErr) {
-                      printError(&sciErr, 0);
-                      return SWIG_ERROR;
-                    }
-                    _v = isBooleanType(pvApiCtx, piAddrVar);
-                  }
-                  if (_v) {
-                    {
-                      int *piAddrVar = NULL;
-                      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[8], &piAddrVar);
-                      if (sciErr.iErr) {
-                        printError(&sciErr, 0);
-                        return SWIG_ERROR;
-                      }
-                      _v = isBooleanType(pvApiCtx, piAddrVar);
-                    }
-                    if (_v) {
-                      return _wrap_calcHist__SWIG_0(SWIG_GatewayArguments);
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 10) {
-    int _v;
-    {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
-          }
-          if (_v) {
-            void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
-            _v = SWIG_CheckState(res);
-            if (_v) {
-              {
-                _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[5], SCI_INT32);
-              }
-              if (_v) {
-                int *piAddr = NULL;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddr);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isDoubleType(pvApiCtx, piAddr);
-                if (_v) {
-                  int *piAddr;
-                  SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[7], &piAddr);
-                  if (sciErr.iErr) {
-                    printError(&sciErr, 0);
-                    return SWIG_ERROR;
-                  }
-                  _v = isDoubleType(pvApiCtx, piAddr);
-                  if (_v) {
-                    {
-                      int *piAddrVar = NULL;
-                      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[8], &piAddrVar);
-                      if (sciErr.iErr) {
-                        printError(&sciErr, 0);
-                        return SWIG_ERROR;
-                      }
-                      _v = isBooleanType(pvApiCtx, piAddrVar);
-                    }
-                    if (_v) {
-                      {
-                        int *piAddrVar = NULL;
-                        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[9], &piAddrVar);
-                        if (sciErr.iErr) {
-                          printError(&sciErr, 0);
-                          return SWIG_ERROR;
-                        }
-                        _v = isBooleanType(pvApiCtx, piAddrVar);
-                      }
-                      if (_v) {
-                        return _wrap_calcHist__SWIG_3(SWIG_GatewayArguments);
-                      }
-                    }
+                    return _wrap_calcHist__SWIG_0(SWIG_GatewayArguments);
                   }
                 }
               }
@@ -59597,8 +58913,6 @@ int _wrap_calcBackProject__SWIG_0(SWIG_GatewayParameters) {
   float **arg6 = (float **) 0 ;
   double arg7 ;
   bool arg8 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   int iRowCount6 ;
@@ -59611,26 +58925,25 @@ int _wrap_calcBackProject__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 7, 7);
+  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcBackProject" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 5, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg6 = (float**) malloc(iColCount6 * sizeof(float*));
@@ -59640,12 +58953,12 @@ int _wrap_calcBackProject__SWIG_0(SWIG_GatewayParameters) {
       arg6[i][j] = pfValues[i*iRowCount6 + j];
     }
   }
-  ecode7 = SWIG_AsVal_double(6, &val7);
+  ecode7 = SWIG_AsVal_double(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "calcBackProject" "', argument " "7"" of type '" "double""'");
   } 
   arg7 = (double)(val7);
-  ecode8 = SWIG_AsVal_bool(7, &val8);
+  ecode8 = SWIG_AsVal_bool(6, &val8);
   if (!SWIG_IsOK(ecode8)) {
     SWIG_exception_fail(SWIG_ArgError(ecode8), "in method '" "calcBackProject" "', argument " "8"" of type '" "bool""'");
   } 
@@ -59671,8 +58984,6 @@ int _wrap_calcBackProject__SWIG_1(SWIG_GatewayParameters) {
   cv::_OutputArray *arg5 = 0 ;
   float **arg6 = (float **) 0 ;
   double arg7 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   int iRowCount6 ;
@@ -59683,26 +58994,25 @@ int _wrap_calcBackProject__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
+  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcBackProject" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 5, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg6 = (float**) malloc(iColCount6 * sizeof(float*));
@@ -59712,7 +59022,7 @@ int _wrap_calcBackProject__SWIG_1(SWIG_GatewayParameters) {
       arg6[i][j] = pfValues[i*iRowCount6 + j];
     }
   }
-  ecode7 = SWIG_AsVal_double(6, &val7);
+  ecode7 = SWIG_AsVal_double(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "calcBackProject" "', argument " "7"" of type '" "double""'");
   } 
@@ -59737,8 +59047,6 @@ int _wrap_calcBackProject__SWIG_2(SWIG_GatewayParameters) {
   cv::_InputArray *arg4 = 0 ;
   cv::_OutputArray *arg5 = 0 ;
   float **arg6 = (float **) 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   int iRowCount6 ;
@@ -59747,26 +59055,25 @@ int _wrap_calcBackProject__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcBackProject" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 4, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciMListMatOrHypermat_AsInputArray(pvApiCtx, 3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 5, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg6 = (float**) malloc(iColCount6 * sizeof(float*));
@@ -59798,8 +59105,6 @@ int _wrap_calcBackProject__SWIG_3(SWIG_GatewayParameters) {
   float **arg6 = (float **) 0 ;
   double arg7 ;
   bool arg8 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   void *argp4 ;
@@ -59814,22 +59119,21 @@ int _wrap_calcBackProject__SWIG_3(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 7, 7);
+  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcBackProject" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 3, &argp4, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "calcBackProject" "', argument " "4"" of type '" "cv::SparseMat const &""'"); 
   }
@@ -59838,7 +59142,7 @@ int _wrap_calcBackProject__SWIG_3(SWIG_GatewayParameters) {
   }
   arg4 = (cv::SparseMat *)(argp4);
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 5, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg6 = (float**) malloc(iColCount6 * sizeof(float*));
@@ -59848,12 +59152,12 @@ int _wrap_calcBackProject__SWIG_3(SWIG_GatewayParameters) {
       arg6[i][j] = pfValues[i*iRowCount6 + j];
     }
   }
-  ecode7 = SWIG_AsVal_double(6, &val7);
+  ecode7 = SWIG_AsVal_double(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "calcBackProject" "', argument " "7"" of type '" "double""'");
   } 
   arg7 = (double)(val7);
-  ecode8 = SWIG_AsVal_bool(7, &val8);
+  ecode8 = SWIG_AsVal_bool(6, &val8);
   if (!SWIG_IsOK(ecode8)) {
     SWIG_exception_fail(SWIG_ArgError(ecode8), "in method '" "calcBackProject" "', argument " "8"" of type '" "bool""'");
   } 
@@ -59878,8 +59182,6 @@ int _wrap_calcBackProject__SWIG_4(SWIG_GatewayParameters) {
   cv::_OutputArray *arg5 = 0 ;
   float **arg6 = (float **) 0 ;
   double arg7 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   void *argp4 ;
@@ -59892,22 +59194,21 @@ int _wrap_calcBackProject__SWIG_4(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
+  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcBackProject" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 3, &argp4, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "calcBackProject" "', argument " "4"" of type '" "cv::SparseMat const &""'"); 
   }
@@ -59916,7 +59217,7 @@ int _wrap_calcBackProject__SWIG_4(SWIG_GatewayParameters) {
   }
   arg4 = (cv::SparseMat *)(argp4);
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 5, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg6 = (float**) malloc(iColCount6 * sizeof(float*));
@@ -59926,7 +59227,7 @@ int _wrap_calcBackProject__SWIG_4(SWIG_GatewayParameters) {
       arg6[i][j] = pfValues[i*iRowCount6 + j];
     }
   }
-  ecode7 = SWIG_AsVal_double(6, &val7);
+  ecode7 = SWIG_AsVal_double(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "calcBackProject" "', argument " "7"" of type '" "double""'");
   } 
@@ -59950,8 +59251,6 @@ int _wrap_calcBackProject__SWIG_5(SWIG_GatewayParameters) {
   cv::SparseMat *arg4 = 0 ;
   cv::_OutputArray *arg5 = 0 ;
   float **arg6 = (float **) 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
   int iRowCount3 ;
   int iColCount3 ;
   void *argp4 ;
@@ -59962,22 +59261,21 @@ int _wrap_calcBackProject__SWIG_5(SWIG_GatewayParameters) {
   cv::Mat *pOutMat5 = new Mat();
   arg5 = new cv::_OutputArray(*pOutMat5);
   
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciHypermat_AsMat(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg2 = 1;
+  } else if (SWIG_SciMatList_AsMatPtr(pvApiCtx, 1, &arg1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "calcBackProject" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 2, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 3, &argp4, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "calcBackProject" "', argument " "4"" of type '" "cv::SparseMat const &""'"); 
   }
@@ -59986,7 +59284,7 @@ int _wrap_calcBackProject__SWIG_5(SWIG_GatewayParameters) {
   }
   arg4 = (cv::SparseMat *)(argp4);
   float *pfValues = NULL;
-  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 5, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
+  if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
   arg6 = (float**) malloc(iColCount6 * sizeof(float*));
@@ -60072,11 +59370,195 @@ int _wrap_calcBackProject__SWIG_6(SWIG_GatewayParameters) {
 
 int _wrap_calcBackProject(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[7] = {
-    1,2,3,4,5,6,7
+  int argv[6] = {
+    1,2,3,4,5,6
   };
   
   SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (argc == 4) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
+      }
+    }
+    if (_v) {
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
+      }
+      _v = isDoubleType(pvApiCtx, piAddr);
+      if (_v) {
+        {
+          if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          }
+        }
+        if (_v) {
+          int *piAddr;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddr);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddr);
+          if (_v) {
+            return _wrap_calcBackProject__SWIG_2(SWIG_GatewayArguments);
+          }
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
+      }
+    }
+    if (_v) {
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
+      }
+      _v = isDoubleType(pvApiCtx, piAddr);
+      if (_v) {
+        void *vptr = 0;
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          int *piAddr;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddr);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddr);
+          if (_v) {
+            return _wrap_calcBackProject__SWIG_5(SWIG_GatewayArguments);
+          }
+        }
+      }
+    }
+  }
+  if (argc == 5) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
+      }
+    }
+    if (_v) {
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
+      }
+      _v = isDoubleType(pvApiCtx, piAddr);
+      if (_v) {
+        void *vptr = 0;
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          int *piAddr;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddr);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddr);
+          if (_v) {
+            {
+              int *piAddrVar = NULL;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
+              }
+              _v = isDoubleType(pvApiCtx, piAddrVar);
+            }
+            if (_v) {
+              return _wrap_calcBackProject__SWIG_4(SWIG_GatewayArguments);
+            }
+          }
+        }
+      }
+    }
+  }
+  if (argc == 5) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
+      }
+    }
+    if (_v) {
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
+      }
+      _v = isDoubleType(pvApiCtx, piAddr);
+      if (_v) {
+        {
+          if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          }
+        }
+        if (_v) {
+          int *piAddr;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddr);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddr);
+          if (_v) {
+            {
+              int *piAddrVar = NULL;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
+              }
+              _v = isDoubleType(pvApiCtx, piAddrVar);
+            }
+            if (_v) {
+              return _wrap_calcBackProject__SWIG_1(SWIG_GatewayArguments);
+            }
+          }
+        }
+      }
+    }
+  }
   if (argc == 5) {
     int _v;
     {
@@ -60118,118 +59600,48 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
       }
     }
   }
-  if (argc == 5) {
-    int _v;
-    {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
-          _v = SWIG_CheckState(res);
-          if (_v) {
-            int *piAddr;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
-            }
-            _v = isDoubleType(pvApiCtx, piAddr);
-            if (_v) {
-              return _wrap_calcBackProject__SWIG_5(SWIG_GatewayArguments);
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 5) {
-    int _v;
-    {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
-          }
-          if (_v) {
-            int *piAddr;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
-            }
-            _v = isDoubleType(pvApiCtx, piAddr);
-            if (_v) {
-              return _wrap_calcBackProject__SWIG_2(SWIG_GatewayArguments);
-            }
-          }
-        }
-      }
-    }
-  }
   if (argc == 6) {
     int _v;
     {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
+      }
     }
     if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
       }
+      _v = isDoubleType(pvApiCtx, piAddr);
       if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
+        void *vptr = 0;
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
+        _v = SWIG_CheckState(res);
         if (_v) {
-          {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
+          int *piAddr;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddr);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
           }
+          _v = isDoubleType(pvApiCtx, piAddr);
           if (_v) {
-            int *piAddr;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
+            {
+              int *piAddrVar = NULL;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
+              }
+              _v = isDoubleType(pvApiCtx, piAddrVar);
             }
-            _v = isDoubleType(pvApiCtx, piAddr);
             if (_v) {
               {
                 int *piAddrVar = NULL;
@@ -60238,10 +59650,10 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
                   printError(&sciErr, 0);
                   return SWIG_ERROR;
                 }
-                _v = isDoubleType(pvApiCtx, piAddrVar);
+                _v = isBooleanType(pvApiCtx, piAddrVar);
               }
               if (_v) {
-                return _wrap_calcBackProject__SWIG_1(SWIG_GatewayArguments);
+                return _wrap_calcBackProject__SWIG_3(SWIG_GatewayArguments);
               }
             }
           }
@@ -60252,33 +59664,48 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
   if (argc == 6) {
     int _v;
     {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        if (!(_v = SWIG_SciHypermat_AsMat(pvApiCtx, argv[0], &pMat, SWIG_Scilab_GetFuncName())) == SWIG_OK) {
+          cv::Mat *pMatArray = NULL;
+          int iMatArrayCount = 0;
+          _v = (SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, &iMatArrayCount, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+        }
+      }
     }
     if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
+      int *piAddr = NULL;
+      SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddr);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
       }
+      _v = isDoubleType(pvApiCtx, piAddr);
       if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
+        {
+          if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+            cv::Mat *pMat = NULL;
+            _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[2], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+          }
         }
-        _v = isDoubleType(pvApiCtx, piAddr);
         if (_v) {
-          void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
-          _v = SWIG_CheckState(res);
+          int *piAddr;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddr);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddr);
           if (_v) {
-            int *piAddr;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
+            {
+              int *piAddrVar = NULL;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
+              }
+              _v = isDoubleType(pvApiCtx, piAddrVar);
             }
-            _v = isDoubleType(pvApiCtx, piAddr);
             if (_v) {
               {
                 int *piAddrVar = NULL;
@@ -60287,133 +59714,10 @@ int _wrap_calcBackProject(SWIG_GatewayParameters) {
                   printError(&sciErr, 0);
                   return SWIG_ERROR;
                 }
-                _v = isDoubleType(pvApiCtx, piAddrVar);
+                _v = isBooleanType(pvApiCtx, piAddrVar);
               }
               if (_v) {
-                return _wrap_calcBackProject__SWIG_4(SWIG_GatewayArguments);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 7) {
-    int _v;
-    {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
-          _v = SWIG_CheckState(res);
-          if (_v) {
-            int *piAddr;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
-            }
-            _v = isDoubleType(pvApiCtx, piAddr);
-            if (_v) {
-              {
-                int *piAddrVar = NULL;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddrVar);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isDoubleType(pvApiCtx, piAddrVar);
-              }
-              if (_v) {
-                {
-                  int *piAddrVar = NULL;
-                  SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddrVar);
-                  if (sciErr.iErr) {
-                    printError(&sciErr, 0);
-                    return SWIG_ERROR;
-                  }
-                  _v = isBooleanType(pvApiCtx, piAddrVar);
-                }
-                if (_v) {
-                  return _wrap_calcBackProject__SWIG_3(SWIG_GatewayArguments);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 7) {
-    int _v;
-    {
-      cv::Mat *pMatArray = NULL;
-      _v = SWIG_SciMatList_AsMatPtr(pvApiCtx, argv[0], &pMatArray, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = (SWIG_SciHypermat_AsMat(pvApiCtx, argv[3], &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
-            }
-          }
-          if (_v) {
-            int *piAddr;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddr);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
-            }
-            _v = isDoubleType(pvApiCtx, piAddr);
-            if (_v) {
-              {
-                int *piAddrVar = NULL;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddrVar);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isDoubleType(pvApiCtx, piAddrVar);
-              }
-              if (_v) {
-                {
-                  int *piAddrVar = NULL;
-                  SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[6], &piAddrVar);
-                  if (sciErr.iErr) {
-                    printError(&sciErr, 0);
-                    return SWIG_ERROR;
-                  }
-                  _v = isBooleanType(pvApiCtx, piAddrVar);
-                }
-                if (_v) {
-                  return _wrap_calcBackProject__SWIG_0(SWIG_GatewayArguments);
-                }
+                return _wrap_calcBackProject__SWIG_0(SWIG_GatewayArguments);
               }
             }
           }

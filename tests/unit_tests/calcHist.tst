@@ -8,15 +8,26 @@ scicv_Init();
 
 img = imread(getSampleImage("lena.jpg"));
 
-imgs = list(img);
-channels = [0 1 2];
 mask = [];
-hist_sizes = [32, 32, 32];
-ranges = [[0; 256], [0; 256], [0; 256]];
+hist_size = 255;
+ranges = [0; 255];
 
-hist = calcHist(imgs, 1, channels, mask, 3, hist_sizes, ranges);
+histB = calcHist(img, 0, mask, 1, hist_size, ranges);
 
-assert_checkfalse(Mat_empty(hist));
+assert_checkfalse(Mat_empty(histB));
+assert_checkequal(size(histB), [255, 1]);
+
+histG = calcHist(img, 1, mask, 1, hist_size, ranges);
+
+assert_checkfalse(Mat_empty(histG));
+assert_checkequal(size(histG), [255, 1]);
+
+histR = calcHist(img, 2, mask, 1, hist_size, ranges);
+
+assert_checkfalse(Mat_empty(histR));
+assert_checkequal(size(histR), [255, 1]);
 
 delete_Mat(img);
-delete_Mat(hist);
+delete_Mat(histB);
+delete_Mat(histG);
+delete_Mat(histR);
