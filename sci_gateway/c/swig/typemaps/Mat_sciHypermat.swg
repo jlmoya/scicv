@@ -5,11 +5,11 @@
 
 %fragment("SWIG_SciHypermat_AsMat", "header") {
 
-#define copy_column_major_planar_to_row_major_pixel_data(src, dst) \
+#define copy_column_major_planar_to_row_major_pixel_data(type) \
   for (int c = 0; c<nc; c++) \
     for (int i = 0; i<h; i++) \
       for (int j = 0; j<w; j++) \
-        dst[c + nc*(i*w + j)] = src[c*w*h + j*h + i]
+        ((type*)data)[c + nc*(i*w + j)] = src[c*w*h + j*h + i]
 
 int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *fname) {
   SciErr sciErr;
@@ -32,6 +32,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
     int *dims = NULL;
     int w, h, nc, type = 0;
     void *data = NULL;
+    int size = 0;
 
     sciErr = getHypermatType(pvApiCtx, piAddrVar, &htype);
     if (sciErr.iErr) {
@@ -54,9 +55,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
             h = dims[0];
             w = dims[1];
             nc = dims[2];
-            uint8_t *dst = (uint8_t *) malloc(w * h * nc * sizeof(uint8_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * nc * sizeof(uint8_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(uint8_t);
             type = (nc > 1) ? CV_8UC3 : CV_8UC1;
           }
           break;
@@ -68,9 +69,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
             h = dims[0];
             w = dims[1];
             nc = dims[2];
-            int8_t *dst = (int8_t *) malloc(w * h * nc * sizeof(int8_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * nc * sizeof(int8_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(int8_t);
             type = (nc > 1) ? CV_8SC3 : CV_8SC1;
           }
           break;
@@ -82,9 +83,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
             h = dims[0];
             w = dims[1];
             nc = dims[2];
-            uint16_t *dst = (uint16_t *) malloc(w * h * nc * sizeof(uint16_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * nc * sizeof(uint16_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(uint16_t);
             type = (nc > 1) ? CV_16UC3 : CV_16UC1;
           }
           break;
@@ -96,9 +97,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
             h = dims[0];
             w = dims[1];
             nc = dims[2];
-            int16_t *dst = (int16_t *) malloc(w * h * nc * sizeof(int16_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * nc * sizeof(int16_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(int16_t);
             type = (nc > 1) ? CV_16SC3 : CV_16SC1;
           }
           break;
@@ -110,10 +111,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
             h = dims[0];
             w = dims[1];
             nc = dims[2];
-            uint32_t *dst = (uint32_t *) malloc(w * h * nc * sizeof(uint32_t));
-            data = dst;
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * nc * sizeof(uint32_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(uint32_t);
             type = (nc > 1) ? CV_32UC3 : CV_32UC1;
           }
           break;
@@ -125,9 +125,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
             h = dims[0];
             w = dims[1];
             nc = dims[2];
-            int32_t *dst = (int32_t *) malloc(w * h * nc * sizeof(int32_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * nc * sizeof(int32_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(int32_t);
             type = (nc > 1) ? CV_32SC3 : CV_32SC1;
           }
           break;
@@ -141,9 +141,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
         h = dims[0];
         w = dims[1];
         nc = dims[2];
-        double *dst = (double *) malloc(w * h * nc * sizeof(double));
-        copy_column_major_planar_to_row_major_pixel_data(src, dst);
-        data = dst;
+        size = w * h * nc * sizeof(double);
+        data = malloc(size);
+        copy_column_major_planar_to_row_major_pixel_data(double);
         type = (nc > 1) ? CV_64FC3 : CV_64FC1;
       }
     }
@@ -157,7 +157,8 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
       return sciErr.iErr;
     }
 
-    *pMat = new cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
+    *pMat = new cv::Mat(h, w, type);
+    memcpy((*pMat)->data, data, size);
 
     return SWIG_OK;
   }
@@ -166,6 +167,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
     int w, h, type = 0;
     int nc = 1;
     void *data = NULL;
+    int size = 0;
 
     if (isIntegerType(pvApiCtx, piAddrVar)) {
       sciErr = getMatrixOfIntegerPrecision(pvApiCtx, piAddrVar, &iPrec);
@@ -179,9 +181,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
           uint8_t *src = NULL;
           sciErr = getMatrixOfUnsignedInteger8(pvApiCtx, piAddrVar, &h, &w, (unsigned char**)&src);
           if (sciErr.iErr == 0) {
-            uint8_t *dst = (uint8_t *) malloc(w * h * sizeof(uint8_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * sizeof(uint8_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(uint8_t);
             type = CV_8UC1;
           }
           break;
@@ -190,9 +192,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
           int8_t *src = NULL;
           sciErr = getMatrixOfInteger8(pvApiCtx, piAddrVar, &h, &w, (char**)&src);
           if (sciErr.iErr == 0) {
-            int8_t *dst = (int8_t *) malloc(w * h * sizeof(int8_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * sizeof(int8_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(int8_t);
             type = CV_8SC1;
           }
           break;
@@ -201,9 +203,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
           uint16_t *src = NULL;
           sciErr = getMatrixOfUnsignedInteger16(pvApiCtx, piAddrVar, &h, &w, (unsigned short**)&src);
           if (sciErr.iErr == 0) {
-            uint16_t *dst = (uint16_t *) malloc(w * h * sizeof(uint16_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * sizeof(uint16_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(uint16_t);
             type = CV_16UC1;
           }
           break;
@@ -212,9 +214,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
           int16_t *src = NULL;
           sciErr = getMatrixOfInteger16(pvApiCtx, piAddrVar, &h, &w, (short**)&src);
           if (sciErr.iErr == 0) {
-            int16_t *dst = (int16_t *) malloc(w * h * sizeof(int16_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * sizeof(int16_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(int16_t);
             type = CV_16SC1;
           }
           break;
@@ -223,9 +225,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
           uint32_t *src = NULL;
           sciErr = getMatrixOfUnsignedInteger32(pvApiCtx, piAddrVar, &h, &w,, (unsigned int**)&src);
           if (sciErr.iErr == 0) {
-            uint32_t *dst = (uint32_t *) malloc(w * h * sizeof(uint32_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * sizeof(uint32_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(uint32_t);
             type = CV_32UC1;
           }
           break;
@@ -234,9 +236,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
           int32_t *src = NULL;
           sciErr = getMatrixOfInteger32(pvApiCtx, piAddrVar, &h, &w, (int**)&src);
           if (sciErr.iErr == 0) {
-            int32_t *dst = (int32_t *) malloc(w * h * sizeof(int32_t));
-            copy_column_major_planar_to_row_major_pixel_data(src, dst);
-            data = dst;
+            size = w * h * sizeof(int32_t);
+            data = malloc(size);
+            copy_column_major_planar_to_row_major_pixel_data(int32_t);
             type = CV_32SC1;
           }
           break;
@@ -247,9 +249,9 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
       double *src = NULL;
       sciErr = getMatrixOfDouble(pvApiCtx, piAddrVar, &h, &w, (double**)&src);
       if (sciErr.iErr == 0) {
-        double *dst = (double *) malloc(w * h * sizeof(double));
-        copy_column_major_planar_to_row_major_pixel_data(src, dst);
-        data = dst;
+        size = w * h * sizeof(double);
+        data = malloc(size);
+        copy_column_major_planar_to_row_major_pixel_data(double);
         type = CV_64FC1;
       }
     }
@@ -263,7 +265,8 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
       return sciErr.iErr;
     }
 
-    *pMat = new cv::Mat(h, w, type, data, cv::Mat::AUTO_STEP);
+    *pMat = new cv::Mat(h, w, type);
+    memcpy((*pMat)->data, data, size);
 
     return SWIG_OK;
   }
@@ -379,6 +382,40 @@ int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMa
   }
 
   return SWIG_OK;
+}
+
+}
+
+%fragment("SWIG_Check_SciHypermat", "header") {
+
+int SWIG_Check_SciHypermat(void *pvApiCtx, int iVarInput, char *fname) {
+  SciErr sciErr;
+  int *piAddrVar = NULL;
+
+  sciErr = getVarAddressFromPosition(pvApiCtx, iVarInput, &piAddrVar);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return sciErr.iErr;
+  }
+
+  if (isEmptyMatrix(pvApiCtx, piAddrVar)) {
+    return 1;
+  }
+  else if (isHypermatType(pvApiCtx, piAddrVar)) {
+    int htype;
+    sciErr = getHypermatType(pvApiCtx, piAddrVar, &htype);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return sciErr.iErr;
+    }
+    return (htype == sci_ints) || (htype == sci_matrix);
+  }
+  else if (isVarMatrixType(pvApiCtx, piAddrVar)) {
+    return (isDoubleType(pvApiCtx, piAddrVar) || isIntegerType(pvApiCtx, piAddrVar));
+  }
+  else {
+    return 0;
+  }
 }
 
 }

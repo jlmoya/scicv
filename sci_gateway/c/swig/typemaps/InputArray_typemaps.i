@@ -23,10 +23,10 @@
 
 // OpenCV InputArray <= Scilab mlist Mat or hypermat
 
-%typemap(typecheck, fragment="SWIG_SciHypermat_AsMat", precedence=SWIG_TYPECHECK_POINTER) cv::InputArray {
+%typemap(typecheck, fragment="SWIG_Check_SciHypermat", precedence = SWIG_TYPECHECK_POINTER) cv::InputArray {
   if (!($1 = SwigScilabCheckPtr(pvApiCtx, $input, SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
     cv::Mat *pMat = NULL;
-    $1 = (SWIG_SciHypermat_AsMat(pvApiCtx, $input, &pMat, SWIG_Scilab_GetFuncName()) == SWIG_OK);
+    $1 = SWIG_Check_SciHypermat(pvApiCtx, $input, SWIG_Scilab_GetFuncName());
   }
 }
 
@@ -39,5 +39,6 @@
 }
 
 %typemap(freearg, noblock=1) cv::InputArray {
+  ((cv::Mat*)$1->obj)->release();
   delete $1;
 }
