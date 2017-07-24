@@ -159,6 +159,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
 
     *pMat = new cv::Mat(h, w, type);
     memcpy((*pMat)->data, data, size);
+    free(data);
 
     return SWIG_OK;
   }
@@ -267,6 +268,7 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
 
     *pMat = new cv::Mat(h, w, type);
     memcpy((*pMat)->data, data, size);
+    free(data);
 
     return SWIG_OK;
   }
