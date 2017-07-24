@@ -15,4 +15,6 @@
   $1 = new cv::_InputArray(*ptLists);
 }
 
+%typemap(freearg, noblock=1) cv::InputArrayOfArrays contours {
+}
 
