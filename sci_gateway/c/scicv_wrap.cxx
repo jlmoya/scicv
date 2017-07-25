@@ -62938,12 +62938,18 @@ int _wrap_calcHist__SWIG_0(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 6, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg8 = (float**) malloc(iColCount8 * sizeof(float*));
-  for (int i=0; i<iColCount8; i++) {
-    arg8[i] = (float *) malloc(iRowCount8 * sizeof(float));
-    for (int j=0; j<iRowCount8; j++) {
-      arg8[i][j] = pfValues[i*iRowCount8 + j];
+  if ((iRowCount8 == 2) || (iColCount8 == 2)) {
+    int n = iRowCount8 == 2 ? iColCount8 : iRowCount8;
+    arg8 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg8[i] = (float *) malloc(2 * sizeof(float));
+      arg8[i][0] = pfValues[i*2];
+      arg8[i][1] = pfValues[i*2+1];
     }
+  }
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
   }
   ecode9 = SWIG_AsVal_bool(7, &val9);
   if (!SWIG_IsOK(ecode9)) {
@@ -63029,12 +63035,18 @@ int _wrap_calcHist__SWIG_1(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 6, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg8 = (float**) malloc(iColCount8 * sizeof(float*));
-  for (int i=0; i<iColCount8; i++) {
-    arg8[i] = (float *) malloc(iRowCount8 * sizeof(float));
-    for (int j=0; j<iRowCount8; j++) {
-      arg8[i][j] = pfValues[i*iRowCount8 + j];
+  if ((iRowCount8 == 2) || (iColCount8 == 2)) {
+    int n = iRowCount8 == 2 ? iColCount8 : iRowCount8;
+    arg8 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg8[i] = (float *) malloc(2 * sizeof(float));
+      arg8[i][0] = pfValues[i*2];
+      arg8[i][1] = pfValues[i*2+1];
     }
+  }
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
   }
   ecode9 = SWIG_AsVal_bool(7, &val9);
   if (!SWIG_IsOK(ecode9)) {
@@ -63096,7 +63108,7 @@ int _wrap_calcHist__SWIG_2(SWIG_GatewayParameters) {
   int iNewMatmask = 0;
   if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 3, &pMatmask, &iNewMatmask, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
     arg4 = new cv::_InputArray(*pMatmask);
-  }
+  }  
   else {
     return SWIG_ERROR;
   }
@@ -63112,15 +63124,20 @@ int _wrap_calcHist__SWIG_2(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 6, &iRowCount8, &iColCount8, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg8 = (float**) malloc(iColCount8 * sizeof(float*));
-  for (int i=0; i<iColCount8; i++) {
-    arg8[i] = (float *) malloc(iRowCount8 * sizeof(float));
-    for (int j=0; j<iRowCount8; j++) {
-      arg8[i][j] = pfValues[i*iRowCount8 + j];
+  if ((iRowCount8 == 2) || (iColCount8 == 2)) {
+    int n = iRowCount8 == 2 ? iColCount8 : iRowCount8;
+    arg8 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg8[i] = (float *) malloc(2 * sizeof(float));
+      arg8[i][0] = pfValues[i*2];
+      arg8[i][1] = pfValues[i*2+1];
     }
   }
-  cv::calcHist((cv::Mat const *)arg1,arg2,(int const *)arg3,(cv::_InputArray const &)*arg4,(cv::_OutputArray const &)*arg5,arg6,(int const *)arg7,(float const **)arg8);
-  
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
+  }  
+  cv::calcHist((cv::Mat const *)arg1,arg2,(int const *)arg3,(cv::_InputArray const &)*arg4,(cv::_OutputArray const &)*arg5,arg6,(int const *)arg7,(float const **)arg8);  
   SWIG_Scilab_SetOutputPosition(1);
   if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat5, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
     return SWIG_ERROR;
@@ -63128,7 +63145,7 @@ int _wrap_calcHist__SWIG_2(SWIG_GatewayParameters) {
   SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   if (iNewMatmask) {
     pMatmask->release();
-  }
+  }  
   delete arg4;
   delete arg5;
   return SWIG_OK;
@@ -63396,12 +63413,18 @@ int _wrap_calcBackProject__SWIG_0(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg6 = (float**) malloc(iColCount6 * sizeof(float*));
-  for (int i=0; i<iColCount6; i++) {
-    arg6[i] = (float *) malloc(iRowCount6 * sizeof(float));
-    for (int j=0; j<iRowCount6; j++) {
-      arg6[i][j] = pfValues[i*iRowCount6 + j];
+  if ((iRowCount6 == 2) || (iColCount6 == 2)) {
+    int n = iRowCount6 == 2 ? iColCount6 : iRowCount6;
+    arg6 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg6[i] = (float *) malloc(2 * sizeof(float));
+      arg6[i][0] = pfValues[i*2];
+      arg6[i][1] = pfValues[i*2+1];
     }
+  }
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
   }
   ecode7 = SWIG_AsVal_double(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
@@ -63473,12 +63496,18 @@ int _wrap_calcBackProject__SWIG_1(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg6 = (float**) malloc(iColCount6 * sizeof(float*));
-  for (int i=0; i<iColCount6; i++) {
-    arg6[i] = (float *) malloc(iRowCount6 * sizeof(float));
-    for (int j=0; j<iRowCount6; j++) {
-      arg6[i][j] = pfValues[i*iRowCount6 + j];
+  if ((iRowCount6 == 2) || (iColCount6 == 2)) {
+    int n = iRowCount6 == 2 ? iColCount6 : iRowCount6;
+    arg6 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg6[i] = (float *) malloc(2 * sizeof(float));
+      arg6[i][0] = pfValues[i*2];
+      arg6[i][1] = pfValues[i*2+1];
     }
+  }
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
   }
   ecode7 = SWIG_AsVal_double(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
@@ -63542,12 +63571,18 @@ int _wrap_calcBackProject__SWIG_2(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg6 = (float**) malloc(iColCount6 * sizeof(float*));
-  for (int i=0; i<iColCount6; i++) {
-    arg6[i] = (float *) malloc(iRowCount6 * sizeof(float));
-    for (int j=0; j<iRowCount6; j++) {
-      arg6[i][j] = pfValues[i*iRowCount6 + j];
+  if ((iRowCount6 == 2) || (iColCount6 == 2)) {
+    int n = iRowCount6 == 2 ? iColCount6 : iRowCount6;
+    arg6 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg6[i] = (float *) malloc(2 * sizeof(float));
+      arg6[i][0] = pfValues[i*2];
+      arg6[i][1] = pfValues[i*2+1];
     }
+  }
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
   }
   cv::calcBackProject((cv::Mat const *)arg1,arg2,(int const *)arg3,(cv::_InputArray const &)*arg4,(cv::_OutputArray const &)*arg5,(float const **)arg6);
   
@@ -63614,12 +63649,18 @@ int _wrap_calcBackProject__SWIG_3(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg6 = (float**) malloc(iColCount6 * sizeof(float*));
-  for (int i=0; i<iColCount6; i++) {
-    arg6[i] = (float *) malloc(iRowCount6 * sizeof(float));
-    for (int j=0; j<iRowCount6; j++) {
-      arg6[i][j] = pfValues[i*iRowCount6 + j];
+ if ((iRowCount6 == 2) || (iColCount6 == 2)) {
+    int n = iRowCount6 == 2 ? iColCount6 : iRowCount6;
+    arg6 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg6[i] = (float *) malloc(2 * sizeof(float));
+      arg6[i][0] = pfValues[i*2];
+      arg6[i][1] = pfValues[i*2+1];
     }
+  }
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
   }
   ecode7 = SWIG_AsVal_double(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
@@ -63689,12 +63730,18 @@ int _wrap_calcBackProject__SWIG_4(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg6 = (float**) malloc(iColCount6 * sizeof(float*));
-  for (int i=0; i<iColCount6; i++) {
-    arg6[i] = (float *) malloc(iRowCount6 * sizeof(float));
-    for (int j=0; j<iRowCount6; j++) {
-      arg6[i][j] = pfValues[i*iRowCount6 + j];
+  if ((iRowCount6 == 2) || (iColCount6 == 2)) {
+    int n = iRowCount6 == 2 ? iColCount6 : iRowCount6;
+    arg6 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg6[i] = (float *) malloc(2 * sizeof(float));
+      arg6[i][0] = pfValues[i*2];
+      arg6[i][1] = pfValues[i*2+1];
     }
+  }
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
   }
   ecode7 = SWIG_AsVal_double(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
@@ -63756,12 +63803,18 @@ int _wrap_calcBackProject__SWIG_5(SWIG_GatewayParameters) {
   if (SWIG_SciDouble_AsFloatArrayAndSize(pvApiCtx, 4, &iRowCount6, &iColCount6, &pfValues, fname) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  arg6 = (float**) malloc(iColCount6 * sizeof(float*));
-  for (int i=0; i<iColCount6; i++) {
-    arg6[i] = (float *) malloc(iRowCount6 * sizeof(float));
-    for (int j=0; j<iRowCount6; j++) {
-      arg6[i][j] = pfValues[i*iRowCount6 + j];
+  if ((iRowCount6 == 2) || (iColCount6 == 2)) {
+    int n = iRowCount6 == 2 ? iColCount6 : iRowCount6;
+    arg6 = (float**) malloc(n * sizeof(float*));
+    for (int i=0; i<n; i++) {
+      arg6[i] = (float *) malloc(2 * sizeof(float));
+      arg6[i][0] = pfValues[i*2];
+      arg6[i][1] = pfValues[i*2+1];
     }
+  }
+  else {
+    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    return SWIG_ERROR;
   }
   cv::calcBackProject((cv::Mat const *)arg1,arg2,(int const *)arg3,(cv::SparseMat const &)*arg4,(cv::_OutputArray const &)*arg5,(float const **)arg6);
   
