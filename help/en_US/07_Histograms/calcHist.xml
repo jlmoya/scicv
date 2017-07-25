@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab Computer Vision Module
+ * Copyright (C) 2017 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="calcHist">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>calcHist</refname>
+    <refpurpose>Calculates a histogram of image(s)</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>hist = calcHist(imgs, channels, mask, dims, bins_sizes, ranges)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img_in</term>
+        <listitem>
+          <para>Input images (a single image or a list of images of <link linkend="Mat">Mat</link> type).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>channels</term>
+        <listitem>
+          <para>List of <term>dims</term> channels of the image used to compute the histogram (1 x <term>dims</term> double)</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>mask</term>
+        <listitem>
+          <para>Optional mask, must be same size as the image or empty (<link linkend="Mat">Mat</link> type).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>dims</term>
+        <listitem>
+          <para>Dimension of the output histogram (1 double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>bins_sizes</term>
+        <listitem>
+          <para>Sizes of the bins in each dimension (1 x <term>dims</term> double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ranges</term>
+        <listitem>
+          <para>Array of the <term>dims</term> arrays of the bin boundaries in each dimension (2 x <term>dims</term> double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>hist</term>
+        <listitem>
+          <para>Output histogram (<term>dims</term> dimensions <link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>calcHist</function> computes one histogram of one or several channels, on one or several images.</para>
+    <para>The output histogram is multi dimensional with <term>dims</term> dimensions, and contains the cross distribution of the channels <term>channels</term>.</para>
+    <para>To have separate histograms of each channel independently, <function>calcHist</function> must be called several times, with the <term>dims</term> equal to 1 and the <term>channels</term> argument set to the corresponding channel.</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img_gray = imread(getSampleImage("lena.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
+
+    // Histogram of the gray level
+    hist = calcHist(img_gray, 0, [], 1, 32, [0 256]);
+    bar(hist(:), 'black');
+
+    delete_Mat(img_gray);
+    delete_Mat(hist);
+ ]]></programlisting>
+ <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"));
+
+    // Histogram of the three RBG channels taken separately
+    // Note: OpenCV color channel order is reversed (BGR)
+    histB = calcHist(img, 0, [], 1, 32, [0 256]);
+    scf();
+    bar(histB(:), 'blue');
+
+    histG = calcHist(img, 1, [], 1, 32, [0 256]);
+    scf();
+    bar(histG(:), 'green');
+
+    histR = calcHist(img, 2, [], 1, 32, [0 256]);
+    scf();
+    bar(histR(:), 'red');
+
+    delete_Mat(img);
+    delete_Mat(histB);
+    delete_Mat(histG);
+    delete_Mat(histR);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>
