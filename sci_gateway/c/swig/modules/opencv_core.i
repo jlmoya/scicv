@@ -263,16 +263,16 @@ using namespace cv::ogl;
 
 
 // ignore functions that confict with Scilab
-%ignore error;
-%ignore abs;
-%ignore sum;
-%ignore mean;
-%ignore trace;
-%ignore dct;
-%ignore idct;
-%ignore norm;
-%ignore write;
-%ignore read;
+%ignore ::error;
+%ignore ::abs;
+%ignore ::sum;
+%ignore ::mean;
+%ignore ::trace;
+%ignore ::dct;
+%ignore ::idct;
+%ignore ::norm;
+%ignore ::write;
+%ignore ::read;
 
 // ignore low level functions & classes
 %ignore setBreakOnError;
