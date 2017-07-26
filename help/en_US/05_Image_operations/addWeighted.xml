@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab Computer Vision Module
+ * Copyright (C) 2017 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="addWeighted">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>addWeighted</refname>
+    <refpurpose>Calculates the weighted sum of two images</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img = addWeighted(img1, alpha, img2, gamma, beta[, dtype])</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img1</term>
+        <listitem>
+          <para>First image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>alpha</term>
+        <listitem>
+          <para>Weight applied to the first image (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img2</term>
+        <listitem>
+          <para>Second image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>beta</term>
+        <listitem>
+          <para>Weight applied to the second image (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>gamma</term>
+        <listitem>
+          <para>Scalar added to the sum (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>dtype</term>
+        <listitem>
+          <para>Optional depth of the output image (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>addWeighted</function> computes the weighted sum of two images pixel per pixel as following:</para>
+    <para><latex>$img = alpha*img1 + beta*img2 + gamma$</latex></para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
+
+    // First order derivative on x, kernel size 3
+    img_grad_x = Sobel(img, CV_16S, 1, 0, 3);
+    img_grad_abs_x = convertScaleAbs(img_grad_x);
+
+    // First order derivative on x, kernel size 3
+    img_grad_y = Sobel(img, CV_16S, 0, 1, 3);
+    img_grad_abs_y = convertScaleAbs(img_grad_y);
+
+    // Calculates the gradient image
+    img_grad = addWeighted(img_grad_abs_x, 0.5, img_grad_abs_y, 0.5, 0);
+    matplot(img_grad);
+
+    delete_Mat(img);
+    delete_Mat(img_grad_x);
+    delete_Mat(img_grad_abs_x);
+    delete_Mat(img_grad_y);
+    delete_Mat(img_grad_abs_y);
+    delete_Mat(img_grad);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member><link linkend="add">add</link></member>
+      <member><link linkend="convertScaleAbs">convertScaleAbs</link></member>
+    </simplelist>
+  </refsection>
+</refentry>

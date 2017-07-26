@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab Computer Vision Module
+ * Copyright (C) 2017 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="convertScaleAbs">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>convertScaleAbs</refname>
+    <refpurpose>Scales, calculates absolutes and convert an image to 8-bit image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = convertScaleAbs(img[, alpha[, beta]])</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img</term>
+        <listitem>
+          <para>Image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>alpha</term>
+        <listitem>
+          <para>Optional scale factor (double, default <literal>1</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>beta</term>
+        <listitem>
+          <para>Optional scalar added to the scaled values (double, default <literal>0</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>convertScaleAbs</function> scales, caclulates the the absolute value of an image, as following:</para>
+    <para><latex>$img = |alpha*img + beta$|</latex></para>
+    <para>Then the result is converted to a 8-bit image</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("lena.jpg"), CV_LOAD_IMAGE_GRAYSCALE);
+
+    // First order derivative on x, kernel size 3
+    img_grad_x = Sobel(img, CV_16S, 1, 0, 3);
+    img_grad_abs_x = convertScaleAbs(img_grad_x);
+
+    // First order derivative on x, kernel size 3
+    img_grad_y = Sobel(img, CV_16S, 0, 1, 3);
+    img_grad_abs_y = convertScaleAbs(img_grad_y);
+
+    // Calculates the gradient image
+    img_grad = addWeighted(img_grad_abs_x, 0.5, img_grad_abs_y, 0.5, 0);
+    matplot(img_grad);
+
+    delete_Mat(img);
+    delete_Mat(img_grad_x);
+    delete_Mat(img_grad_abs_x);
+    delete_Mat(img_grad_y);
+    delete_Mat(img_grad_abs_y);
+    delete_Mat(img_grad);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member><link linkend="normalize">normalize</link></member>
+    </simplelist>
+  </refsection>
+</refentry>

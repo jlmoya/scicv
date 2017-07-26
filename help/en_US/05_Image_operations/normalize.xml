@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab Computer Vision Module
+ * Copyright (C) 2017 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="normalize">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>normalize</refname>
+    <refpurpose>Normalizes an image</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>img_out = normalize(img, alpha, beta, normType)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img</term>
+        <listitem>
+          <para>Image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>alpha</term>
+        <listitem>
+          <para>Norm value or range minimum value (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>beta</term>
+        <listitem>
+          <para>Maximal range value (double, default <literal>0</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>normType</term>
+        <listitem>
+          <para>Norm type (double, <literal>NORM_1</literal>, <literal>NORM_2</literal>, <literal>NORM_INF</literal> or <literal>NORM_MINMAX</literal>).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>img_out</term>
+        <listitem>
+          <para>Output image (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>normalize</function> normalizes an image or a histogram, so that the image or histogram has a specified norm or range.</para>
+    <para>There are two modes of normalization, depending on <term>normType</term> argument:</para>
+      <itemizedlist>
+        <member>when set <literal>NORM_1</literal>, <literal>NORM_2</literal>or <literal>NORM_INF</literal>, the norm (1, 2, inf) of the image is normalized to <term>alpha</term>.</member>
+        <member>when set to <literal>NORM_MINMAX</literal> the range of the pixel values are normalized to minimal value <term>alpha</term> and maximal value <term>beta</term>.</member>
+      </itemizedlist>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = imread(getSampleImage("puffins.png"));
+
+    img_template = imread(getSampleImage("puffin_pattern.png"));
+    img_result = matchTemplate(img, img_template, CV_TM_SQDIFF_NORMED);
+
+    gcf().color_map = graycolormap(255);
+    colorbar(0, 255);
+
+    // Normalize the match template result
+    img_out = normalize(img_result, 0, 255, NORM_MINMAX);
+
+    matplot(img_out);
+
+    delete_Mat(img);
+    delete_Mat(img_template);
+    delete_Mat(img_result);
+  ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member><link linkend="convertScaleAbs">convertScaleAbs</link></member>
+    </simplelist>
+  </refsection>
+</refentry>
