@@ -272,7 +272,6 @@ using namespace cv::ogl;
 %ignore idct;
 %ignore norm;
 
-%ignore read(const FileNode& fn);
 %ignore read(const FileNode& node, int& value, int default_value);
 %ignore read(const FileNode& node, bool& value, bool default_value);
 %ignore read(const FileNode& node, uchar& value, uchar default_value);
@@ -294,11 +293,33 @@ using namespace cv::ogl;
 %ignore read(const FileNode& node, SparseMat& mat, const SparseMat& default_mat=SparseMat());
 
 %ignore write(FileStorage& fs, const string& name, int value);
-%ignore write( FileStorage& fs, const string& name, float value );
-%ignore write( FileStorage& fs, const string& name, double value );
-%ignore write( FileStorage& fs, const string& name, const string& value );
-
-
+%ignore write(FileStorage& fs, const string& name, float value);
+%ignore write(FileStorage& fs, const string& name, double value);
+%ignore write(FileStorage& fs, const string& name, const string& value);
+%ignore write(FileStorage& fs, const _Tp& value);
+%ignore write(FileStorage& fs, const int& value);
+%ignore write(FileStorage& fs, const float& value);
+%ignore write(FileStorage& fs, const double& value);
+%ignore write(FileStorage& fs, const string& value);
+%ignore write(FileStorage& fs, const Point_<_Tp>& pt);
+%ignore write(FileStorage& fs, const Point3_<_Tp>& pt);
+%ignore write(FileStorage& fs, const Size_<_Tp>& sz);
+%ignore write(FileStorage& fs, const Complex<_Tp>& c);
+%ignore write(FileStorage& fs, const Rect_<_Tp>& r);
+%ignore write(FileStorage& fs, const Vec<_Tp, cn>& v);
+%ignore write(FileStorage& fs, const Scalar_<_Tp>& s);
+%ignore write(FileStorage& fs, const Range& r);
+%ignore write(FileStorage& fs, const string& name, const Point_<_Tp>& pt);
+%ignore write(FileStorage& fs, const string& name, const Point3_<_Tp>& pt);
+%ignore write(FileStorage& fs, const string& name, const Size_<_Tp>& sz);
+%ignore write(FileStorage& fs, const string& name, const Complex<_Tp>& c);
+%ignore write(FileStorage& fs, const string& name, const Vec<_Tp, cn>& v);
+%ignore write(FileStorage& fs, const string& name, const Scalar_<_Tp>& s);
+%ignore write(FileStorage& fs, const string& name, const Range& r);
+%ignore write(FileStorage& fs, const vector<_Tp>& vec);
+%ignore write(FileStorage& fs, const string& name, const vector<_Tp>& vec);
+%ignore write(FileStorage& fs, const string& name, const Mat& value);
+%ignore write(FileStorage& fs, const string& name, const SparseMat& value);
 
 // ignore low level functions & classes
 %ignore setBreakOnError;
