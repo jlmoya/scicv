@@ -28,7 +28,7 @@
     }
   }
   else {
-    Scierror(999,_("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected.", SWIG_Scilab_GetFuncName(), $input));
+    Scierror(999, _("%s: Wrong size for input argument #%d: a matrix with 2 rows or columns expected."), SWIG_Scilab_GetFuncName(), $input);
     return SWIG_ERROR;
   }
 }
