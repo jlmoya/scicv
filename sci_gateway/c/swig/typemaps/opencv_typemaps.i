@@ -22,3 +22,5 @@
 %include Mat_typemaps.i
 %include PtList_typemaps.i
 %include PtLists_typemaps.i
+
+%include MatExpr_typemaps.i

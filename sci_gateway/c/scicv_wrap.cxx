@@ -5231,7 +5231,11 @@ int _wrap___add____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator +((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5267,7 +5271,11 @@ int _wrap___add____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (Scalar *)(argp2);
   result = cv::operator +((Mat const &)*arg1,(Scalar const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5303,7 +5311,11 @@ int _wrap___add____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator +((Scalar const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5339,7 +5351,11 @@ int _wrap___add____SWIG_3(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator +((cv::MatExpr const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5375,7 +5391,11 @@ int _wrap___add____SWIG_4(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator +((Mat const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5411,7 +5431,11 @@ int _wrap___add____SWIG_5(SWIG_GatewayParameters) {
   arg2 = (Scalar *)(argp2);
   result = cv::operator +((cv::MatExpr const &)*arg1,(Scalar const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5447,7 +5471,11 @@ int _wrap___add____SWIG_6(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator +((Scalar const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5483,7 +5511,11 @@ int _wrap___add____SWIG_7(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator +((cv::MatExpr const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5519,7 +5551,11 @@ int _wrap___sub____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator -((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5555,7 +5591,11 @@ int _wrap___sub____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (Scalar *)(argp2);
   result = cv::operator -((Mat const &)*arg1,(Scalar const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5591,7 +5631,11 @@ int _wrap___sub____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator -((Scalar const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5627,7 +5671,11 @@ int _wrap___sub____SWIG_3(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator -((cv::MatExpr const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5663,7 +5711,11 @@ int _wrap___sub____SWIG_4(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator -((Mat const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5699,7 +5751,11 @@ int _wrap___sub____SWIG_5(SWIG_GatewayParameters) {
   arg2 = (Scalar *)(argp2);
   result = cv::operator -((cv::MatExpr const &)*arg1,(Scalar const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5735,7 +5791,11 @@ int _wrap___sub____SWIG_6(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator -((Scalar const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5771,7 +5831,11 @@ int _wrap___sub____SWIG_7(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator -((cv::MatExpr const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5796,7 +5860,11 @@ int _wrap___sub____SWIG_8(SWIG_GatewayParameters) {
   arg1 = (Mat *)(argp1);
   result = cv::operator -((Mat const &)*arg1);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5821,7 +5889,11 @@ int _wrap___sub____SWIG_9(SWIG_GatewayParameters) {
   arg1 = (cv::MatExpr *)(argp1);
   result = cv::operator -((cv::MatExpr const &)*arg1);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5857,7 +5929,11 @@ int _wrap___mul____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator *((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5890,7 +5966,11 @@ int _wrap___mul____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator *((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5923,7 +6003,11 @@ int _wrap___mul____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator *(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5959,7 +6043,11 @@ int _wrap___mul____SWIG_3(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator *((cv::MatExpr const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -5995,7 +6083,11 @@ int _wrap___mul____SWIG_4(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator *((Mat const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6028,7 +6120,11 @@ int _wrap___mul____SWIG_5(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator *((cv::MatExpr const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6061,7 +6157,11 @@ int _wrap___mul____SWIG_6(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator *(arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6097,7 +6197,11 @@ int _wrap___mul____SWIG_7(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator *((cv::MatExpr const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6133,7 +6237,11 @@ int _wrap___div____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator /((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6166,7 +6274,11 @@ int _wrap___div____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator /((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6199,7 +6311,11 @@ int _wrap___div____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator /(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6235,7 +6351,11 @@ int _wrap___div____SWIG_3(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator /((cv::MatExpr const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6271,7 +6391,11 @@ int _wrap___div____SWIG_4(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator /((Mat const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6304,7 +6428,11 @@ int _wrap___div____SWIG_5(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator /((cv::MatExpr const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6337,7 +6465,11 @@ int _wrap___div____SWIG_6(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator /(arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6373,7 +6505,11 @@ int _wrap___div____SWIG_7(SWIG_GatewayParameters) {
   arg2 = (cv::MatExpr *)(argp2);
   result = cv::operator /((cv::MatExpr const &)*arg1,(cv::MatExpr const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6558,7 +6694,11 @@ int _wrap___lt____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator <((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6591,7 +6731,11 @@ int _wrap___lt____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator <((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6624,7 +6768,11 @@ int _wrap___lt____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator <(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6660,7 +6808,11 @@ int _wrap___lte____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator <=((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6693,7 +6845,11 @@ int _wrap___lte____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator <=((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6726,7 +6882,11 @@ int _wrap___lte____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator <=(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6762,7 +6922,11 @@ int _wrap___eq____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator ==((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6795,7 +6959,11 @@ int _wrap___eq____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator ==((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6828,7 +6996,11 @@ int _wrap___eq____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator ==(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6864,7 +7036,11 @@ int _wrap___ne____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator !=((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6897,7 +7073,11 @@ int _wrap___ne____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator !=((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6930,7 +7110,11 @@ int _wrap___ne____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator !=(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6966,7 +7150,11 @@ int _wrap___gte____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator >=((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -6999,7 +7187,11 @@ int _wrap___gte____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator >=((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7032,7 +7224,11 @@ int _wrap___gte____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator >=(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7068,7 +7264,11 @@ int _wrap___gt____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator >((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7101,7 +7301,11 @@ int _wrap___gt____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::operator >((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7134,7 +7338,11 @@ int _wrap___gt____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator >(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7170,7 +7378,11 @@ int _wrap_min__SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::min((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7203,7 +7415,11 @@ int _wrap_min__SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::min((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7236,7 +7452,11 @@ int _wrap_min__SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::min(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7272,7 +7492,11 @@ int _wrap_max__SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::max((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7305,7 +7529,11 @@ int _wrap_max__SWIG_1(SWIG_GatewayParameters) {
   arg2 = (double)(val2);
   result = cv::max((Mat const &)*arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7338,7 +7566,11 @@ int _wrap_max__SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::max(arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7374,7 +7606,11 @@ int _wrap___logand____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator &((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7410,7 +7646,11 @@ int _wrap___logand____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (Scalar *)(argp2);
   result = cv::operator &((Mat const &)*arg1,(Scalar const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7446,7 +7686,11 @@ int _wrap___logand____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator &((Scalar const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7482,7 +7726,11 @@ int _wrap___logior____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator |((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7518,7 +7766,11 @@ int _wrap___logior____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (Scalar *)(argp2);
   result = cv::operator |((Mat const &)*arg1,(Scalar const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7554,7 +7806,11 @@ int _wrap___logior____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator |((Scalar const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7645,7 +7901,11 @@ int _wrap___logxor____SWIG_0(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator ^((Mat const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7681,7 +7941,11 @@ int _wrap___logxor____SWIG_1(SWIG_GatewayParameters) {
   arg2 = (Scalar *)(argp2);
   result = cv::operator ^((Mat const &)*arg1,(Scalar const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -7717,7 +7981,11 @@ int _wrap___logxor____SWIG_2(SWIG_GatewayParameters) {
   arg2 = (Mat *)(argp2);
   result = cv::operator ^((Scalar const &)*arg1,(Mat const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -13578,7 +13846,11 @@ int _wrap_Mat_t(SWIG_GatewayParameters) {
   arg1 = (cv::Mat *)(argp1);
   result = ((cv::Mat const *)arg1)->t();
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -13608,7 +13880,11 @@ int _wrap_Mat_inv__SWIG_0(SWIG_GatewayParameters) {
   arg2 = (int)(val2);
   result = ((cv::Mat const *)arg1)->inv(arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -13630,7 +13906,11 @@ int _wrap_Mat_inv__SWIG_1(SWIG_GatewayParameters) {
   arg1 = (cv::Mat *)(argp1);
   result = ((cv::Mat const *)arg1)->inv();
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -13705,7 +13985,11 @@ int _wrap_Mat_mul__SWIG_0(SWIG_GatewayParameters) {
   arg3 = (double)(val3);
   result = ((cv::Mat const *)arg1)->mul((cv::_InputArray const &)*arg2,arg3);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   if (iNewMatm) {
     pMatm->release();
   }
@@ -13740,7 +14024,11 @@ int _wrap_Mat_mul__SWIG_1(SWIG_GatewayParameters) {
   }
   result = ((cv::Mat const *)arg1)->mul((cv::_InputArray const &)*arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   if (iNewMatm) {
     pMatm->release();
   }
@@ -13913,7 +14201,11 @@ int _wrap_Mat_zeros__SWIG_0(SWIG_GatewayParameters) {
   arg3 = (int)(val3);
   result = cv::Mat::zeros(arg1,arg2,arg3);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -13939,7 +14231,11 @@ int _wrap_Mat_zeros__SWIG_1(SWIG_GatewayParameters) {
   arg2 = (int)(val2);
   result = cv::Mat::zeros(arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -13975,7 +14271,11 @@ int _wrap_Mat_zeros__SWIG_2(SWIG_GatewayParameters) {
   arg3 = (int)(val3);
   result = cv::Mat::zeros(arg1,(int const *)arg2,arg3);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -14082,7 +14382,11 @@ int _wrap_Mat_ones__SWIG_0(SWIG_GatewayParameters) {
   arg3 = (int)(val3);
   result = cv::Mat::ones(arg1,arg2,arg3);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -14108,7 +14412,11 @@ int _wrap_Mat_ones__SWIG_1(SWIG_GatewayParameters) {
   arg2 = (int)(val2);
   result = cv::Mat::ones(arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -14144,7 +14452,11 @@ int _wrap_Mat_ones__SWIG_2(SWIG_GatewayParameters) {
   arg3 = (int)(val3);
   result = cv::Mat::ones(arg1,(int const *)arg2,arg3);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -14251,7 +14563,11 @@ int _wrap_Mat_eye__SWIG_0(SWIG_GatewayParameters) {
   arg3 = (int)(val3);
   result = cv::Mat::eye(arg1,arg2,arg3);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
@@ -14277,7 +14593,11 @@ int _wrap_Mat_eye__SWIG_1(SWIG_GatewayParameters) {
   arg2 = (int)(val2);
   result = cv::Mat::eye(arg1,arg2);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  cv::Mat *outMat = new cv::Mat(result);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), outMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
   return SWIG_OK;
 }
 
