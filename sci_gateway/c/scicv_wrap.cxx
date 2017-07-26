@@ -7777,87 +7777,6 @@ int _wrap___logxor__(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_abs__SWIG_0(SWIG_GatewayParameters) {
-  Mat *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  cv::MatExpr result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "abs" "', argument " "1"" of type '" "Mat const &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "abs" "', argument " "1"" of type '" "Mat const &""'"); 
-  }
-  arg1 = (Mat *)(argp1);
-  result = cv::abs((Mat const &)*arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_abs__SWIG_1(SWIG_GatewayParameters) {
-  cv::MatExpr *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  cv::MatExpr result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "abs" "', argument " "1"" of type '" "cv::MatExpr const &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "abs" "', argument " "1"" of type '" "cv::MatExpr const &""'"); 
-  }
-  arg1 = (cv::MatExpr *)(argp1);
-  result = cv::abs((cv::MatExpr const &)*arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::MatExpr((const cv::MatExpr&)(result))), SWIGTYPE_p_cv__MatExpr, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_abs(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[1] = {
-    1
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_Mat, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_abs__SWIG_0(SWIG_GatewayArguments);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__MatExpr, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_abs__SWIG_1(SWIG_GatewayArguments);
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
-}
-
-
 int _wrap___add_assign____SWIG_0(SWIG_GatewayParameters) {
   Mat *arg1 = 0 ;
   Mat *arg2 = 0 ;
@@ -9979,29 +9898,6 @@ int _wrap_Exception_line_get(SWIG_GatewayParameters) {
   result = (int) ((arg1)->line);
   SWIG_Scilab_SetOutputPosition(1);
   if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_int((int)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_error(SWIG_GatewayParameters) {
-  cv::Exception *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "error" "', argument " "1"" of type '" "cv::Exception const &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "error" "', argument " "1"" of type '" "cv::Exception const &""'"); 
-  }
-  arg1 = (cv::Exception *)(argp1);
-  cv::error((cv::Exception const &)*arg1);
-  
   return SWIG_OK;
 }
 
@@ -19349,33 +19245,6 @@ int _wrap_LUT(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_sum(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::Scalar result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc = NULL;
-  int iNewMatsrc = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc, &iNewMatsrc, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  result = cv::sum((cv::_InputArray const &)*arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::Scalar((const cv::Scalar&)(result))), SWIGTYPE_p_cv__Scalar_T_double_t, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
-  if (iNewMatsrc) {
-    pMatsrc->release();
-  }
-  delete arg1;
-  return SWIG_OK;
-}
-
-
 int _wrap_countNonZero(SWIG_GatewayParameters) {
   cv::_InputArray *arg1 = 0 ;
   int result;
@@ -19435,118 +19304,6 @@ int _wrap_findNonZero(SWIG_GatewayParameters) {
   delete arg1;
   delete arg2;
   return SWIG_OK;
-}
-
-
-int _wrap_mean__SWIG_0(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_InputArray *arg2 = 0 ;
-  cv::Scalar result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc = NULL;
-  int iNewMatsrc = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc, &iNewMatsrc, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  cv::Mat *pMatmask = NULL;
-  int iNewMatmask = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 2, &pMatmask, &iNewMatmask, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg2 = new cv::_InputArray(*pMatmask);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  result = cv::mean((cv::_InputArray const &)*arg1,(cv::_InputArray const &)*arg2);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::Scalar((const cv::Scalar&)(result))), SWIGTYPE_p_cv__Scalar_T_double_t, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
-  if (iNewMatsrc) {
-    pMatsrc->release();
-  }
-  delete arg1;
-  if (iNewMatmask) {
-    pMatmask->release();
-  }
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_mean__SWIG_1(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::Scalar result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc = NULL;
-  int iNewMatsrc = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc, &iNewMatsrc, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  result = cv::mean((cv::_InputArray const &)*arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::Scalar((const cv::Scalar&)(result))), SWIGTYPE_p_cv__Scalar_T_double_t, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
-  if (iNewMatsrc) {
-    pMatsrc->release();
-  }
-  delete arg1;
-  return SWIG_OK;
-}
-
-
-int _wrap_mean(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[2] = {
-    1,2
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 1) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      return _wrap_mean__SWIG_1(SWIG_GatewayArguments);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat *pMat = NULL;
-          _v = SWIG_Check_SciHypermat(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
-        }
-      }
-      if (_v) {
-        return _wrap_mean__SWIG_0(SWIG_GatewayArguments);
-      }
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
 }
 
 
@@ -19695,265 +19452,6 @@ int _wrap_meanStdDev(SWIG_GatewayParameters) {
   
   Scierror(999, _("No matching function for overload"));
   return SWIG_ERROR;
-}
-
-
-int _wrap_norm__SWIG_0(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  int arg2 ;
-  cv::_InputArray *arg3 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  double result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc1 = NULL;
-  int iNewMatsrc1 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc1, &iNewMatsrc1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc1);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "norm" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  cv::Mat *pMatmask = NULL;
-  int iNewMatmask = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 3, &pMatmask, &iNewMatmask, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg3 = new cv::_InputArray(*pMatmask);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  result = (double)cv::norm((cv::_InputArray const &)*arg1,arg2,(cv::_InputArray const &)*arg3);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_double((double)(result))))) return SWIG_ERROR;
-  if (iNewMatsrc1) {
-    pMatsrc1->release();
-  }
-  delete arg1;
-  if (iNewMatmask) {
-    pMatmask->release();
-  }
-  delete arg3;
-  return SWIG_OK;
-}
-
-
-int _wrap_norm__SWIG_1(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  int arg2 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  double result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc1 = NULL;
-  int iNewMatsrc1 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc1, &iNewMatsrc1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc1);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "norm" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  result = (double)cv::norm((cv::_InputArray const &)*arg1,arg2);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_double((double)(result))))) return SWIG_ERROR;
-  if (iNewMatsrc1) {
-    pMatsrc1->release();
-  }
-  delete arg1;
-  return SWIG_OK;
-}
-
-
-int _wrap_norm__SWIG_2(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  double result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc1 = NULL;
-  int iNewMatsrc1 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc1, &iNewMatsrc1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc1);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  result = (double)cv::norm((cv::_InputArray const &)*arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_double((double)(result))))) return SWIG_ERROR;
-  if (iNewMatsrc1) {
-    pMatsrc1->release();
-  }
-  delete arg1;
-  return SWIG_OK;
-}
-
-
-int _wrap_norm__SWIG_3(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_InputArray *arg2 = 0 ;
-  int arg3 ;
-  cv::_InputArray *arg4 = 0 ;
-  int val3 ;
-  int ecode3 = 0 ;
-  double result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc1 = NULL;
-  int iNewMatsrc1 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc1, &iNewMatsrc1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc1);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  cv::Mat *pMatsrc2 = NULL;
-  int iNewMatsrc2 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 2, &pMatsrc2, &iNewMatsrc2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg2 = new cv::_InputArray(*pMatsrc2);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_int(3, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "norm" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = (int)(val3);
-  cv::Mat *pMatmask = NULL;
-  int iNewMatmask = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 4, &pMatmask, &iNewMatmask, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg4 = new cv::_InputArray(*pMatmask);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  result = (double)cv::norm((cv::_InputArray const &)*arg1,(cv::_InputArray const &)*arg2,arg3,(cv::_InputArray const &)*arg4);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_double((double)(result))))) return SWIG_ERROR;
-  if (iNewMatsrc1) {
-    pMatsrc1->release();
-  }
-  delete arg1;
-  if (iNewMatsrc2) {
-    pMatsrc2->release();
-  }
-  delete arg2;
-  if (iNewMatmask) {
-    pMatmask->release();
-  }
-  delete arg4;
-  return SWIG_OK;
-}
-
-
-int _wrap_norm__SWIG_4(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_InputArray *arg2 = 0 ;
-  int arg3 ;
-  int val3 ;
-  int ecode3 = 0 ;
-  double result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc1 = NULL;
-  int iNewMatsrc1 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc1, &iNewMatsrc1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc1);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  cv::Mat *pMatsrc2 = NULL;
-  int iNewMatsrc2 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 2, &pMatsrc2, &iNewMatsrc2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg2 = new cv::_InputArray(*pMatsrc2);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_int(3, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "norm" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = (int)(val3);
-  result = (double)cv::norm((cv::_InputArray const &)*arg1,(cv::_InputArray const &)*arg2,arg3);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_double((double)(result))))) return SWIG_ERROR;
-  if (iNewMatsrc1) {
-    pMatsrc1->release();
-  }
-  delete arg1;
-  if (iNewMatsrc2) {
-    pMatsrc2->release();
-  }
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_norm__SWIG_5(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_InputArray *arg2 = 0 ;
-  double result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc1 = NULL;
-  int iNewMatsrc1 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc1, &iNewMatsrc1, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc1);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  cv::Mat *pMatsrc2 = NULL;
-  int iNewMatsrc2 = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 2, &pMatsrc2, &iNewMatsrc2, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg2 = new cv::_InputArray(*pMatsrc2);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  result = (double)cv::norm((cv::_InputArray const &)*arg1,(cv::_InputArray const &)*arg2);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_double((double)(result))))) return SWIG_ERROR;
-  if (iNewMatsrc1) {
-    pMatsrc1->release();
-  }
-  delete arg1;
-  if (iNewMatsrc2) {
-    pMatsrc2->release();
-  }
-  delete arg2;
-  return SWIG_OK;
 }
 
 
@@ -26744,33 +26242,6 @@ int _wrap_determinant(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_trace(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::Scalar result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatmtx = NULL;
-  int iNewMatmtx = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatmtx, &iNewMatmtx, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatmtx);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  result = cv::trace((cv::_InputArray const &)*arg1);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new cv::Scalar((const cv::Scalar&)(result))), SWIGTYPE_p_cv__Scalar_T_double_t, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
-  if (iNewMatmtx) {
-    pMatmtx->release();
-  }
-  delete arg1;
-  return SWIG_OK;
-}
-
-
 int _wrap_invert__SWIG_0(SWIG_GatewayParameters) {
   cv::_InputArray *arg1 = 0 ;
   cv::_OutputArray *arg2 = 0 ;
@@ -30123,246 +29594,6 @@ int _wrap_idft(SWIG_GatewayParameters) {
         if (_v) {
           return _wrap_idft__SWIG_0(SWIG_GatewayArguments);
         }
-      }
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
-}
-
-
-int _wrap_dct__SWIG_0(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  int arg3 ;
-  int val3 ;
-  int ecode3 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc = NULL;
-  int iNewMatsrc = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc, &iNewMatsrc, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_int(2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "dct" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = (int)(val3);
-  cv::dct((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatsrc) {
-    pMatsrc->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_dct__SWIG_1(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc = NULL;
-  int iNewMatsrc = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc, &iNewMatsrc, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  cv::dct((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatsrc) {
-    pMatsrc->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_dct(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[2] = {
-    1,2
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 1) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      return _wrap_dct__SWIG_1(SWIG_GatewayArguments);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        return _wrap_dct__SWIG_0(SWIG_GatewayArguments);
-      }
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
-}
-
-
-int _wrap_idct__SWIG_0(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  int arg3 ;
-  int val3 ;
-  int ecode3 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc = NULL;
-  int iNewMatsrc = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc, &iNewMatsrc, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_int(2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "idct" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = (int)(val3);
-  cv::idct((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatsrc) {
-    pMatsrc->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_idct__SWIG_1(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatsrc = NULL;
-  int iNewMatsrc = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatsrc, &iNewMatsrc, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatsrc);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  cv::idct((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatsrc) {
-    pMatsrc->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_idct(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[2] = {
-    1,2
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 1) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      return _wrap_idct__SWIG_1(SWIG_GatewayArguments);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        return _wrap_idct__SWIG_0(SWIG_GatewayArguments);
       }
     }
   }
@@ -37561,198 +36792,6 @@ int _wrap_minMaxLoc(SWIG_GatewayParameters) {
         }
         if (_v) {
           return _wrap_minMaxLoc__SWIG_5(SWIG_GatewayArguments);
-        }
-      }
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
-}
-
-
-int _wrap_norm__SWIG_6(SWIG_GatewayParameters) {
-  cv::SparseMat *arg1 = 0 ;
-  int arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  double result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "norm" "', argument " "1"" of type '" "cv::SparseMat const &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "norm" "', argument " "1"" of type '" "cv::SparseMat const &""'"); 
-  }
-  arg1 = (cv::SparseMat *)(argp1);
-  ecode2 = SWIG_AsVal_int(2, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "norm" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  result = (double)cv::norm((cv::SparseMat const &)*arg1,arg2);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_double((double)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_norm(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[4] = {
-    1,2,3,4
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 1) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      return _wrap_norm__SWIG_2(SWIG_GatewayArguments);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat *pMat = NULL;
-          _v = SWIG_Check_SciHypermat(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
-        }
-      }
-      if (_v) {
-        return _wrap_norm__SWIG_5(SWIG_GatewayArguments);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        return _wrap_norm__SWIG_1(SWIG_GatewayArguments);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__SparseMat, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        return _wrap_norm__SWIG_6(SWIG_GatewayArguments);
-      }
-    }
-  }
-  if (argc == 3) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat *pMat = NULL;
-          _v = SWIG_Check_SciHypermat(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
-        }
-      }
-      if (_v) {
-        {
-          _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[2], SCI_INT32);
-        }
-        if (_v) {
-          return _wrap_norm__SWIG_4(SWIG_GatewayArguments);
-        }
-      }
-    }
-  }
-  if (argc == 3) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
-      }
-      if (_v) {
-        {
-          if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-            cv::Mat *pMat = NULL;
-            _v = SWIG_Check_SciHypermat(pvApiCtx, argv[2], SWIG_Scilab_GetFuncName());
-          }
-        }
-        if (_v) {
-          return _wrap_norm__SWIG_0(SWIG_GatewayArguments);
-        }
-      }
-    }
-  }
-  if (argc == 4) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-          cv::Mat *pMat = NULL;
-          _v = SWIG_Check_SciHypermat(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
-        }
-      }
-      if (_v) {
-        {
-          _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[2], SCI_INT32);
-        }
-        if (_v) {
-          {
-            if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-              cv::Mat *pMat = NULL;
-              _v = SWIG_Check_SciHypermat(pvApiCtx, argv[3], SWIG_Scilab_GetFuncName());
-            }
-          }
-          if (_v) {
-            return _wrap_norm__SWIG_3(SWIG_GatewayArguments);
-          }
         }
       }
     }
@@ -74437,39 +73476,6 @@ int _wrap_delete_FeatureEvaluator(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_FeatureEvaluator_read(SWIG_GatewayParameters) {
-  cv::FeatureEvaluator *arg1 = (cv::FeatureEvaluator *) 0 ;
-  cv::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "FeatureEvaluator_read" "', argument " "1"" of type '" "cv::FeatureEvaluator *""'"); 
-  }
-  arg1 = (cv::FeatureEvaluator *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "FeatureEvaluator_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "FeatureEvaluator_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  arg2 = (cv::FileNode *)(argp2);
-  result = (bool)(arg1)->read((cv::FileNode const &)*arg2);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_bool((bool)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
 int _wrap_FeatureEvaluator_clone(SWIG_GatewayParameters) {
   cv::FeatureEvaluator *arg1 = (cv::FeatureEvaluator *) 0 ;
   void *argp1 = 0 ;
@@ -74813,39 +73819,6 @@ int _wrap_CascadeClassifier_load(SWIG_GatewayParameters) {
   SWIG_Scilab_SetOutputPosition(1);
   if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_bool((bool)(result))))) return SWIG_ERROR;
   if (SWIG_IsNewObj(res2)) delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_CascadeClassifier_read(SWIG_GatewayParameters) {
-  cv::CascadeClassifier *arg1 = (cv::CascadeClassifier *) 0 ;
-  cv::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CascadeClassifier_read" "', argument " "1"" of type '" "cv::CascadeClassifier *""'"); 
-  }
-  arg1 = (cv::CascadeClassifier *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "CascadeClassifier_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "CascadeClassifier_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  arg2 = (cv::FileNode *)(argp2);
-  result = (bool)(arg1)->read((cv::FileNode const &)*arg2);
-  SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_bool((bool)(result))))) return SWIG_ERROR;
   return SWIG_OK;
 }
 
@@ -76346,37 +75319,6 @@ int _wrap_new_Feature(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_Feature_read(SWIG_GatewayParameters) {
-  cv::linemod::Feature *arg1 = (cv::linemod::Feature *) 0 ;
-  cv::linemod::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Feature_read" "', argument " "1"" of type '" "cv::linemod::Feature *""'"); 
-  }
-  arg1 = (cv::linemod::Feature *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Feature_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Feature_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  arg2 = (cv::linemod::FileNode *)(argp2);
-  (arg1)->read((cv::linemod::FileNode const &)*arg2);
-  
-  return SWIG_OK;
-}
-
-
 int _wrap_Feature_write(SWIG_GatewayParameters) {
   cv::linemod::Feature *arg1 = (cv::linemod::Feature *) 0 ;
   cv::linemod::FileStorage *arg2 = 0 ;
@@ -76624,37 +75566,6 @@ int _wrap_Template_features_get(SWIG_GatewayParameters) {
   result = (std::vector< cv::linemod::Feature,std::allocator< cv::linemod::Feature > > *)& ((arg1)->features);
   SWIG_Scilab_SetOutputPosition(1);
   if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_cv__linemod__Feature_std__allocatorT_cv__linemod__Feature_t_t, 0 |  0 , NULL)))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_Template_read(SWIG_GatewayParameters) {
-  cv::linemod::Template *arg1 = (cv::linemod::Template *) 0 ;
-  cv::linemod::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Template_read" "', argument " "1"" of type '" "cv::linemod::Template *""'"); 
-  }
-  arg1 = (cv::linemod::Template *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Template_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Template_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  arg2 = (cv::linemod::FileNode *)(argp2);
-  (arg1)->read((cv::linemod::FileNode const &)*arg2);
-  
   return SWIG_OK;
 }
 
@@ -76993,37 +75904,6 @@ int _wrap_Modality_name(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_Modality_read(SWIG_GatewayParameters) {
-  cv::linemod::Modality *arg1 = (cv::linemod::Modality *) 0 ;
-  cv::linemod::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Modality, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Modality_read" "', argument " "1"" of type '" "cv::linemod::Modality *""'"); 
-  }
-  arg1 = (cv::linemod::Modality *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Modality_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Modality_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  arg2 = (cv::linemod::FileNode *)(argp2);
-  (arg1)->read((cv::linemod::FileNode const &)*arg2);
-  
-  return SWIG_OK;
-}
-
-
 int _wrap_Modality_write(SWIG_GatewayParameters) {
   cv::linemod::Modality *arg1 = (cv::linemod::Modality *) 0 ;
   cv::linemod::FileStorage *arg2 = 0 ;
@@ -77256,37 +76136,6 @@ int _wrap_ColorGradient_name(SWIG_GatewayParameters) {
   result = ((cv::linemod::ColorGradient const *)arg1)->name();
   SWIG_Scilab_SetOutputPosition(1);
   if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_std_string((std::string)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_ColorGradient_read(SWIG_GatewayParameters) {
-  cv::linemod::ColorGradient *arg1 = (cv::linemod::ColorGradient *) 0 ;
-  cv::linemod::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ColorGradient_read" "', argument " "1"" of type '" "cv::linemod::ColorGradient *""'"); 
-  }
-  arg1 = (cv::linemod::ColorGradient *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ColorGradient_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ColorGradient_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  arg2 = (cv::linemod::FileNode *)(argp2);
-  (arg1)->read((cv::linemod::FileNode const &)*arg2);
-  
   return SWIG_OK;
 }
 
@@ -77611,37 +76460,6 @@ int _wrap_DepthNormal_name(SWIG_GatewayParameters) {
   result = ((cv::linemod::DepthNormal const *)arg1)->name();
   SWIG_Scilab_SetOutputPosition(1);
   if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SWIG_From_std_string((std::string)(result))))) return SWIG_ERROR;
-  return SWIG_OK;
-}
-
-
-int _wrap_DepthNormal_read(SWIG_GatewayParameters) {
-  cv::linemod::DepthNormal *arg1 = (cv::linemod::DepthNormal *) 0 ;
-  cv::linemod::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DepthNormal_read" "', argument " "1"" of type '" "cv::linemod::DepthNormal *""'"); 
-  }
-  arg1 = (cv::linemod::DepthNormal *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "DepthNormal_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DepthNormal_read" "', argument " "2"" of type '" "cv::linemod::FileNode const &""'"); 
-  }
-  arg2 = (cv::linemod::FileNode *)(argp2);
-  (arg1)->read((cv::linemod::FileNode const &)*arg2);
-  
   return SWIG_OK;
 }
 
@@ -87946,7 +86764,7 @@ int _wrap_delete_KeyPoint(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_write__SWIG_29(SWIG_GatewayParameters) {
+int _wrap_write__SWIG_25(SWIG_GatewayParameters) {
   cv::FileStorage *arg1 = 0 ;
   cv::string *arg2 = 0 ;
   vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *arg3 = 0 ;
@@ -88014,7 +86832,7 @@ int _wrap_write(SWIG_GatewayParameters) {
         int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_write__SWIG_29(SWIG_GatewayArguments);
+          return _wrap_write__SWIG_25(SWIG_GatewayArguments);
         }
       }
     }
@@ -88025,7 +86843,7 @@ int _wrap_write(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_read__SWIG_25(SWIG_GatewayParameters) {
+int _wrap_read(SWIG_GatewayParameters) {
   cv::FileNode *arg1 = 0 ;
   vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *arg2 = 0 ;
   void *argp1 ;
@@ -88056,33 +86874,6 @@ int _wrap_read__SWIG_25(SWIG_GatewayParameters) {
   cv::read((cv::FileNode const &)*arg1,*arg2);
   
   return SWIG_OK;
-}
-
-
-int _wrap_read(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[2] = {
-    1,2
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__FileNode, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_read__SWIG_25(SWIG_GatewayArguments);
-      }
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
 }
 
 
@@ -93978,37 +92769,6 @@ int _wrap_new_SimpleBlobDetector(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_SimpleBlobDetector_read(SWIG_GatewayParameters) {
-  cv::SimpleBlobDetector *arg1 = (cv::SimpleBlobDetector *) 0 ;
-  cv::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimpleBlobDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SimpleBlobDetector_read" "', argument " "1"" of type '" "cv::SimpleBlobDetector *""'"); 
-  }
-  arg1 = (cv::SimpleBlobDetector *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SimpleBlobDetector_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SimpleBlobDetector_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  arg2 = (cv::FileNode *)(argp2);
-  (arg1)->read((cv::FileNode const &)*arg2);
-  
-  return SWIG_OK;
-}
-
-
 int _wrap_SimpleBlobDetector_write(SWIG_GatewayParameters) {
   cv::SimpleBlobDetector *arg1 = (cv::SimpleBlobDetector *) 0 ;
   cv::FileStorage *arg2 = 0 ;
@@ -96723,37 +95483,6 @@ int _wrap_new_OpponentColorDescriptorExtractor(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_OpponentColorDescriptorExtractor_read(SWIG_GatewayParameters) {
-  cv::OpponentColorDescriptorExtractor *arg1 = (cv::OpponentColorDescriptorExtractor *) 0 ;
-  cv::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__OpponentColorDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "OpponentColorDescriptorExtractor_read" "', argument " "1"" of type '" "cv::OpponentColorDescriptorExtractor *""'"); 
-  }
-  arg1 = (cv::OpponentColorDescriptorExtractor *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "OpponentColorDescriptorExtractor_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "OpponentColorDescriptorExtractor_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  arg2 = (cv::FileNode *)(argp2);
-  (arg1)->read((cv::FileNode const &)*arg2);
-  
-  return SWIG_OK;
-}
-
-
 int _wrap_OpponentColorDescriptorExtractor_write(SWIG_GatewayParameters) {
   cv::OpponentColorDescriptorExtractor *arg1 = (cv::OpponentColorDescriptorExtractor *) 0 ;
   cv::FileStorage *arg2 = 0 ;
@@ -99098,37 +97827,6 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
   
   Scierror(999, _("No matching function for overload"));
   return SWIG_ERROR;
-}
-
-
-int _wrap_DescriptorMatcher_read(SWIG_GatewayParameters) {
-  cv::DescriptorMatcher *arg1 = (cv::DescriptorMatcher *) 0 ;
-  cv::FileNode *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DescriptorMatcher_read" "', argument " "1"" of type '" "cv::DescriptorMatcher *""'"); 
-  }
-  arg1 = (cv::DescriptorMatcher *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "DescriptorMatcher_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_read" "', argument " "2"" of type '" "cv::FileNode const &""'"); 
-  }
-  arg2 = (cv::FileNode *)(argp2);
-  (arg1)->read((cv::FileNode const &)*arg2);
-  
-  return SWIG_OK;
 }
 
 

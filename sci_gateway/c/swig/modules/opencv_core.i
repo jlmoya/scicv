@@ -263,16 +263,42 @@ using namespace cv::ogl;
 
 
 // ignore functions that confict with Scilab
-%ignore ::error;
-%ignore ::abs;
-%ignore ::sum;
-%ignore ::mean;
-%ignore ::trace;
-%ignore ::dct;
-%ignore ::idct;
-%ignore ::norm;
-%ignore ::write;
-%ignore ::read;
+%ignore error;
+%ignore abs;
+%ignore sum;
+%ignore mean;
+%ignore trace;
+%ignore dct;
+%ignore idct;
+%ignore norm;
+
+%ignore read(const FileNode& fn);
+%ignore read(const FileNode& node, int& value, int default_value);
+%ignore read(const FileNode& node, bool& value, bool default_value);
+%ignore read(const FileNode& node, uchar& value, uchar default_value);
+%ignore read(const FileNode& node, schar& value, schar default_value);
+%ignore read(const FileNode& node, ushort& value, ushort default_value);
+%ignore read(const FileNode& node, short& value, short default_value);
+%ignore read(const FileNode& node, float& value, float default_value);
+%ignore read(const FileNode& node, double& value, double default_value);
+%ignore read(const FileNode& node, string& value, const string& default_value);
+%ignore read(const FileNode& node, Point_<_Tp>& value, const Point_<_Tp>& default_value);
+%ignore read(const FileNode& node, Point3_<_Tp>& value, const Point3_<_Tp>& default_value);
+%ignore read(const FileNode& node, Size_<_Tp>& value, const Size_<_Tp>& default_value);
+%ignore read(const FileNode& node, Complex<_Tp>& value, const Complex<_Tp>& default_value);
+%ignore read(const FileNode& node, Rect_<_Tp>& value, const Rect_<_Tp>& default_value);
+%ignore read(const FileNode& node, Vec<_Tp, cn>& value, const Vec<_Tp, cn>& default_value);
+%ignore read(const FileNode& node, Scalar_<_Tp>& value, const Scalar_<_Tp>& default_value);
+%ignore read(const FileNode& node, Range& value, const Range& default_value);
+%ignore read(const FileNode& node, Mat& mat, const Mat& default_mat=Mat());
+%ignore read(const FileNode& node, SparseMat& mat, const SparseMat& default_mat=SparseMat());
+
+%ignore write(FileStorage& fs, const string& name, int value);
+%ignore write( FileStorage& fs, const string& name, float value );
+%ignore write( FileStorage& fs, const string& name, double value );
+%ignore write( FileStorage& fs, const string& name, const string& value );
+
+
 
 // ignore low level functions & classes
 %ignore setBreakOnError;
