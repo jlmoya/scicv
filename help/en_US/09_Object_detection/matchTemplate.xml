@@ -68,15 +68,17 @@
 
     img_template = imread(getSampleImage("puffin_pattern.png"));
 
-    result = matchTemplate(img, img_template, CV_TM_SQDIFF_NORMED);
-    
+    img_result = matchTemplate(img, img_template, CV_TM_SQDIFF_NORMED);
+
     gcf().color_map = graycolormap(255);
     colorbar(0, 255);
-    matplot(result(:,:)*255);
-    
+    img_out = normalize(img_result, 0, 255, NORM_MINMAX);
+
+    matplot(img_out);
+
     delete_Mat(img);
     delete_Mat(img_template);
-    delete_Mat(result);
+    delete_Mat(img_result);
  ]]></programlisting>
   </refsection>
   <refsection>
