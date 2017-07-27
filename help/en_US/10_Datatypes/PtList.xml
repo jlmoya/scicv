@@ -23,7 +23,6 @@
   <refsection>
     <title>Examples</title>
     <programlisting role="example"><![CDATA[
-    // <-- CLI SHELL MODE -->
     scicv_Init();
 
     img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);

@@ -35,7 +35,7 @@
       <varlistentry>
         <term>beta</term>
         <listitem>
-          <para>Maximal range value (double, default <literal>0</literal>).</para>
+          <para>Maximal range value (double).</para>
         </listitem>
       </varlistentry>
       <varlistentry>

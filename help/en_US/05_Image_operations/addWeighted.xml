@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img = addWeighted(img1, alpha, img2, gamma, beta[, dtype])</synopsis>
+    <synopsis>img_out = addWeighted(img1, alpha, img2, beta, gamma[, dtype])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>
@@ -57,7 +57,7 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>img</term>
+        <term>img_out</term>
         <listitem>
           <para>Output image (<link linkend="Mat">Mat</link>).</para>
         </listitem>

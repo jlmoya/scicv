@@ -109,12 +109,4 @@
     delete_Mat(histR);
  ]]></programlisting>
   </refsection>
-  <refsection>
-    <title>See also</title>
-    <simplelist type="inline">
-      <member>
-
-      </member>
-    </simplelist>
-  </refsection>
 </refentry>

@@ -21,9 +21,9 @@
     <title>Parameters</title>
     <variablelist>
       <varlistentry>
-        <term>img1</term>
+        <term>img</term>
         <listitem>
-          <para>First image (<link linkend="Mat">Mat</link>).</para>
+          <para>Image (<link linkend="Mat">Mat</link>).</para>
         </listitem>
       </varlistentry>
       <varlistentry>
