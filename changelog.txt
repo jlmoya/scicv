@@ -15,3 +15,8 @@ changelog of the Scilab Computer Vision Module
     - fixed tests
     - 3rd party libraries (OpenCV/FFMPEG) rebuilt to be not GPL licensed
 
+0.4: alpha3 release
+    - bad side effects fixed (#1688)
+    - some memory leaks fixed
+    - documentation added
+    - issues #1694, #1690
