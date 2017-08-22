@@ -84154,7 +84154,7 @@ int _wrap_delete_BackgrdSubMOG(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubMOG___funcall____SWIG_0(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubMOG_update__SWIG_0(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG *arg1 = (cv::BackgroundSubtractorMOG *) 0 ;
   cv::_InputArray *arg2 = 0 ;
   cv::_OutputArray *arg3 = 0 ;
@@ -84173,7 +84173,7 @@ int _wrap_BackgrdSubMOG___funcall____SWIG_0(SWIG_GatewayParameters) {
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubMOG___funcall__" "', argument " "1"" of type '" "cv::BackgroundSubtractorMOG *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubMOG_update" "', argument " "1"" of type '" "cv::BackgroundSubtractorMOG *""'"); 
   }
   arg1 = (cv::BackgroundSubtractorMOG *)(argp1);
   cv::Mat *pMatimage = NULL;
@@ -84186,7 +84186,7 @@ int _wrap_BackgrdSubMOG___funcall____SWIG_0(SWIG_GatewayParameters) {
   }
   ecode4 = SWIG_AsVal_double(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "BackgrdSubMOG___funcall__" "', argument " "4"" of type '" "double""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "BackgrdSubMOG_update" "', argument " "4"" of type '" "double""'");
   } 
   arg4 = (double)(val4);
   (arg1)->operator ()((cv::_InputArray const &)*arg2,(cv::_OutputArray const &)*arg3,arg4);
@@ -84205,7 +84205,7 @@ int _wrap_BackgrdSubMOG___funcall____SWIG_0(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubMOG___funcall____SWIG_1(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubMOG_update__SWIG_1(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG *arg1 = (cv::BackgroundSubtractorMOG *) 0 ;
   cv::_InputArray *arg2 = 0 ;
   cv::_OutputArray *arg3 = 0 ;
@@ -84221,7 +84221,7 @@ int _wrap_BackgrdSubMOG___funcall____SWIG_1(SWIG_GatewayParameters) {
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubMOG___funcall__" "', argument " "1"" of type '" "cv::BackgroundSubtractorMOG *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubMOG_update" "', argument " "1"" of type '" "cv::BackgroundSubtractorMOG *""'"); 
   }
   arg1 = (cv::BackgroundSubtractorMOG *)(argp1);
   cv::Mat *pMatimage = NULL;
@@ -84248,7 +84248,7 @@ int _wrap_BackgrdSubMOG___funcall____SWIG_1(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubMOG___funcall__(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubMOG_update(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
   int argv[3] = {
     1,2,3
@@ -84268,7 +84268,7 @@ int _wrap_BackgrdSubMOG___funcall__(SWIG_GatewayParameters) {
         }
       }
       if (_v) {
-        return _wrap_BackgrdSubMOG___funcall____SWIG_1(SWIG_GatewayArguments);
+        return _wrap_BackgrdSubMOG_update__SWIG_1(SWIG_GatewayArguments);
       }
     }
   }
@@ -84295,7 +84295,7 @@ int _wrap_BackgrdSubMOG___funcall__(SWIG_GatewayParameters) {
           _v = isDoubleType(pvApiCtx, piAddrVar);
         }
         if (_v) {
-          return _wrap_BackgrdSubMOG___funcall____SWIG_0(SWIG_GatewayArguments);
+          return _wrap_BackgrdSubMOG_update__SWIG_0(SWIG_GatewayArguments);
         }
       }
     }
@@ -84529,7 +84529,7 @@ int _wrap_delete_BackgrdSubMOG2(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubMOG2___funcall____SWIG_0(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubMOG2_update__SWIG_0(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG2 *arg1 = (cv::BackgroundSubtractorMOG2 *) 0 ;
   cv::_InputArray *arg2 = 0 ;
   cv::_OutputArray *arg3 = 0 ;
@@ -84548,7 +84548,7 @@ int _wrap_BackgrdSubMOG2___funcall____SWIG_0(SWIG_GatewayParameters) {
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG2, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubMOG2___funcall__" "', argument " "1"" of type '" "cv::BackgroundSubtractorMOG2 *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubMOG2_update" "', argument " "1"" of type '" "cv::BackgroundSubtractorMOG2 *""'"); 
   }
   arg1 = (cv::BackgroundSubtractorMOG2 *)(argp1);
   cv::Mat *pMatimage = NULL;
@@ -84561,7 +84561,7 @@ int _wrap_BackgrdSubMOG2___funcall____SWIG_0(SWIG_GatewayParameters) {
   }
   ecode4 = SWIG_AsVal_double(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "BackgrdSubMOG2___funcall__" "', argument " "4"" of type '" "double""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "BackgrdSubMOG2_update" "', argument " "4"" of type '" "double""'");
   } 
   arg4 = (double)(val4);
   (arg1)->operator ()((cv::_InputArray const &)*arg2,(cv::_OutputArray const &)*arg3,arg4);
@@ -84580,7 +84580,7 @@ int _wrap_BackgrdSubMOG2___funcall____SWIG_0(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubMOG2___funcall____SWIG_1(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubMOG2_update__SWIG_1(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG2 *arg1 = (cv::BackgroundSubtractorMOG2 *) 0 ;
   cv::_InputArray *arg2 = 0 ;
   cv::_OutputArray *arg3 = 0 ;
@@ -84596,7 +84596,7 @@ int _wrap_BackgrdSubMOG2___funcall____SWIG_1(SWIG_GatewayParameters) {
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG2, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubMOG2___funcall__" "', argument " "1"" of type '" "cv::BackgroundSubtractorMOG2 *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubMOG2_update" "', argument " "1"" of type '" "cv::BackgroundSubtractorMOG2 *""'"); 
   }
   arg1 = (cv::BackgroundSubtractorMOG2 *)(argp1);
   cv::Mat *pMatimage = NULL;
@@ -84623,7 +84623,7 @@ int _wrap_BackgrdSubMOG2___funcall____SWIG_1(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubMOG2___funcall__(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubMOG2_update(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
   int argv[3] = {
     1,2,3
@@ -84643,7 +84643,7 @@ int _wrap_BackgrdSubMOG2___funcall__(SWIG_GatewayParameters) {
         }
       }
       if (_v) {
-        return _wrap_BackgrdSubMOG2___funcall____SWIG_1(SWIG_GatewayArguments);
+        return _wrap_BackgrdSubMOG2_update__SWIG_1(SWIG_GatewayArguments);
       }
     }
   }
@@ -84670,7 +84670,7 @@ int _wrap_BackgrdSubMOG2___funcall__(SWIG_GatewayParameters) {
           _v = isDoubleType(pvApiCtx, piAddrVar);
         }
         if (_v) {
-          return _wrap_BackgrdSubMOG2___funcall____SWIG_0(SWIG_GatewayArguments);
+          return _wrap_BackgrdSubMOG2_update__SWIG_0(SWIG_GatewayArguments);
         }
       }
     }
@@ -84861,7 +84861,7 @@ int _wrap_BackgrdSubGMG_initialize(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubGMG___funcall____SWIG_0(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubGMG_update__SWIG_0(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorGMG *arg1 = (cv::BackgroundSubtractorGMG *) 0 ;
   cv::_InputArray *arg2 = 0 ;
   cv::_OutputArray *arg3 = 0 ;
@@ -84880,7 +84880,7 @@ int _wrap_BackgrdSubGMG___funcall____SWIG_0(SWIG_GatewayParameters) {
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubGMG___funcall__" "', argument " "1"" of type '" "cv::BackgroundSubtractorGMG *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubGMG_update" "', argument " "1"" of type '" "cv::BackgroundSubtractorGMG *""'"); 
   }
   arg1 = (cv::BackgroundSubtractorGMG *)(argp1);
   cv::Mat *pMatimage = NULL;
@@ -84893,7 +84893,7 @@ int _wrap_BackgrdSubGMG___funcall____SWIG_0(SWIG_GatewayParameters) {
   }
   ecode4 = SWIG_AsVal_double(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "BackgrdSubGMG___funcall__" "', argument " "4"" of type '" "double""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "BackgrdSubGMG_update" "', argument " "4"" of type '" "double""'");
   } 
   arg4 = (double)(val4);
   (arg1)->operator ()((cv::_InputArray const &)*arg2,(cv::_OutputArray const &)*arg3,arg4);
@@ -84912,7 +84912,7 @@ int _wrap_BackgrdSubGMG___funcall____SWIG_0(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubGMG___funcall____SWIG_1(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubGMG_update__SWIG_1(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorGMG *arg1 = (cv::BackgroundSubtractorGMG *) 0 ;
   cv::_InputArray *arg2 = 0 ;
   cv::_OutputArray *arg3 = 0 ;
@@ -84928,7 +84928,7 @@ int _wrap_BackgrdSubGMG___funcall____SWIG_1(SWIG_GatewayParameters) {
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubGMG___funcall__" "', argument " "1"" of type '" "cv::BackgroundSubtractorGMG *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BackgrdSubGMG_update" "', argument " "1"" of type '" "cv::BackgroundSubtractorGMG *""'"); 
   }
   arg1 = (cv::BackgroundSubtractorGMG *)(argp1);
   cv::Mat *pMatimage = NULL;
@@ -84955,7 +84955,7 @@ int _wrap_BackgrdSubGMG___funcall____SWIG_1(SWIG_GatewayParameters) {
 }
 
 
-int _wrap_BackgrdSubGMG___funcall__(SWIG_GatewayParameters) {
+int _wrap_BackgrdSubGMG_update(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
   int argv[3] = {
     1,2,3
@@ -84975,7 +84975,7 @@ int _wrap_BackgrdSubGMG___funcall__(SWIG_GatewayParameters) {
         }
       }
       if (_v) {
-        return _wrap_BackgrdSubGMG___funcall____SWIG_1(SWIG_GatewayArguments);
+        return _wrap_BackgrdSubGMG_update__SWIG_1(SWIG_GatewayArguments);
       }
     }
   }
@@ -85002,7 +85002,7 @@ int _wrap_BackgrdSubGMG___funcall__(SWIG_GatewayParameters) {
           _v = isDoubleType(pvApiCtx, piAddrVar);
         }
         if (_v) {
-          return _wrap_BackgrdSubGMG___funcall____SWIG_0(SWIG_GatewayArguments);
+          return _wrap_BackgrdSubGMG_update__SWIG_0(SWIG_GatewayArguments);
         }
       }
     }

@@ -8,7 +8,7 @@ toolbar(f.figure_id, "off");
 demo_viewCode("video_analysis_background_substraction.dem.sce");
 
 videoCapture = new_VideoCapture(getSampleVideo("pedestrian.avi"));
-backMog = new_BackgrdSubMOG();
+backSubMog = new_BackgrdSubMOG();
 
 while is_handle_valid(f)
     [ret, frame] = VideoCapture_read(videoCapture);
@@ -21,7 +21,7 @@ while is_handle_valid(f)
             break
         end
 
-        img_out = BackgrdSubMOG___funcall_(backMog, frame);
+        img_out = BackgrdSubMOG_update(backSubMog, frame);
         delete_Mat(frame);
 
         if is_handle_valid(f) then
@@ -35,5 +35,5 @@ while is_handle_valid(f)
     end
 end
 
-delete_BackgrdSubMOG(backMog);
+delete_BackgrdSubMOG(backSubMog);
 delete_VideoCapture(videoCapture);
