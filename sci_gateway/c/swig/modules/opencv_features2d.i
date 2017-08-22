@@ -17,6 +17,10 @@ using namespace cv;
 %ignore BriefDescriptorExtractor;
 %ignore FREAK;
 
+// ignore functions that confict with Scilab
+%ignore write(FileStorage& fs, const string& name, const vector<KeyPoint>& keypoints);
+%ignore read(const FileNode& node, vector<KeyPoint>& keypoints);
+
 %apply KeyPoints* { vector<cv::KeyPoint>& keypoints };
 
 %include "opencv2/features2d/features2d.hpp"
