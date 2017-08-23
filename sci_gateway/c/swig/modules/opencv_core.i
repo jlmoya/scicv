@@ -339,6 +339,8 @@ using namespace cv::ogl;
 %apply double *OUTPUT { double *minVal };
 %apply double *OUTPUT { double *maxVal };
 
+using std::vector;
+
 %include "opencv2/core/types_c.h"
 %include "opencv2/core/mat.hpp"
 %import "opencv2/core/opengl_interop_deprecated.hpp"
@@ -350,8 +352,6 @@ using namespace cv::ogl;
 %template() cv::Size_<int>;
 %template() cv::Rect_<int>;
 %template() cv::Scalar_<double>;
-
-//%template(vecOfRect) std::vector<cv::Rect_<int>>;
 
 %include carrays.i
 

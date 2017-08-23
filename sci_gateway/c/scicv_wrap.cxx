@@ -1520,34 +1520,25 @@ int SWIG_ptr(SWIG_GatewayParameters) {
 #define SWIGTYPE_p_value_type swig_types[271]
 #define SWIGTYPE_p_vectorT_char_std__allocatorT_char_t_t swig_types[272]
 #define SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t swig_types[273]
-#define SWIGTYPE_p_vectorT_cv__DMatch_t swig_types[274]
-#define SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[275]
-#define SWIGTYPE_p_vectorT_cv__KeyPoint_t swig_types[276]
-#define SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t swig_types[277]
-#define SWIGTYPE_p_vectorT_cv__Mat_t swig_types[278]
-#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t swig_types[279]
-#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_t swig_types[280]
-#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[281]
-#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_t swig_types[282]
-#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t swig_types[283]
-#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_t swig_types[284]
-#define SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t swig_types[285]
-#define SWIGTYPE_p_vectorT_double_t swig_types[286]
-#define SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t swig_types[287]
-#define SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t swig_types[288]
-#define SWIGTYPE_p_vectorT_int_t swig_types[289]
-#define SWIGTYPE_p_vectorT_std__string_std__allocatorT_std__string_t_t swig_types[290]
-#define SWIGTYPE_p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t swig_types[291]
-#define SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t swig_types[292]
-#define SWIGTYPE_p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t swig_types[293]
-#define SWIGTYPE_p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t swig_types[294]
-#define SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t swig_types[295]
-#define SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t swig_types[296]
-#define SWIGTYPE_p_vectorT_vectorT_cv__Point_T_int_t_t_t swig_types[297]
-#define SWIGTYPE_p_void swig_types[298]
-#define SWIGTYPE_std__invalid_argument swig_types[299]
-static swig_type_info *swig_types[301];
-static swig_module_info swig_module = {swig_types, 300, 0, 0, 0, 0};
+#define SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[274]
+#define SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t swig_types[275]
+#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t swig_types[276]
+#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[277]
+#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t swig_types[278]
+#define SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t swig_types[279]
+#define SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t swig_types[280]
+#define SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t swig_types[281]
+#define SWIGTYPE_p_vectorT_std__string_std__allocatorT_std__string_t_t swig_types[282]
+#define SWIGTYPE_p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t swig_types[283]
+#define SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t swig_types[284]
+#define SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t swig_types[285]
+#define SWIGTYPE_p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t swig_types[286]
+#define SWIGTYPE_p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t swig_types[287]
+#define SWIGTYPE_p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t swig_types[288]
+#define SWIGTYPE_p_void swig_types[289]
+#define SWIGTYPE_std__invalid_argument swig_types[290]
+static swig_type_info *swig_types[292];
+static swig_module_info swig_module = {swig_types, 291, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -2120,7 +2111,7 @@ namespace swig {
   template <class Type>
   struct traits_asptr {
     static int asptr(const SwigSciObject& obj, Type **val) {
-      Type *p;
+      Type *p = 0;
       swig_type_info *descriptor = type_info<Type>();
       int res = descriptor ? SwigScilabPtrToObject(pvApiCtx, obj, (void **)&p, descriptor, 0, SWIG_Scilab_GetFuncName()) : SWIG_ERROR;
       if (SWIG_IsOK(res)) {
@@ -73002,37 +72993,54 @@ int _wrap_groupRectangles__SWIG_0(SWIG_GatewayParameters) {
   vector< cv::Rect,std::allocator< cv::Rect > > *arg1 = 0 ;
   int arg2 ;
   double arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   int val2 ;
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  ecode2 = SWIG_AsVal_int(2, &val2);
+  ecode2 = SWIG_AsVal_int(1, &val2);
   if (!SWIG_IsOK(ecode2)) {
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "groupRectangles" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = (int)(val2);
-  ecode3 = SWIG_AsVal_double(3, &val3);
+  ecode3 = SWIG_AsVal_double(2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "groupRectangles" "', argument " "3"" of type '" "double""'");
   } 
   arg3 = (double)(val3);
   cv::groupRectangles(*arg1,arg2,arg3);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
@@ -73040,30 +73048,47 @@ int _wrap_groupRectangles__SWIG_0(SWIG_GatewayParameters) {
 int _wrap_groupRectangles__SWIG_1(SWIG_GatewayParameters) {
   vector< cv::Rect,std::allocator< cv::Rect > > *arg1 = 0 ;
   int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   int val2 ;
   int ecode2 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 1, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  ecode2 = SWIG_AsVal_int(2, &val2);
+  ecode2 = SWIG_AsVal_int(1, &val2);
   if (!SWIG_IsOK(ecode2)) {
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "groupRectangles" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = (int)(val2);
   cv::groupRectangles(*arg1,arg2);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
@@ -73073,8 +73098,7 @@ int _wrap_groupRectangles__SWIG_2(SWIG_GatewayParameters) {
   vector< int,std::allocator< int > > *arg2 = 0 ;
   int arg3 ;
   double arg4 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
   int val3 ;
@@ -73082,19 +73106,12 @@ int _wrap_groupRectangles__SWIG_2(SWIG_GatewayParameters) {
   double val4 ;
   int ecode4 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "groupRectangles" "', argument " "2"" of type '" "vector< int,std::allocator< int > > &""'"); 
   }
@@ -73102,18 +73119,43 @@ int _wrap_groupRectangles__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "2"" of type '" "vector< int,std::allocator< int > > &""'"); 
   }
   arg2 = (vector< int,std::allocator< int > > *)(argp2);
-  ecode3 = SWIG_AsVal_int(3, &val3);
+  ecode3 = SWIG_AsVal_int(2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "groupRectangles" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = (int)(val3);
-  ecode4 = SWIG_AsVal_double(4, &val4);
+  ecode4 = SWIG_AsVal_double(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "groupRectangles" "', argument " "4"" of type '" "double""'");
   } 
   arg4 = (double)(val4);
   cv::groupRectangles(*arg1,*arg2,arg3,arg4);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
@@ -73122,26 +73164,18 @@ int _wrap_groupRectangles__SWIG_3(SWIG_GatewayParameters) {
   vector< cv::Rect,std::allocator< cv::Rect > > *arg1 = 0 ;
   vector< int,std::allocator< int > > *arg2 = 0 ;
   int arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "groupRectangles" "', argument " "2"" of type '" "vector< int,std::allocator< int > > &""'"); 
   }
@@ -73149,13 +73183,38 @@ int _wrap_groupRectangles__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "2"" of type '" "vector< int,std::allocator< int > > &""'"); 
   }
   arg2 = (vector< int,std::allocator< int > > *)(argp2);
-  ecode3 = SWIG_AsVal_int(3, &val3);
+  ecode3 = SWIG_AsVal_int(2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "groupRectangles" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = (int)(val3);
   cv::groupRectangles(*arg1,*arg2,arg3);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
@@ -73166,8 +73225,7 @@ int _wrap_groupRectangles__SWIG_4(SWIG_GatewayParameters) {
   double arg3 ;
   vector< int,std::allocator< int > > *arg4 = (vector< int,std::allocator< int > > *) 0 ;
   vector< double,std::allocator< double > > *arg5 = (vector< double,std::allocator< double > > *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   int val2 ;
   int ecode2 = 0 ;
   double val3 ;
@@ -73177,40 +73235,58 @@ int _wrap_groupRectangles__SWIG_4(SWIG_GatewayParameters) {
   void *argp5 = 0 ;
   int res5 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  ecode2 = SWIG_AsVal_int(2, &val2);
+  ecode2 = SWIG_AsVal_int(1, &val2);
   if (!SWIG_IsOK(ecode2)) {
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "groupRectangles" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = (int)(val2);
-  ecode3 = SWIG_AsVal_double(3, &val3);
+  ecode3 = SWIG_AsVal_double(2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "groupRectangles" "', argument " "3"" of type '" "double""'");
   } 
   arg3 = (double)(val3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0 |  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 3, &argp4, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "groupRectangles" "', argument " "4"" of type '" "vector< int,std::allocator< int > > *""'"); 
   }
   arg4 = (vector< int,std::allocator< int > > *)(argp4);
-  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0 |  0 , SWIG_Scilab_GetFuncName());
+  res5 = SwigScilabPtrToObject(pvApiCtx, 4, &argp5, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res5)) {
     SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "groupRectangles" "', argument " "5"" of type '" "vector< double,std::allocator< double > > *""'"); 
   }
   arg5 = (vector< double,std::allocator< double > > *)(argp5);
   cv::groupRectangles(*arg1,arg2,arg3,arg4,arg5);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
@@ -73221,8 +73297,7 @@ int _wrap_groupRectangles__SWIG_5(SWIG_GatewayParameters) {
   vector< double,std::allocator< double > > *arg3 = 0 ;
   int arg4 ;
   double arg5 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
   void *argp3 = 0 ;
@@ -73232,19 +73307,12 @@ int _wrap_groupRectangles__SWIG_5(SWIG_GatewayParameters) {
   double val5 ;
   int ecode5 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "groupRectangles" "', argument " "2"" of type '" "vector< int,std::allocator< int > > &""'"); 
   }
@@ -73252,7 +73320,7 @@ int _wrap_groupRectangles__SWIG_5(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "2"" of type '" "vector< int,std::allocator< int > > &""'"); 
   }
   arg2 = (vector< int,std::allocator< int > > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "groupRectangles" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
@@ -73260,18 +73328,43 @@ int _wrap_groupRectangles__SWIG_5(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
   arg3 = (vector< double,std::allocator< double > > *)(argp3);
-  ecode4 = SWIG_AsVal_int(4, &val4);
+  ecode4 = SWIG_AsVal_int(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "groupRectangles" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = (int)(val4);
-  ecode5 = SWIG_AsVal_double(5, &val5);
+  ecode5 = SWIG_AsVal_double(4, &val5);
   if (!SWIG_IsOK(ecode5)) {
     SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "groupRectangles" "', argument " "5"" of type '" "double""'");
   } 
   arg5 = (double)(val5);
   cv::groupRectangles(*arg1,*arg2,*arg3,arg4,arg5);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
@@ -73281,8 +73374,7 @@ int _wrap_groupRectangles__SWIG_6(SWIG_GatewayParameters) {
   vector< int,std::allocator< int > > *arg2 = 0 ;
   vector< double,std::allocator< double > > *arg3 = 0 ;
   int arg4 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
   void *argp3 = 0 ;
@@ -73290,19 +73382,12 @@ int _wrap_groupRectangles__SWIG_6(SWIG_GatewayParameters) {
   int val4 ;
   int ecode4 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "groupRectangles" "', argument " "2"" of type '" "vector< int,std::allocator< int > > &""'"); 
   }
@@ -73310,7 +73395,7 @@ int _wrap_groupRectangles__SWIG_6(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "2"" of type '" "vector< int,std::allocator< int > > &""'"); 
   }
   arg2 = (vector< int,std::allocator< int > > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "groupRectangles" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
@@ -73318,53 +73403,107 @@ int _wrap_groupRectangles__SWIG_6(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
   arg3 = (vector< double,std::allocator< double > > *)(argp3);
-  ecode4 = SWIG_AsVal_int(4, &val4);
+  ecode4 = SWIG_AsVal_int(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "groupRectangles" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = (int)(val4);
   cv::groupRectangles(*arg1,*arg2,*arg3,arg4);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
 
 int _wrap_groupRectangles(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[5] = {
-    1,2,3,4,5
+  int argv[4] = {
+    1,2,3,4
   };
   
   SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (argc == 1) {
+    int _v;
+    {
+      _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[0], SCI_INT32);
+    }
+    if (_v) {
+      return _wrap_groupRectangles__SWIG_1(SWIG_GatewayArguments);
+    }
+  }
   if (argc == 2) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       {
         _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
       }
       if (_v) {
-        return _wrap_groupRectangles__SWIG_1(SWIG_GatewayArguments);
+        return _wrap_groupRectangles__SWIG_3(SWIG_GatewayArguments);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[0], SCI_INT32);
+    }
+    if (_v) {
+      {
+        int *piAddrVar = NULL;
+        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
+        if (sciErr.iErr) {
+          printError(&sciErr, 0);
+          return SWIG_ERROR;
+        }
+        _v = isDoubleType(pvApiCtx, piAddrVar);
+      }
+      if (_v) {
+        return _wrap_groupRectangles__SWIG_0(SWIG_GatewayArguments);
       }
     }
   }
   if (argc == 3) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
         {
           _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[2], SCI_INT32);
         }
         if (_v) {
-          return _wrap_groupRectangles__SWIG_3(SWIG_GatewayArguments);
+          return _wrap_groupRectangles__SWIG_6(SWIG_GatewayArguments);
         }
       }
     }
@@ -73372,7 +73511,7 @@ int _wrap_groupRectangles(SWIG_GatewayParameters) {
   if (argc == 3) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       {
@@ -73389,7 +73528,7 @@ int _wrap_groupRectangles(SWIG_GatewayParameters) {
           _v = isDoubleType(pvApiCtx, piAddrVar);
         }
         if (_v) {
-          return _wrap_groupRectangles__SWIG_0(SWIG_GatewayArguments);
+          return _wrap_groupRectangles__SWIG_2(SWIG_GatewayArguments);
         }
       }
     }
@@ -73397,35 +73536,11 @@ int _wrap_groupRectangles(SWIG_GatewayParameters) {
   if (argc == 4) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            return _wrap_groupRectangles__SWIG_6(SWIG_GatewayArguments);
-          }
-        }
-      }
-    }
-  }
-  if (argc == 4) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
         {
@@ -73442,77 +73557,37 @@ int _wrap_groupRectangles(SWIG_GatewayParameters) {
             _v = isDoubleType(pvApiCtx, piAddrVar);
           }
           if (_v) {
-            return _wrap_groupRectangles__SWIG_2(SWIG_GatewayArguments);
+            return _wrap_groupRectangles__SWIG_5(SWIG_GatewayArguments);
           }
         }
       }
     }
   }
-  if (argc == 5) {
+  if (argc == 4) {
     int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isDoubleType(pvApiCtx, piAddrVar);
-            }
-            if (_v) {
-              return _wrap_groupRectangles__SWIG_5(SWIG_GatewayArguments);
-            }
-          }
-        }
-      }
+    {
+      _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[0], SCI_INT32);
     }
-  }
-  if (argc == 5) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
     if (_v) {
       {
-        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
+        int *piAddrVar = NULL;
+        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
+        if (sciErr.iErr) {
+          printError(&sciErr, 0);
+          return SWIG_ERROR;
+        }
+        _v = isDoubleType(pvApiCtx, piAddrVar);
       }
       if (_v) {
         {
-          int *piAddrVar = NULL;
-          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
-          if (sciErr.iErr) {
-            printError(&sciErr, 0);
-            return SWIG_ERROR;
-          }
-          _v = isDoubleType(pvApiCtx, piAddrVar);
+          _v = SwigScilabCheckPtr(pvApiCtx, argv[2], SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, SWIG_Scilab_GetFuncName());
         }
         if (_v) {
           {
-            _v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, SWIG_Scilab_GetFuncName());
+            _v = SwigScilabCheckPtr(pvApiCtx, argv[3], SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, SWIG_Scilab_GetFuncName());
           }
           if (_v) {
-            {
-              _v = SwigScilabCheckPtr(pvApiCtx, argv[4], SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, SWIG_Scilab_GetFuncName());
-            }
-            if (_v) {
-              return _wrap_groupRectangles__SWIG_4(SWIG_GatewayArguments);
-            }
+            return _wrap_groupRectangles__SWIG_4(SWIG_GatewayArguments);
           }
         }
       }
@@ -73530,8 +73605,7 @@ int _wrap_groupRectangles_meanshift__SWIG_0(SWIG_GatewayParameters) {
   vector< double,std::allocator< double > > *arg3 = 0 ;
   double arg4 ;
   cv::Size arg5 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
   void *argp3 = 0 ;
@@ -73539,19 +73613,12 @@ int _wrap_groupRectangles_meanshift__SWIG_0(SWIG_GatewayParameters) {
   double val4 ;
   int ecode4 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles_meanshift" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles_meanshift" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "groupRectangles_meanshift" "', argument " "2"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
@@ -73559,7 +73626,7 @@ int _wrap_groupRectangles_meanshift__SWIG_0(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles_meanshift" "', argument " "2"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
   arg2 = (vector< double,std::allocator< double > > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "groupRectangles_meanshift" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
@@ -73567,16 +73634,41 @@ int _wrap_groupRectangles_meanshift__SWIG_0(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles_meanshift" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
   arg3 = (vector< double,std::allocator< double > > *)(argp3);
-  ecode4 = SWIG_AsVal_double(4, &val4);
+  ecode4 = SWIG_AsVal_double(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "groupRectangles_meanshift" "', argument " "4"" of type '" "double""'");
   } 
   arg4 = (double)(val4);
-  if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 5, &arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 4, &arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   cv::groupRectangles_meanshift(*arg1,*arg2,*arg3,arg4,arg5);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
@@ -73586,8 +73678,7 @@ int _wrap_groupRectangles_meanshift__SWIG_1(SWIG_GatewayParameters) {
   vector< double,std::allocator< double > > *arg2 = 0 ;
   vector< double,std::allocator< double > > *arg3 = 0 ;
   double arg4 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
   void *argp3 = 0 ;
@@ -73595,19 +73686,12 @@ int _wrap_groupRectangles_meanshift__SWIG_1(SWIG_GatewayParameters) {
   double val4 ;
   int ecode4 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles_meanshift" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles_meanshift" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "groupRectangles_meanshift" "', argument " "2"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
@@ -73615,7 +73699,7 @@ int _wrap_groupRectangles_meanshift__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles_meanshift" "', argument " "2"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
   arg2 = (vector< double,std::allocator< double > > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "groupRectangles_meanshift" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
@@ -73623,13 +73707,38 @@ int _wrap_groupRectangles_meanshift__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles_meanshift" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
   arg3 = (vector< double,std::allocator< double > > *)(argp3);
-  ecode4 = SWIG_AsVal_double(4, &val4);
+  ecode4 = SWIG_AsVal_double(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "groupRectangles_meanshift" "', argument " "4"" of type '" "double""'");
   } 
   arg4 = (double)(val4);
   cv::groupRectangles_meanshift(*arg1,*arg2,*arg3,arg4);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
@@ -73638,26 +73747,18 @@ int _wrap_groupRectangles_meanshift__SWIG_2(SWIG_GatewayParameters) {
   vector< cv::Rect,std::allocator< cv::Rect > > *arg1 = 0 ;
   vector< double,std::allocator< double > > *arg2 = 0 ;
   vector< double,std::allocator< double > > *arg3 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  vector< cv::Rect_< int > > vRect1 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg1 = &vRect1;
+  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "groupRectangles_meanshift" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles_meanshift" "', argument " "1"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg1 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "groupRectangles_meanshift" "', argument " "2"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
@@ -73665,7 +73766,7 @@ int _wrap_groupRectangles_meanshift__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "groupRectangles_meanshift" "', argument " "2"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
   arg2 = (vector< double,std::allocator< double > > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "groupRectangles_meanshift" "', argument " "3"" of type '" "vector< double,std::allocator< double > > &""'"); 
   }
@@ -73675,32 +73776,77 @@ int _wrap_groupRectangles_meanshift__SWIG_2(SWIG_GatewayParameters) {
   arg3 = (vector< double,std::allocator< double > > *)(argp3);
   cv::groupRectangles_meanshift(*arg1,*arg2,*arg3);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg1->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg1->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   return SWIG_OK;
 }
 
 
 int _wrap_groupRectangles_meanshift(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[5] = {
-    1,2,3,4,5
+  int argv[4] = {
+    1,2,3,4
   };
   
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 3) {
+  if (argc == 2) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
       int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
-        void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
-        _v = SWIG_CheckState(res);
+        return _wrap_groupRectangles_meanshift__SWIG_2(SWIG_GatewayArguments);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddrVar);
+        }
         if (_v) {
-          return _wrap_groupRectangles_meanshift__SWIG_2(SWIG_GatewayArguments);
+          return _wrap_groupRectangles_meanshift__SWIG_1(SWIG_GatewayArguments);
         }
       }
     }
@@ -73708,63 +73854,28 @@ int _wrap_groupRectangles_meanshift(SWIG_GatewayParameters) {
   if (argc == 4) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
       int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
-        void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          {
-            int *piAddrVar = NULL;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddrVar);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
-            }
-            _v = isDoubleType(pvApiCtx, piAddrVar);
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
           }
-          if (_v) {
-            return _wrap_groupRectangles_meanshift__SWIG_1(SWIG_GatewayArguments);
-          }
+          _v = isDoubleType(pvApiCtx, piAddrVar);
         }
-      }
-    }
-  }
-  if (argc == 5) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, 0, SWIG_Scilab_GetFuncName());
-        _v = SWIG_CheckState(res);
         if (_v) {
           {
-            int *piAddrVar = NULL;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddrVar);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
-            }
-            _v = isDoubleType(pvApiCtx, piAddrVar);
+            _v = SWIG_Check_Size(pvApiCtx, argv[3], SWIG_Scilab_GetFuncName());
           }
           if (_v) {
-            {
-              _v = SWIG_Check_Size(pvApiCtx, argv[4], SWIG_Scilab_GetFuncName());
-            }
-            if (_v) {
-              return _wrap_groupRectangles_meanshift__SWIG_0(SWIG_GatewayArguments);
-            }
+            return _wrap_groupRectangles_meanshift__SWIG_0(SWIG_GatewayArguments);
           }
         }
       }
@@ -75073,7 +75184,7 @@ int _wrap_DetectionROI_locatio_set(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DetectionROI_locatio_set" "', argument " "1"" of type '" "cv::DetectionROI *""'"); 
   }
   arg1 = (cv::DetectionROI *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Point_T_int_t_t, 0 |  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t, 0 |  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "DetectionROI_locatio_set" "', argument " "2"" of type '" "vector< cv::Point > *""'"); 
   }
@@ -75101,7 +75212,7 @@ int _wrap_DetectionROI_locatio_get(SWIG_GatewayParameters) {
   arg1 = (cv::DetectionROI *)(argp1);
   result = (vector< cv::Point > *)& ((arg1)->locations);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_vectorT_cv__Point_T_int_t_t, 0 |  0 , NULL)))) return SWIG_ERROR;
+  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t, 0 |  0 , NULL)))) return SWIG_ERROR;
   return SWIG_OK;
 }
 
@@ -75124,7 +75235,7 @@ int _wrap_DetectionROI_confide_set(SWIG_GatewayParameters) {
   }
   arg1 = (cv::DetectionROI *)(argp1);
   {
-    res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_double_t,  0 , SWIG_Scilab_GetFuncName());
+    res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
     if (!SWIG_IsOK(res2)) {
       SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "DetectionROI_confide_set" "', argument " "2"" of type '" "vector< double >""'"); 
     }  
@@ -75157,7 +75268,7 @@ int _wrap_DetectionROI_confide_get(SWIG_GatewayParameters) {
   arg1 = (cv::DetectionROI *)(argp1);
   result =  ((arg1)->confidences);
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new vector< double >((const vector< double >&)(result))), SWIGTYPE_p_vectorT_double_t, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
+  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), (new vector< double >((const vector< double >&)(result))), SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t, SWIG_POINTER_OWN |  0 , NULL)))) return SWIG_ERROR;
   return SWIG_OK;
 }
 
@@ -80214,8 +80325,7 @@ int _wrap_segmentMotion(SWIG_GatewayParameters) {
   vector< cv::Rect,std::allocator< cv::Rect > > *arg3 = 0 ;
   double arg4 ;
   double arg5 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
+  vector< cv::Rect_< int > > vRect3 ;
   double val4 ;
   int ecode4 = 0 ;
   double val5 ;
@@ -80224,8 +80334,9 @@ int _wrap_segmentMotion(SWIG_GatewayParameters) {
   cv::Mat *pOutMat2 = new Mat();
   arg2 = new cv::_OutputArray(*pOutMat2);
   
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  arg3 = &vRect3;
+  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmhi = NULL;
@@ -80236,20 +80347,12 @@ int _wrap_segmentMotion(SWIG_GatewayParameters) {
   else {
     return SWIG_ERROR;
   }
-  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "segmentMotion" "', argument " "3"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "segmentMotion" "', argument " "3"" of type '" "vector< cv::Rect,std::allocator< cv::Rect > > &""'"); 
-  }
-  arg3 = (vector< cv::Rect,std::allocator< cv::Rect > > *)(argp3);
-  ecode4 = SWIG_AsVal_double(3, &val4);
+  ecode4 = SWIG_AsVal_double(2, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "segmentMotion" "', argument " "4"" of type '" "double""'");
   } 
   arg4 = (double)(val4);
-  ecode5 = SWIG_AsVal_double(4, &val5);
+  ecode5 = SWIG_AsVal_double(3, &val5);
   if (!SWIG_IsOK(ecode5)) {
     SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "segmentMotion" "', argument " "5"" of type '" "double""'");
   } 
@@ -80261,6 +80364,31 @@ int _wrap_segmentMotion(SWIG_GatewayParameters) {
     return SWIG_ERROR;
   }
   SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  SWIG_Scilab_SetOutputPosition(2);
+  SciErr sciErr;
+  int *piListAddr = NULL;
+  int nbElements = (int) arg3->size();
+  int iVarOut =  SWIG_Scilab_GetOutputPosition();
+  
+  sciErr = createList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, nbElements, &piListAddr);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+  
+  for (int i = 0; i<nbElements; i++) {
+    cv::Rect_<int> rect = arg3->at(i);
+    double pdRect[4] = {
+      rect.x, rect.y, rect.width, rect.height 
+    };
+    sciErr = createMatrixOfDoubleInList(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut, piListAddr, i+1, 1, 4, &pdRect[0]);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+  }
+  
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + iVarOut);
   if (iNewMatmhi) {
     pMatmhi->release();
   }
@@ -86468,7 +86596,7 @@ int _wrap_KeyPoint_convert__SWIG_0(SWIG_GatewayParameters) {
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "KeyPoint_convert" "', argument " "2"" of type '" "vector< cv::Point2f > &""'"); 
   }
@@ -86476,7 +86604,7 @@ int _wrap_KeyPoint_convert__SWIG_0(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "KeyPoint_convert" "', argument " "2"" of type '" "vector< cv::Point2f > &""'"); 
   }
   arg2 = (vector< cv::Point2f > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_vectorT_int_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "KeyPoint_convert" "', argument " "3"" of type '" "vector< int > const &""'"); 
   }
@@ -86509,7 +86637,7 @@ int _wrap_KeyPoint_convert__SWIG_1(SWIG_GatewayParameters) {
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "KeyPoint_convert" "', argument " "2"" of type '" "vector< cv::Point2f > &""'"); 
   }
@@ -86554,7 +86682,7 @@ int _wrap_KeyPoint_convert__SWIG_2(SWIG_GatewayParameters) {
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "KeyPoint_convert" "', argument " "1"" of type '" "vector< cv::Point2f > const &""'"); 
   }
@@ -86616,7 +86744,7 @@ int _wrap_KeyPoint_convert__SWIG_3(SWIG_GatewayParameters) {
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "KeyPoint_convert" "', argument " "1"" of type '" "vector< cv::Point2f > const &""'"); 
   }
@@ -86670,7 +86798,7 @@ int _wrap_KeyPoint_convert__SWIG_4(SWIG_GatewayParameters) {
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "KeyPoint_convert" "', argument " "1"" of type '" "vector< cv::Point2f > const &""'"); 
   }
@@ -86716,7 +86844,7 @@ int _wrap_KeyPoint_convert__SWIG_5(SWIG_GatewayParameters) {
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "KeyPoint_convert" "', argument " "1"" of type '" "vector< cv::Point2f > const &""'"); 
   }
@@ -86754,7 +86882,7 @@ int _wrap_KeyPoint_convert__SWIG_6(SWIG_GatewayParameters) {
   SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "KeyPoint_convert" "', argument " "1"" of type '" "vector< cv::Point2f > const &""'"); 
   }
@@ -86785,7 +86913,7 @@ int _wrap_KeyPoint_convert(SWIG_GatewayParameters) {
   if (argc == 1) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       return _wrap_KeyPoint_convert__SWIG_1(SWIG_GatewayArguments);
@@ -86794,7 +86922,7 @@ int _wrap_KeyPoint_convert(SWIG_GatewayParameters) {
   if (argc == 1) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       return _wrap_KeyPoint_convert__SWIG_6(SWIG_GatewayArguments);
@@ -86803,11 +86931,11 @@ int _wrap_KeyPoint_convert(SWIG_GatewayParameters) {
   if (argc == 2) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_int_t, 0, SWIG_Scilab_GetFuncName());
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
         return _wrap_KeyPoint_convert__SWIG_0(SWIG_GatewayArguments);
@@ -86817,7 +86945,7 @@ int _wrap_KeyPoint_convert(SWIG_GatewayParameters) {
   if (argc == 2) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       {
@@ -86837,7 +86965,7 @@ int _wrap_KeyPoint_convert(SWIG_GatewayParameters) {
   if (argc == 3) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       {
@@ -86868,7 +86996,7 @@ int _wrap_KeyPoint_convert(SWIG_GatewayParameters) {
   if (argc == 4) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       {
@@ -86904,7 +87032,7 @@ int _wrap_KeyPoint_convert(SWIG_GatewayParameters) {
   if (argc == 5) {
     int _v;
     void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_t, 0, SWIG_Scilab_GetFuncName());
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t, 0, SWIG_Scilab_GetFuncName());
     _v = SWIG_CheckState(res);
     if (_v) {
       {
@@ -87702,7 +87830,7 @@ int _wrap_FeatureDetector_detect__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "FeatureDetector_detect" "', argument " "1"" of type '" "cv::FeatureDetector const *""'"); 
   }
   arg1 = (cv::FeatureDetector *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "FeatureDetector_detect" "', argument " "2"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -87710,7 +87838,7 @@ int _wrap_FeatureDetector_detect__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "FeatureDetector_detect" "', argument " "2"" of type '" "vector< cv::Mat > const &""'"); 
   }
   arg2 = (vector< cv::Mat > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "FeatureDetector_detect" "', argument " "3"" of type '" "vector< vector< cv::KeyPoint > > &""'"); 
   }
@@ -87718,7 +87846,7 @@ int _wrap_FeatureDetector_detect__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "FeatureDetector_detect" "', argument " "3"" of type '" "vector< vector< cv::KeyPoint > > &""'"); 
   }
   arg3 = (vector< vector< cv::KeyPoint > > *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "FeatureDetector_detect" "', argument " "4"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -87752,7 +87880,7 @@ int _wrap_FeatureDetector_detect__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "FeatureDetector_detect" "', argument " "1"" of type '" "cv::FeatureDetector const *""'"); 
   }
   arg1 = (cv::FeatureDetector *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "FeatureDetector_detect" "', argument " "2"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -87760,7 +87888,7 @@ int _wrap_FeatureDetector_detect__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "FeatureDetector_detect" "', argument " "2"" of type '" "vector< cv::Mat > const &""'"); 
   }
   arg2 = (vector< cv::Mat > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "FeatureDetector_detect" "', argument " "3"" of type '" "vector< vector< cv::KeyPoint > > &""'"); 
   }
@@ -87821,11 +87949,11 @@ int _wrap_FeatureDetector_detect(SWIG_GatewayParameters) {
     }
     if (_v) {
       void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           return _wrap_FeatureDetector_detect__SWIG_3(SWIG_GatewayArguments);
@@ -87840,15 +87968,15 @@ int _wrap_FeatureDetector_detect(SWIG_GatewayParameters) {
     }
     if (_v) {
       void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             return _wrap_FeatureDetector_detect__SWIG_2(SWIG_GatewayArguments);
@@ -88001,7 +88129,7 @@ int _wrap_DescriptorExtractor_compute__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DescriptorExtractor_compute" "', argument " "1"" of type '" "cv::DescriptorExtractor const *""'"); 
   }
   arg1 = (cv::DescriptorExtractor *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "DescriptorExtractor_compute" "', argument " "2"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -88009,7 +88137,7 @@ int _wrap_DescriptorExtractor_compute__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorExtractor_compute" "', argument " "2"" of type '" "vector< cv::Mat > const &""'"); 
   }
   arg2 = (vector< cv::Mat > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorExtractor_compute" "', argument " "3"" of type '" "vector< vector< cv::KeyPoint > > &""'"); 
   }
@@ -88017,7 +88145,7 @@ int _wrap_DescriptorExtractor_compute__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorExtractor_compute" "', argument " "3"" of type '" "vector< vector< cv::KeyPoint > > &""'"); 
   }
   arg3 = (vector< vector< cv::KeyPoint > > *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorExtractor_compute" "', argument " "4"" of type '" "vector< cv::Mat > &""'"); 
   }
@@ -88064,15 +88192,15 @@ int _wrap_DescriptorExtractor_compute(SWIG_GatewayParameters) {
     }
     if (_v) {
       void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             return _wrap_DescriptorExtractor_compute__SWIG_1(SWIG_GatewayArguments);
@@ -88402,13 +88530,13 @@ int _wrap_Feature2D_compute(SWIG_GatewayParameters) {
   cv::Mat *arg4 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg3 = new std::vector<cv::KeyPoint>();
+  
+  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Feature2D, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88419,15 +88547,7 @@ int _wrap_Feature2D_compute(SWIG_GatewayParameters) {
   if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&arg2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Feature2D_compute" "', argument " "3"" of type '" "std::vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > &""'"); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Feature2D_compute" "', argument " "3"" of type '" "std::vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > &""'"); 
-  }
-  arg3 = (std::vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 3, &argp4, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Feature2D_compute" "', argument " "4"" of type '" "cv::Mat &""'"); 
   }
@@ -88437,6 +88557,13 @@ int _wrap_Feature2D_compute(SWIG_GatewayParameters) {
   arg4 = (cv::Mat *)(argp4);
   ((cv::Feature2D const *)arg1)->compute((cv::Mat const &)*arg2,*arg3,*arg4);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg3, SWIG_Scilab_TypeQuery("KeyPoints *"), 0, "KeyPoints") == SWIG_OK) {
+    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  }
+  else {
+    return SWIG_ERROR;
+  }
   return SWIG_OK;
 }
 
@@ -91685,7 +91812,7 @@ int _wrap_MSER___funcall____SWIG_0(SWIG_GatewayParameters) {
   if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&arg2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__Point_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "MSER___funcall__" "', argument " "3"" of type '" "vector< vector< cv::Point > > &""'"); 
   }
@@ -91728,7 +91855,7 @@ int _wrap_MSER___funcall____SWIG_1(SWIG_GatewayParameters) {
   if (SwigScilabPtrToObject(pvApiCtx, 2, (void**)&arg2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__Point_T_int_t_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "MSER___funcall__" "', argument " "3"" of type '" "vector< vector< cv::Point > > &""'"); 
   }
@@ -91760,7 +91887,7 @@ int _wrap_MSER___funcall__(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__Point_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           return _wrap_MSER___funcall____SWIG_1(SWIG_GatewayArguments);
@@ -91779,7 +91906,7 @@ int _wrap_MSER___funcall__(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__Point_T_int_t_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
@@ -92236,15 +92363,15 @@ int _wrap_FAST__SWIG_0(SWIG_GatewayParameters) {
   vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *arg2 = 0 ;
   int arg3 ;
   bool arg4 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
   bool val4 ;
   int ecode4 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg2 = new std::vector<cv::KeyPoint>();
+  
+  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -92255,26 +92382,25 @@ int _wrap_FAST__SWIG_0(SWIG_GatewayParameters) {
   else {
     return SWIG_ERROR;
   }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "FAST" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "FAST" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > &""'"); 
-  }
-  arg2 = (vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *)(argp2);
-  ecode3 = SWIG_AsVal_int(3, &val3);
+  ecode3 = SWIG_AsVal_int(2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "FAST" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = (int)(val3);
-  ecode4 = SWIG_AsVal_bool(4, &val4);
+  ecode4 = SWIG_AsVal_bool(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "FAST" "', argument " "4"" of type '" "bool""'");
   } 
   arg4 = (bool)(val4);
   cv::FAST((cv::_InputArray const &)*arg1,*arg2,arg3,arg4);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_TypeQuery("KeyPoints *"), 0, "KeyPoints") == SWIG_OK) {
+    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  }
+  else {
+    return SWIG_ERROR;
+  }
   if (iNewMatimage) {
     pMatimage->release();
   }
@@ -92287,13 +92413,13 @@ int _wrap_FAST__SWIG_1(SWIG_GatewayParameters) {
   cv::_InputArray *arg1 = 0 ;
   vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *arg2 = 0 ;
   int arg3 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg2 = new std::vector<cv::KeyPoint>();
+  
+  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -92304,21 +92430,20 @@ int _wrap_FAST__SWIG_1(SWIG_GatewayParameters) {
   else {
     return SWIG_ERROR;
   }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "FAST" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "FAST" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > &""'"); 
-  }
-  arg2 = (vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *)(argp2);
-  ecode3 = SWIG_AsVal_int(3, &val3);
+  ecode3 = SWIG_AsVal_int(2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "FAST" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = (int)(val3);
   cv::FAST((cv::_InputArray const &)*arg1,*arg2,arg3);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_TypeQuery("KeyPoints *"), 0, "KeyPoints") == SWIG_OK) {
+    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  }
+  else {
+    return SWIG_ERROR;
+  }
   if (iNewMatimage) {
     pMatimage->release();
   }
@@ -92329,11 +92454,28 @@ int _wrap_FAST__SWIG_1(SWIG_GatewayParameters) {
 
 int _wrap_FAST(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[4] = {
-    1,2,3,4
+  int argv[3] = {
+    1,2,3
   };
   
   SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (argc == 2) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
+      }
+      if (_v) {
+        return _wrap_FAST__SWIG_1(SWIG_GatewayArguments);
+      }
+    }
+  }
   if (argc == 3) {
     int _v;
     {
@@ -92343,48 +92485,21 @@ int _wrap_FAST(SWIG_GatewayParameters) {
       }
     }
     if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
+      {
+        _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[1], SCI_INT32);
+      }
       if (_v) {
         {
-          _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[2], SCI_INT32);
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isBooleanType(pvApiCtx, piAddrVar);
         }
         if (_v) {
-          return _wrap_FAST__SWIG_1(SWIG_GatewayArguments);
-        }
-      }
-    }
-  }
-  if (argc == 4) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        {
-          _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[2], SCI_INT32);
-        }
-        if (_v) {
-          {
-            int *piAddrVar = NULL;
-            SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[3], &piAddrVar);
-            if (sciErr.iErr) {
-              printError(&sciErr, 0);
-              return SWIG_ERROR;
-            }
-            _v = isBooleanType(pvApiCtx, piAddrVar);
-          }
-          if (_v) {
-            return _wrap_FAST__SWIG_0(SWIG_GatewayArguments);
-          }
+          return _wrap_FAST__SWIG_0(SWIG_GatewayArguments);
         }
       }
     }
@@ -92401,8 +92516,6 @@ int _wrap_FASTX(SWIG_GatewayParameters) {
   int arg3 ;
   bool arg4 ;
   int arg5 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
   bool val4 ;
@@ -92410,8 +92523,10 @@ int _wrap_FASTX(SWIG_GatewayParameters) {
   int val5 ;
   int ecode5 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg2 = new std::vector<cv::KeyPoint>();
+  
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -92422,31 +92537,30 @@ int _wrap_FASTX(SWIG_GatewayParameters) {
   else {
     return SWIG_ERROR;
   }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "FASTX" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "FASTX" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > &""'"); 
-  }
-  arg2 = (vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *)(argp2);
-  ecode3 = SWIG_AsVal_int(3, &val3);
+  ecode3 = SWIG_AsVal_int(2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "FASTX" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = (int)(val3);
-  ecode4 = SWIG_AsVal_bool(4, &val4);
+  ecode4 = SWIG_AsVal_bool(3, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "FASTX" "', argument " "4"" of type '" "bool""'");
   } 
   arg4 = (bool)(val4);
-  ecode5 = SWIG_AsVal_int(5, &val5);
+  ecode5 = SWIG_AsVal_int(4, &val5);
   if (!SWIG_IsOK(ecode5)) {
     SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "FASTX" "', argument " "5"" of type '" "int""'");
   } 
   arg5 = (int)(val5);
   cv::FASTX((cv::_InputArray const &)*arg1,*arg2,arg3,arg4,arg5);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_TypeQuery("KeyPoints *"), 0, "KeyPoints") == SWIG_OK) {
+    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  }
+  else {
+    return SWIG_ERROR;
+  }
   if (iNewMatimage) {
     pMatimage->release();
   }
@@ -96629,7 +96743,7 @@ int _wrap_DescriptorMatcher_add(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "DescriptorMatcher_add" "', argument " "1"" of type '" "cv::DescriptorMatcher *""'"); 
   }
   arg1 = (cv::DescriptorMatcher *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "DescriptorMatcher_add" "', argument " "2"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -96660,7 +96774,7 @@ int _wrap_DescriptorMatcher_getTrainDescriptors(SWIG_GatewayParameters) {
   arg1 = (cv::DescriptorMatcher *)(argp1);
   result = (vector< cv::Mat > *) &((cv::DescriptorMatcher const *)arg1)->getTrainDescriptors();
   SWIG_Scilab_SetOutputPosition(1);
-  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_vectorT_cv__Mat_t, 0 |  0 , NULL)))) return SWIG_ERROR;
+  if (!SWIG_IsOK(SWIG_Scilab_SetOutput(pvApiCtx, SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), SWIG_as_voidptr(result), SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0 |  0 , NULL)))) return SWIG_ERROR;
   return SWIG_OK;
 }
 
@@ -96791,7 +96905,7 @@ int _wrap_DescriptorMatcher_match__SWIG_0(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_match" "', argument " "3"" of type '" "cv::Mat const &""'"); 
   }
   arg3 = (cv::Mat *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__DMatch_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_match" "', argument " "4"" of type '" "vector< cv::DMatch > &""'"); 
   }
@@ -96852,7 +96966,7 @@ int _wrap_DescriptorMatcher_match__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_match" "', argument " "3"" of type '" "cv::Mat const &""'"); 
   }
   arg3 = (cv::Mat *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__DMatch_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_match" "', argument " "4"" of type '" "vector< cv::DMatch > &""'"); 
   }
@@ -96914,7 +97028,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_0(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_knnMatch" "', argument " "3"" of type '" "cv::Mat const &""'"); 
   }
   arg3 = (cv::Mat *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_knnMatch" "', argument " "4"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -96991,7 +97105,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_knnMatch" "', argument " "3"" of type '" "cv::Mat const &""'"); 
   }
   arg3 = (cv::Mat *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_knnMatch" "', argument " "4"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97060,7 +97174,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_knnMatch" "', argument " "3"" of type '" "cv::Mat const &""'"); 
   }
   arg3 = (cv::Mat *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_knnMatch" "', argument " "4"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97127,7 +97241,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_0(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_radiusMatch" "', argument " "3"" of type '" "cv::Mat const &""'"); 
   }
   arg3 = (cv::Mat *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "4"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97204,7 +97318,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_radiusMatch" "', argument " "3"" of type '" "cv::Mat const &""'"); 
   }
   arg3 = (cv::Mat *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "4"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97273,7 +97387,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_radiusMatch" "', argument " "3"" of type '" "cv::Mat const &""'"); 
   }
   arg3 = (cv::Mat *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "4"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97323,7 +97437,7 @@ int _wrap_DescriptorMatcher_match__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_match" "', argument " "2"" of type '" "cv::Mat const &""'"); 
   }
   arg2 = (cv::Mat *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_cv__DMatch_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorMatcher_match" "', argument " "3"" of type '" "vector< cv::DMatch > &""'"); 
   }
@@ -97331,7 +97445,7 @@ int _wrap_DescriptorMatcher_match__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_match" "', argument " "3"" of type '" "vector< cv::DMatch > &""'"); 
   }
   arg3 = (vector< cv::DMatch > *)(argp3);
-  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res4 = SwigScilabPtrToObject(pvApiCtx, 4, &argp4, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "DescriptorMatcher_match" "', argument " "4"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -97373,7 +97487,7 @@ int _wrap_DescriptorMatcher_match__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_match" "', argument " "2"" of type '" "cv::Mat const &""'"); 
   }
   arg2 = (cv::Mat *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_cv__DMatch_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorMatcher_match" "', argument " "3"" of type '" "vector< cv::DMatch > &""'"); 
   }
@@ -97405,7 +97519,7 @@ int _wrap_DescriptorMatcher_match(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_cv__DMatch_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           return _wrap_DescriptorMatcher_match__SWIG_3(SWIG_GatewayArguments);
@@ -97424,11 +97538,11 @@ int _wrap_DescriptorMatcher_match(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_cv__DMatch_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             return _wrap_DescriptorMatcher_match__SWIG_2(SWIG_GatewayArguments);
@@ -97452,7 +97566,7 @@ int _wrap_DescriptorMatcher_match(SWIG_GatewayParameters) {
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__DMatch_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             return _wrap_DescriptorMatcher_match__SWIG_1(SWIG_GatewayArguments);
@@ -97476,7 +97590,7 @@ int _wrap_DescriptorMatcher_match(SWIG_GatewayParameters) {
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__DMatch_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             void *vptr = 0;
@@ -97533,7 +97647,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_knnMatch" "', argument " "2"" of type '" "cv::Mat const &""'"); 
   }
   arg2 = (cv::Mat *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorMatcher_knnMatch" "', argument " "3"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97546,7 +97660,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "DescriptorMatcher_knnMatch" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = (int)(val4);
-  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res5)) {
     SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "DescriptorMatcher_knnMatch" "', argument " "5"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -97599,7 +97713,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_4(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_knnMatch" "', argument " "2"" of type '" "cv::Mat const &""'"); 
   }
   arg2 = (cv::Mat *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorMatcher_knnMatch" "', argument " "3"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97612,7 +97726,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_4(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "DescriptorMatcher_knnMatch" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = (int)(val4);
-  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res5)) {
     SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "DescriptorMatcher_knnMatch" "', argument " "5"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -97657,7 +97771,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_5(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_knnMatch" "', argument " "2"" of type '" "cv::Mat const &""'"); 
   }
   arg2 = (cv::Mat *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorMatcher_knnMatch" "', argument " "3"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97694,7 +97808,7 @@ int _wrap_DescriptorMatcher_knnMatch(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           {
@@ -97718,7 +97832,7 @@ int _wrap_DescriptorMatcher_knnMatch(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           {
@@ -97726,7 +97840,7 @@ int _wrap_DescriptorMatcher_knnMatch(SWIG_GatewayParameters) {
           }
           if (_v) {
             void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
             _v = SWIG_CheckState(res);
             if (_v) {
               return _wrap_DescriptorMatcher_knnMatch__SWIG_4(SWIG_GatewayArguments);
@@ -97751,7 +97865,7 @@ int _wrap_DescriptorMatcher_knnMatch(SWIG_GatewayParameters) {
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             {
@@ -97780,7 +97894,7 @@ int _wrap_DescriptorMatcher_knnMatch(SWIG_GatewayParameters) {
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             {
@@ -97810,7 +97924,7 @@ int _wrap_DescriptorMatcher_knnMatch(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           {
@@ -97818,7 +97932,7 @@ int _wrap_DescriptorMatcher_knnMatch(SWIG_GatewayParameters) {
           }
           if (_v) {
             void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
             _v = SWIG_CheckState(res);
             if (_v) {
               {
@@ -97854,7 +97968,7 @@ int _wrap_DescriptorMatcher_knnMatch(SWIG_GatewayParameters) {
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             {
@@ -97927,7 +98041,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_radiusMatch" "', argument " "2"" of type '" "cv::Mat const &""'"); 
   }
   arg2 = (cv::Mat *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "3"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -97940,7 +98054,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "4"" of type '" "float""'");
   } 
   arg4 = (float)(val4);
-  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res5)) {
     SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "5"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -97993,7 +98107,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_4(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_radiusMatch" "', argument " "2"" of type '" "cv::Mat const &""'"); 
   }
   arg2 = (cv::Mat *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "3"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -98006,7 +98120,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_4(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "4"" of type '" "float""'");
   } 
   arg4 = (float)(val4);
-  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_cv__Mat_t,  0 , SWIG_Scilab_GetFuncName());
+  res5 = SwigScilabPtrToObject(pvApiCtx, 5, &argp5, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res5)) {
     SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "5"" of type '" "vector< cv::Mat > const &""'"); 
   }
@@ -98051,7 +98165,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_5(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "DescriptorMatcher_radiusMatch" "', argument " "2"" of type '" "cv::Mat const &""'"); 
   }
   arg2 = (cv::Mat *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "DescriptorMatcher_radiusMatch" "', argument " "3"" of type '" "vector< vector< cv::DMatch > > &""'"); 
   }
@@ -98088,7 +98202,7 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           {
@@ -98118,7 +98232,7 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           {
@@ -98132,7 +98246,7 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
           }
           if (_v) {
             void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
             _v = SWIG_CheckState(res);
             if (_v) {
               return _wrap_DescriptorMatcher_radiusMatch__SWIG_4(SWIG_GatewayArguments);
@@ -98157,7 +98271,7 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             {
@@ -98192,7 +98306,7 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             {
@@ -98228,7 +98342,7 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
         _v = SWIG_CheckState(res);
         if (_v) {
           {
@@ -98242,7 +98356,7 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
           }
           if (_v) {
             void *vptr = 0;
-            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_cv__Mat_t, 0, SWIG_Scilab_GetFuncName());
+            int res = SwigScilabPtrToObject(pvApiCtx, argv[4], &vptr, SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, SWIG_Scilab_GetFuncName());
             _v = SWIG_CheckState(res);
             if (_v) {
               {
@@ -98278,7 +98392,7 @@ int _wrap_DescriptorMatcher_radiusMatch(SWIG_GatewayParameters) {
         _v = SWIG_CheckState(res);
         if (_v) {
           void *vptr = 0;
-          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_vectorT_cv__DMatch_t_t, 0, SWIG_Scilab_GetFuncName());
+          int res = SwigScilabPtrToObject(pvApiCtx, argv[3], &vptr, SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, SWIG_Scilab_GetFuncName());
           _v = SWIG_CheckState(res);
           if (_v) {
             {
@@ -98813,30 +98927,22 @@ int _wrap_drawKeypoints__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat *arg3 = 0 ;
   cv::Scalar *arg4 = 0 ;
   int arg5 ;
-  void *argp2 ;
-  int res2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
   cv::Scalar tmpScalar4 ;
   int val5 ;
   int ecode5 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg2 = new std::vector<cv::KeyPoint>();
+  
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "drawKeypoints" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "drawKeypoints" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &""'"); 
-  }
-  arg2 = (vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "drawKeypoints" "', argument " "3"" of type '" "cv::Mat &""'"); 
   }
@@ -98845,16 +98951,23 @@ int _wrap_drawKeypoints__SWIG_0(SWIG_GatewayParameters) {
   }
   arg3 = (cv::Mat *)(argp3);
   arg4 = &tmpScalar4;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 4, arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 3, arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode5 = SWIG_AsVal_int(5, &val5);
+  ecode5 = SWIG_AsVal_int(4, &val5);
   if (!SWIG_IsOK(ecode5)) {
     SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "drawKeypoints" "', argument " "5"" of type '" "int""'");
   } 
   arg5 = (int)(val5);
   cv::drawKeypoints((cv::Mat const &)*arg1,(vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &)*arg2,*arg3,(cv::Scalar_< double > const &)*arg4,arg5);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_TypeQuery("KeyPoints *"), 0, "KeyPoints") == SWIG_OK) {
+    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  }
+  else {
+    return SWIG_ERROR;
+  }
   return SWIG_OK;
 }
 
@@ -98864,28 +98977,20 @@ int _wrap_drawKeypoints__SWIG_1(SWIG_GatewayParameters) {
   vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *arg2 = 0 ;
   cv::Mat *arg3 = 0 ;
   cv::Scalar *arg4 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
   cv::Scalar tmpScalar4 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg2 = new std::vector<cv::KeyPoint>();
+  
+  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "drawKeypoints" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "drawKeypoints" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &""'"); 
-  }
-  arg2 = (vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "drawKeypoints" "', argument " "3"" of type '" "cv::Mat &""'"); 
   }
@@ -98894,11 +98999,18 @@ int _wrap_drawKeypoints__SWIG_1(SWIG_GatewayParameters) {
   }
   arg3 = (cv::Mat *)(argp3);
   arg4 = &tmpScalar4;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 4, arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 3, arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   cv::drawKeypoints((cv::Mat const &)*arg1,(vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &)*arg2,*arg3,(cv::Scalar_< double > const &)*arg4);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_TypeQuery("KeyPoints *"), 0, "KeyPoints") == SWIG_OK) {
+    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  }
+  else {
+    return SWIG_ERROR;
+  }
   return SWIG_OK;
 }
 
@@ -98907,27 +99019,19 @@ int _wrap_drawKeypoints__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat *arg1 = 0 ;
   vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *arg2 = 0 ;
   cv::Mat *arg3 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  arg2 = new std::vector<cv::KeyPoint>();
+  
+  SWIG_CheckInputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "drawKeypoints" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "drawKeypoints" "', argument " "2"" of type '" "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &""'"); 
-  }
-  arg2 = (vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *)(argp2);
-  res3 = SwigScilabPtrToObject(pvApiCtx, 3, &argp3, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
+  res3 = SwigScilabPtrToObject(pvApiCtx, 2, &argp3, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "drawKeypoints" "', argument " "3"" of type '" "cv::Mat &""'"); 
   }
@@ -98937,17 +99041,38 @@ int _wrap_drawKeypoints__SWIG_2(SWIG_GatewayParameters) {
   arg3 = (cv::Mat *)(argp3);
   cv::drawKeypoints((cv::Mat const &)*arg1,(vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > const &)*arg2,*arg3);
   
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), arg2, SWIG_Scilab_TypeQuery("KeyPoints *"), 0, "KeyPoints") == SWIG_OK) {
+    SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  }
+  else {
+    return SWIG_ERROR;
+  }
   return SWIG_OK;
 }
 
 
 int _wrap_drawKeypoints(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[5] = {
-    1,2,3,4,5
+  int argv[4] = {
+    1,2,3,4
   };
   
   SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_drawKeypoints__SWIG_2(SWIG_GatewayArguments);
+      }
+    }
+  }
   if (argc == 3) {
     int _v;
     void *vptr = 0;
@@ -98955,14 +99080,15 @@ int _wrap_drawKeypoints(SWIG_GatewayParameters) {
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
-        void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
-        _v = SWIG_CheckState(res);
+        {
+          cv::Scalar scalar;
+          _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[2], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        }
         if (_v) {
-          return _wrap_drawKeypoints__SWIG_2(SWIG_GatewayArguments);
+          return _wrap_drawKeypoints__SWIG_1(SWIG_GatewayArguments);
         }
       }
     }
@@ -98974,49 +99100,19 @@ int _wrap_drawKeypoints(SWIG_GatewayParameters) {
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
+      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
       _v = SWIG_CheckState(res);
       if (_v) {
-        void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          {
-            cv::Scalar scalar;
-            _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[3], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-          }
-          if (_v) {
-            return _wrap_drawKeypoints__SWIG_1(SWIG_GatewayArguments);
-          }
+        {
+          cv::Scalar scalar;
+          _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[2], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
         }
-      }
-    }
-  }
-  if (argc == 5) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SwigScilabPtrToObject(pvApiCtx, argv[1], &vptr, SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t, 0, SWIG_Scilab_GetFuncName());
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SwigScilabPtrToObject(pvApiCtx, argv[2], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
-        _v = SWIG_CheckState(res);
         if (_v) {
           {
-            cv::Scalar scalar;
-            _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[3], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
           }
           if (_v) {
-            {
-              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
-            }
-            if (_v) {
-              return _wrap_drawKeypoints__SWIG_0(SWIG_GatewayArguments);
-            }
+            return _wrap_drawKeypoints__SWIG_0(SWIG_GatewayArguments);
           }
         }
       }
@@ -101966,31 +102062,22 @@ static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "uchar *|un
 static swig_type_info _swigt__p_unsigned_short = {"_p_unsigned_short", "unsigned short *|ushort *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_vectorT_char_std__allocatorT_char_t_t = {"_p_vectorT_char_std__allocatorT_char_t_t", "vector< char,std::allocator< char > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t = {"_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t", "vector< cv::DMatch,std::allocator< cv::DMatch > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__DMatch_t = {"_p_vectorT_cv__DMatch_t", "vector< cv::DMatch > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t = {"_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t", "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__KeyPoint_t = {"_p_vectorT_cv__KeyPoint_t", "vector< cv::KeyPoint > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t = {"_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t", "vector< cv::Mat,std::allocator< cv::Mat > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__Mat_t = {"_p_vectorT_cv__Mat_t", "vector< cv::Mat > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t = {"_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t", "vector< cv::Point2f,std::allocator< cv::Point2f > > *|vector< cv::Point_< float >,std::allocator< cv::Point_< float > > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__Point_T_float_t_t = {"_p_vectorT_cv__Point_T_float_t_t", "vector< cv::Point_< float > > *|vector< cv::Point2f > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t = {"_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t", "vector< cv::Point,std::allocator< cv::Point > > *|vector< cv::Point_< int >,std::allocator< cv::Point_< int > > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__Point_T_int_t_t = {"_p_vectorT_cv__Point_T_int_t_t", "vector< cv::Point_< int > > *|vector< cv::Point > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t = {"_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t", "vector< cv::Rect_< int >,std::allocator< cv::Rect_< int > > > *|vector< cv::Rect,std::allocator< cv::Rect > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_cv__Rect_T_int_t_t = {"_p_vectorT_cv__Rect_T_int_t_t", "vector< cv::Rect_< int > > *|vector< cv::Rect > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_double_std__allocatorT_double_t_t = {"_p_vectorT_double_std__allocatorT_double_t_t", "vector< double,std::allocator< double > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_double_t = {"_p_vectorT_double_t", "vector< double > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t = {"_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t", "vector< cv::DMatch > *|vector< cv::DMatch,std::allocator< cv::DMatch > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t = {"_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t", "vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > *|vector< cv::KeyPoint > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t = {"_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t", "vector< cv::Mat,std::allocator< cv::Mat > > *|vector< cv::Mat > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t = {"_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t", "vector< cv::Point2f,std::allocator< cv::Point2f > > *|vector< cv::Point_< float > > *|vector< cv::Point2f > *|vector< cv::Point_< float >,std::allocator< cv::Point_< float > > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t = {"_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t", "vector< cv::Point,std::allocator< cv::Point > > *|vector< cv::Point_< int > > *|vector< cv::Point_< int >,std::allocator< cv::Point_< int > > > *|vector< cv::Point > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t = {"_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t", "vector< cv::Rect_< int >,std::allocator< cv::Rect_< int > > > *|vector< cv::Rect,std::allocator< cv::Rect > > *|vector< cv::Rect_< int > > *|vector< cv::Rect > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_double_std__allocatorT_double_t_t = {"_p_vectorT_double_std__allocatorT_double_t_t", "vector< double,std::allocator< double > > *|vector< double > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_vectorT_float_std__allocatorT_float_t_t = {"_p_vectorT_float_std__allocatorT_float_t_t", "vector< float,std::allocator< float > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_int_std__allocatorT_int_t_t = {"_p_vectorT_int_std__allocatorT_int_t_t", "vector< int,std::allocator< int > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_int_t = {"_p_vectorT_int_t", "vector< int > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_int_std__allocatorT_int_t_t = {"_p_vectorT_int_std__allocatorT_int_t_t", "vector< int,std::allocator< int > > *|vector< int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_vectorT_std__string_std__allocatorT_std__string_t_t = {"_p_vectorT_std__string_std__allocatorT_std__string_t_t", "vector< std::string,std::allocator< std::string > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t = {"_p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t", "vector< std::vector< char,std::allocator< char > >,std::allocator< std::vector< char,std::allocator< char > > > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t = {"_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t", "vector< std::vector< cv::DMatch,std::allocator< cv::DMatch > >,std::allocator< std::vector< cv::DMatch,std::allocator< cv::DMatch > > > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t = {"_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t", "vector< vector< cv::DMatch > > *|vector< std::vector< cv::DMatch,std::allocator< cv::DMatch > >,std::allocator< std::vector< cv::DMatch,std::allocator< cv::DMatch > > > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t = {"_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t", "vector< vector< cv::KeyPoint > > *|vector< std::vector< cv::KeyPoint,std::allocator< cv::KeyPoint > >,std::allocator< std::vector< cv::KeyPoint,std::allocator< cv::KeyPoint > > > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t = {"_p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t", "vector< vector< cv::Point_< int > > > *|vector< vector< cv::Point > > *|vector< std::vector< cv::Point_< int >,std::allocator< cv::Point_< int > > >,std::allocator< std::vector< cv::Point_< int >,std::allocator< cv::Point_< int > > > > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t = {"_p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t", "vector< std::vector< unsigned char,std::allocator< unsigned char > >,std::allocator< std::vector< unsigned char,std::allocator< unsigned char > > > > *|vector< std::vector< uchar,std::allocator< uchar > >,std::allocator< std::vector< uchar,std::allocator< uchar > > > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t = {"_p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t", "vector< uchar,std::allocator< uchar > > *|vector< unsigned char,std::allocator< unsigned char > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_vectorT_cv__DMatch_t_t = {"_p_vectorT_vectorT_cv__DMatch_t_t", "vector< vector< cv::DMatch > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_vectorT_cv__KeyPoint_t_t = {"_p_vectorT_vectorT_cv__KeyPoint_t_t", "vector< vector< cv::KeyPoint > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_vectorT_vectorT_cv__Point_T_int_t_t_t = {"_p_vectorT_vectorT_cv__Point_T_int_t_t_t", "vector< vector< cv::Point_< int > > > *|vector< vector< cv::Point > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_void = {"_p_void", "CvArr *|void *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__std__invalid_argument = {"_std__invalid_argument", "std::invalid_argument", 0, 0, (void*)0, 0};
 
@@ -102269,30 +102356,21 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_value_type,
   &_swigt__p_vectorT_char_std__allocatorT_char_t_t,
   &_swigt__p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t,
-  &_swigt__p_vectorT_cv__DMatch_t,
   &_swigt__p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,
-  &_swigt__p_vectorT_cv__KeyPoint_t,
   &_swigt__p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,
-  &_swigt__p_vectorT_cv__Mat_t,
   &_swigt__p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,
-  &_swigt__p_vectorT_cv__Point_T_float_t_t,
   &_swigt__p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t,
-  &_swigt__p_vectorT_cv__Point_T_int_t_t,
   &_swigt__p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,
-  &_swigt__p_vectorT_cv__Rect_T_int_t_t,
   &_swigt__p_vectorT_double_std__allocatorT_double_t_t,
-  &_swigt__p_vectorT_double_t,
   &_swigt__p_vectorT_float_std__allocatorT_float_t_t,
   &_swigt__p_vectorT_int_std__allocatorT_int_t_t,
-  &_swigt__p_vectorT_int_t,
   &_swigt__p_vectorT_std__string_std__allocatorT_std__string_t_t,
   &_swigt__p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t,
   &_swigt__p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,
+  &_swigt__p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t,
+  &_swigt__p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t,
   &_swigt__p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t,
   &_swigt__p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t,
-  &_swigt__p_vectorT_vectorT_cv__DMatch_t_t,
-  &_swigt__p_vectorT_vectorT_cv__KeyPoint_t_t,
-  &_swigt__p_vectorT_vectorT_cv__Point_T_int_t_t_t,
   &_swigt__p_void,
   &_swigt__std__invalid_argument,
 };
@@ -102571,30 +102649,21 @@ static swig_cast_info _swigc__p_unsigned_short[] = {  {&_swigt__p_unsigned_short
 static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_char_std__allocatorT_char_t_t[] = {  {&_swigt__p_vectorT_char_std__allocatorT_char_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t[] = {  {&_swigt__p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_cv__DMatch_t[] = {  {&_swigt__p_vectorT_cv__DMatch_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t[] = {  {&_swigt__p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_cv__KeyPoint_t[] = {  {&_swigt__p_vectorT_cv__KeyPoint_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t[] = {  {&_swigt__p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_cv__Mat_t[] = {  {&_swigt__p_vectorT_cv__Mat_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t[] = {  {&_swigt__p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_cv__Point_T_float_t_t[] = {  {&_swigt__p_vectorT_cv__Point_T_float_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t[] = {  {&_swigt__p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_cv__Point_T_int_t_t[] = {  {&_swigt__p_vectorT_cv__Point_T_int_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t[] = {  {&_swigt__p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_cv__Rect_T_int_t_t[] = {  {&_swigt__p_vectorT_cv__Rect_T_int_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_double_std__allocatorT_double_t_t[] = {  {&_swigt__p_vectorT_double_std__allocatorT_double_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_double_t[] = {  {&_swigt__p_vectorT_double_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_float_std__allocatorT_float_t_t[] = {  {&_swigt__p_vectorT_float_std__allocatorT_float_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_int_std__allocatorT_int_t_t[] = {  {&_swigt__p_vectorT_int_std__allocatorT_int_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_int_t[] = {  {&_swigt__p_vectorT_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_std__string_std__allocatorT_std__string_t_t[] = {  {&_swigt__p_vectorT_std__string_std__allocatorT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t[] = {  {&_swigt__p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t[] = {  {&_swigt__p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t[] = {  {&_swigt__p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t[] = {  {&_swigt__p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t[] = {  {&_swigt__p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t[] = {  {&_swigt__p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_vectorT_cv__DMatch_t_t[] = {  {&_swigt__p_vectorT_vectorT_cv__DMatch_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_vectorT_cv__KeyPoint_t_t[] = {  {&_swigt__p_vectorT_vectorT_cv__KeyPoint_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_vectorT_vectorT_cv__Point_T_int_t_t_t[] = {  {&_swigt__p_vectorT_vectorT_cv__Point_T_int_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_void[] = {  {&_swigt__p_void, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__std__invalid_argument[] = {  {&_swigt__std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
 
@@ -102873,30 +102942,21 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_value_type,
   _swigc__p_vectorT_char_std__allocatorT_char_t_t,
   _swigc__p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t,
-  _swigc__p_vectorT_cv__DMatch_t,
   _swigc__p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,
-  _swigc__p_vectorT_cv__KeyPoint_t,
   _swigc__p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,
-  _swigc__p_vectorT_cv__Mat_t,
   _swigc__p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,
-  _swigc__p_vectorT_cv__Point_T_float_t_t,
   _swigc__p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t,
-  _swigc__p_vectorT_cv__Point_T_int_t_t,
   _swigc__p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t,
-  _swigc__p_vectorT_cv__Rect_T_int_t_t,
   _swigc__p_vectorT_double_std__allocatorT_double_t_t,
-  _swigc__p_vectorT_double_t,
   _swigc__p_vectorT_float_std__allocatorT_float_t_t,
   _swigc__p_vectorT_int_std__allocatorT_int_t_t,
-  _swigc__p_vectorT_int_t,
   _swigc__p_vectorT_std__string_std__allocatorT_std__string_t_t,
   _swigc__p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t,
   _swigc__p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,
+  _swigc__p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t,
+  _swigc__p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t,
   _swigc__p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t,
   _swigc__p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t,
-  _swigc__p_vectorT_vectorT_cv__DMatch_t_t,
-  _swigc__p_vectorT_vectorT_cv__KeyPoint_t_t,
-  _swigc__p_vectorT_vectorT_cv__Point_T_int_t_t_t,
   _swigc__p_void,
   _swigc__std__invalid_argument,
 };
