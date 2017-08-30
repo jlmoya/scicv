@@ -8,7 +8,7 @@ using namespace cv;
 %}
 
 
-%ignore   cvLoadWindowParameters();
+%ignore cvLoadWindowParameters();
 
 %apply cv::Mat& matIn { const cv::Mat& image };
 %apply cv::Mat* matOut { cv::Mat& image };

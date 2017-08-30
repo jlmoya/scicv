@@ -7,33 +7,9 @@
 using namespace cv;
 %}
 
-%ignore CvKalman;
-%ignore DenseOpticalFlow;
-%ignore cvCalcOpticalFlowFarneback;
-%ignore cvEstimateRigidTransform;
-%ignore cvUpdateMotionHistory;
-%ignore cvCalcMotionGradient;
-%ignore cvCalcGlobalOrientation;
-%ignore cvSegmentMotion;
-%ignore cvCamShift;
-%ignore cvMeanShift;
+%include opencv_video_ignore.i
 
-
-
-%rename (KalmFltr) KalmanFilter;
-%rename (BackgrdSub) BackgroundSubtractor;
-%rename (BackgrdSubMOG) BackgroundSubtractorMOG;
-%rename (BackgrdSubMOG2) BackgroundSubtractorMOG2;
-%rename (BackgrdSubGMG) BackgroundSubtractorGMG;
-
-%rename(update) cv::BackgroundSubtractorMOG::operator();
-%rename(update) cv::BackgroundSubtractorMOG2::operator();
-%rename(update) cv::BackgroundSubtractorGMG::operator();
-
-// renommer deux methodes
-%rename (measurMtx) measurementMatrix;
-%rename (errCovPost) errorCovPost;
-
+%include opencv_video_rename.i
 
 
 %include "opencv2/video/video.hpp"
