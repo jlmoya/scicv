@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>img_out = add(img, blockSize, ksize, k[, borderType])</synopsis>
+    <synopsis>img_out = cornerHarris(img, blockSize, ksize, k[, borderType])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>
