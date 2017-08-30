@@ -2111,7 +2111,7 @@ namespace swig {
   template <class Type>
   struct traits_asptr {
     static int asptr(const SwigSciObject& obj, Type **val) {
-      Type *p = 0;
+      Type *p;
       swig_type_info *descriptor = type_info<Type>();
       int res = descriptor ? SwigScilabPtrToObject(pvApiCtx, obj, (void **)&p, descriptor, 0, SWIG_Scilab_GetFuncName()) : SWIG_ERROR;
       if (SWIG_IsOK(res)) {
@@ -4288,6 +4288,44 @@ SWIG_SciString_AsChar(void *pvApiCtx, int iVar, char *pcValue, char *fname) {
 
 #undef SKIP_INCLUDES
 #include "opencv2/imgproc/imgproc.hpp"
+
+
+int SWIG_SciDouble_FromVectorVec2f(void *pvApiCtx, SwigSciObject iVarOut, std::vector<Vec2f> *vectorVec2f, char *fname) {
+  int vecSize = (int) vectorVec2f->size();
+  double *pdValues = (double *) malloc(2 * vecSize * sizeof(double));
+  for (int i = 0; i < vecSize; i++) {
+    Vec2f vec = vectorVec2f->at(i);
+    pdValues[2*i] = vec[0];
+    pdValues[2*i+1] = vec[1];
+  }
+  if (SWIG_SciDouble_FromDoubleArrayAndSize(pvApiCtx, SWIG_Scilab_GetOutputPosition(), 2, vecSize, pdValues) != SWIG_OK) {
+    free(pdValues);
+    return SWIG_ERROR;
+  }
+  free(pdValues);
+  return SWIG_OK;
+
+}
+
+
+int SWIG_SciDouble_FromVectorVec4i(void *pvApiCtx, SwigSciObject iVarOut, std::vector<Vec4i> *vectorVec4i, char *fname) {
+  int vecSize = (int) vectorVec4i->size();
+  double *pdValues = (double *) malloc(4 * vecSize * sizeof(double));
+  for (int i = 0; i < vecSize; i++) {
+    Vec4i vec = vectorVec4i->at(i);
+    pdValues[4*i] = vec[0];
+    pdValues[4*i+1] = vec[1];
+    pdValues[4*i+2] = vec[2];
+    pdValues[4*i+3] = vec[3];
+  }
+  if (SWIG_SciDouble_FromDoubleArrayAndSize(pvApiCtx, SWIG_Scilab_GetOutputPosition(), 4, vecSize, pdValues) != SWIG_OK) {
+    free(pdValues);
+    return SWIG_ERROR;
+  }
+  free(pdValues);
+  return SWIG_OK;
+
+}
 
 
 
@@ -42153,6 +42191,740 @@ int _wrap_CV_FOURCC(SWIG_GatewayParameters) {
 }
 
 
+int _wrap_HoughLines__SWIG_0(SWIG_GatewayParameters) {
+  cv::_InputArray *arg1 = 0 ;
+  cv::_OutputArray *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  int arg5 ;
+  double arg6 ;
+  double arg7 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  double val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  double val6 ;
+  int ecode6 = 0 ;
+  double val7 ;
+  int ecode7 = 0 ;
+  
+  std::vector<Vec2f> *pOutVector2 = new std::vector<Vec2f>();
+  arg2 = new cv::_OutputArray(*pOutVector2);
+  
+  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  cv::Mat *pMatimage = NULL;
+  int iNewMatimage = 0;
+  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg1 = new cv::_InputArray(*pMatimage);
+  }
+  else {
+    return SWIG_ERROR;
+  }
+  ecode3 = SWIG_AsVal_double(2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLines" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = (double)(val3);
+  ecode4 = SWIG_AsVal_double(3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLines" "', argument " "4"" of type '" "double""'");
+  } 
+  arg4 = (double)(val4);
+  ecode5 = SWIG_AsVal_int(4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLines" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = (int)(val5);
+  ecode6 = SWIG_AsVal_double(5, &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "HoughLines" "', argument " "6"" of type '" "double""'");
+  } 
+  arg6 = (double)(val6);
+  ecode7 = SWIG_AsVal_double(6, &val7);
+  if (!SWIG_IsOK(ecode7)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "HoughLines" "', argument " "7"" of type '" "double""'");
+  } 
+  arg7 = (double)(val7);
+  HoughLines((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5,arg6,arg7);
+  
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SWIG_SciDouble_FromVectorVec2f(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutVector2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  if (iNewMatimage) {
+    pMatimage->release();
+  }
+  delete arg1;
+  delete arg2;
+  delete pOutVector2;
+  return SWIG_OK;
+}
+
+
+int _wrap_HoughLines__SWIG_1(SWIG_GatewayParameters) {
+  cv::_InputArray *arg1 = 0 ;
+  cv::_OutputArray *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  int arg5 ;
+  double arg6 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  double val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  double val6 ;
+  int ecode6 = 0 ;
+  
+  std::vector<Vec2f> *pOutVector2 = new std::vector<Vec2f>();
+  arg2 = new cv::_OutputArray(*pOutVector2);
+  
+  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  cv::Mat *pMatimage = NULL;
+  int iNewMatimage = 0;
+  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg1 = new cv::_InputArray(*pMatimage);
+  }
+  else {
+    return SWIG_ERROR;
+  }
+  ecode3 = SWIG_AsVal_double(2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLines" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = (double)(val3);
+  ecode4 = SWIG_AsVal_double(3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLines" "', argument " "4"" of type '" "double""'");
+  } 
+  arg4 = (double)(val4);
+  ecode5 = SWIG_AsVal_int(4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLines" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = (int)(val5);
+  ecode6 = SWIG_AsVal_double(5, &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "HoughLines" "', argument " "6"" of type '" "double""'");
+  } 
+  arg6 = (double)(val6);
+  HoughLines((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5,arg6);
+  
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SWIG_SciDouble_FromVectorVec2f(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutVector2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  if (iNewMatimage) {
+    pMatimage->release();
+  }
+  delete arg1;
+  delete arg2;
+  delete pOutVector2;
+  return SWIG_OK;
+}
+
+
+int _wrap_HoughLines__SWIG_2(SWIG_GatewayParameters) {
+  cv::_InputArray *arg1 = 0 ;
+  cv::_OutputArray *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  int arg5 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  double val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  
+  std::vector<Vec2f> *pOutVector2 = new std::vector<Vec2f>();
+  arg2 = new cv::_OutputArray(*pOutVector2);
+  
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  cv::Mat *pMatimage = NULL;
+  int iNewMatimage = 0;
+  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg1 = new cv::_InputArray(*pMatimage);
+  }
+  else {
+    return SWIG_ERROR;
+  }
+  ecode3 = SWIG_AsVal_double(2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLines" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = (double)(val3);
+  ecode4 = SWIG_AsVal_double(3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLines" "', argument " "4"" of type '" "double""'");
+  } 
+  arg4 = (double)(val4);
+  ecode5 = SWIG_AsVal_int(4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLines" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = (int)(val5);
+  HoughLines((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5);
+  
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SWIG_SciDouble_FromVectorVec2f(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutVector2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  if (iNewMatimage) {
+    pMatimage->release();
+  }
+  delete arg1;
+  delete arg2;
+  delete pOutVector2;
+  return SWIG_OK;
+}
+
+
+int _wrap_HoughLines(SWIG_GatewayParameters) {
+  int argc = SWIG_NbInputArgument(pvApiCtx);
+  int argv[6] = {
+    1,2,3,4,5,6
+  };
+  
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (argc == 4) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
+      }
+    }
+    if (_v) {
+      {
+        int *piAddrVar = NULL;
+        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
+        if (sciErr.iErr) {
+          printError(&sciErr, 0);
+          return SWIG_ERROR;
+        }
+        _v = isDoubleType(pvApiCtx, piAddrVar);
+      }
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddrVar);
+        }
+        if (_v) {
+          {
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+          }
+          if (_v) {
+            return _wrap_HoughLines__SWIG_2(SWIG_GatewayArguments);
+          }
+        }
+      }
+    }
+  }
+  if (argc == 5) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
+      }
+    }
+    if (_v) {
+      {
+        int *piAddrVar = NULL;
+        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
+        if (sciErr.iErr) {
+          printError(&sciErr, 0);
+          return SWIG_ERROR;
+        }
+        _v = isDoubleType(pvApiCtx, piAddrVar);
+      }
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddrVar);
+        }
+        if (_v) {
+          {
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+          }
+          if (_v) {
+            {
+              int *piAddrVar = NULL;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
+              }
+              _v = isDoubleType(pvApiCtx, piAddrVar);
+            }
+            if (_v) {
+              return _wrap_HoughLines__SWIG_1(SWIG_GatewayArguments);
+            }
+          }
+        }
+      }
+    }
+  }
+  if (argc == 6) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
+      }
+    }
+    if (_v) {
+      {
+        int *piAddrVar = NULL;
+        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
+        if (sciErr.iErr) {
+          printError(&sciErr, 0);
+          return SWIG_ERROR;
+        }
+        _v = isDoubleType(pvApiCtx, piAddrVar);
+      }
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddrVar);
+        }
+        if (_v) {
+          {
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+          }
+          if (_v) {
+            {
+              int *piAddrVar = NULL;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
+              }
+              _v = isDoubleType(pvApiCtx, piAddrVar);
+            }
+            if (_v) {
+              {
+                int *piAddrVar = NULL;
+                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddrVar);
+                if (sciErr.iErr) {
+                  printError(&sciErr, 0);
+                  return SWIG_ERROR;
+                }
+                _v = isDoubleType(pvApiCtx, piAddrVar);
+              }
+              if (_v) {
+                return _wrap_HoughLines__SWIG_0(SWIG_GatewayArguments);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  Scierror(999, _("No matching function for overload"));
+  return SWIG_ERROR;
+}
+
+
+int _wrap_HoughLinesP__SWIG_0(SWIG_GatewayParameters) {
+  cv::_InputArray *arg1 = 0 ;
+  cv::_OutputArray *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  int arg5 ;
+  double arg6 ;
+  double arg7 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  double val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  double val6 ;
+  int ecode6 = 0 ;
+  double val7 ;
+  int ecode7 = 0 ;
+  
+  std::vector<Vec4i> *pOutVector2 = new std::vector<Vec4i>();
+  arg2 = new cv::_OutputArray(*pOutVector2);
+  
+  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  cv::Mat *pMatimage = NULL;
+  int iNewMatimage = 0;
+  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg1 = new cv::_InputArray(*pMatimage);
+  }
+  else {
+    return SWIG_ERROR;
+  }
+  ecode3 = SWIG_AsVal_double(2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLinesP" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = (double)(val3);
+  ecode4 = SWIG_AsVal_double(3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLinesP" "', argument " "4"" of type '" "double""'");
+  } 
+  arg4 = (double)(val4);
+  ecode5 = SWIG_AsVal_int(4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLinesP" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = (int)(val5);
+  ecode6 = SWIG_AsVal_double(5, &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "HoughLinesP" "', argument " "6"" of type '" "double""'");
+  } 
+  arg6 = (double)(val6);
+  ecode7 = SWIG_AsVal_double(6, &val7);
+  if (!SWIG_IsOK(ecode7)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "HoughLinesP" "', argument " "7"" of type '" "double""'");
+  } 
+  arg7 = (double)(val7);
+  HoughLinesP((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5,arg6,arg7);
+  
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SWIG_SciDouble_FromVectorVec4i(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutVector2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  if (iNewMatimage) {
+    pMatimage->release();
+  }
+  delete arg1;
+  delete arg2;
+  delete pOutVector2;
+  return SWIG_OK;
+}
+
+
+int _wrap_HoughLinesP__SWIG_1(SWIG_GatewayParameters) {
+  cv::_InputArray *arg1 = 0 ;
+  cv::_OutputArray *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  int arg5 ;
+  double arg6 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  double val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  double val6 ;
+  int ecode6 = 0 ;
+  
+  std::vector<Vec4i> *pOutVector2 = new std::vector<Vec4i>();
+  arg2 = new cv::_OutputArray(*pOutVector2);
+  
+  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  cv::Mat *pMatimage = NULL;
+  int iNewMatimage = 0;
+  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg1 = new cv::_InputArray(*pMatimage);
+  }
+  else {
+    return SWIG_ERROR;
+  }
+  ecode3 = SWIG_AsVal_double(2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLinesP" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = (double)(val3);
+  ecode4 = SWIG_AsVal_double(3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLinesP" "', argument " "4"" of type '" "double""'");
+  } 
+  arg4 = (double)(val4);
+  ecode5 = SWIG_AsVal_int(4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLinesP" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = (int)(val5);
+  ecode6 = SWIG_AsVal_double(5, &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "HoughLinesP" "', argument " "6"" of type '" "double""'");
+  } 
+  arg6 = (double)(val6);
+  HoughLinesP((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5,arg6);
+  
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SWIG_SciDouble_FromVectorVec4i(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutVector2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  if (iNewMatimage) {
+    pMatimage->release();
+  }
+  delete arg1;
+  delete arg2;
+  delete pOutVector2;
+  return SWIG_OK;
+}
+
+
+int _wrap_HoughLinesP__SWIG_2(SWIG_GatewayParameters) {
+  cv::_InputArray *arg1 = 0 ;
+  cv::_OutputArray *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  int arg5 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  double val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  
+  std::vector<Vec4i> *pOutVector2 = new std::vector<Vec4i>();
+  arg2 = new cv::_OutputArray(*pOutVector2);
+  
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  cv::Mat *pMatimage = NULL;
+  int iNewMatimage = 0;
+  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    arg1 = new cv::_InputArray(*pMatimage);
+  }
+  else {
+    return SWIG_ERROR;
+  }
+  ecode3 = SWIG_AsVal_double(2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLinesP" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = (double)(val3);
+  ecode4 = SWIG_AsVal_double(3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLinesP" "', argument " "4"" of type '" "double""'");
+  } 
+  arg4 = (double)(val4);
+  ecode5 = SWIG_AsVal_int(4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLinesP" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = (int)(val5);
+  HoughLinesP((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5);
+  
+  SWIG_Scilab_SetOutputPosition(1);
+  if (SWIG_SciDouble_FromVectorVec4i(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutVector2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
+  if (iNewMatimage) {
+    pMatimage->release();
+  }
+  delete arg1;
+  delete arg2;
+  delete pOutVector2;
+  return SWIG_OK;
+}
+
+
+int _wrap_HoughLinesP(SWIG_GatewayParameters) {
+  int argc = SWIG_NbInputArgument(pvApiCtx);
+  int argv[6] = {
+    1,2,3,4,5,6
+  };
+  
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (argc == 4) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
+      }
+    }
+    if (_v) {
+      {
+        int *piAddrVar = NULL;
+        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
+        if (sciErr.iErr) {
+          printError(&sciErr, 0);
+          return SWIG_ERROR;
+        }
+        _v = isDoubleType(pvApiCtx, piAddrVar);
+      }
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddrVar);
+        }
+        if (_v) {
+          {
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+          }
+          if (_v) {
+            return _wrap_HoughLinesP__SWIG_2(SWIG_GatewayArguments);
+          }
+        }
+      }
+    }
+  }
+  if (argc == 5) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
+      }
+    }
+    if (_v) {
+      {
+        int *piAddrVar = NULL;
+        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
+        if (sciErr.iErr) {
+          printError(&sciErr, 0);
+          return SWIG_ERROR;
+        }
+        _v = isDoubleType(pvApiCtx, piAddrVar);
+      }
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddrVar);
+        }
+        if (_v) {
+          {
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+          }
+          if (_v) {
+            {
+              int *piAddrVar = NULL;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
+              }
+              _v = isDoubleType(pvApiCtx, piAddrVar);
+            }
+            if (_v) {
+              return _wrap_HoughLinesP__SWIG_1(SWIG_GatewayArguments);
+            }
+          }
+        }
+      }
+    }
+  }
+  if (argc == 6) {
+    int _v;
+    {
+      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
+        cv::Mat *pMat = NULL;
+        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
+      }
+    }
+    if (_v) {
+      {
+        int *piAddrVar = NULL;
+        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
+        if (sciErr.iErr) {
+          printError(&sciErr, 0);
+          return SWIG_ERROR;
+        }
+        _v = isDoubleType(pvApiCtx, piAddrVar);
+      }
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isDoubleType(pvApiCtx, piAddrVar);
+        }
+        if (_v) {
+          {
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+          }
+          if (_v) {
+            {
+              int *piAddrVar = NULL;
+              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
+              if (sciErr.iErr) {
+                printError(&sciErr, 0);
+                return SWIG_ERROR;
+              }
+              _v = isDoubleType(pvApiCtx, piAddrVar);
+            }
+            if (_v) {
+              {
+                int *piAddrVar = NULL;
+                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddrVar);
+                if (sciErr.iErr) {
+                  printError(&sciErr, 0);
+                  return SWIG_ERROR;
+                }
+                _v = isDoubleType(pvApiCtx, piAddrVar);
+              }
+              if (_v) {
+                return _wrap_HoughLinesP__SWIG_0(SWIG_GatewayArguments);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  Scierror(999, _("No matching function for overload"));
+  return SWIG_ERROR;
+}
+
+
 int _wrap_borderInterpolate(SWIG_GatewayParameters) {
   int arg1 ;
   int arg2 ;
@@ -53902,734 +54674,6 @@ int _wrap_goodFeaturesToTrack(SWIG_GatewayParameters) {
                     return _wrap_goodFeaturesToTrack__SWIG_0(SWIG_GatewayArguments);
                   }
                 }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
-}
-
-
-int _wrap_HoughLines__SWIG_0(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  double arg3 ;
-  double arg4 ;
-  int arg5 ;
-  double arg6 ;
-  double arg7 ;
-  double val3 ;
-  int ecode3 = 0 ;
-  double val4 ;
-  int ecode4 = 0 ;
-  int val5 ;
-  int ecode5 = 0 ;
-  double val6 ;
-  int ecode6 = 0 ;
-  double val7 ;
-  int ecode7 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatimage = NULL;
-  int iNewMatimage = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatimage);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_double(2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLines" "', argument " "3"" of type '" "double""'");
-  } 
-  arg3 = (double)(val3);
-  ecode4 = SWIG_AsVal_double(3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLines" "', argument " "4"" of type '" "double""'");
-  } 
-  arg4 = (double)(val4);
-  ecode5 = SWIG_AsVal_int(4, &val5);
-  if (!SWIG_IsOK(ecode5)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLines" "', argument " "5"" of type '" "int""'");
-  } 
-  arg5 = (int)(val5);
-  ecode6 = SWIG_AsVal_double(5, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "HoughLines" "', argument " "6"" of type '" "double""'");
-  } 
-  arg6 = (double)(val6);
-  ecode7 = SWIG_AsVal_double(6, &val7);
-  if (!SWIG_IsOK(ecode7)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "HoughLines" "', argument " "7"" of type '" "double""'");
-  } 
-  arg7 = (double)(val7);
-  cv::HoughLines((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5,arg6,arg7);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatimage) {
-    pMatimage->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_HoughLines__SWIG_1(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  double arg3 ;
-  double arg4 ;
-  int arg5 ;
-  double arg6 ;
-  double val3 ;
-  int ecode3 = 0 ;
-  double val4 ;
-  int ecode4 = 0 ;
-  int val5 ;
-  int ecode5 = 0 ;
-  double val6 ;
-  int ecode6 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatimage = NULL;
-  int iNewMatimage = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatimage);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_double(2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLines" "', argument " "3"" of type '" "double""'");
-  } 
-  arg3 = (double)(val3);
-  ecode4 = SWIG_AsVal_double(3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLines" "', argument " "4"" of type '" "double""'");
-  } 
-  arg4 = (double)(val4);
-  ecode5 = SWIG_AsVal_int(4, &val5);
-  if (!SWIG_IsOK(ecode5)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLines" "', argument " "5"" of type '" "int""'");
-  } 
-  arg5 = (int)(val5);
-  ecode6 = SWIG_AsVal_double(5, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "HoughLines" "', argument " "6"" of type '" "double""'");
-  } 
-  arg6 = (double)(val6);
-  cv::HoughLines((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5,arg6);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatimage) {
-    pMatimage->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_HoughLines__SWIG_2(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  double arg3 ;
-  double arg4 ;
-  int arg5 ;
-  double val3 ;
-  int ecode3 = 0 ;
-  double val4 ;
-  int ecode4 = 0 ;
-  int val5 ;
-  int ecode5 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatimage = NULL;
-  int iNewMatimage = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatimage);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_double(2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLines" "', argument " "3"" of type '" "double""'");
-  } 
-  arg3 = (double)(val3);
-  ecode4 = SWIG_AsVal_double(3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLines" "', argument " "4"" of type '" "double""'");
-  } 
-  arg4 = (double)(val4);
-  ecode5 = SWIG_AsVal_int(4, &val5);
-  if (!SWIG_IsOK(ecode5)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLines" "', argument " "5"" of type '" "int""'");
-  } 
-  arg5 = (int)(val5);
-  cv::HoughLines((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatimage) {
-    pMatimage->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_HoughLines(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[6] = {
-    1,2,3,4,5,6
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 4) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        int *piAddrVar = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddrVar);
-      }
-      if (_v) {
-        {
-          int *piAddrVar = NULL;
-          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
-          if (sciErr.iErr) {
-            printError(&sciErr, 0);
-            return SWIG_ERROR;
-          }
-          _v = isDoubleType(pvApiCtx, piAddrVar);
-        }
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            return _wrap_HoughLines__SWIG_2(SWIG_GatewayArguments);
-          }
-        }
-      }
-    }
-  }
-  if (argc == 5) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        int *piAddrVar = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddrVar);
-      }
-      if (_v) {
-        {
-          int *piAddrVar = NULL;
-          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
-          if (sciErr.iErr) {
-            printError(&sciErr, 0);
-            return SWIG_ERROR;
-          }
-          _v = isDoubleType(pvApiCtx, piAddrVar);
-        }
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isDoubleType(pvApiCtx, piAddrVar);
-            }
-            if (_v) {
-              return _wrap_HoughLines__SWIG_1(SWIG_GatewayArguments);
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 6) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        int *piAddrVar = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddrVar);
-      }
-      if (_v) {
-        {
-          int *piAddrVar = NULL;
-          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
-          if (sciErr.iErr) {
-            printError(&sciErr, 0);
-            return SWIG_ERROR;
-          }
-          _v = isDoubleType(pvApiCtx, piAddrVar);
-        }
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isDoubleType(pvApiCtx, piAddrVar);
-            }
-            if (_v) {
-              {
-                int *piAddrVar = NULL;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddrVar);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isDoubleType(pvApiCtx, piAddrVar);
-              }
-              if (_v) {
-                return _wrap_HoughLines__SWIG_0(SWIG_GatewayArguments);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  
-  Scierror(999, _("No matching function for overload"));
-  return SWIG_ERROR;
-}
-
-
-int _wrap_HoughLinesP__SWIG_0(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  double arg3 ;
-  double arg4 ;
-  int arg5 ;
-  double arg6 ;
-  double arg7 ;
-  double val3 ;
-  int ecode3 = 0 ;
-  double val4 ;
-  int ecode4 = 0 ;
-  int val5 ;
-  int ecode5 = 0 ;
-  double val6 ;
-  int ecode6 = 0 ;
-  double val7 ;
-  int ecode7 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatimage = NULL;
-  int iNewMatimage = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatimage);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_double(2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLinesP" "', argument " "3"" of type '" "double""'");
-  } 
-  arg3 = (double)(val3);
-  ecode4 = SWIG_AsVal_double(3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLinesP" "', argument " "4"" of type '" "double""'");
-  } 
-  arg4 = (double)(val4);
-  ecode5 = SWIG_AsVal_int(4, &val5);
-  if (!SWIG_IsOK(ecode5)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLinesP" "', argument " "5"" of type '" "int""'");
-  } 
-  arg5 = (int)(val5);
-  ecode6 = SWIG_AsVal_double(5, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "HoughLinesP" "', argument " "6"" of type '" "double""'");
-  } 
-  arg6 = (double)(val6);
-  ecode7 = SWIG_AsVal_double(6, &val7);
-  if (!SWIG_IsOK(ecode7)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "HoughLinesP" "', argument " "7"" of type '" "double""'");
-  } 
-  arg7 = (double)(val7);
-  cv::HoughLinesP((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5,arg6,arg7);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatimage) {
-    pMatimage->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_HoughLinesP__SWIG_1(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  double arg3 ;
-  double arg4 ;
-  int arg5 ;
-  double arg6 ;
-  double val3 ;
-  int ecode3 = 0 ;
-  double val4 ;
-  int ecode4 = 0 ;
-  int val5 ;
-  int ecode5 = 0 ;
-  double val6 ;
-  int ecode6 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatimage = NULL;
-  int iNewMatimage = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatimage);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_double(2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLinesP" "', argument " "3"" of type '" "double""'");
-  } 
-  arg3 = (double)(val3);
-  ecode4 = SWIG_AsVal_double(3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLinesP" "', argument " "4"" of type '" "double""'");
-  } 
-  arg4 = (double)(val4);
-  ecode5 = SWIG_AsVal_int(4, &val5);
-  if (!SWIG_IsOK(ecode5)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLinesP" "', argument " "5"" of type '" "int""'");
-  } 
-  arg5 = (int)(val5);
-  ecode6 = SWIG_AsVal_double(5, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "HoughLinesP" "', argument " "6"" of type '" "double""'");
-  } 
-  arg6 = (double)(val6);
-  cv::HoughLinesP((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5,arg6);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatimage) {
-    pMatimage->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_HoughLinesP__SWIG_2(SWIG_GatewayParameters) {
-  cv::_InputArray *arg1 = 0 ;
-  cv::_OutputArray *arg2 = 0 ;
-  double arg3 ;
-  double arg4 ;
-  int arg5 ;
-  double val3 ;
-  int ecode3 = 0 ;
-  double val4 ;
-  int ecode4 = 0 ;
-  int val5 ;
-  int ecode5 = 0 ;
-  
-  cv::Mat *pOutMat2 = new Mat();
-  arg2 = new cv::_OutputArray(*pOutMat2);
-  
-  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 1, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  cv::Mat *pMatimage = NULL;
-  int iNewMatimage = 0;
-  if (SWIG_SciMListMatOrHypermat_AsMat(pvApiCtx, 1, &pMatimage, &iNewMatimage, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
-    arg1 = new cv::_InputArray(*pMatimage);
-  }
-  else {
-    return SWIG_ERROR;
-  }
-  ecode3 = SWIG_AsVal_double(2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HoughLinesP" "', argument " "3"" of type '" "double""'");
-  } 
-  arg3 = (double)(val3);
-  ecode4 = SWIG_AsVal_double(3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HoughLinesP" "', argument " "4"" of type '" "double""'");
-  } 
-  arg4 = (double)(val4);
-  ecode5 = SWIG_AsVal_int(4, &val5);
-  if (!SWIG_IsOK(ecode5)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HoughLinesP" "', argument " "5"" of type '" "int""'");
-  } 
-  arg5 = (int)(val5);
-  cv::HoughLinesP((cv::_InputArray const &)*arg1,(cv::_OutputArray const &)*arg2,arg3,arg4,arg5);
-  
-  SWIG_Scilab_SetOutputPosition(1);
-  if (SwigScilabPtrFromObject(pvApiCtx, SWIG_Scilab_GetOutputPosition(), pOutMat2, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, "Mat") != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  SWIG_Scilab_SetOutput(pvApiCtx, SWIG_NbInputArgument(pvApiCtx) + SWIG_Scilab_GetOutputPosition());
-  if (iNewMatimage) {
-    pMatimage->release();
-  }
-  delete arg1;
-  delete arg2;
-  return SWIG_OK;
-}
-
-
-int _wrap_HoughLinesP(SWIG_GatewayParameters) {
-  int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[6] = {
-    1,2,3,4,5,6
-  };
-  
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  if (argc == 4) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        int *piAddrVar = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddrVar);
-      }
-      if (_v) {
-        {
-          int *piAddrVar = NULL;
-          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
-          if (sciErr.iErr) {
-            printError(&sciErr, 0);
-            return SWIG_ERROR;
-          }
-          _v = isDoubleType(pvApiCtx, piAddrVar);
-        }
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            return _wrap_HoughLinesP__SWIG_2(SWIG_GatewayArguments);
-          }
-        }
-      }
-    }
-  }
-  if (argc == 5) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        int *piAddrVar = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddrVar);
-      }
-      if (_v) {
-        {
-          int *piAddrVar = NULL;
-          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
-          if (sciErr.iErr) {
-            printError(&sciErr, 0);
-            return SWIG_ERROR;
-          }
-          _v = isDoubleType(pvApiCtx, piAddrVar);
-        }
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isDoubleType(pvApiCtx, piAddrVar);
-            }
-            if (_v) {
-              return _wrap_HoughLinesP__SWIG_1(SWIG_GatewayArguments);
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 6) {
-    int _v;
-    {
-      if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[0], SWIG_Scilab_TypeQuery("cv::Mat *"), SWIG_Scilab_GetFuncName()))) {
-        cv::Mat *pMat = NULL;
-        _v = SWIG_Check_SciHypermat(pvApiCtx, argv[0], SWIG_Scilab_GetFuncName());
-      }
-    }
-    if (_v) {
-      {
-        int *piAddrVar = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[1], &piAddrVar);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddrVar);
-      }
-      if (_v) {
-        {
-          int *piAddrVar = NULL;
-          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
-          if (sciErr.iErr) {
-            printError(&sciErr, 0);
-            return SWIG_ERROR;
-          }
-          _v = isDoubleType(pvApiCtx, piAddrVar);
-        }
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isDoubleType(pvApiCtx, piAddrVar);
-            }
-            if (_v) {
-              {
-                int *piAddrVar = NULL;
-                SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[5], &piAddrVar);
-                if (sciErr.iErr) {
-                  printError(&sciErr, 0);
-                  return SWIG_ERROR;
-                }
-                _v = isDoubleType(pvApiCtx, piAddrVar);
-              }
-              if (_v) {
-                return _wrap_HoughLinesP__SWIG_0(SWIG_GatewayArguments);
               }
             }
           }

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab Computer Vision Module
+ * Copyright (C) 2017 - Scilab Enterprises
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="HoughLinesP">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>HoughLinesP</refname>
+    <refpurpose>Finds lines in a binary image using the probabilistic Hough transform</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>lines = HoughLinesP(img, distance_res, angle_res, threshold[, minLineLength[, maxLineGap]])</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>img</term>
+        <listitem>
+          <para>Image (<link linkend="Mat">Mat</link>, 8-bit single channel).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>distance_res</term>
+        <listitem>
+          <para>Distance resolution, in pixels (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>angle_res</term>
+        <listitem>
+          <para>Angle resolution, in radians (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>threshold</term>
+        <listitem>
+          <para>Threshold parameter (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>minLineLength</term>
+        <listitem>
+          <para>Minimum line length, shorter lines are rejected (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>maxLineGap</term>
+        <listitem>
+          <para>Maximum allowed gap between points on the same line to link them (double).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>lines</term>
+        <listitem>
+          <para>Output matrix of lines. Each column represents a line, coded in cartesian coordinates system (<literal>(x1, y1), (x2, y2)</literal>). (double 4xn).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>HoughLinesP</function> find the line segments in an image using the probabilistic Hough transform. To apply, first an edge detection pre-processing is necessary.
+    It keeps track of the intersection between curves of every point in the image. If the number of intersections is above the value of <term>threshold</term>, then the line is output in cartesian coordinates (<literal>(x1, y1), (x2, y2)</literal>).</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img = new_Mat(200, 200, CV_8UC1, 0);
+    rectangle(img, [50,50], [100,100], 255 , -1);
+
+    scf();
+    matplot(img);
+
+    img_canny = Canny(img, 50, 150);
+
+    lines = HoughLinesP(img_canny, 1, %pi/180, 30, 10);
+
+    img_lines = new_Mat(200, 200, CV_8UC3, 0);
+    nb_lines = size(lines, 'c');
+    for i=1:nb_lines
+        line(img_lines, lines(1:2,i), lines(3:4,i), [0,0,255]);
+    end
+
+    scf();
+    matplot(img_lines);
+
+    delete_Mat(img);
+    delete_Mat(img_canny);
+    delete_Mat(img_lines);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member><link linkend="HoughLines">HoughLines</link></member>
+    </simplelist>
+  </refsection>
+</refentry>
