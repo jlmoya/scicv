@@ -2111,7 +2111,7 @@ namespace swig {
   template <class Type>
   struct traits_asptr {
     static int asptr(const SwigSciObject& obj, Type **val) {
-      Type *p;
+      Type *p = 0;
       swig_type_info *descriptor = type_info<Type>();
       int res = descriptor ? SwigScilabPtrToObject(pvApiCtx, obj, (void **)&p, descriptor, 0, SWIG_Scilab_GetFuncName()) : SWIG_ERROR;
       if (SWIG_IsOK(res)) {
@@ -3281,7 +3281,6 @@ using namespace cv::gpu;
 using namespace cv::ogl;
 
 
-
 SWIGINTERN int
 SWIG_AsVal_bool (SwigSciObject iVar, bool *pbValue) {
   SciErr sciErr;
@@ -4447,9 +4446,11 @@ using namespace cv;
 using namespace cv;
 
 
+
 void cvGetKeyPoints(KeyPoints& keyPointsIn, KeyPoints* keyPointsMatrixOut) {
     *keyPointsMatrixOut = keyPointsIn;
 }
+
 
 
 
