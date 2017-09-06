@@ -7,6 +7,7 @@
 %include InputArray_typemaps.i
 %include OutputArray_typemaps.i
 
+%include PointPtr_typemaps.i
 %include Point_typemaps.i
 %include Point2f_typemaps.i
 %include Rect_typemaps.i

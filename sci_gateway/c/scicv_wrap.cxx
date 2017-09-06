@@ -1494,51 +1494,50 @@ int SWIG_ptr(SWIG_GatewayParameters) {
 #define SWIGTYPE_p_p_CvKalman swig_types[245]
 #define SWIGTYPE_p_p_CvLSVMFilterObject swig_types[246]
 #define SWIGTYPE_p_p_CvLatentSvmDetector swig_types[247]
-#define SWIGTYPE_p_p_cv__Point_T_int_t swig_types[248]
-#define SWIGTYPE_p_p_cv___InputArray swig_types[249]
-#define SWIGTYPE_p_p_cv___OutputArray swig_types[250]
-#define SWIGTYPE_p_p_int swig_types[251]
-#define SWIGTYPE_p_p_unsigned_char swig_types[252]
-#define SWIGTYPE_p_signed_char swig_types[253]
-#define SWIGTYPE_p_size_t swig_types[254]
-#define SWIGTYPE_p_std__basic_stringT_wchar_t_t swig_types[255]
-#define SWIGTYPE_p_std__dequeT_CvDataMatrixCode_t swig_types[256]
-#define SWIGTYPE_p_std__exception swig_types[257]
-#define SWIGTYPE_p_std__ostream swig_types[258]
-#define SWIGTYPE_p_std__string swig_types[259]
-#define SWIGTYPE_p_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[260]
-#define SWIGTYPE_p_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[261]
-#define SWIGTYPE_p_std__vectorT_cv__linemod__Feature_std__allocatorT_cv__linemod__Feature_t_t swig_types[262]
-#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[263]
-#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[264]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[265]
-#define SWIGTYPE_p_std__vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t swig_types[266]
-#define SWIGTYPE_p_swig__SciSwigIterator swig_types[267]
-#define SWIGTYPE_p_uint64_t swig_types[268]
-#define SWIGTYPE_p_unsigned_char swig_types[269]
-#define SWIGTYPE_p_unsigned_short swig_types[270]
-#define SWIGTYPE_p_value_type swig_types[271]
-#define SWIGTYPE_p_vectorT_char_std__allocatorT_char_t_t swig_types[272]
-#define SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t swig_types[273]
-#define SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[274]
-#define SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t swig_types[275]
-#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t swig_types[276]
-#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[277]
-#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t swig_types[278]
-#define SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t swig_types[279]
-#define SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t swig_types[280]
-#define SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t swig_types[281]
-#define SWIGTYPE_p_vectorT_std__string_std__allocatorT_std__string_t_t swig_types[282]
-#define SWIGTYPE_p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t swig_types[283]
-#define SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t swig_types[284]
-#define SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t swig_types[285]
-#define SWIGTYPE_p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t swig_types[286]
-#define SWIGTYPE_p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t swig_types[287]
-#define SWIGTYPE_p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t swig_types[288]
-#define SWIGTYPE_p_void swig_types[289]
-#define SWIGTYPE_std__invalid_argument swig_types[290]
-static swig_type_info *swig_types[292];
-static swig_module_info swig_module = {swig_types, 291, 0, 0, 0, 0};
+#define SWIGTYPE_p_p_cv___InputArray swig_types[248]
+#define SWIGTYPE_p_p_cv___OutputArray swig_types[249]
+#define SWIGTYPE_p_p_int swig_types[250]
+#define SWIGTYPE_p_p_unsigned_char swig_types[251]
+#define SWIGTYPE_p_signed_char swig_types[252]
+#define SWIGTYPE_p_size_t swig_types[253]
+#define SWIGTYPE_p_std__basic_stringT_wchar_t_t swig_types[254]
+#define SWIGTYPE_p_std__dequeT_CvDataMatrixCode_t swig_types[255]
+#define SWIGTYPE_p_std__exception swig_types[256]
+#define SWIGTYPE_p_std__ostream swig_types[257]
+#define SWIGTYPE_p_std__string swig_types[258]
+#define SWIGTYPE_p_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[259]
+#define SWIGTYPE_p_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[260]
+#define SWIGTYPE_p_std__vectorT_cv__linemod__Feature_std__allocatorT_cv__linemod__Feature_t_t swig_types[261]
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[262]
+#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[263]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[264]
+#define SWIGTYPE_p_std__vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t swig_types[265]
+#define SWIGTYPE_p_swig__SciSwigIterator swig_types[266]
+#define SWIGTYPE_p_uint64_t swig_types[267]
+#define SWIGTYPE_p_unsigned_char swig_types[268]
+#define SWIGTYPE_p_unsigned_short swig_types[269]
+#define SWIGTYPE_p_value_type swig_types[270]
+#define SWIGTYPE_p_vectorT_char_std__allocatorT_char_t_t swig_types[271]
+#define SWIGTYPE_p_vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t swig_types[272]
+#define SWIGTYPE_p_vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t swig_types[273]
+#define SWIGTYPE_p_vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t swig_types[274]
+#define SWIGTYPE_p_vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t swig_types[275]
+#define SWIGTYPE_p_vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t swig_types[276]
+#define SWIGTYPE_p_vectorT_cv__Rect_T_int_t_std__allocatorT_cv__Rect_T_int_t_t_t swig_types[277]
+#define SWIGTYPE_p_vectorT_double_std__allocatorT_double_t_t swig_types[278]
+#define SWIGTYPE_p_vectorT_float_std__allocatorT_float_t_t swig_types[279]
+#define SWIGTYPE_p_vectorT_int_std__allocatorT_int_t_t swig_types[280]
+#define SWIGTYPE_p_vectorT_std__string_std__allocatorT_std__string_t_t swig_types[281]
+#define SWIGTYPE_p_vectorT_std__vectorT_char_std__allocatorT_char_t_t_std__allocatorT_std__vectorT_char_std__allocatorT_char_t_t_t_t swig_types[282]
+#define SWIGTYPE_p_vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t swig_types[283]
+#define SWIGTYPE_p_vectorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_std__allocatorT_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t_t_t swig_types[284]
+#define SWIGTYPE_p_vectorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_std__allocatorT_std__vectorT_cv__Point_T_int_t_std__allocatorT_cv__Point_T_int_t_t_t_t_t swig_types[285]
+#define SWIGTYPE_p_vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t swig_types[286]
+#define SWIGTYPE_p_vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t swig_types[287]
+#define SWIGTYPE_p_void swig_types[288]
+#define SWIGTYPE_std__invalid_argument swig_types[289]
+static swig_type_info *swig_types[291];
+static swig_module_info swig_module = {swig_types, 290, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -4020,6 +4019,157 @@ int SWIG_SciMListMatOrHypermat_AsOutputArray(void *pvApiCtx, SwigSciObject iVar,
 }
 
 
+
+int SWIG_SciDoubleOrListOfDouble_AsPointPtr(void *pvApiCtx, SwigSciObject iVar, cv::Point ***pPoints, int **piPointCount, int *piContourCount, char *fname) {
+  SciErr sciErr;
+  int iType = 0;
+  int *piAddrVar = NULL;
+
+  sciErr = getVarAddressFromPosition(pvApiCtx, iVar, &piAddrVar);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+
+  sciErr = getVarType(pvApiCtx, piAddrVar, &iType);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return SWIG_ERROR;
+  }
+
+  if (iType == sci_matrix) {
+    int *piValues = NULL;
+    int iRows = 0;
+    int iCols = 0;
+    if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, iVar, &iRows, &iCols, &piValues, fname) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
+
+    if (iRows != 2 ) {
+      Scierror(999, _("%s: Wrong size for argument #%d: A matrix of 2xn double is expected.\n"), fname, iVar);
+      return SWIG_ERROR;
+    }
+
+    *piContourCount = 1;
+    *piPointCount = (int*) malloc(sizeof(int));
+    *pPoints = (cv::Point**) malloc(sizeof(cv::Point*));
+
+    (*piPointCount)[0] = iCols;
+    (*pPoints)[0] = (cv::Point*) malloc(iCols * sizeof(cv::Point));
+    for (int j=0; j<iCols; j++) {
+      (*pPoints)[0][j] = cv::Point(piValues[2*j], piValues[2*j+1]);
+    }
+  }
+  else if ((iType == sci_list) || (iType == sci_mlist) || (iType == sci_tlist)) {
+    sciErr = getListItemNumber(pvApiCtx, piAddrVar, piContourCount);
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+
+    *piPointCount = (int*) malloc(*piContourCount * sizeof(int));
+    *pPoints = (cv::Point**) malloc(*piContourCount * sizeof(cv::Point*));
+
+    for (int i=0; i<*piContourCount; i++) {
+      int *piAddrItem = NULL;
+      int iItemType;
+      int iCols;
+      int iRows;
+      double *pdValues;
+
+      sciErr = getListItemAddress(pvApiCtx, piAddrVar, i+1, &piAddrItem);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
+      }
+
+      sciErr = getVarType(pvApiCtx, piAddrItem, &iItemType);
+      if (sciErr.iErr) {
+        printError(&sciErr, 0);
+        return SWIG_ERROR;
+      }
+
+      if (iItemType == sci_matrix) {
+        sciErr = getMatrixOfDoubleInList(pvApiCtx, piAddrVar, i+1, &iRows, &iCols, &pdValues);
+        if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+        }
+
+        if (iRows != 2 ) {
+          Scierror(999, _("%s: Wrong size for item #%d: A matrix of 2xn double is expected.\n"), fname, i+1);
+          return SWIG_ERROR;
+        }
+
+        (*piPointCount)[i] = iCols;
+        (*pPoints)[i] = (cv::Point*) malloc((*piPointCount)[i] * sizeof(cv::Point));
+        for (int j=0; j<(*piPointCount)[i]; j++) {
+          (*pPoints)[i][j] = cv::Point((int)pdValues[2*j], (int)pdValues[2*j+1]);
+        }
+      }
+      else {
+        Scierror(999, _("%s: Wrong type for item #%d: A matrix of 2xn double is expected.\n"), fname, i+1);
+        return SWIG_ERROR;
+      }
+    }
+  }
+  else {
+    Scierror(999, _("%s: Wrong size for argument #%d: A matrix of 2xn double or a list of matrixes of double 2xn is expected.\n"), fname, iVar);
+    return SWIG_ERROR;
+  }
+
+  return SWIG_OK;
+}
+
+
+
+
+int SWIG_PtLists_AsPointPtr(void *pvApiCtx, SwigSciObject iVar, cv::Point ***pPoints, int **piPointCount, int *piContourCount, char *fname) {
+  std::vector<std::vector<cv::Point> > *pPtLists = NULL;
+  if (SwigScilabPtrToObject(pvApiCtx, iVar, (void**)&pPtLists, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) == SWIG_OK) {
+    *piContourCount = pPtLists->size();
+    *piPointCount = (int*) malloc(pPtLists->size() * sizeof(int));
+    *pPoints = (cv::Point**) malloc(pPtLists->size() * sizeof(cv::Point*));
+    for (int i=0; i<pPtLists->size(); i++) {
+      std::vector<cv::Point> pPtList = pPtLists->at(i);
+      (*piPointCount)[i] = pPtList.size();
+      (*pPoints)[i] = (cv::Point*) malloc(pPtList.size() * sizeof(cv::Point));
+      for (int j=0; j<pPtList.size(); j++) {
+        (*pPoints)[i][j] = pPtList[j];
+      }
+    }
+    return SWIG_OK;
+  }
+  else {
+    return SWIG_ERROR;
+  }
+}
+
+
+
+
+int SWIG_Check_SciDoubleOrListOfDouble(void *pvApiCtx, SwigSciObject iVar, char *fname) {
+  SciErr sciErr;
+  int iType;
+  int *piAddrVar = NULL;
+
+  sciErr = getVarAddressFromPosition(pvApiCtx, iVar, &piAddrVar);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return 0;
+  }
+
+  sciErr = getVarType(pvApiCtx, piAddrVar, &iType);
+  if (sciErr.iErr) {
+    printError(&sciErr, 0);
+    return 0;
+  }
+
+  return (iType == sci_matrix) || ((iType == sci_list) || (iType == sci_mlist) || (iType == sci_tlist));
+}
+
+
+
   static double *new_double_array(size_t nelements) { 
     return (new double[nelements]());
   }
@@ -4314,8 +4464,8 @@ int SWIG_SciDouble_FromVectorVec4i(void *pvApiCtx, SwigSciObject iVarOut, std::v
     Vec4i vec = vectorVec4i->at(i);
     pdValues[4*i] = vec[0];
     pdValues[4*i+1] = vec[1];
-    pdValues[4*i+2] = vec[2];
-    pdValues[4*i+3] = vec[3];
+    pdValues[4*i+2] = vec[0];
+    pdValues[4*i+3] = vec[1];
   }
   if (SWIG_SciDouble_FromDoubleArrayAndSize(pvApiCtx, SWIG_Scilab_GetOutputPosition(), 4, vecSize, pdValues) != SWIG_OK) {
     free(pdValues);
@@ -34341,19 +34491,13 @@ int _wrap_fillPoly__SWIG_0(SWIG_GatewayParameters) {
   cv::Point arg8 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  int val4 ;
-  int ecode4 = 0 ;
   cv::Scalar tmpScalar5 ;
   int val6 ;
   int ecode6 = 0 ;
   int val7 ;
   int ecode7 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 8, 8);
+  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
   SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
@@ -34365,38 +34509,31 @@ int _wrap_fillPoly__SWIG_0(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
   }
   arg1 = (cv::Mat *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_p_cv__Point_T_int_t, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "fillPoly" "', argument " "2"" of type '" "cv::Point const **""'"); 
+  if (SWIG_PtLists_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    if (SWIG_SciDoubleOrListOfDouble_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
   }
-  arg2 = (cv::Point **)(argp2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode4 = SWIG_AsVal_int(4, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "fillPoly" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = (int)(val4);
   arg5 = &tmpScalar5;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 5, arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 3, arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode6 = SWIG_AsVal_int(6, &val6);
+  ecode6 = SWIG_AsVal_int(4, &val6);
   if (!SWIG_IsOK(ecode6)) {
     SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "fillPoly" "', argument " "6"" of type '" "int""'");
   } 
   arg6 = (int)(val6);
-  ecode7 = SWIG_AsVal_int(7, &val7);
+  ecode7 = SWIG_AsVal_int(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "fillPoly" "', argument " "7"" of type '" "int""'");
   } 
   arg7 = (int)(val7);
-  if (SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, 8, &arg8, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, 6, &arg8, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   cv::fillPoly(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,(cv::Scalar_< double > const &)*arg5,arg6,arg7,arg8);
   
+  delete arg2;
   return SWIG_OK;
 }
 
@@ -34411,137 +34548,11 @@ int _wrap_fillPoly__SWIG_1(SWIG_GatewayParameters) {
   int arg7 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  int val4 ;
-  int ecode4 = 0 ;
   cv::Scalar tmpScalar5 ;
   int val6 ;
   int ecode6 = 0 ;
   int val7 ;
   int ecode7 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
-  }
-  arg1 = (cv::Mat *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_p_cv__Point_T_int_t, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "fillPoly" "', argument " "2"" of type '" "cv::Point const **""'"); 
-  }
-  arg2 = (cv::Point **)(argp2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode4 = SWIG_AsVal_int(4, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "fillPoly" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = (int)(val4);
-  arg5 = &tmpScalar5;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 5, arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode6 = SWIG_AsVal_int(6, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "fillPoly" "', argument " "6"" of type '" "int""'");
-  } 
-  arg6 = (int)(val6);
-  ecode7 = SWIG_AsVal_int(7, &val7);
-  if (!SWIG_IsOK(ecode7)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "fillPoly" "', argument " "7"" of type '" "int""'");
-  } 
-  arg7 = (int)(val7);
-  cv::fillPoly(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,(cv::Scalar_< double > const &)*arg5,arg6,arg7);
-  
-  return SWIG_OK;
-}
-
-
-int _wrap_fillPoly__SWIG_2(SWIG_GatewayParameters) {
-  cv::Mat *arg1 = 0 ;
-  cv::Point **arg2 = (cv::Point **) 0 ;
-  int *arg3 = (int *) 0 ;
-  int arg4 ;
-  cv::Scalar *arg5 = 0 ;
-  int arg6 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  int val4 ;
-  int ecode4 = 0 ;
-  cv::Scalar tmpScalar5 ;
-  int val6 ;
-  int ecode6 = 0 ;
-  
-  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
-  SWIG_Scilab_SetFuncName(fname);
-  SWIG_Scilab_SetApiContext(pvApiCtx);
-  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
-  }
-  arg1 = (cv::Mat *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_p_cv__Point_T_int_t, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "fillPoly" "', argument " "2"" of type '" "cv::Point const **""'"); 
-  }
-  arg2 = (cv::Point **)(argp2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode4 = SWIG_AsVal_int(4, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "fillPoly" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = (int)(val4);
-  arg5 = &tmpScalar5;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 5, arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode6 = SWIG_AsVal_int(6, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "fillPoly" "', argument " "6"" of type '" "int""'");
-  } 
-  arg6 = (int)(val6);
-  cv::fillPoly(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,(cv::Scalar_< double > const &)*arg5,arg6);
-  
-  return SWIG_OK;
-}
-
-
-int _wrap_fillPoly__SWIG_3(SWIG_GatewayParameters) {
-  cv::Mat *arg1 = 0 ;
-  cv::Point **arg2 = (cv::Point **) 0 ;
-  int *arg3 = (int *) 0 ;
-  int arg4 ;
-  cv::Scalar *arg5 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  int val4 ;
-  int ecode4 = 0 ;
-  cv::Scalar tmpScalar5 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
   SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
@@ -34555,25 +34566,112 @@ int _wrap_fillPoly__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
   }
   arg1 = (cv::Mat *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_p_cv__Point_T_int_t, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "fillPoly" "', argument " "2"" of type '" "cv::Point const **""'"); 
+  if (SWIG_PtLists_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    if (SWIG_SciDoubleOrListOfDouble_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
   }
-  arg2 = (cv::Point **)(argp2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
+  arg5 = &tmpScalar5;
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 3, arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode4 = SWIG_AsVal_int(4, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "fillPoly" "', argument " "4"" of type '" "int""'");
+  ecode6 = SWIG_AsVal_int(4, &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "fillPoly" "', argument " "6"" of type '" "int""'");
   } 
-  arg4 = (int)(val4);
+  arg6 = (int)(val6);
+  ecode7 = SWIG_AsVal_int(5, &val7);
+  if (!SWIG_IsOK(ecode7)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "fillPoly" "', argument " "7"" of type '" "int""'");
+  } 
+  arg7 = (int)(val7);
+  cv::fillPoly(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,(cv::Scalar_< double > const &)*arg5,arg6,arg7);
+  
+  delete arg2;
+  return SWIG_OK;
+}
+
+
+int _wrap_fillPoly__SWIG_2(SWIG_GatewayParameters) {
+  cv::Mat *arg1 = 0 ;
+  cv::Point **arg2 = (cv::Point **) 0 ;
+  int *arg3 = (int *) 0 ;
+  int arg4 ;
+  cv::Scalar *arg5 = 0 ;
+  int arg6 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  cv::Scalar tmpScalar5 ;
+  int val6 ;
+  int ecode6 = 0 ;
+  
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
+  }
+  arg1 = (cv::Mat *)(argp1);
+  if (SWIG_PtLists_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    if (SWIG_SciDoubleOrListOfDouble_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
+  }
   arg5 = &tmpScalar5;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 5, arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 3, arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    return SWIG_ERROR;
+  }
+  ecode6 = SWIG_AsVal_int(4, &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "fillPoly" "', argument " "6"" of type '" "int""'");
+  } 
+  arg6 = (int)(val6);
+  cv::fillPoly(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,(cv::Scalar_< double > const &)*arg5,arg6);
+  
+  delete arg2;
+  return SWIG_OK;
+}
+
+
+int _wrap_fillPoly__SWIG_3(SWIG_GatewayParameters) {
+  cv::Mat *arg1 = 0 ;
+  cv::Point **arg2 = (cv::Point **) 0 ;
+  int *arg3 = (int *) 0 ;
+  int arg4 ;
+  cv::Scalar *arg5 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  cv::Scalar tmpScalar5 ;
+  
+  SWIG_CheckInputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_Scilab_SetFuncName(fname);
+  SWIG_Scilab_SetApiContext(pvApiCtx);
+  res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "fillPoly" "', argument " "1"" of type '" "cv::Mat &""'"); 
+  }
+  arg1 = (cv::Mat *)(argp1);
+  if (SWIG_PtLists_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    if (SWIG_SciDoubleOrListOfDouble_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
+  }
+  arg5 = &tmpScalar5;
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 3, arg5, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   cv::fillPoly(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,(cv::Scalar_< double > const &)*arg5);
   
+  delete arg2;
   return SWIG_OK;
 }
 
@@ -34796,11 +34894,33 @@ int _wrap_fillPoly__SWIG_7(SWIG_GatewayParameters) {
 
 int _wrap_fillPoly(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[8] = {
-    1,2,3,4,5,6,7,8
+  int argv[6] = {
+    1,2,3,4,5,6
   };
   
   SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName()))) {
+          _v = SWIG_Check_SciDoubleOrListOfDouble(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
+        }
+      }
+      if (_v) {
+        {
+          cv::Scalar scalar;
+          _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[2], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        }
+        if (_v) {
+          return _wrap_fillPoly__SWIG_3(SWIG_GatewayArguments);
+        }
+      }
+    }
+  }
   if (argc == 3) {
     int _v;
     {
@@ -34858,6 +34978,33 @@ int _wrap_fillPoly(SWIG_GatewayParameters) {
       }
     }
   }
+  if (argc == 4) {
+    int _v;
+    void *vptr = 0;
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName()))) {
+          _v = SWIG_Check_SciDoubleOrListOfDouble(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
+        }
+      }
+      if (_v) {
+        {
+          cv::Scalar scalar;
+          _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[2], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+        }
+        if (_v) {
+          {
+            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+          }
+          if (_v) {
+            return _wrap_fillPoly__SWIG_2(SWIG_GatewayArguments);
+          }
+        }
+      }
+    }
+  }
   if (argc == 5) {
     int _v;
     void *vptr = 0;
@@ -34865,27 +35012,25 @@ int _wrap_fillPoly(SWIG_GatewayParameters) {
     _v = SWIG_CheckState(res);
     if (_v) {
       {
-        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIGTYPE_p_p_cv__Point_T_int_t, SWIG_Scilab_GetFuncName());
+        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName()))) {
+          _v = SWIG_Check_SciDoubleOrListOfDouble(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
+        }
       }
       if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
+        {
+          cv::Scalar scalar;
+          _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[2], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
         }
-        _v = isDoubleType(pvApiCtx, piAddr);
         if (_v) {
           {
             _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
           }
           if (_v) {
             {
-              cv::Scalar scalar;
-              _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[4], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
             }
             if (_v) {
-              return _wrap_fillPoly__SWIG_3(SWIG_GatewayArguments);
+              return _wrap_fillPoly__SWIG_1(SWIG_GatewayArguments);
             }
           }
         }
@@ -34977,125 +35122,30 @@ int _wrap_fillPoly(SWIG_GatewayParameters) {
     _v = SWIG_CheckState(res);
     if (_v) {
       {
-        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIGTYPE_p_p_cv__Point_T_int_t, SWIG_Scilab_GetFuncName());
+        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName()))) {
+          _v = SWIG_Check_SciDoubleOrListOfDouble(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
+        }
       }
       if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
+        {
+          cv::Scalar scalar;
+          _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[2], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
         }
-        _v = isDoubleType(pvApiCtx, piAddr);
         if (_v) {
           {
             _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
           }
           if (_v) {
             {
-              cv::Scalar scalar;
-              _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[4], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
             }
             if (_v) {
               {
-                _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[5], SCI_INT32);
+                cv::Point point;
+                _v = SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, argv[5], &point, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
               }
               if (_v) {
-                return _wrap_fillPoly__SWIG_2(SWIG_GatewayArguments);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 7) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIGTYPE_p_p_cv__Point_T_int_t, SWIG_Scilab_GetFuncName());
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              cv::Scalar scalar;
-              _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[4], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-            }
-            if (_v) {
-              {
-                _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[5], SCI_INT32);
-              }
-              if (_v) {
-                {
-                  _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[6], SCI_INT32);
-                }
-                if (_v) {
-                  return _wrap_fillPoly__SWIG_1(SWIG_GatewayArguments);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 8) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIGTYPE_p_p_cv__Point_T_int_t, SWIG_Scilab_GetFuncName());
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              cv::Scalar scalar;
-              _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[4], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-            }
-            if (_v) {
-              {
-                _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[5], SCI_INT32);
-              }
-              if (_v) {
-                {
-                  _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[6], SCI_INT32);
-                }
-                if (_v) {
-                  {
-                    cv::Point point;
-                    _v = SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, argv[7], &point, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-                  }
-                  if (_v) {
-                    return _wrap_fillPoly__SWIG_0(SWIG_GatewayArguments);
-                  }
-                }
+                return _wrap_fillPoly__SWIG_0(SWIG_GatewayArguments);
               }
             }
           }
@@ -35121,12 +35171,6 @@ int _wrap_polylines__SWIG_0(SWIG_GatewayParameters) {
   int arg9 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  int val4 ;
-  int ecode4 = 0 ;
   bool val5 ;
   int ecode5 = 0 ;
   cv::Scalar tmpScalar6 ;
@@ -35137,7 +35181,7 @@ int _wrap_polylines__SWIG_0(SWIG_GatewayParameters) {
   int val9 ;
   int ecode9 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 9, 9);
+  SWIG_CheckInputArgument(pvApiCtx, 7, 7);
   SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
@@ -35149,45 +35193,38 @@ int _wrap_polylines__SWIG_0(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "polylines" "', argument " "1"" of type '" "cv::Mat &""'"); 
   }
   arg1 = (cv::Mat *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_p_cv__Point_T_int_t, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "polylines" "', argument " "2"" of type '" "cv::Point const **""'"); 
+  if (SWIG_PtLists_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    if (SWIG_SciDoubleOrListOfDouble_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
   }
-  arg2 = (cv::Point **)(argp2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode4 = SWIG_AsVal_int(4, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "polylines" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = (int)(val4);
-  ecode5 = SWIG_AsVal_bool(5, &val5);
+  ecode5 = SWIG_AsVal_bool(3, &val5);
   if (!SWIG_IsOK(ecode5)) {
     SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "polylines" "', argument " "5"" of type '" "bool""'");
   } 
   arg5 = (bool)(val5);
   arg6 = &tmpScalar6;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 6, arg6, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 4, arg6, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode7 = SWIG_AsVal_int(7, &val7);
+  ecode7 = SWIG_AsVal_int(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "polylines" "', argument " "7"" of type '" "int""'");
   } 
   arg7 = (int)(val7);
-  ecode8 = SWIG_AsVal_int(8, &val8);
+  ecode8 = SWIG_AsVal_int(6, &val8);
   if (!SWIG_IsOK(ecode8)) {
     SWIG_exception_fail(SWIG_ArgError(ecode8), "in method '" "polylines" "', argument " "8"" of type '" "int""'");
   } 
   arg8 = (int)(val8);
-  ecode9 = SWIG_AsVal_int(9, &val9);
+  ecode9 = SWIG_AsVal_int(7, &val9);
   if (!SWIG_IsOK(ecode9)) {
     SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "polylines" "', argument " "9"" of type '" "int""'");
   } 
   arg9 = (int)(val9);
   cv::polylines(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,arg5,(cv::Scalar_< double > const &)*arg6,arg7,arg8,arg9);
   
+  delete arg2;
   return SWIG_OK;
 }
 
@@ -35203,12 +35240,6 @@ int _wrap_polylines__SWIG_1(SWIG_GatewayParameters) {
   int arg8 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  int val4 ;
-  int ecode4 = 0 ;
   bool val5 ;
   int ecode5 = 0 ;
   cv::Scalar tmpScalar6 ;
@@ -35217,7 +35248,7 @@ int _wrap_polylines__SWIG_1(SWIG_GatewayParameters) {
   int val8 ;
   int ecode8 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 8, 8);
+  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
   SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
@@ -35229,40 +35260,33 @@ int _wrap_polylines__SWIG_1(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "polylines" "', argument " "1"" of type '" "cv::Mat &""'"); 
   }
   arg1 = (cv::Mat *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_p_cv__Point_T_int_t, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "polylines" "', argument " "2"" of type '" "cv::Point const **""'"); 
+  if (SWIG_PtLists_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    if (SWIG_SciDoubleOrListOfDouble_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
   }
-  arg2 = (cv::Point **)(argp2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode4 = SWIG_AsVal_int(4, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "polylines" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = (int)(val4);
-  ecode5 = SWIG_AsVal_bool(5, &val5);
+  ecode5 = SWIG_AsVal_bool(3, &val5);
   if (!SWIG_IsOK(ecode5)) {
     SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "polylines" "', argument " "5"" of type '" "bool""'");
   } 
   arg5 = (bool)(val5);
   arg6 = &tmpScalar6;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 6, arg6, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 4, arg6, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode7 = SWIG_AsVal_int(7, &val7);
+  ecode7 = SWIG_AsVal_int(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "polylines" "', argument " "7"" of type '" "int""'");
   } 
   arg7 = (int)(val7);
-  ecode8 = SWIG_AsVal_int(8, &val8);
+  ecode8 = SWIG_AsVal_int(6, &val8);
   if (!SWIG_IsOK(ecode8)) {
     SWIG_exception_fail(SWIG_ArgError(ecode8), "in method '" "polylines" "', argument " "8"" of type '" "int""'");
   } 
   arg8 = (int)(val8);
   cv::polylines(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,arg5,(cv::Scalar_< double > const &)*arg6,arg7,arg8);
   
+  delete arg2;
   return SWIG_OK;
 }
 
@@ -35277,19 +35301,13 @@ int _wrap_polylines__SWIG_2(SWIG_GatewayParameters) {
   int arg7 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  int val4 ;
-  int ecode4 = 0 ;
   bool val5 ;
   int ecode5 = 0 ;
   cv::Scalar tmpScalar6 ;
   int val7 ;
   int ecode7 = 0 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 7, 7);
+  SWIG_CheckInputArgument(pvApiCtx, 5, 5);
   SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
@@ -35301,35 +35319,28 @@ int _wrap_polylines__SWIG_2(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "polylines" "', argument " "1"" of type '" "cv::Mat &""'"); 
   }
   arg1 = (cv::Mat *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_p_cv__Point_T_int_t, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "polylines" "', argument " "2"" of type '" "cv::Point const **""'"); 
+  if (SWIG_PtLists_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    if (SWIG_SciDoubleOrListOfDouble_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
   }
-  arg2 = (cv::Point **)(argp2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode4 = SWIG_AsVal_int(4, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "polylines" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = (int)(val4);
-  ecode5 = SWIG_AsVal_bool(5, &val5);
+  ecode5 = SWIG_AsVal_bool(3, &val5);
   if (!SWIG_IsOK(ecode5)) {
     SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "polylines" "', argument " "5"" of type '" "bool""'");
   } 
   arg5 = (bool)(val5);
   arg6 = &tmpScalar6;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 6, arg6, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 4, arg6, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
-  ecode7 = SWIG_AsVal_int(7, &val7);
+  ecode7 = SWIG_AsVal_int(5, &val7);
   if (!SWIG_IsOK(ecode7)) {
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "polylines" "', argument " "7"" of type '" "int""'");
   } 
   arg7 = (int)(val7);
   cv::polylines(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,arg5,(cv::Scalar_< double > const &)*arg6,arg7);
   
+  delete arg2;
   return SWIG_OK;
 }
 
@@ -35343,17 +35354,11 @@ int _wrap_polylines__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar *arg6 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int iRowCount3 ;
-  int iColCount3 ;
-  int val4 ;
-  int ecode4 = 0 ;
   bool val5 ;
   int ecode5 = 0 ;
   cv::Scalar tmpScalar6 ;
   
-  SWIG_CheckInputArgument(pvApiCtx, 6, 6);
+  SWIG_CheckInputArgument(pvApiCtx, 4, 4);
   SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
@@ -35365,30 +35370,23 @@ int _wrap_polylines__SWIG_3(SWIG_GatewayParameters) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "polylines" "', argument " "1"" of type '" "cv::Mat &""'"); 
   }
   arg1 = (cv::Mat *)(argp1);
-  res2 = SwigScilabPtrToObject(pvApiCtx, 2, &argp2, SWIGTYPE_p_p_cv__Point_T_int_t, 0 |  0 , SWIG_Scilab_GetFuncName());
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "polylines" "', argument " "2"" of type '" "cv::Point const **""'"); 
+  if (SWIG_PtLists_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+    if (SWIG_SciDoubleOrListOfDouble_AsPointPtr(pvApiCtx, 2, &arg2, &arg3, &arg4, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+      return SWIG_ERROR;
+    }
   }
-  arg2 = (cv::Point **)(argp2);
-  if (SWIG_SciDoubleOrInt32_AsIntArrayAndSize(pvApiCtx, 3, &iRowCount3, &iColCount3, &arg3, fname) != SWIG_OK) {
-    return SWIG_ERROR;
-  }
-  ecode4 = SWIG_AsVal_int(4, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "polylines" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = (int)(val4);
-  ecode5 = SWIG_AsVal_bool(5, &val5);
+  ecode5 = SWIG_AsVal_bool(3, &val5);
   if (!SWIG_IsOK(ecode5)) {
     SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "polylines" "', argument " "5"" of type '" "bool""'");
   } 
   arg5 = (bool)(val5);
   arg6 = &tmpScalar6;
-  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 6, arg6, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
+  if (SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, 4, arg6, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
     return SWIG_ERROR;
   }
   cv::polylines(*arg1,(cv::Point_< int > const **)arg2,(int const *)arg3,arg4,arg5,(cv::Scalar_< double > const &)*arg6);
   
+  delete arg2;
   return SWIG_OK;
 }
 
@@ -35647,11 +35645,44 @@ int _wrap_polylines__SWIG_7(SWIG_GatewayParameters) {
 
 int _wrap_polylines(SWIG_GatewayParameters) {
   int argc = SWIG_NbInputArgument(pvApiCtx);
-  int argv[9] = {
-    1,2,3,4,5,6,7,8,9
+  int argv[7] = {
+    1,2,3,4,5,6,7
   };
   
   SWIG_Scilab_SetApiContext(pvApiCtx);
+  if (argc == 4) {
+    int _v;
+    void *vptr = 0;
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName()))) {
+          _v = SWIG_Check_SciDoubleOrListOfDouble(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
+        }
+      }
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isBooleanType(pvApiCtx, piAddrVar);
+        }
+        if (_v) {
+          {
+            cv::Scalar scalar;
+            _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[3], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          }
+          if (_v) {
+            return _wrap_polylines__SWIG_3(SWIG_GatewayArguments);
+          }
+        }
+      }
+    }
+  }
   if (argc == 4) {
     int _v;
     {
@@ -35731,6 +35762,44 @@ int _wrap_polylines(SWIG_GatewayParameters) {
       }
     }
   }
+  if (argc == 5) {
+    int _v;
+    void *vptr = 0;
+    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName()))) {
+          _v = SWIG_Check_SciDoubleOrListOfDouble(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
+        }
+      }
+      if (_v) {
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isBooleanType(pvApiCtx, piAddrVar);
+        }
+        if (_v) {
+          {
+            cv::Scalar scalar;
+            _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[3], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+          }
+          if (_v) {
+            {
+              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
+            }
+            if (_v) {
+              return _wrap_polylines__SWIG_2(SWIG_GatewayArguments);
+            }
+          }
+        }
+      }
+    }
+  }
   if (argc == 6) {
     int _v;
     void *vptr = 0;
@@ -35738,37 +35807,35 @@ int _wrap_polylines(SWIG_GatewayParameters) {
     _v = SWIG_CheckState(res);
     if (_v) {
       {
-        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIGTYPE_p_p_cv__Point_T_int_t, SWIG_Scilab_GetFuncName());
+        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName()))) {
+          _v = SWIG_Check_SciDoubleOrListOfDouble(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
+        }
       }
       if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isBooleanType(pvApiCtx, piAddrVar);
         }
-        _v = isDoubleType(pvApiCtx, piAddr);
         if (_v) {
           {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+            cv::Scalar scalar;
+            _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[3], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
           }
           if (_v) {
             {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isBooleanType(pvApiCtx, piAddrVar);
+              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
             }
             if (_v) {
               {
-                cv::Scalar scalar;
-                _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[5], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+                _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[5], SCI_INT32);
               }
               if (_v) {
-                return _wrap_polylines__SWIG_3(SWIG_GatewayArguments);
+                return _wrap_polylines__SWIG_1(SWIG_GatewayArguments);
               }
             }
           }
@@ -35882,156 +35949,39 @@ int _wrap_polylines(SWIG_GatewayParameters) {
     _v = SWIG_CheckState(res);
     if (_v) {
       {
-        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIGTYPE_p_p_cv__Point_T_int_t, SWIG_Scilab_GetFuncName());
+        if (!(_v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIG_Scilab_TypeQuery("PtList *"), SWIG_Scilab_GetFuncName()))) {
+          _v = SWIG_Check_SciDoubleOrListOfDouble(pvApiCtx, argv[1], SWIG_Scilab_GetFuncName());
+        }
       }
       if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
+        {
+          int *piAddrVar = NULL;
+          SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddrVar);
+          if (sciErr.iErr) {
+            printError(&sciErr, 0);
+            return SWIG_ERROR;
+          }
+          _v = isBooleanType(pvApiCtx, piAddrVar);
         }
-        _v = isDoubleType(pvApiCtx, piAddr);
         if (_v) {
           {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
+            cv::Scalar scalar;
+            _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[3], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
           }
           if (_v) {
             {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isBooleanType(pvApiCtx, piAddrVar);
+              _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[4], SCI_INT32);
             }
             if (_v) {
               {
-                cv::Scalar scalar;
-                _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[5], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
+                _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[5], SCI_INT32);
               }
               if (_v) {
                 {
                   _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[6], SCI_INT32);
                 }
                 if (_v) {
-                  return _wrap_polylines__SWIG_2(SWIG_GatewayArguments);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 8) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIGTYPE_p_p_cv__Point_T_int_t, SWIG_Scilab_GetFuncName());
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isBooleanType(pvApiCtx, piAddrVar);
-            }
-            if (_v) {
-              {
-                cv::Scalar scalar;
-                _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[5], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-              }
-              if (_v) {
-                {
-                  _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[6], SCI_INT32);
-                }
-                if (_v) {
-                  {
-                    _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[7], SCI_INT32);
-                  }
-                  if (_v) {
-                    return _wrap_polylines__SWIG_1(SWIG_GatewayArguments);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 9) {
-    int _v;
-    void *vptr = 0;
-    int res = SwigScilabPtrToObject(pvApiCtx, argv[0], &vptr, SWIGTYPE_p_cv__Mat, 0, SWIG_Scilab_GetFuncName());
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        _v = SwigScilabCheckPtr(pvApiCtx, argv[1], SWIGTYPE_p_p_cv__Point_T_int_t, SWIG_Scilab_GetFuncName());
-      }
-      if (_v) {
-        int *piAddr = NULL;
-        SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[2], &piAddr);
-        if (sciErr.iErr) {
-          printError(&sciErr, 0);
-          return SWIG_ERROR;
-        }
-        _v = isDoubleType(pvApiCtx, piAddr);
-        if (_v) {
-          {
-            _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[3], SCI_INT32);
-          }
-          if (_v) {
-            {
-              int *piAddrVar = NULL;
-              SciErr sciErr = getVarAddressFromPosition(pvApiCtx, argv[4], &piAddrVar);
-              if (sciErr.iErr) {
-                printError(&sciErr, 0);
-                return SWIG_ERROR;
-              }
-              _v = isBooleanType(pvApiCtx, piAddrVar);
-            }
-            if (_v) {
-              {
-                cv::Scalar scalar;
-                _v = SWIG_SciDoubleOrInt32_AsScalar(pvApiCtx, argv[5], &scalar, SWIG_Scilab_GetFuncName()) == SWIG_OK ? 1 : 0;
-              }
-              if (_v) {
-                {
-                  _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[6], SCI_INT32);
-                }
-                if (_v) {
-                  {
-                    _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[7], SCI_INT32);
-                  }
-                  if (_v) {
-                    {
-                      _v = SWIG_Check_SciDoubleOrInt(pvApiCtx, argv[8], SCI_INT32);
-                    }
-                    if (_v) {
-                      return _wrap_polylines__SWIG_0(SWIG_GatewayArguments);
-                    }
-                  }
+                  return _wrap_polylines__SWIG_0(SWIG_GatewayArguments);
                 }
               }
             }
@@ -102082,7 +102032,6 @@ static swig_type_info _swigt__p_p_CvHaarClassifierCascade = {"_p_p_CvHaarClassif
 static swig_type_info _swigt__p_p_CvKalman = {"_p_p_CvKalman", "CvKalman **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_CvLSVMFilterObject = {"_p_p_CvLSVMFilterObject", "CvLSVMFilterObject **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_CvLatentSvmDetector = {"_p_p_CvLatentSvmDetector", "CvLatentSvmDetector **", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_p_cv__Point_T_int_t = {"_p_p_cv__Point_T_int_t", "cv::Point_< int > **|cv::Point **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_cv___InputArray = {"_p_p_cv___InputArray", "cv::_InputArray **|cv::InputArrayOfArrays *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_cv___OutputArray = {"_p_p_cv___OutputArray", "cv::InputOutputArray *|cv::_OutputArray **|cv::OutputArrayOfArrays *|cv::InputOutputArrayOfArrays *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_int = {"_p_p_int", "int **", 0, 0, (void*)0, 0};
@@ -102375,7 +102324,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_p_CvKalman,
   &_swigt__p_p_CvLSVMFilterObject,
   &_swigt__p_p_CvLatentSvmDetector,
-  &_swigt__p_p_cv__Point_T_int_t,
   &_swigt__p_p_cv___InputArray,
   &_swigt__p_p_cv___OutputArray,
   &_swigt__p_p_int,
@@ -102668,7 +102616,6 @@ static swig_cast_info _swigc__p_p_CvHaarClassifierCascade[] = {  {&_swigt__p_p_C
 static swig_cast_info _swigc__p_p_CvKalman[] = {  {&_swigt__p_p_CvKalman, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_CvLSVMFilterObject[] = {  {&_swigt__p_p_CvLSVMFilterObject, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_CvLatentSvmDetector[] = {  {&_swigt__p_p_CvLatentSvmDetector, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_p_cv__Point_T_int_t[] = {  {&_swigt__p_p_cv__Point_T_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_cv___InputArray[] = {  {&_swigt__p_p_cv___InputArray, 0, 0, 0},  {&_swigt__p_p_cv___OutputArray, _p_p_cv___OutputArrayTo_p_p_cv___InputArray, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_cv___OutputArray[] = {  {&_swigt__p_p_cv___OutputArray, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_int[] = {  {&_swigt__p_p_int, 0, 0, 0},{0, 0, 0, 0}};
@@ -102961,7 +102908,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_p_CvKalman,
   _swigc__p_p_CvLSVMFilterObject,
   _swigc__p_p_CvLatentSvmDetector,
-  _swigc__p_p_cv__Point_T_int_t,
   _swigc__p_p_cv___InputArray,
   _swigc__p_p_cv___OutputArray,
   _swigc__p_p_int,
