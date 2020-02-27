@@ -9,9 +9,7 @@ expected_w = 100;
 expected_h = 100;
 check_img_proc("lena.jpg", "resize", [100, 100], check_size);
 Warning : redefining function: check_func              . Use funcprot(0) to avoid this message
-
 expected_w = 90;
 expected_h = 90;
 check_img_proc("lena.jpg", "resize", 0, 0.4 , 0.4, check_size);
 Warning : redefining function: check_func              . Use funcprot(0) to avoid this message
-

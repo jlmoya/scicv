@@ -1,5 +1,5 @@
 // Scilab Computer Vision Module
-// Copyright (C) 2017 - Scilab Enterprises
+// Copyright (C) 2020 - Scilab Enterprises
 
 // <-- CLI SHELL MODE -->
 
@@ -14,9 +14,7 @@ function check_img(img, expected_rows, expected_cols, expected_channels, varargi
     if size(varargin) > 0 then
         expected_value = varargin(1);
         expected_data = ones(1,expected_rows*expected_cols*expected_channels)*expected_value;
-        warning("off");
-        assert_checkequal(double(img(:,:)), hypermat([expected_rows, expected_cols, expected_channels], expected_data));
-        warning("on");
+        assert_checkequal(double(img(:,:)), matrix(expected_data, [expected_rows, expected_cols, expected_channels]));
         delete_Mat(img);
     end
 endfunction
