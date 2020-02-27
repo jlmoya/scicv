@@ -8,7 +8,6 @@ SWIG=
 SWIG_LIB=
 OPENCV=
 OPENCV_INC=
-OPENCV_LIB
 
 # Check for compilers and standard includes
 AC_PROG_CC
@@ -50,20 +49,12 @@ else
   else
     AC_MSG_ERROR($WITH_OPENCV/include/opencv2 not found)
   fi
-  AC_MSG_CHECKING(for OpenCV lib)
-  if test -f "$WITH_OPENCV/lib/libopencv_core.so"; then
-    OPENCV_LIB=$WITH_OPENCV/lib
-    AC_MSG_RESULT($OPENCV_LIB)
-  else
-    AC_MSG_ERROR($WITH_OPENCV/lib/libopencv_core.so not found)
-  fi
 fi
 
 # Set SWIG variables
 AC_SUBST(SWIG)
 AC_SUBST(SWIG_LIB)
 AC_SUBST(OPENCV_INC)
-AC_SUBST(OPENCV_LIB)
 
 # Generate files
 AC_CONFIG_FILES([Makefile])

@@ -2,14 +2,13 @@ SWIG       = @SWIG@
 SWIG_LIB   = @SWIG_LIB@
 export SWIG_LIB
 OPENCV_INC = @OPENCV_INC@
-OPENCV_LIB = @OPENCV_LIB@
 SRCS       =
 TARGET     = scicv
 INTERFACE  = scicv.i
 INCLUDES   = -I./include -I$(OPENCV_INC)
 
 build:
-	$(SWIG) -scilab -c++ -builder $(INCLUDES) -builderflagscript buildflags.sci -builderverbositylevel 2 $(INTERFACE)
+	$(SWIG) -scilab -c++ -targetversion 6 -builder $(INCLUDES) -builderflagscript buildflags.sci -builderverbositylevel 2 $(INTERFACE)
 	sed 's/builder/builder_gateway_c/' <builder.sce >builder_gateway_c.sce
 	mv builder_gateway_c.sce ..
 	mv $(TARGET)_wrap.cxx ..
