@@ -37,9 +37,8 @@ function [scicvlib] = startModule()
 
   if os == "Windows" then
       bin_dir = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
-// OpenH264 is no more used on Scilab 6.1 ; Windows 10 codecs are better/simpler to manage
-      mingw_libs = [] // ["libwinpthread-1"; "libgcc_s_seh-1"; "libstdc++-6"];
-      codec_libs = [] // ["libopenh264"];
+      mingw_libs = ["libwinpthread-1"; "libgcc_s_seh-1"; "libstdc++-6"];
+      codec_libs = ["libopenh264"];
       ffmpeg_libs = ["opencv_ffmpeg2413_64"];
       opencv_libs = opencv_libs + "2413";
       thirdparty_libs = [mingw_libs; codec_libs; ffmpeg_libs; opencv_libs];
