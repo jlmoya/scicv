@@ -37,11 +37,14 @@ function [scicvlib] = startModule()
 
   if os == "Windows" then
       bin_dir = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
-      mingw_libs = ["libwinpthread-1"; "libgcc_s_seh-1"; "libstdc++-6"];
-      codec_libs = ["libopenh264"];
-      ffmpeg_libs = ["opencv_ffmpeg2413_64"];
-      opencv_libs = opencv_libs + "2413";
-      thirdparty_libs = [mingw_libs; codec_libs; ffmpeg_libs; opencv_libs];
+      ffmpeg_libs = ["avutil-56"; "swscale-5"; "swresample-3"; "postproc-55"; "avcodec-58"; "avformat-58"; "avfilter-7"; "avdevice-58"];
+      opencv_ffmpeg_libs = ["opencv_ffmpeg2413_64"];
+      opencv_libs = [opencv_libs + "2413"];
+      // load debug library when needed
+			if grep(opts, "debug") then
+        opencv_libs = opencv_libs + "d";
+      end
+      thirdparty_libs = [ffmpeg_libs; opencv_ffmpeg_libs; opencv_libs];
       thirdparty_lib_paths = fullpath(bin_dir + "\" + thirdparty_libs + ".dll");
   elseif os == "Linux"
       lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
@@ -55,8 +58,12 @@ function [scicvlib] = startModule()
       thirdparty_libs = opencv_libs;
       thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".dylib");
   end
-  for thirdparty_lib_path = thirdparty_lib_paths'
+  try
+    for thirdparty_lib_path = thirdparty_lib_paths'
       link(thirdparty_lib_path);
+    end
+  catch
+    error(msprintf("\tUnable to link %s", thirdparty_lib_path));
   end
 
 // Load gateways
