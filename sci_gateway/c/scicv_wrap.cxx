@@ -4676,7 +4676,7 @@ int _wrap_delete_SciSwigIterator(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -4697,7 +4697,7 @@ int _wrap_SciSwigIterator_value(SWIG_GatewayParameters) {
   SwigSciObject result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -4727,7 +4727,7 @@ int _wrap_SciSwigIterator_incr__SWIG_0(SWIG_GatewayParameters) {
   swig::SciSwigIterator *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -4759,7 +4759,7 @@ int _wrap_SciSwigIterator_incr__SWIG_1(SWIG_GatewayParameters) {
   swig::SciSwigIterator *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -4826,7 +4826,7 @@ int _wrap_SciSwigIterator_decr__SWIG_0(SWIG_GatewayParameters) {
   swig::SciSwigIterator *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -4858,7 +4858,7 @@ int _wrap_SciSwigIterator_decr__SWIG_1(SWIG_GatewayParameters) {
   swig::SciSwigIterator *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -4925,7 +4925,7 @@ int _wrap_SciSwigIterator_distance(SWIG_GatewayParameters) {
   ptrdiff_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -4962,7 +4962,7 @@ int _wrap_SciSwigIterator_equal(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -4996,7 +4996,7 @@ int _wrap_SciSwigIterator_copy(SWIG_GatewayParameters) {
   swig::SciSwigIterator *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -5018,7 +5018,7 @@ int _wrap_SciSwigIterator_next(SWIG_GatewayParameters) {
   SwigSciObject result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -5045,7 +5045,7 @@ int _wrap_SciSwigIterator_previous(SWIG_GatewayParameters) {
   SwigSciObject result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -5075,7 +5075,7 @@ int _wrap_SciSwigIterator_advance(SWIG_GatewayParameters) {
   swig::SciSwigIterator *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_swig__SciSwigIterator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -5158,7 +5158,7 @@ int _wrap_CvScalar_val_set(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvScalar, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -5199,7 +5199,7 @@ int _wrap_CvScalar_val_get(SWIG_GatewayParameters) {
   double *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvScalar, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -5218,7 +5218,7 @@ int _wrap_new_CvScalar(SWIG_GatewayParameters) {
   CvScalar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (CvScalar *)new CvScalar();
@@ -5234,7 +5234,7 @@ int _wrap_delete_CvScalar(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvScalar, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -5260,7 +5260,7 @@ int _wrap_cvarrToMatND__SWIG_0(SWIG_GatewayParameters) {
   Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -5293,7 +5293,7 @@ int _wrap_cvarrToMatND__SWIG_1(SWIG_GatewayParameters) {
   Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -5318,7 +5318,7 @@ int _wrap_cvarrToMatND__SWIG_2(SWIG_GatewayParameters) {
   Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -5409,7 +5409,7 @@ int _wrap___add____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -5449,7 +5449,7 @@ int _wrap___add____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -5489,7 +5489,7 @@ int _wrap___add____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Scalar,  0 , SWIG_Scilab_GetFuncName());
@@ -5529,7 +5529,7 @@ int _wrap___add____SWIG_3(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -5569,7 +5569,7 @@ int _wrap___add____SWIG_4(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -5609,7 +5609,7 @@ int _wrap___add____SWIG_5(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -5649,7 +5649,7 @@ int _wrap___add____SWIG_6(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Scalar,  0 , SWIG_Scilab_GetFuncName());
@@ -5689,7 +5689,7 @@ int _wrap___add____SWIG_7(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -5729,7 +5729,7 @@ int _wrap___sub____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -5769,7 +5769,7 @@ int _wrap___sub____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -5809,7 +5809,7 @@ int _wrap___sub____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Scalar,  0 , SWIG_Scilab_GetFuncName());
@@ -5849,7 +5849,7 @@ int _wrap___sub____SWIG_3(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -5889,7 +5889,7 @@ int _wrap___sub____SWIG_4(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -5929,7 +5929,7 @@ int _wrap___sub____SWIG_5(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -5969,7 +5969,7 @@ int _wrap___sub____SWIG_6(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Scalar,  0 , SWIG_Scilab_GetFuncName());
@@ -6009,7 +6009,7 @@ int _wrap___sub____SWIG_7(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -6046,7 +6046,7 @@ int _wrap___sub____SWIG_8(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6075,7 +6075,7 @@ int _wrap___sub____SWIG_9(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -6107,7 +6107,7 @@ int _wrap___mul____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6147,7 +6147,7 @@ int _wrap___mul____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6184,7 +6184,7 @@ int _wrap___mul____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -6221,7 +6221,7 @@ int _wrap___mul____SWIG_3(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -6261,7 +6261,7 @@ int _wrap___mul____SWIG_4(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6301,7 +6301,7 @@ int _wrap___mul____SWIG_5(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -6338,7 +6338,7 @@ int _wrap___mul____SWIG_6(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -6375,7 +6375,7 @@ int _wrap___mul____SWIG_7(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -6415,7 +6415,7 @@ int _wrap___div____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6455,7 +6455,7 @@ int _wrap___div____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6492,7 +6492,7 @@ int _wrap___div____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -6529,7 +6529,7 @@ int _wrap___div____SWIG_3(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -6569,7 +6569,7 @@ int _wrap___div____SWIG_4(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6609,7 +6609,7 @@ int _wrap___div____SWIG_5(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -6646,7 +6646,7 @@ int _wrap___div____SWIG_6(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -6683,7 +6683,7 @@ int _wrap___div____SWIG_7(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatExpr,  0 , SWIG_Scilab_GetFuncName());
@@ -6872,7 +6872,7 @@ int _wrap___lt____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6912,7 +6912,7 @@ int _wrap___lt____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -6949,7 +6949,7 @@ int _wrap___lt____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -6986,7 +6986,7 @@ int _wrap___lte____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7026,7 +7026,7 @@ int _wrap___lte____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7063,7 +7063,7 @@ int _wrap___lte____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -7100,7 +7100,7 @@ int _wrap___eq____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7140,7 +7140,7 @@ int _wrap___eq____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7177,7 +7177,7 @@ int _wrap___eq____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -7214,7 +7214,7 @@ int _wrap___ne____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7254,7 +7254,7 @@ int _wrap___ne____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7291,7 +7291,7 @@ int _wrap___ne____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -7328,7 +7328,7 @@ int _wrap___gte____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7368,7 +7368,7 @@ int _wrap___gte____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7405,7 +7405,7 @@ int _wrap___gte____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -7442,7 +7442,7 @@ int _wrap___gt____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7482,7 +7482,7 @@ int _wrap___gt____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7519,7 +7519,7 @@ int _wrap___gt____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -7556,7 +7556,7 @@ int _wrap_min__SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7596,7 +7596,7 @@ int _wrap_min__SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7633,7 +7633,7 @@ int _wrap_min__SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -7670,7 +7670,7 @@ int _wrap_max__SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7710,7 +7710,7 @@ int _wrap_max__SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7747,7 +7747,7 @@ int _wrap_max__SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -7784,7 +7784,7 @@ int _wrap___logand____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7824,7 +7824,7 @@ int _wrap___logand____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7864,7 +7864,7 @@ int _wrap___logand____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Scalar,  0 , SWIG_Scilab_GetFuncName());
@@ -7904,7 +7904,7 @@ int _wrap___logior____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7944,7 +7944,7 @@ int _wrap___logior____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -7984,7 +7984,7 @@ int _wrap___logior____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Scalar,  0 , SWIG_Scilab_GetFuncName());
@@ -8079,7 +8079,7 @@ int _wrap___logxor____SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8119,7 +8119,7 @@ int _wrap___logxor____SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8159,7 +8159,7 @@ int _wrap___logxor____SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Scalar,  0 , SWIG_Scilab_GetFuncName());
@@ -8254,7 +8254,7 @@ int _wrap___add_assign____SWIG_0(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8290,7 +8290,7 @@ int _wrap___add_assign____SWIG_1(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8326,7 +8326,7 @@ int _wrap___add_assign____SWIG_4(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8417,7 +8417,7 @@ int _wrap___sub_assign____SWIG_0(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8453,7 +8453,7 @@ int _wrap___sub_assign____SWIG_1(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8489,7 +8489,7 @@ int _wrap___sub_assign____SWIG_4(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8580,7 +8580,7 @@ int _wrap___mul_assign____SWIG_0(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8616,7 +8616,7 @@ int _wrap___mul_assign____SWIG_1(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8649,7 +8649,7 @@ int _wrap___mul_assign____SWIG_4(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8746,7 +8746,7 @@ int _wrap___div_assign____SWIG_0(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8782,7 +8782,7 @@ int _wrap___div_assign____SWIG_1(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8815,7 +8815,7 @@ int _wrap___div_assign____SWIG_4(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8912,7 +8912,7 @@ int _wrap___logand_assign____SWIG_0(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8948,7 +8948,7 @@ int _wrap___logand_assign____SWIG_1(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -8984,7 +8984,7 @@ int _wrap___logior_assign____SWIG_0(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -9020,7 +9020,7 @@ int _wrap___logior_assign____SWIG_1(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -9097,7 +9097,7 @@ int _wrap___logxor_assign____SWIG_0(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -9133,7 +9133,7 @@ int _wrap___logxor_assign____SWIG_1(SWIG_GatewayParameters) {
   Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -9210,7 +9210,7 @@ int _wrap___eq____SWIG_3(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_MatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9246,7 +9246,7 @@ int _wrap___lt____SWIG_3(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_MatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9282,7 +9282,7 @@ int _wrap___gt____SWIG_3(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_MatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9399,7 +9399,7 @@ int _wrap___lte____SWIG_3(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_MatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9516,7 +9516,7 @@ int _wrap___gte____SWIG_3(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_MatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9633,7 +9633,7 @@ int _wrap___sub____SWIG_10(SWIG_GatewayParameters) {
   ptrdiff_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_MatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9669,7 +9669,7 @@ int _wrap___add____SWIG_8(SWIG_GatewayParameters) {
   MatConstIterator result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_MatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9702,7 +9702,7 @@ int _wrap___add____SWIG_9(SWIG_GatewayParameters) {
   MatConstIterator result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_ptrdiff_t(1, &val1);
@@ -9735,7 +9735,7 @@ int _wrap___sub____SWIG_11(SWIG_GatewayParameters) {
   MatConstIterator result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_MatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9768,7 +9768,7 @@ int _wrap___eq____SWIG_6(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_SparseMatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9804,7 +9804,7 @@ int _wrap___ne____SWIG_6(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_SparseMatConstIterator,  0 , SWIG_Scilab_GetFuncName());
@@ -9839,7 +9839,7 @@ int _wrap_format__SWIG_0(SWIG_GatewayParameters) {
   cv::string result;
   
   SWIG_CheckInputArgumentAtLeast(pvApiCtx, 1-1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SWIG_SciString_AsCharPtrAndSize(pvApiCtx, 1, &buf1, NULL, &alloc1, SWIG_Scilab_GetFuncName());
@@ -9859,7 +9859,7 @@ int _wrap_new_Exception__SWIG_0(SWIG_GatewayParameters) {
   cv::Exception *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::Exception *)new cv::Exception();
@@ -9885,7 +9885,7 @@ int _wrap_new_Exception__SWIG_1(SWIG_GatewayParameters) {
   cv::Exception *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -9989,7 +9989,7 @@ int _wrap_delete_Exception(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -10010,7 +10010,7 @@ int _wrap_Exception_what(SWIG_GatewayParameters) {
   char *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10031,7 +10031,7 @@ int _wrap_Exception_formatMessage(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10053,7 +10053,7 @@ int _wrap_Exception_msg_set(SWIG_GatewayParameters) {
   int res2 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10086,7 +10086,7 @@ int _wrap_Exception_msg_get(SWIG_GatewayParameters) {
   cv::string *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10110,7 +10110,7 @@ int _wrap_Exception_code_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10136,7 +10136,7 @@ int _wrap_Exception_code_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10159,7 +10159,7 @@ int _wrap_Exception_err_set(SWIG_GatewayParameters) {
   int res2 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10192,7 +10192,7 @@ int _wrap_Exception_err_get(SWIG_GatewayParameters) {
   cv::string *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10215,7 +10215,7 @@ int _wrap_Exception_func_set(SWIG_GatewayParameters) {
   int res2 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10248,7 +10248,7 @@ int _wrap_Exception_func_get(SWIG_GatewayParameters) {
   cv::string *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10271,7 +10271,7 @@ int _wrap_Exception_file_set(SWIG_GatewayParameters) {
   int res2 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10304,7 +10304,7 @@ int _wrap_Exception_file_get(SWIG_GatewayParameters) {
   cv::string *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10328,7 +10328,7 @@ int _wrap_Exception_line_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10354,7 +10354,7 @@ int _wrap_Exception_line_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Exception, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10375,7 +10375,7 @@ int _wrap_setNumThreads(SWIG_GatewayParameters) {
   int ecode1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -10393,7 +10393,7 @@ int _wrap_getNumThreads(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (int)cv::getNumThreads();
@@ -10407,7 +10407,7 @@ int _wrap_getThreadNum(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (int)cv::getThreadNum();
@@ -10421,7 +10421,7 @@ int _wrap_getBuildInformation(SWIG_GatewayParameters) {
   cv::string *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::string *) &cv::getBuildInformation();
@@ -10435,7 +10435,7 @@ int _wrap_getTickCount(SWIG_GatewayParameters) {
   int64 result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = cv::getTickCount();
@@ -10449,7 +10449,7 @@ int _wrap_getTickFrequency(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (double)cv::getTickFrequency();
@@ -10463,7 +10463,7 @@ int _wrap_getCPUTickCount(SWIG_GatewayParameters) {
   int64 result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = cv::getCPUTickCount();
@@ -10480,7 +10480,7 @@ int _wrap_checkHardwareSupport(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -10499,7 +10499,7 @@ int _wrap_getNumberOfCPUs(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (int)cv::getNumberOfCPUs();
@@ -10515,7 +10515,7 @@ int _wrap_setUseOptimized(SWIG_GatewayParameters) {
   int ecode1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_bool(1, &val1);
@@ -10533,7 +10533,7 @@ int _wrap_useOptimized(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (bool)cv::useOptimized();
@@ -10547,7 +10547,7 @@ int _wrap_new_RotatedRect__SWIG_0(SWIG_GatewayParameters) {
   cv::RotatedRect *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::RotatedRect *)new cv::RotatedRect();
@@ -10570,7 +10570,7 @@ int _wrap_new_RotatedRect__SWIG_1(SWIG_GatewayParameters) {
   cv::RotatedRect *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Point_T_float_t,  0 , SWIG_Scilab_GetFuncName());
@@ -10608,7 +10608,7 @@ int _wrap_new_RotatedRect__SWIG_2(SWIG_GatewayParameters) {
   cv::RotatedRect *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvBox2D,  0 , SWIG_Scilab_GetFuncName());
@@ -10686,7 +10686,7 @@ int _wrap_RotatedRect_points(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10712,7 +10712,7 @@ int _wrap_RotatedRect_boundingRect(SWIG_GatewayParameters) {
   cv::Rect result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10737,7 +10737,7 @@ int _wrap_RotatedRect_center_set(SWIG_GatewayParameters) {
   arg2 = &tmpPoint2f2;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10763,7 +10763,7 @@ int _wrap_RotatedRect_center_get(SWIG_GatewayParameters) {
   cv::Point2f *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10787,7 +10787,7 @@ int _wrap_RotatedRect_size_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10813,7 +10813,7 @@ int _wrap_RotatedRect_size_get(SWIG_GatewayParameters) {
   cv::Size2f *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10837,7 +10837,7 @@ int _wrap_RotatedRect_angle_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10863,7 +10863,7 @@ int _wrap_RotatedRect_angle_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -10884,7 +10884,7 @@ int _wrap_delete_RotatedRect(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__RotatedRect, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -10911,7 +10911,7 @@ int _wrap_scalarToRawData__SWIG_0(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   arg1 = &tmpScalar1;
@@ -10948,7 +10948,7 @@ int _wrap_scalarToRawData__SWIG_1(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   arg1 = &tmpScalar1;
@@ -11032,7 +11032,7 @@ int _wrap_noArray(SWIG_GatewayParameters) {
   cv::_OutputArray *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::_OutputArray *) &cv::noArray();
@@ -11049,7 +11049,7 @@ int _wrap_getElemSize(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11070,7 +11070,7 @@ int _wrap_delete_MatAllocator(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatAllocator, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -11111,7 +11111,7 @@ int _wrap_MatAllocator_allocate(SWIG_GatewayParameters) {
   int res8 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatAllocator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -11182,7 +11182,7 @@ int _wrap_MatAllocator_deallocate(SWIG_GatewayParameters) {
   int res4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MatAllocator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -11215,7 +11215,7 @@ int _wrap_new_Mat__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::Mat *)new cv::Mat();
@@ -11241,7 +11241,7 @@ int _wrap_new_Mat__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11277,7 +11277,7 @@ int _wrap_new_Mat__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -11313,7 +11313,7 @@ int _wrap_new_Mat__SWIG_3(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11355,7 +11355,7 @@ int _wrap_new_Mat__SWIG_4(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -11393,7 +11393,7 @@ int _wrap_new_Mat__SWIG_5(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11434,7 +11434,7 @@ int _wrap_new_Mat__SWIG_6(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11471,7 +11471,7 @@ int _wrap_new_Mat__SWIG_7(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -11510,7 +11510,7 @@ int _wrap_new_Mat__SWIG_8(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11562,7 +11562,7 @@ int _wrap_new_Mat__SWIG_9(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11607,7 +11607,7 @@ int _wrap_new_Mat__SWIG_10(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -11647,7 +11647,7 @@ int _wrap_new_Mat__SWIG_11(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -11690,7 +11690,7 @@ int _wrap_new_Mat__SWIG_12(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11740,7 +11740,7 @@ int _wrap_new_Mat__SWIG_13(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -11783,7 +11783,7 @@ int _wrap_new_Mat__SWIG_14(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -11830,7 +11830,7 @@ int _wrap_new_Mat__SWIG_15(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -11868,7 +11868,7 @@ int _wrap_new_Mat__SWIG_16(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -11903,7 +11903,7 @@ int _wrap_new_Mat__SWIG_17(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -11939,7 +11939,7 @@ int _wrap_new_Mat__SWIG_18(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvMat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -11969,7 +11969,7 @@ int _wrap_new_Mat__SWIG_19(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvMat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -11997,7 +11997,7 @@ int _wrap_new_Mat__SWIG_20(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvMatND, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12027,7 +12027,7 @@ int _wrap_new_Mat__SWIG_21(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvMatND, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12055,7 +12055,7 @@ int _wrap_new_Mat__SWIG_22(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p__IplImage, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12085,7 +12085,7 @@ int _wrap_new_Mat__SWIG_23(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p__IplImage, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12110,7 +12110,7 @@ int _wrap_new_Mat__SWIG_35(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__gpu__GpuMat,  0 , SWIG_Scilab_GetFuncName());
@@ -12609,7 +12609,7 @@ int _wrap_delete_Mat(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -12633,7 +12633,7 @@ int _wrap_Mat___assign____SWIG_0(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12666,7 +12666,7 @@ int _wrap_Mat___assign____SWIG_1(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12699,7 +12699,7 @@ int _wrap_Mat_row(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12732,7 +12732,7 @@ int _wrap_Mat_col(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12768,7 +12768,7 @@ int _wrap_Mat_rowRange__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12806,7 +12806,7 @@ int _wrap_Mat_rowRange__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12891,7 +12891,7 @@ int _wrap_Mat_colRange__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -12929,7 +12929,7 @@ int _wrap_Mat_colRange__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13011,7 +13011,7 @@ int _wrap_Mat_diag__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13041,7 +13041,7 @@ int _wrap_Mat_diag__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13066,7 +13066,7 @@ int _wrap_Mat_diag__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -13139,7 +13139,7 @@ int _wrap_Mat_clone(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13167,7 +13167,7 @@ int _wrap_Mat_copyTo__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13198,7 +13198,7 @@ int _wrap_Mat_copyTo__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13288,7 +13288,7 @@ int _wrap_Mat_convertTo__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13339,7 +13339,7 @@ int _wrap_Mat_convertTo__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13382,7 +13382,7 @@ int _wrap_Mat_convertTo__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13507,7 +13507,7 @@ int _wrap_Mat_assignTo__SWIG_0(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13543,7 +13543,7 @@ int _wrap_Mat_assignTo__SWIG_1(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13620,7 +13620,7 @@ int _wrap_Mat___assign____SWIG_2(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13704,7 +13704,7 @@ int _wrap_Mat_setTo__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13751,7 +13751,7 @@ int _wrap_Mat_setTo__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13846,7 +13846,7 @@ int _wrap_Mat_reshape__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13884,7 +13884,7 @@ int _wrap_Mat_reshape__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -13923,7 +13923,7 @@ int _wrap_Mat_reshape__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14035,7 +14035,7 @@ int _wrap_Mat_t(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14064,7 +14064,7 @@ int _wrap_Mat_inv__SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14095,7 +14095,7 @@ int _wrap_Mat_inv__SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14161,7 +14161,7 @@ int _wrap_Mat_mul__SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14205,7 +14205,7 @@ int _wrap_Mat_mul__SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14302,7 +14302,7 @@ int _wrap_Mat_cross(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14340,7 +14340,7 @@ int _wrap_Mat_dot(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14380,7 +14380,7 @@ int _wrap_Mat_zeros__SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -14417,7 +14417,7 @@ int _wrap_Mat_zeros__SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -14452,7 +14452,7 @@ int _wrap_Mat_zeros__SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -14561,7 +14561,7 @@ int _wrap_Mat_ones__SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -14598,7 +14598,7 @@ int _wrap_Mat_ones__SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -14633,7 +14633,7 @@ int _wrap_Mat_ones__SWIG_2(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -14742,7 +14742,7 @@ int _wrap_Mat_eye__SWIG_0(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -14779,7 +14779,7 @@ int _wrap_Mat_eye__SWIG_1(SWIG_GatewayParameters) {
   cv::MatExpr result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -14862,7 +14862,7 @@ int _wrap_Mat_create__SWIG_0(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14901,7 +14901,7 @@ int _wrap_Mat_create__SWIG_1(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -14938,7 +14938,7 @@ int _wrap_Mat_create__SWIG_2(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15055,7 +15055,7 @@ int _wrap_Mat_addref(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15075,7 +15075,7 @@ int _wrap_Mat_release(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15095,7 +15095,7 @@ int _wrap_Mat_deallocate(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15118,7 +15118,7 @@ int _wrap_Mat_copySize(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15149,7 +15149,7 @@ int _wrap_Mat_reserve(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15177,7 +15177,7 @@ int _wrap_Mat_resize__SWIG_0(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15207,7 +15207,7 @@ int _wrap_Mat_resize__SWIG_1(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar3 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15287,7 +15287,7 @@ int _wrap_Mat_push_back_(SWIG_GatewayParameters) {
   int res2 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15314,7 +15314,7 @@ int _wrap_Mat_push_back(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15345,7 +15345,7 @@ int _wrap_Mat_pop_back__SWIG_0(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15370,7 +15370,7 @@ int _wrap_Mat_pop_back__SWIG_1(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15432,7 +15432,7 @@ int _wrap_Mat_locateROI(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15477,7 +15477,7 @@ int _wrap_Mat_adjustROI(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15525,7 +15525,7 @@ int _wrap_Mat___funcall____SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15574,7 +15574,7 @@ int _wrap_Mat___funcall____SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15606,7 +15606,7 @@ int _wrap_Mat___funcall____SWIG_2(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15697,7 +15697,7 @@ int _wrap_Mat_cv_CvMat(SWIG_GatewayParameters) {
   CvMat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15719,7 +15719,7 @@ int _wrap_Mat_isContinuous(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15741,7 +15741,7 @@ int _wrap_Mat_isSubmatrix(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15763,7 +15763,7 @@ int _wrap_Mat_elemSize(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15785,7 +15785,7 @@ int _wrap_Mat_elemSize1(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15807,7 +15807,7 @@ int _wrap_Mat_type(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15829,7 +15829,7 @@ int _wrap_Mat_depth(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15851,7 +15851,7 @@ int _wrap_Mat_channels(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15876,7 +15876,7 @@ int _wrap_Mat_step1__SWIG_0(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15903,7 +15903,7 @@ int _wrap_Mat_step1__SWIG_1(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15961,7 +15961,7 @@ int _wrap_Mat_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -15983,7 +15983,7 @@ int _wrap_Mat_total(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16014,7 +16014,7 @@ int _wrap_Mat_checkVector__SWIG_0(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16057,7 +16057,7 @@ int _wrap_Mat_checkVector__SWIG_1(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16092,7 +16092,7 @@ int _wrap_Mat_checkVector__SWIG_2(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16198,7 +16198,7 @@ int _wrap_Mat_ptr__SWIG_0(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16225,7 +16225,7 @@ int _wrap_Mat_ptr__SWIG_1(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16250,7 +16250,7 @@ int _wrap_Mat_ptr__SWIG_2(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16277,7 +16277,7 @@ int _wrap_Mat_ptr__SWIG_3(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16305,7 +16305,7 @@ int _wrap_Mat_ptr__SWIG_4(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16343,7 +16343,7 @@ int _wrap_Mat_ptr__SWIG_5(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16384,7 +16384,7 @@ int _wrap_Mat_ptr__SWIG_6(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16430,7 +16430,7 @@ int _wrap_Mat_ptr__SWIG_7(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16470,7 +16470,7 @@ int _wrap_Mat_ptr__SWIG_8(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16498,7 +16498,7 @@ int _wrap_Mat_ptr__SWIG_9(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16706,7 +16706,7 @@ int _wrap_Mat_flags_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16732,7 +16732,7 @@ int _wrap_Mat_flags_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16756,7 +16756,7 @@ int _wrap_Mat_dims_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16782,7 +16782,7 @@ int _wrap_Mat_dims_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16806,7 +16806,7 @@ int _wrap_Mat_rows_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16832,7 +16832,7 @@ int _wrap_Mat_rows_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16856,7 +16856,7 @@ int _wrap_Mat_cols_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16882,7 +16882,7 @@ int _wrap_Mat_cols_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16906,7 +16906,7 @@ int _wrap_Mat_data_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16932,7 +16932,7 @@ int _wrap_Mat_data_get(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16956,7 +16956,7 @@ int _wrap_Mat_refcount_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -16982,7 +16982,7 @@ int _wrap_Mat_refcount_get(SWIG_GatewayParameters) {
   int *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17006,7 +17006,7 @@ int _wrap_Mat_datastart_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17032,7 +17032,7 @@ int _wrap_Mat_datastart_get(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17056,7 +17056,7 @@ int _wrap_Mat_dataend_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17082,7 +17082,7 @@ int _wrap_Mat_dataend_get(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17106,7 +17106,7 @@ int _wrap_Mat_datalimit_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17132,7 +17132,7 @@ int _wrap_Mat_datalimit_get(SWIG_GatewayParameters) {
   uchar *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17156,7 +17156,7 @@ int _wrap_Mat_allocator_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17182,7 +17182,7 @@ int _wrap_Mat_allocator_get(SWIG_GatewayParameters) {
   cv::MatAllocator *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17206,7 +17206,7 @@ int _wrap_Mat_size_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17232,7 +17232,7 @@ int _wrap_Mat_size_get(SWIG_GatewayParameters) {
   cv::Mat::MSize *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -17257,7 +17257,7 @@ int _wrap_getConvertFunc(SWIG_GatewayParameters) {
   cv::BinaryFunc result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -17287,7 +17287,7 @@ int _wrap_getConvertScaleFunc(SWIG_GatewayParameters) {
   cv::BinaryFunc result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -17314,7 +17314,7 @@ int _wrap_getCopyMaskFunc(SWIG_GatewayParameters) {
   cv::BinaryFunc result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_size_t(1, &val1);
@@ -17338,7 +17338,7 @@ int _wrap_swap(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -17378,7 +17378,7 @@ int _wrap_cvarrToMat__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -17422,7 +17422,7 @@ int _wrap_cvarrToMat__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -17458,7 +17458,7 @@ int _wrap_cvarrToMat__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -17486,7 +17486,7 @@ int _wrap_cvarrToMat__SWIG_3(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -17624,7 +17624,7 @@ int _wrap_extractImageCOI__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -17657,7 +17657,7 @@ int _wrap_extractImageCOI__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -17721,7 +17721,7 @@ int _wrap_insertImageCOI__SWIG_0(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcoiimg = NULL;
@@ -17757,7 +17757,7 @@ int _wrap_insertImageCOI__SWIG_1(SWIG_GatewayParameters) {
   int res2 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcoiimg = NULL;
@@ -17847,7 +17847,7 @@ int _wrap_add__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -17913,7 +17913,7 @@ int _wrap_add__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -17973,7 +17973,7 @@ int _wrap_add__SWIG_2(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18119,7 +18119,7 @@ int _wrap_subtract__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18185,7 +18185,7 @@ int _wrap_subtract__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18245,7 +18245,7 @@ int _wrap_subtract__SWIG_2(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18393,7 +18393,7 @@ int _wrap_multiply__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18454,7 +18454,7 @@ int _wrap_multiply__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18507,7 +18507,7 @@ int _wrap_multiply__SWIG_2(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18661,7 +18661,7 @@ int _wrap_divide__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18722,7 +18722,7 @@ int _wrap_divide__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18775,7 +18775,7 @@ int _wrap_divide__SWIG_2(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -18828,7 +18828,7 @@ int _wrap_divide__SWIG_3(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -18876,7 +18876,7 @@ int _wrap_divide__SWIG_4(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -19071,7 +19071,7 @@ int _wrap_scaleAdd(SWIG_GatewayParameters) {
   arg4 = new cv::_OutputArray(*pOutMat4);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -19136,7 +19136,7 @@ int _wrap_addWeighted__SWIG_0(SWIG_GatewayParameters) {
   arg6 = new cv::_OutputArray(*pOutMat6);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -19213,7 +19213,7 @@ int _wrap_addWeighted__SWIG_1(SWIG_GatewayParameters) {
   arg6 = new cv::_OutputArray(*pOutMat6);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -19405,7 +19405,7 @@ int _wrap_convertScaleAbs__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -19453,7 +19453,7 @@ int _wrap_convertScaleAbs__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -19493,7 +19493,7 @@ int _wrap_convertScaleAbs__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -19614,7 +19614,7 @@ int _wrap_LUT__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -19667,7 +19667,7 @@ int _wrap_LUT__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -19769,7 +19769,7 @@ int _wrap_countNonZero(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -19799,7 +19799,7 @@ int _wrap_findNonZero(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -19839,7 +19839,7 @@ int _wrap_meanStdDev__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -19896,7 +19896,7 @@ int _wrap_meanStdDev__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -20003,7 +20003,7 @@ int _wrap_batchDistance__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -20111,7 +20111,7 @@ int _wrap_batchDistance__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -20211,7 +20211,7 @@ int _wrap_batchDistance__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -20305,7 +20305,7 @@ int _wrap_batchDistance__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -20384,7 +20384,7 @@ int _wrap_batchDistance__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -20455,7 +20455,7 @@ int _wrap_batchDistance__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -20779,7 +20779,7 @@ int _wrap_normalize__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -20858,7 +20858,7 @@ int _wrap_normalize__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -20922,7 +20922,7 @@ int _wrap_normalize__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -20978,7 +20978,7 @@ int _wrap_normalize__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21026,7 +21026,7 @@ int _wrap_normalize__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21066,7 +21066,7 @@ int _wrap_normalize__SWIG_5(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21114,7 +21114,7 @@ int _wrap_minMaxLoc__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 4, 5);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21191,7 +21191,7 @@ int _wrap_minMaxLoc__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 4, 4);
+  SWIG_CheckOutputArgument(pvApiCtx, 4, 5);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21252,7 +21252,7 @@ int _wrap_minMaxLoc__SWIG_2(SWIG_GatewayParameters) {
   arg3 = &temp3;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21304,7 +21304,7 @@ int _wrap_minMaxLoc__SWIG_3(SWIG_GatewayParameters) {
   arg2 = &temp2;
   arg3 = &temp3;
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21347,7 +21347,7 @@ int _wrap_minMaxLoc__SWIG_4(SWIG_GatewayParameters) {
   
   arg2 = &temp2;
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21394,7 +21394,7 @@ int _wrap_minMaxIdx__SWIG_0(SWIG_GatewayParameters) {
   arg2 = &temp2;
   arg3 = &temp3;
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21469,7 +21469,7 @@ int _wrap_minMaxIdx__SWIG_1(SWIG_GatewayParameters) {
   arg2 = &temp2;
   arg3 = &temp3;
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21529,7 +21529,7 @@ int _wrap_minMaxIdx__SWIG_2(SWIG_GatewayParameters) {
   arg2 = &temp2;
   arg3 = &temp3;
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21581,7 +21581,7 @@ int _wrap_minMaxIdx__SWIG_3(SWIG_GatewayParameters) {
   arg2 = &temp2;
   arg3 = &temp3;
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21727,7 +21727,7 @@ int _wrap_reduce__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21783,7 +21783,7 @@ int _wrap_reduce__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -21895,7 +21895,7 @@ int _wrap_merge__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -21930,7 +21930,7 @@ int _wrap_merge__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -21961,7 +21961,7 @@ int _wrap_merge__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmv = NULL;
@@ -22046,7 +22046,7 @@ int _wrap_split__SWIG_1(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -22077,7 +22077,7 @@ int _wrap_split__SWIG_2(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -22110,7 +22110,7 @@ int _wrap_split__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatm = NULL;
@@ -22211,7 +22211,7 @@ int _wrap_mixChannels__SWIG_0(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -22263,7 +22263,7 @@ int _wrap_mixChannels__SWIG_1(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Mat_std__allocatorT_cv__Mat_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -22304,7 +22304,7 @@ int _wrap_mixChannels__SWIG_2(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -22464,7 +22464,7 @@ int _wrap_extractChannel(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -22505,7 +22505,7 @@ int _wrap_insertChannel(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -22552,7 +22552,7 @@ int _wrap_flip(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -22598,7 +22598,7 @@ int _wrap_repeat__SWIG_0(SWIG_GatewayParameters) {
   arg4 = new cv::_OutputArray(*pOutMat4);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -22648,7 +22648,7 @@ int _wrap_repeat__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -22746,7 +22746,7 @@ int _wrap_hconcat__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -22780,7 +22780,7 @@ int _wrap_hconcat__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -22827,7 +22827,7 @@ int _wrap_hconcat__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -22927,7 +22927,7 @@ int _wrap_vconcat__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -22961,7 +22961,7 @@ int _wrap_vconcat__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23008,7 +23008,7 @@ int _wrap_vconcat__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -23105,7 +23105,7 @@ int _wrap_bitwise_and__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23165,7 +23165,7 @@ int _wrap_bitwise_and__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23275,7 +23275,7 @@ int _wrap_bitwise_or__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23335,7 +23335,7 @@ int _wrap_bitwise_or__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23445,7 +23445,7 @@ int _wrap_bitwise_xor__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23505,7 +23505,7 @@ int _wrap_bitwise_xor__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23614,7 +23614,7 @@ int _wrap_bitwise_not__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -23661,7 +23661,7 @@ int _wrap_bitwise_not__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -23742,7 +23742,7 @@ int _wrap_absdiff(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23791,7 +23791,7 @@ int _wrap_inRange(SWIG_GatewayParameters) {
   arg4 = new cv::_OutputArray(*pOutMat4);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -23854,7 +23854,7 @@ int _wrap_compare(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23907,7 +23907,7 @@ int _wrap_min__SWIG_9(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -23955,7 +23955,7 @@ int _wrap_max__SWIG_9(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -24006,7 +24006,7 @@ int _wrap_min__SWIG_10(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -24051,7 +24051,7 @@ int _wrap_min__SWIG_11(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -24093,7 +24093,7 @@ int _wrap_max__SWIG_10(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -24138,7 +24138,7 @@ int _wrap_max__SWIG_11(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -24176,7 +24176,7 @@ int _wrap_sqrt__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -24214,7 +24214,7 @@ int _wrap_pow__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -24254,7 +24254,7 @@ int _wrap_exp__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -24289,7 +24289,7 @@ int _wrap_log__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -24323,7 +24323,7 @@ int _wrap_cubeRoot(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -24348,7 +24348,7 @@ int _wrap_fastAtan2__SWIG_0(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -24380,7 +24380,7 @@ int _wrap_exp__SWIG_1(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_float, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -24416,7 +24416,7 @@ int _wrap_log__SWIG_1(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_float, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -24458,7 +24458,7 @@ int _wrap_fastAtan2__SWIG_1(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_float, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -24581,7 +24581,7 @@ int _wrap_magnitude__SWIG_0(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_float, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -24626,7 +24626,7 @@ int _wrap_polarToCart__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmagnitude = NULL;
@@ -24689,7 +24689,7 @@ int _wrap_polarToCart__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmagnitude = NULL;
@@ -24814,7 +24814,7 @@ int _wrap_cartToPolar__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatx = NULL;
@@ -24877,7 +24877,7 @@ int _wrap_cartToPolar__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatx = NULL;
@@ -24998,7 +24998,7 @@ int _wrap_phase__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatx = NULL;
@@ -25051,7 +25051,7 @@ int _wrap_phase__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatx = NULL;
@@ -25163,7 +25163,7 @@ int _wrap_magnitude__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatx = NULL;
@@ -25277,7 +25277,7 @@ int _wrap_checkRange__SWIG_0(SWIG_GatewayParameters) {
   arg3 = &tmpPoint3;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMata = NULL;
@@ -25334,7 +25334,7 @@ int _wrap_checkRange__SWIG_1(SWIG_GatewayParameters) {
   arg3 = &tmpPoint3;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMata = NULL;
@@ -25383,7 +25383,7 @@ int _wrap_checkRange__SWIG_2(SWIG_GatewayParameters) {
   arg3 = &tmpPoint3;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMata = NULL;
@@ -25423,7 +25423,7 @@ int _wrap_checkRange__SWIG_3(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMata = NULL;
@@ -25455,7 +25455,7 @@ int _wrap_checkRange__SWIG_4(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMata = NULL;
@@ -25635,7 +25635,7 @@ int _wrap_patchNaNs__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -25664,7 +25664,7 @@ int _wrap_patchNaNs__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -25750,7 +25750,7 @@ int _wrap_gemm__SWIG_0(SWIG_GatewayParameters) {
   arg6 = new cv::_OutputArray(*pOutMat6);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -25832,7 +25832,7 @@ int _wrap_gemm__SWIG_1(SWIG_GatewayParameters) {
   arg6 = new cv::_OutputArray(*pOutMat6);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -26029,7 +26029,7 @@ int _wrap_mulTransposed__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26098,7 +26098,7 @@ int _wrap_mulTransposed__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26159,7 +26159,7 @@ int _wrap_mulTransposed__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26214,7 +26214,7 @@ int _wrap_mulTransposed__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26410,7 +26410,7 @@ int _wrap_transpose(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26446,7 +26446,7 @@ int _wrap_transform(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26494,7 +26494,7 @@ int _wrap_perspectiveTransform(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26541,7 +26541,7 @@ int _wrap_completeSymm__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -26570,7 +26570,7 @@ int _wrap_completeSymm__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -26644,7 +26644,7 @@ int _wrap_setIdentity__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -26672,7 +26672,7 @@ int _wrap_setIdentity__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -26739,7 +26739,7 @@ int _wrap_determinant(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmtx = NULL;
@@ -26773,7 +26773,7 @@ int _wrap_invert__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26815,7 +26815,7 @@ int _wrap_invert__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -26898,7 +26898,7 @@ int _wrap_solve__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -26953,7 +26953,7 @@ int _wrap_solve__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -27062,7 +27062,7 @@ int _wrap_sort(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27105,7 +27105,7 @@ int _wrap_sortIdx(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27146,7 +27146,7 @@ int _wrap_solveCubic(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcoeffs = NULL;
@@ -27186,7 +27186,7 @@ int _wrap_solvePoly__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcoeffs = NULL;
@@ -27228,7 +27228,7 @@ int _wrap_solvePoly__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcoeffs = NULL;
@@ -27313,7 +27313,7 @@ int _wrap_eigen__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27363,7 +27363,7 @@ int _wrap_eigen__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27405,7 +27405,7 @@ int _wrap_eigen__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27452,7 +27452,7 @@ int _wrap_eigen__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27512,7 +27512,7 @@ int _wrap_eigen__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27564,7 +27564,7 @@ int _wrap_eigen__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27614,7 +27614,7 @@ int _wrap_eigen__SWIG_6(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -27812,7 +27812,7 @@ int _wrap_calcCovarMatrix__SWIG_0(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -27875,7 +27875,7 @@ int _wrap_calcCovarMatrix__SWIG_1(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -27933,7 +27933,7 @@ int _wrap_calcCovarMatrix__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsamples = NULL;
@@ -27991,7 +27991,7 @@ int _wrap_calcCovarMatrix__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsamples = NULL;
@@ -28157,7 +28157,7 @@ int _wrap_PCACompute__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatdata = NULL;
@@ -28209,7 +28209,7 @@ int _wrap_PCACompute__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatdata = NULL;
@@ -28317,7 +28317,7 @@ int _wrap_PCAComputeVar(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatdata = NULL;
@@ -28369,7 +28369,7 @@ int _wrap_PCAProject(SWIG_GatewayParameters) {
   arg4 = new cv::_OutputArray(*pOutMat4);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatdata = NULL;
@@ -28430,7 +28430,7 @@ int _wrap_PCABackProject(SWIG_GatewayParameters) {
   arg4 = new cv::_OutputArray(*pOutMat4);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatdata = NULL;
@@ -28485,7 +28485,7 @@ int _wrap_new_SVD__SWIG_0(SWIG_GatewayParameters) {
   cv::SVD *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::SVD *)new cv::SVD();
@@ -28503,7 +28503,7 @@ int _wrap_new_SVD__SWIG_1(SWIG_GatewayParameters) {
   cv::SVD *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -28535,7 +28535,7 @@ int _wrap_new_SVD__SWIG_2(SWIG_GatewayParameters) {
   cv::SVD *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -28613,7 +28613,7 @@ int _wrap_SVD___funcall____SWIG_0(SWIG_GatewayParameters) {
   cv::SVD *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -28653,7 +28653,7 @@ int _wrap_SVD___funcall____SWIG_1(SWIG_GatewayParameters) {
   cv::SVD *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -28751,7 +28751,7 @@ int _wrap_SVD_compute__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -28811,7 +28811,7 @@ int _wrap_SVD_compute__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -28861,7 +28861,7 @@ int _wrap_SVD_compute__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -28901,7 +28901,7 @@ int _wrap_SVD_compute__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -29010,7 +29010,7 @@ int _wrap_SVD_backSubst__SWIG_0(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatw = NULL;
@@ -29081,7 +29081,7 @@ int _wrap_SVD_solveZ(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -29119,7 +29119,7 @@ int _wrap_SVD_backSubst__SWIG_2(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -29226,7 +29226,7 @@ int _wrap_SVD_u_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -29252,7 +29252,7 @@ int _wrap_SVD_u_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -29279,7 +29279,7 @@ int _wrap_SVD_w_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -29305,7 +29305,7 @@ int _wrap_SVD_w_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -29332,7 +29332,7 @@ int _wrap_SVD_vt_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -29358,7 +29358,7 @@ int _wrap_SVD_vt_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -29382,7 +29382,7 @@ int _wrap_delete_SVD(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SVD, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -29415,7 +29415,7 @@ int _wrap_SVDecomp__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -29475,7 +29475,7 @@ int _wrap_SVDecomp__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -29567,7 +29567,7 @@ int _wrap_SVBackSubst(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatw = NULL;
@@ -29637,7 +29637,7 @@ int _wrap_Mahalanobis(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatv1 = NULL;
@@ -29690,7 +29690,7 @@ int _wrap_Mahalonobis(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatv1 = NULL;
@@ -29750,7 +29750,7 @@ int _wrap_dft__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -29798,7 +29798,7 @@ int _wrap_dft__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -29838,7 +29838,7 @@ int _wrap_dft__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -29943,7 +29943,7 @@ int _wrap_idft__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -29991,7 +29991,7 @@ int _wrap_idft__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -30031,7 +30031,7 @@ int _wrap_idft__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -30137,7 +30137,7 @@ int _wrap_mulSpectrums__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMata = NULL;
@@ -30198,7 +30198,7 @@ int _wrap_mulSpectrums__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMata = NULL;
@@ -30323,7 +30323,7 @@ int _wrap_getOptimalDFTSize(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -30361,7 +30361,7 @@ int _wrap_kmeans__SWIG_0(SWIG_GatewayParameters) {
   arg7 = new cv::_OutputArray(*pOutMat7);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatdata = NULL;
@@ -30444,7 +30444,7 @@ int _wrap_kmeans__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatdata = NULL;
@@ -30599,7 +30599,7 @@ int _wrap_theRNG(SWIG_GatewayParameters) {
   cv::RNG *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::RNG *) &cv::theRNG();
@@ -30615,7 +30615,7 @@ int _wrap_setRNGSeed(SWIG_GatewayParameters) {
   int ecode1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -30636,7 +30636,7 @@ int _wrap_randu(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -30686,7 +30686,7 @@ int _wrap_randn(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -30740,7 +30740,7 @@ int _wrap_randShuffle__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -30777,7 +30777,7 @@ int _wrap_randShuffle__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -30806,7 +30806,7 @@ int _wrap_randShuffle__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -30909,7 +30909,7 @@ int _wrap_randShuffle___SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -30938,7 +30938,7 @@ int _wrap_randShuffle___SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -31024,7 +31024,7 @@ int _wrap_line__SWIG_0(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31082,7 +31082,7 @@ int _wrap_line__SWIG_1(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31132,7 +31132,7 @@ int _wrap_line__SWIG_2(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31174,7 +31174,7 @@ int _wrap_line__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar4 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31374,7 +31374,7 @@ int _wrap_arrowedLine__SWIG_0(SWIG_GatewayParameters) {
   int ecode8 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31440,7 +31440,7 @@ int _wrap_arrowedLine__SWIG_1(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31498,7 +31498,7 @@ int _wrap_arrowedLine__SWIG_2(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31548,7 +31548,7 @@ int _wrap_arrowedLine__SWIG_3(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31590,7 +31590,7 @@ int _wrap_arrowedLine__SWIG_4(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar4 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31840,7 +31840,7 @@ int _wrap_rectangle__SWIG_0(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31898,7 +31898,7 @@ int _wrap_rectangle__SWIG_1(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31948,7 +31948,7 @@ int _wrap_rectangle__SWIG_2(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -31990,7 +31990,7 @@ int _wrap_rectangle__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar4 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32035,7 +32035,7 @@ int _wrap_rectangle__SWIG_4(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32089,7 +32089,7 @@ int _wrap_rectangle__SWIG_5(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32135,7 +32135,7 @@ int _wrap_rectangle__SWIG_6(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32173,7 +32173,7 @@ int _wrap_rectangle__SWIG_7(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar3 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32483,7 +32483,7 @@ int _wrap_circle__SWIG_0(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32545,7 +32545,7 @@ int _wrap_circle__SWIG_1(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32599,7 +32599,7 @@ int _wrap_circle__SWIG_2(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32645,7 +32645,7 @@ int _wrap_circle__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar4 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32849,7 +32849,7 @@ int _wrap_ellipse__SWIG_0(SWIG_GatewayParameters) {
   int ecode10 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 10, 10);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -32931,7 +32931,7 @@ int _wrap_ellipse__SWIG_1(SWIG_GatewayParameters) {
   int ecode9 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33005,7 +33005,7 @@ int _wrap_ellipse__SWIG_2(SWIG_GatewayParameters) {
   int ecode8 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33071,7 +33071,7 @@ int _wrap_ellipse__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar7 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33130,7 +33130,7 @@ int _wrap_ellipse__SWIG_4(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33183,7 +33183,7 @@ int _wrap_ellipse__SWIG_5(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33228,7 +33228,7 @@ int _wrap_ellipse__SWIG_6(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar3 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33632,7 +33632,7 @@ int _wrap_drawMarker__SWIG_0(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33694,7 +33694,7 @@ int _wrap_drawMarker__SWIG_1(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33748,7 +33748,7 @@ int _wrap_drawMarker__SWIG_2(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33794,7 +33794,7 @@ int _wrap_drawMarker__SWIG_3(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -33832,7 +33832,7 @@ int _wrap_drawMarker__SWIG_4(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar3 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -34045,7 +34045,7 @@ int _wrap_fillConvexPoly__SWIG_0(SWIG_GatewayParameters) {
   arg2 = &tmpPoint2;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -34104,7 +34104,7 @@ int _wrap_fillConvexPoly__SWIG_1(SWIG_GatewayParameters) {
   arg2 = &tmpPoint2;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -34155,7 +34155,7 @@ int _wrap_fillConvexPoly__SWIG_2(SWIG_GatewayParameters) {
   arg2 = &tmpPoint2;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -34200,7 +34200,7 @@ int _wrap_fillConvexPoly__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -34252,7 +34252,7 @@ int _wrap_fillConvexPoly__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -34296,7 +34296,7 @@ int _wrap_fillConvexPoly__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -34517,7 +34517,7 @@ int _wrap_fillPoly__SWIG_0(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -34574,7 +34574,7 @@ int _wrap_fillPoly__SWIG_1(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -34625,7 +34625,7 @@ int _wrap_fillPoly__SWIG_2(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -34668,7 +34668,7 @@ int _wrap_fillPoly__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar5 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -34710,7 +34710,7 @@ int _wrap_fillPoly__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -34772,7 +34772,7 @@ int _wrap_fillPoly__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -34828,7 +34828,7 @@ int _wrap_fillPoly__SWIG_6(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -34876,7 +34876,7 @@ int _wrap_fillPoly__SWIG_7(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -35201,7 +35201,7 @@ int _wrap_polylines__SWIG_0(SWIG_GatewayParameters) {
   int ecode9 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -35268,7 +35268,7 @@ int _wrap_polylines__SWIG_1(SWIG_GatewayParameters) {
   int ecode8 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -35327,7 +35327,7 @@ int _wrap_polylines__SWIG_2(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -35378,7 +35378,7 @@ int _wrap_polylines__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar6 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -35430,7 +35430,7 @@ int _wrap_polylines__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -35502,7 +35502,7 @@ int _wrap_polylines__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -35566,7 +35566,7 @@ int _wrap_polylines__SWIG_6(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -35622,7 +35622,7 @@ int _wrap_polylines__SWIG_7(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -36026,7 +36026,7 @@ int _wrap_clipLine__SWIG_0(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -36066,7 +36066,7 @@ int _wrap_clipLine__SWIG_1(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsRect(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -36171,7 +36171,7 @@ int _wrap_ellipse2Poly(SWIG_GatewayParameters) {
   int res7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsPoint(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -36239,7 +36239,7 @@ int _wrap_putText__SWIG_0(SWIG_GatewayParameters) {
   int ecode9 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -36321,7 +36321,7 @@ int _wrap_putText__SWIG_1(SWIG_GatewayParameters) {
   int ecode8 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -36395,7 +36395,7 @@ int _wrap_putText__SWIG_2(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -36461,7 +36461,7 @@ int _wrap_putText__SWIG_3(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -36737,7 +36737,7 @@ int _wrap_getTextSize(SWIG_GatewayParameters) {
   cv::Size result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -36789,7 +36789,7 @@ int _wrap_getConvertElem(SWIG_GatewayParameters) {
   cv::ConvertData result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -36819,7 +36819,7 @@ int _wrap_getConvertScaleElem(SWIG_GatewayParameters) {
   cv::ConvertScaleData result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -36859,7 +36859,7 @@ int _wrap_minMaxLoc__SWIG_5(SWIG_GatewayParameters) {
   arg2 = &temp2;
   arg3 = &temp3;
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
@@ -36917,7 +36917,7 @@ int _wrap_minMaxLoc__SWIG_6(SWIG_GatewayParameters) {
   arg2 = &temp2;
   arg3 = &temp3;
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
@@ -36967,7 +36967,7 @@ int _wrap_minMaxLoc__SWIG_7(SWIG_GatewayParameters) {
   arg2 = &temp2;
   arg3 = &temp3;
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
@@ -37136,7 +37136,7 @@ int _wrap_normalize__SWIG_6(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
@@ -37430,7 +37430,7 @@ int _wrap_parallel_for___SWIG_0(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Range,  0 , SWIG_Scilab_GetFuncName());
@@ -37469,7 +37469,7 @@ int _wrap_parallel_for___SWIG_1(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Range,  0 , SWIG_Scilab_GetFuncName());
@@ -37553,7 +37553,7 @@ int _wrap_TLSDataContainer_createDataInstance(SWIG_GatewayParameters) {
   void *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__TLSDataContainer, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37576,7 +37576,7 @@ int _wrap_TLSDataContainer_deleteDataInstance(SWIG_GatewayParameters) {
   int res2 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__TLSDataContainer, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37601,7 +37601,7 @@ int _wrap_TLSDataContainer_getData(SWIG_GatewayParameters) {
   void *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__TLSDataContainer, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37623,7 +37623,7 @@ int _wrap_new_double_array(SWIG_GatewayParameters) {
   double *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_size_t(1, &val1);
@@ -37644,7 +37644,7 @@ int _wrap_delete_double_array(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_double, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37668,7 +37668,7 @@ int _wrap_double_array_getitem(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_double, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37700,7 +37700,7 @@ int _wrap_double_array_setitem(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_double, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37731,7 +37731,7 @@ int _wrap_new_float_array(SWIG_GatewayParameters) {
   float *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_size_t(1, &val1);
@@ -37752,7 +37752,7 @@ int _wrap_delete_float_array(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_float, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37776,7 +37776,7 @@ int _wrap_float_array_getitem(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_float, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37808,7 +37808,7 @@ int _wrap_float_array_setitem(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_float, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37839,7 +37839,7 @@ int _wrap_new_int_array(SWIG_GatewayParameters) {
   int *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_size_t(1, &val1);
@@ -37860,7 +37860,7 @@ int _wrap_delete_int_array(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_int, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37884,7 +37884,7 @@ int _wrap_int_array_getitem(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_int, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37916,7 +37916,7 @@ int _wrap_int_array_setitem(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_int, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -37944,7 +37944,7 @@ int _wrap_new_intp(SWIG_GatewayParameters) {
   int *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (int *)new_intp();
@@ -37961,7 +37961,7 @@ int _wrap_copy_intp(SWIG_GatewayParameters) {
   int *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -37982,7 +37982,7 @@ int _wrap_delete_intp(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_int, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -38005,7 +38005,7 @@ int _wrap_intp_assign(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_int, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -38031,7 +38031,7 @@ int _wrap_intp_value(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_int, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -38053,7 +38053,7 @@ int _wrap_cvMatExtract(SWIG_GatewayParameters) {
   
   arg2 = &tmpMat2;
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -38075,7 +38075,7 @@ int _wrap_getImageType(SWIG_GatewayParameters) {
   std::string result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -38096,7 +38096,7 @@ int _wrap_namedWindow__SWIG_0(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38127,7 +38127,7 @@ int _wrap_namedWindow__SWIG_1(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38187,7 +38187,7 @@ int _wrap_destroyWindow(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38210,7 +38210,7 @@ int _wrap_destroyWindow(SWIG_GatewayParameters) {
 
 int _wrap_destroyAllWindows(SWIG_GatewayParameters) {
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::destroyAllWindows();
@@ -38223,7 +38223,7 @@ int _wrap_startWindowThread(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (int)cv::startWindowThread();
@@ -38240,7 +38240,7 @@ int _wrap_waitKey__SWIG_0(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -38259,7 +38259,7 @@ int _wrap_waitKey__SWIG_1(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (int)cv::waitKey();
@@ -38300,7 +38300,7 @@ int _wrap_imshow(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38344,7 +38344,7 @@ int _wrap_resizeWindow(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38386,7 +38386,7 @@ int _wrap_moveWindow(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38428,7 +38428,7 @@ int _wrap_setWindowProperty(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38468,7 +38468,7 @@ int _wrap_getWindowProperty(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38503,7 +38503,7 @@ int _wrap_setMouseCallback__SWIG_0(SWIG_GatewayParameters) {
   int res3 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38540,7 +38540,7 @@ int _wrap_setMouseCallback__SWIG_1(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38628,7 +38628,7 @@ int _wrap_createTrackbar__SWIG_0(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38697,7 +38697,7 @@ int _wrap_createTrackbar__SWIG_1(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38761,7 +38761,7 @@ int _wrap_createTrackbar__SWIG_2(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38907,7 +38907,7 @@ int _wrap_getTrackbarPos(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38951,7 +38951,7 @@ int _wrap_setTrackbarPos(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -38997,7 +38997,7 @@ int _wrap_setOpenGlDrawCallback__SWIG_0(SWIG_GatewayParameters) {
   int res3 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39034,7 +39034,7 @@ int _wrap_setOpenGlDrawCallback__SWIG_1(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39110,7 +39110,7 @@ int _wrap_setOpenGlContext(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39136,7 +39136,7 @@ int _wrap_updateWindow(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39168,7 +39168,7 @@ int _wrap_pointCloudShow__SWIG_0(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39215,7 +39215,7 @@ int _wrap_pointCloudShow__SWIG_1(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39273,7 +39273,7 @@ int _wrap_pointCloudShow__SWIG_2(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39404,7 +39404,7 @@ int _wrap_fontQt__SWIG_0(SWIG_GatewayParameters) {
   CvFont result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39465,7 +39465,7 @@ int _wrap_fontQt__SWIG_1(SWIG_GatewayParameters) {
   CvFont result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39518,7 +39518,7 @@ int _wrap_fontQt__SWIG_2(SWIG_GatewayParameters) {
   CvFont result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39563,7 +39563,7 @@ int _wrap_fontQt__SWIG_3(SWIG_GatewayParameters) {
   CvFont result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39602,7 +39602,7 @@ int _wrap_fontQt__SWIG_4(SWIG_GatewayParameters) {
   CvFont result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39635,7 +39635,7 @@ int _wrap_fontQt__SWIG_5(SWIG_GatewayParameters) {
   CvFont result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39809,7 +39809,7 @@ int _wrap_addText(SWIG_GatewayParameters) {
   int res4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -39862,7 +39862,7 @@ int _wrap_displayOverlay__SWIG_0(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39907,7 +39907,7 @@ int _wrap_displayOverlay__SWIG_1(SWIG_GatewayParameters) {
   int res2 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -39992,7 +39992,7 @@ int _wrap_displayStatusBar__SWIG_0(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40037,7 +40037,7 @@ int _wrap_displayStatusBar__SWIG_1(SWIG_GatewayParameters) {
   int res2 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40117,7 +40117,7 @@ int _wrap_saveWindowParameters(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40143,7 +40143,7 @@ int _wrap_loadWindowParameters(SWIG_GatewayParameters) {
   int res1 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40173,7 +40173,7 @@ int _wrap_startLoop(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40209,7 +40209,7 @@ int _wrap_startLoop(SWIG_GatewayParameters) {
 
 int _wrap_stopLoop(SWIG_GatewayParameters) {
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::stopLoop();
@@ -40233,7 +40233,7 @@ int _wrap_createButton__SWIG_0(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40287,7 +40287,7 @@ int _wrap_createButton__SWIG_1(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40333,7 +40333,7 @@ int _wrap_createButton__SWIG_2(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40372,7 +40372,7 @@ int _wrap_createButton__SWIG_3(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40510,7 +40510,7 @@ int _wrap_imread__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40546,7 +40546,7 @@ int _wrap_imread__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40615,7 +40615,7 @@ int _wrap_imwrite__SWIG_0(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40664,7 +40664,7 @@ int _wrap_imwrite__SWIG_1(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40756,7 +40756,7 @@ int _wrap_imdecode__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatbuf = NULL;
@@ -40797,7 +40797,7 @@ int _wrap_imdecode__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatbuf = NULL;
@@ -40897,7 +40897,7 @@ int _wrap_imencode__SWIG_0(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -40957,7 +40957,7 @@ int _wrap_imencode__SWIG_1(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -41063,7 +41063,7 @@ int _wrap_new_VideoCapture__SWIG_0(SWIG_GatewayParameters) {
   cv::VideoCapture *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::VideoCapture *)new cv::VideoCapture();
@@ -41079,7 +41079,7 @@ int _wrap_new_VideoCapture__SWIG_1(SWIG_GatewayParameters) {
   cv::VideoCapture *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -41108,7 +41108,7 @@ int _wrap_new_VideoCapture__SWIG_2(SWIG_GatewayParameters) {
   cv::VideoCapture *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -41162,7 +41162,7 @@ int _wrap_delete_VideoCapture(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -41185,7 +41185,7 @@ int _wrap_VideoCapture_open__SWIG_0(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41222,7 +41222,7 @@ int _wrap_VideoCapture_open__SWIG_1(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41289,7 +41289,7 @@ int _wrap_VideoCapture_isOpened(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41310,7 +41310,7 @@ int _wrap_VideoCapture_release(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41331,7 +41331,7 @@ int _wrap_VideoCapture_grab(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41359,7 +41359,7 @@ int _wrap_VideoCapture_retrieve__SWIG_0(SWIG_GatewayParameters) {
   
   arg2 = new cv::Mat();
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41394,7 +41394,7 @@ int _wrap_VideoCapture_retrieve__SWIG_1(SWIG_GatewayParameters) {
   
   arg2 = new cv::Mat();
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41460,7 +41460,7 @@ int _wrap_VideoCapture___rshift__(SWIG_GatewayParameters) {
   
   arg2 = new cv::Mat();
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41490,7 +41490,7 @@ int _wrap_VideoCapture_read(SWIG_GatewayParameters) {
   
   arg2 = new cv::Mat();
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41523,7 +41523,7 @@ int _wrap_VideoCapture_set(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41558,7 +41558,7 @@ int _wrap_VideoCapture_get(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoCapture, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41582,7 +41582,7 @@ int _wrap_new_VideoWriter__SWIG_0(SWIG_GatewayParameters) {
   cv::VideoWriter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::VideoWriter *)new cv::VideoWriter();
@@ -41608,7 +41608,7 @@ int _wrap_new_VideoWriter__SWIG_1(SWIG_GatewayParameters) {
   cv::VideoWriter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -41661,7 +41661,7 @@ int _wrap_new_VideoWriter__SWIG_2(SWIG_GatewayParameters) {
   cv::VideoWriter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -41787,7 +41787,7 @@ int _wrap_delete_VideoWriter(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoWriter, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -41820,7 +41820,7 @@ int _wrap_VideoWriter_open__SWIG_0(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoWriter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -41881,7 +41881,7 @@ int _wrap_VideoWriter_open__SWIG_1(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoWriter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -42020,7 +42020,7 @@ int _wrap_VideoWriter_isOpened(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoWriter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -42041,7 +42041,7 @@ int _wrap_VideoWriter_release(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoWriter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -42063,7 +42063,7 @@ int _wrap_VideoWriter___lshift__(SWIG_GatewayParameters) {
   cv::VideoWriter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoWriter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -42093,7 +42093,7 @@ int _wrap_VideoWriter_write(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__VideoWriter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -42131,7 +42131,7 @@ int _wrap_CV_FOURCC(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_SciString_AsChar(pvApiCtx, 1, &val1, SWIG_Scilab_GetFuncName());
@@ -42184,7 +42184,7 @@ int _wrap_HoughLines__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutVector2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -42257,7 +42257,7 @@ int _wrap_HoughLines__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutVector2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -42322,7 +42322,7 @@ int _wrap_HoughLines__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutVector2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -42551,7 +42551,7 @@ int _wrap_HoughLinesP__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutVector2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -42624,7 +42624,7 @@ int _wrap_HoughLinesP__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutVector2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -42689,7 +42689,7 @@ int _wrap_HoughLinesP__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutVector2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -42908,7 +42908,7 @@ int _wrap_borderInterpolate(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -42939,7 +42939,7 @@ int _wrap_delete_BaseRowFilter(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseRowFilter, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -42971,7 +42971,7 @@ int _wrap_BaseRowFilter___funcall__(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseRowFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43014,7 +43014,7 @@ int _wrap_BaseRowFilter_ksize_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseRowFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43040,7 +43040,7 @@ int _wrap_BaseRowFilter_ksize_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseRowFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43064,7 +43064,7 @@ int _wrap_BaseRowFilter_anchor_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseRowFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43090,7 +43090,7 @@ int _wrap_BaseRowFilter_anchor_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseRowFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43111,7 +43111,7 @@ int _wrap_delete_BaseColumnFilter(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseColumnFilter, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -43146,7 +43146,7 @@ int _wrap_BaseColumnFilter___funcall__(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseColumnFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43191,7 +43191,7 @@ int _wrap_BaseColumnFilter_reset(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseColumnFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43214,7 +43214,7 @@ int _wrap_BaseColumnFilter_ksize_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseColumnFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43240,7 +43240,7 @@ int _wrap_BaseColumnFilter_ksize_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseColumnFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43264,7 +43264,7 @@ int _wrap_BaseColumnFilter_anchor_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseColumnFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43290,7 +43290,7 @@ int _wrap_BaseColumnFilter_anchor_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseColumnFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43311,7 +43311,7 @@ int _wrap_delete_BaseFilter(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseFilter, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -43349,7 +43349,7 @@ int _wrap_BaseFilter___funcall__(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43399,7 +43399,7 @@ int _wrap_BaseFilter_reset(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43422,7 +43422,7 @@ int _wrap_BaseFilter_ksize_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43448,7 +43448,7 @@ int _wrap_BaseFilter_ksize_get(SWIG_GatewayParameters) {
   cv::Size *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43473,7 +43473,7 @@ int _wrap_BaseFilter_anchor_set(SWIG_GatewayParameters) {
   arg2 = &tmpPoint2;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43499,7 +43499,7 @@ int _wrap_BaseFilter_anchor_get(SWIG_GatewayParameters) {
   cv::Point *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BaseFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -43520,7 +43520,7 @@ int _wrap_getKernelType(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatkernel = NULL;
@@ -43562,7 +43562,7 @@ int _wrap_getLinearRowFilter(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseRowFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -43627,7 +43627,7 @@ int _wrap_getLinearColumnFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseColumnFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -43699,7 +43699,7 @@ int _wrap_getLinearColumnFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseColumnFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -43763,7 +43763,7 @@ int _wrap_getLinearColumnFilter__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseColumnFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -43959,7 +43959,7 @@ int _wrap_getLinearFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44019,7 +44019,7 @@ int _wrap_getLinearFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44071,7 +44071,7 @@ int _wrap_getLinearFilter__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44117,7 +44117,7 @@ int _wrap_getLinearFilter__SWIG_3(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44319,7 +44319,7 @@ int _wrap_createSeparableLinearFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44407,7 +44407,7 @@ int _wrap_createSeparableLinearFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44488,7 +44488,7 @@ int _wrap_createSeparableLinearFilter__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44561,7 +44561,7 @@ int _wrap_createSeparableLinearFilter__SWIG_3(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44626,7 +44626,7 @@ int _wrap_createSeparableLinearFilter__SWIG_4(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -44685,7 +44685,7 @@ int _wrap_createSeparableLinearFilter__SWIG_5(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45050,7 +45050,7 @@ int _wrap_createLinearFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45125,7 +45125,7 @@ int _wrap_createLinearFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45193,7 +45193,7 @@ int _wrap_createLinearFilter__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45253,7 +45253,7 @@ int _wrap_createLinearFilter__SWIG_3(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45305,7 +45305,7 @@ int _wrap_createLinearFilter__SWIG_4(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45351,7 +45351,7 @@ int _wrap_createLinearFilter__SWIG_5(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45646,7 +45646,7 @@ int _wrap_getGaussianKernel__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45684,7 +45684,7 @@ int _wrap_getGaussianKernel__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45782,7 +45782,7 @@ int _wrap_createGaussianFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45829,7 +45829,7 @@ int _wrap_createGaussianFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -45868,7 +45868,7 @@ int _wrap_createGaussianFilter__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46032,7 +46032,7 @@ int _wrap_getDerivKernels__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode3 = SWIG_AsVal_int(1, &val3);
@@ -46101,7 +46101,7 @@ int _wrap_getDerivKernels__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode3 = SWIG_AsVal_int(1, &val3);
@@ -46162,7 +46162,7 @@ int _wrap_getDerivKernels__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode3 = SWIG_AsVal_int(1, &val3);
@@ -46317,7 +46317,7 @@ int _wrap_createDerivFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46376,7 +46376,7 @@ int _wrap_createDerivFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46503,7 +46503,7 @@ int _wrap_getRowSumFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseRowFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46546,7 +46546,7 @@ int _wrap_getRowSumFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseRowFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46646,7 +46646,7 @@ int _wrap_getColumnSumFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseColumnFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46697,7 +46697,7 @@ int _wrap_getColumnSumFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseColumnFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46740,7 +46740,7 @@ int _wrap_getColumnSumFilter__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseColumnFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46874,7 +46874,7 @@ int _wrap_createBoxFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46925,7 +46925,7 @@ int _wrap_createBoxFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -46968,7 +46968,7 @@ int _wrap_createBoxFilter__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -47005,7 +47005,7 @@ int _wrap_createBoxFilter__SWIG_3(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -47185,7 +47185,7 @@ int _wrap_getGaborKernel__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -47251,7 +47251,7 @@ int _wrap_getGaborKernel__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -47309,7 +47309,7 @@ int _wrap_getGaborKernel__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -47560,7 +47560,7 @@ int _wrap_getMorphologyRowFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseRowFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -47603,7 +47603,7 @@ int _wrap_getMorphologyRowFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseRowFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -47700,7 +47700,7 @@ int _wrap_getMorphologyColumnFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseColumnFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -47743,7 +47743,7 @@ int _wrap_getMorphologyColumnFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseColumnFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -47836,7 +47836,7 @@ int _wrap_getMorphologyFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -47882,7 +47882,7 @@ int _wrap_getMorphologyFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::BaseFilter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -47981,7 +47981,7 @@ int _wrap_morphologyDefaultBorderValue(SWIG_GatewayParameters) {
   cv::Scalar result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = cv::morphologyDefaultBorderValue();
@@ -48011,7 +48011,7 @@ int _wrap_createMorphologyFilter__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -48078,7 +48078,7 @@ int _wrap_createMorphologyFilter__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -48138,7 +48138,7 @@ int _wrap_createMorphologyFilter__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -48190,7 +48190,7 @@ int _wrap_createMorphologyFilter__SWIG_3(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -48236,7 +48236,7 @@ int _wrap_createMorphologyFilter__SWIG_4(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FilterEngine > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -48455,7 +48455,7 @@ int _wrap_getStructuringElement__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -48487,7 +48487,7 @@ int _wrap_getStructuringElement__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -48580,7 +48580,7 @@ int _wrap_copyMakeBorder__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -48659,7 +48659,7 @@ int _wrap_copyMakeBorder__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -48815,7 +48815,7 @@ int _wrap_medianBlur(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -48865,7 +48865,7 @@ int _wrap_GaussianBlur__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -48925,7 +48925,7 @@ int _wrap_GaussianBlur__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -48977,7 +48977,7 @@ int _wrap_GaussianBlur__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49156,7 +49156,7 @@ int _wrap_bilateralFilter__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49220,7 +49220,7 @@ int _wrap_bilateralFilter__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49377,7 +49377,7 @@ int _wrap_adaptiveBilateralFilter__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49441,7 +49441,7 @@ int _wrap_adaptiveBilateralFilter__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49499,7 +49499,7 @@ int _wrap_adaptiveBilateralFilter__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49551,7 +49551,7 @@ int _wrap_adaptiveBilateralFilter__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49780,7 +49780,7 @@ int _wrap_boxFilter__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49844,7 +49844,7 @@ int _wrap_boxFilter__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49900,7 +49900,7 @@ int _wrap_boxFilter__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -49950,7 +49950,7 @@ int _wrap_boxFilter__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50144,7 +50144,7 @@ int _wrap_blur__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50192,7 +50192,7 @@ int _wrap_blur__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50234,7 +50234,7 @@ int _wrap_blur__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50364,7 +50364,7 @@ int _wrap_filter2D__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50437,7 +50437,7 @@ int _wrap_filter2D__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50502,7 +50502,7 @@ int _wrap_filter2D__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50561,7 +50561,7 @@ int _wrap_filter2D__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50783,7 +50783,7 @@ int _wrap_sepFilter2D__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50869,7 +50869,7 @@ int _wrap_sepFilter2D__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -50947,7 +50947,7 @@ int _wrap_sepFilter2D__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -51019,7 +51019,7 @@ int _wrap_sepFilter2D__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -51294,7 +51294,7 @@ int _wrap_Sobel__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -51382,7 +51382,7 @@ int _wrap_Sobel__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -51462,7 +51462,7 @@ int _wrap_Sobel__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -51534,7 +51534,7 @@ int _wrap_Sobel__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -51598,7 +51598,7 @@ int _wrap_Sobel__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -51894,7 +51894,7 @@ int _wrap_Scharr__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -51974,7 +51974,7 @@ int _wrap_Scharr__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -52046,7 +52046,7 @@ int _wrap_Scharr__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -52110,7 +52110,7 @@ int _wrap_Scharr__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -52356,7 +52356,7 @@ int _wrap_Laplacian__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -52428,7 +52428,7 @@ int _wrap_Laplacian__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -52492,7 +52492,7 @@ int _wrap_Laplacian__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -52548,7 +52548,7 @@ int _wrap_Laplacian__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -52596,7 +52596,7 @@ int _wrap_Laplacian__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -52826,7 +52826,7 @@ int _wrap_Canny__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -52890,7 +52890,7 @@ int _wrap_Canny__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -52946,7 +52946,7 @@ int _wrap_Canny__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -53136,7 +53136,7 @@ int _wrap_cornerMinEigenVal__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53192,7 +53192,7 @@ int _wrap_cornerMinEigenVal__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53240,7 +53240,7 @@ int _wrap_cornerMinEigenVal__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53371,7 +53371,7 @@ int _wrap_cornerHarris__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53435,7 +53435,7 @@ int _wrap_cornerHarris__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53573,7 +53573,7 @@ int _wrap_eigen2x2(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_float, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -53614,7 +53614,7 @@ int _wrap_cornerEigenValsAndVecs__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53670,7 +53670,7 @@ int _wrap_cornerEigenValsAndVecs__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53783,7 +53783,7 @@ int _wrap_preCornerDetect__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53831,7 +53831,7 @@ int _wrap_preCornerDetect__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -53926,7 +53926,7 @@ int _wrap_cornerSubPix(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54001,7 +54001,7 @@ int _wrap_goodFeaturesToTrack__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54094,7 +54094,7 @@ int _wrap_goodFeaturesToTrack__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54179,7 +54179,7 @@ int _wrap_goodFeaturesToTrack__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54256,7 +54256,7 @@ int _wrap_goodFeaturesToTrack__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54327,7 +54327,7 @@ int _wrap_goodFeaturesToTrack__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54686,7 +54686,7 @@ int _wrap_HoughCircles__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54774,7 +54774,7 @@ int _wrap_HoughCircles__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54854,7 +54854,7 @@ int _wrap_HoughCircles__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54926,7 +54926,7 @@ int _wrap_HoughCircles__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -54990,7 +54990,7 @@ int _wrap_HoughCircles__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -55339,7 +55339,7 @@ int _wrap_GeneralizedHough_create(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::GeneralizedHough > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -55360,7 +55360,7 @@ int _wrap_delete_GeneralizedHough(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -55385,7 +55385,7 @@ int _wrap_GeneralizedHough_setTemplate__SWIG_0(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -55429,7 +55429,7 @@ int _wrap_GeneralizedHough_setTemplate__SWIG_1(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -55467,7 +55467,7 @@ int _wrap_GeneralizedHough_setTemplate__SWIG_2(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -55503,7 +55503,7 @@ int _wrap_GeneralizedHough_setTemplate__SWIG_3(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -55565,7 +55565,7 @@ int _wrap_GeneralizedHough_setTemplate__SWIG_4(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -55785,7 +55785,7 @@ int _wrap_GeneralizedHough_detect__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -55843,7 +55843,7 @@ int _wrap_GeneralizedHough_detect__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -55892,7 +55892,7 @@ int _wrap_GeneralizedHough_detect__SWIG_2(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -55941,7 +55941,7 @@ int _wrap_GeneralizedHough_detect__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -56016,7 +56016,7 @@ int _wrap_GeneralizedHough_detect__SWIG_4(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -56213,7 +56213,7 @@ int _wrap_GeneralizedHough_release(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GeneralizedHough, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -56245,7 +56245,7 @@ int _wrap_erode__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56317,7 +56317,7 @@ int _wrap_erode__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56382,7 +56382,7 @@ int _wrap_erode__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56439,7 +56439,7 @@ int _wrap_erode__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56490,7 +56490,7 @@ int _wrap_erode__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56715,7 +56715,7 @@ int _wrap_dilate__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56787,7 +56787,7 @@ int _wrap_dilate__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56852,7 +56852,7 @@ int _wrap_dilate__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56909,7 +56909,7 @@ int _wrap_dilate__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -56960,7 +56960,7 @@ int _wrap_dilate__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57188,7 +57188,7 @@ int _wrap_morphologyEx__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57268,7 +57268,7 @@ int _wrap_morphologyEx__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57341,7 +57341,7 @@ int _wrap_morphologyEx__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57406,7 +57406,7 @@ int _wrap_morphologyEx__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57465,7 +57465,7 @@ int _wrap_morphologyEx__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57720,7 +57720,7 @@ int _wrap_resize__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57780,7 +57780,7 @@ int _wrap_resize__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57832,7 +57832,7 @@ int _wrap_resize__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -57876,7 +57876,7 @@ int _wrap_resize__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58065,7 +58065,7 @@ int _wrap_warpAffine__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58137,7 +58137,7 @@ int _wrap_warpAffine__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58202,7 +58202,7 @@ int _wrap_warpAffine__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58259,7 +58259,7 @@ int _wrap_warpAffine__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58463,7 +58463,7 @@ int _wrap_warpPerspective__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58535,7 +58535,7 @@ int _wrap_warpPerspective__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58600,7 +58600,7 @@ int _wrap_warpPerspective__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58657,7 +58657,7 @@ int _wrap_warpPerspective__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58861,7 +58861,7 @@ int _wrap_remap__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -58942,7 +58942,7 @@ int _wrap_remap__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -59016,7 +59016,7 @@ int _wrap_remap__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -59219,7 +59219,7 @@ int _wrap_convertMaps__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmap1 = NULL;
@@ -59290,7 +59290,7 @@ int _wrap_convertMaps__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmap1 = NULL;
@@ -59425,7 +59425,7 @@ int _wrap_getRotationMatrix2D(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDouble_AsPoint2f(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -59461,7 +59461,7 @@ int _wrap_getPerspectiveTransform__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Point_T_float_t, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -59494,7 +59494,7 @@ int _wrap_getAffineTransform__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Point_T_float_t, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -59525,7 +59525,7 @@ int _wrap_invertAffineTransform(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatM = NULL;
@@ -59558,7 +59558,7 @@ int _wrap_getPerspectiveTransform__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -59648,7 +59648,7 @@ int _wrap_getAffineTransform__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -59745,7 +59745,7 @@ int _wrap_getRectSubPix__SWIG_0(SWIG_GatewayParameters) {
   arg4 = new cv::_OutputArray(*pOutMat4);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -59793,7 +59793,7 @@ int _wrap_getRectSubPix__SWIG_1(SWIG_GatewayParameters) {
   arg4 = new cv::_OutputArray(*pOutMat4);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -59901,7 +59901,7 @@ int _wrap_integral__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -59941,7 +59941,7 @@ int _wrap_integral__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -59983,7 +59983,7 @@ int _wrap_integral__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60033,7 +60033,7 @@ int _wrap_integral__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60085,7 +60085,7 @@ int _wrap_integral__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60145,7 +60145,7 @@ int _wrap_integral__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60291,7 +60291,7 @@ int _wrap_accumulate__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60340,7 +60340,7 @@ int _wrap_accumulate__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60439,7 +60439,7 @@ int _wrap_accumulateSquare__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60488,7 +60488,7 @@ int _wrap_accumulateSquare__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60588,7 +60588,7 @@ int _wrap_accumulateProduct__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -60650,7 +60650,7 @@ int _wrap_accumulateProduct__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -60780,7 +60780,7 @@ int _wrap_accumulateWeighted__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60837,7 +60837,7 @@ int _wrap_accumulateWeighted__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -60962,7 +60962,7 @@ int _wrap_PSNR(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -61003,7 +61003,7 @@ int _wrap_phaseCorrelate__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Point_< double > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -61055,7 +61055,7 @@ int _wrap_phaseCorrelate__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Point_< double > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -61160,7 +61160,7 @@ int _wrap_phaseCorrelateRes__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Point_< double > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -61218,7 +61218,7 @@ int _wrap_phaseCorrelateRes__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Point_< double > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc1 = NULL;
@@ -61349,7 +61349,7 @@ int _wrap_createHanningWindow(SWIG_GatewayParameters) {
   arg1 = new cv::_OutputArray(*pOutMat1);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -61390,7 +61390,7 @@ int _wrap_threshold(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61456,7 +61456,7 @@ int _wrap_adaptiveThreshold(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61521,7 +61521,7 @@ int _wrap_pyrDown__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61567,7 +61567,7 @@ int _wrap_pyrDown__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61606,7 +61606,7 @@ int _wrap_pyrDown__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61710,7 +61710,7 @@ int _wrap_pyrUp__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61756,7 +61756,7 @@ int _wrap_pyrUp__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61795,7 +61795,7 @@ int _wrap_pyrUp__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61900,7 +61900,7 @@ int _wrap_buildPyramid__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -61948,7 +61948,7 @@ int _wrap_buildPyramid__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -62043,7 +62043,7 @@ int _wrap_undistort__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -62116,7 +62116,7 @@ int _wrap_undistort__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -62263,7 +62263,7 @@ int _wrap_initUndistortRectifyMap(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcameraMatrix = NULL;
@@ -62367,7 +62367,7 @@ int _wrap_initWideAngleProjMap__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcameraMatrix = NULL;
@@ -62460,7 +62460,7 @@ int _wrap_initWideAngleProjMap__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcameraMatrix = NULL;
@@ -62545,7 +62545,7 @@ int _wrap_initWideAngleProjMap__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcameraMatrix = NULL;
@@ -62752,7 +62752,7 @@ int _wrap_getDefaultNewCameraMatrix__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcameraMatrix = NULL;
@@ -62791,7 +62791,7 @@ int _wrap_getDefaultNewCameraMatrix__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcameraMatrix = NULL;
@@ -62824,7 +62824,7 @@ int _wrap_getDefaultNewCameraMatrix__SWIG_2(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatcameraMatrix = NULL;
@@ -62931,7 +62931,7 @@ int _wrap_undistortPoints__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -63017,7 +63017,7 @@ int _wrap_undistortPoints__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -63090,7 +63090,7 @@ int _wrap_undistortPoints__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -63290,7 +63290,7 @@ int _wrap_calcHist__SWIG_0(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -63387,7 +63387,7 @@ int _wrap_calcHist__SWIG_1(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -63476,7 +63476,7 @@ int _wrap_calcHist__SWIG_2(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -63774,7 +63774,7 @@ int _wrap_calcBackProject__SWIG_0(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -63857,7 +63857,7 @@ int _wrap_calcBackProject__SWIG_1(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -63932,7 +63932,7 @@ int _wrap_calcBackProject__SWIG_2(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -64010,7 +64010,7 @@ int _wrap_calcBackProject__SWIG_3(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -64091,7 +64091,7 @@ int _wrap_calcBackProject__SWIG_4(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -64164,7 +64164,7 @@ int _wrap_calcBackProject__SWIG_5(SWIG_GatewayParameters) {
   arg5 = new cv::_OutputArray(*pOutMat5);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
@@ -64232,7 +64232,7 @@ int _wrap_calcBackProject__SWIG_6(SWIG_GatewayParameters) {
   arg4 = new cv::_OutputArray(*pOutMat4);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimages = NULL;
@@ -64664,7 +64664,7 @@ int _wrap_compareHist__SWIG_0(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatH1 = NULL;
@@ -64716,7 +64716,7 @@ int _wrap_compareHist__SWIG_1(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SparseMat,  0 , SWIG_Scilab_GetFuncName());
@@ -64812,7 +64812,7 @@ int _wrap_equalizeHist(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -64850,7 +64850,7 @@ int _wrap_CLAHE_apply(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CLAHE, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -64891,7 +64891,7 @@ int _wrap_CLAHE_setClipLimit(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CLAHE, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -64917,7 +64917,7 @@ int _wrap_CLAHE_getClipLimit(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CLAHE, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -64939,7 +64939,7 @@ int _wrap_CLAHE_setTilesGridSize(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CLAHE, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -64963,7 +64963,7 @@ int _wrap_CLAHE_getTilesGridSize(SWIG_GatewayParameters) {
   cv::Size result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CLAHE, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -64984,7 +64984,7 @@ int _wrap_CLAHE_collectGarbage(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CLAHE, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -65004,7 +65004,7 @@ int _wrap_delete_CLAHE(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CLAHE, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -65026,7 +65026,7 @@ int _wrap_createCLAHE__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::CLAHE > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -65051,7 +65051,7 @@ int _wrap_createCLAHE__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::CLAHE > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -65070,7 +65070,7 @@ int _wrap_createCLAHE__SWIG_2(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::CLAHE > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = cv::createCLAHE();
@@ -65148,7 +65148,7 @@ int _wrap_EMD__SWIG_0(SWIG_GatewayParameters) {
   arg6 = new cv::_OutputArray(*pOutMat6);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsignature1 = NULL;
@@ -65223,7 +65223,7 @@ int _wrap_EMD__SWIG_1(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsignature1 = NULL;
@@ -65289,7 +65289,7 @@ int _wrap_EMD__SWIG_2(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsignature1 = NULL;
@@ -65349,7 +65349,7 @@ int _wrap_EMD__SWIG_3(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsignature1 = NULL;
@@ -65541,7 +65541,7 @@ int _wrap_watershed(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -65592,7 +65592,7 @@ int _wrap_pyrMeanShiftFiltering__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -65662,7 +65662,7 @@ int _wrap_pyrMeanShiftFiltering__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -65718,7 +65718,7 @@ int _wrap_pyrMeanShiftFiltering__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -65902,7 +65902,7 @@ int _wrap_grabCut__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimg = NULL;
@@ -65980,7 +65980,7 @@ int _wrap_grabCut__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimg = NULL;
@@ -66172,7 +66172,7 @@ int _wrap_distanceTransform__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -66238,7 +66238,7 @@ int _wrap_distanceTransform__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -66295,7 +66295,7 @@ int _wrap_distanceTransform__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -66432,7 +66432,7 @@ int _wrap_floodFill__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66487,7 +66487,7 @@ int _wrap_floodFill__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66536,7 +66536,7 @@ int _wrap_floodFill__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66581,7 +66581,7 @@ int _wrap_floodFill__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66620,7 +66620,7 @@ int _wrap_floodFill__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66664,7 +66664,7 @@ int _wrap_floodFill__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66731,7 +66731,7 @@ int _wrap_floodFill__SWIG_6(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66792,7 +66792,7 @@ int _wrap_floodFill__SWIG_7(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66849,7 +66849,7 @@ int _wrap_floodFill__SWIG_8(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -66900,7 +66900,7 @@ int _wrap_floodFill__SWIG_9(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -67353,7 +67353,7 @@ int _wrap_cvtColor__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -67401,7 +67401,7 @@ int _wrap_cvtColor__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -67493,7 +67493,7 @@ int _wrap_moments__SWIG_0(SWIG_GatewayParameters) {
   cv::Moments result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatarray = NULL;
@@ -67525,7 +67525,7 @@ int _wrap_moments__SWIG_1(SWIG_GatewayParameters) {
   cv::Moments result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatarray = NULL;
@@ -67602,7 +67602,7 @@ int _wrap_HuMoments__SWIG_0(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Moments,  0 , SWIG_Scilab_GetFuncName());
@@ -67642,7 +67642,7 @@ int _wrap_HuMoments__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Moments,  0 , SWIG_Scilab_GetFuncName());
@@ -67719,7 +67719,7 @@ int _wrap_matchTemplate(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -67783,7 +67783,7 @@ int _wrap_findContours__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -67846,7 +67846,7 @@ int _wrap_findContours__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -67903,7 +67903,7 @@ int _wrap_findContours__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pPtLists2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -67956,7 +67956,7 @@ int _wrap_findContours__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pPtLists2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -68127,7 +68127,7 @@ int _wrap_drawContours__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -68212,7 +68212,7 @@ int _wrap_drawContours__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -68291,7 +68291,7 @@ int _wrap_drawContours__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -68364,7 +68364,7 @@ int _wrap_drawContours__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -68422,7 +68422,7 @@ int _wrap_drawContours__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -68472,7 +68472,7 @@ int _wrap_drawContours__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -68785,7 +68785,7 @@ int _wrap_approxPolyDP(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -68826,7 +68826,7 @@ int _wrap_arcLength(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -68854,7 +68854,7 @@ int _wrap_boundingRect(SWIG_GatewayParameters) {
   cv::Rect result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -68880,7 +68880,7 @@ int _wrap_contourArea__SWIG_0(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -68908,7 +68908,7 @@ int _wrap_contourArea__SWIG_1(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -68973,7 +68973,7 @@ int _wrap_minAreaRect(SWIG_GatewayParameters) {
   cv::RotatedRect result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69001,7 +69001,7 @@ int _wrap_minEnclosingCircle(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69046,7 +69046,7 @@ int _wrap_matchShapes(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69096,7 +69096,7 @@ int _wrap_convexHull__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69140,7 +69140,7 @@ int _wrap_convexHull__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69176,7 +69176,7 @@ int _wrap_convexHull__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69281,7 +69281,7 @@ int _wrap_convexityDefects(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69321,7 +69321,7 @@ int _wrap_isContourConvex(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69352,7 +69352,7 @@ int _wrap_intersectConvexConvex__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMat_p1 = NULL;
@@ -69407,7 +69407,7 @@ int _wrap_intersectConvexConvex__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMat_p1 = NULL;
@@ -69516,7 +69516,7 @@ int _wrap_fitEllipse(SWIG_GatewayParameters) {
   cv::RotatedRect result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69554,7 +69554,7 @@ int _wrap_fitLine(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69606,7 +69606,7 @@ int _wrap_pointPolygonTest(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   PtList *pInPtList1 = NULL;
@@ -69642,7 +69642,7 @@ int _wrap_cvGetPtList(SWIG_GatewayParameters) {
   arg3 = new std::vector<cv::Point>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -69671,7 +69671,7 @@ int _wrap_cvGetPtListsSize(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("PtLists *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -69692,7 +69692,7 @@ int _wrap_cvPtListExtract(SWIG_GatewayParameters) {
   arg2 = &tmpPtList2;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("PtList *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -69721,7 +69721,7 @@ int _wrap___lshift____SWIG_17(SWIG_GatewayParameters) {
   std::ostream *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__ostream,  0 , SWIG_Scilab_GetFuncName());
@@ -69785,7 +69785,7 @@ int _wrap_applyColorMap(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -69826,7 +69826,7 @@ int _wrap_CvHaarFeature_tilted_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarFeature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -69852,7 +69852,7 @@ int _wrap_CvHaarFeature_tilted_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarFeature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -69871,7 +69871,7 @@ int _wrap_new_CvHaarFeature(SWIG_GatewayParameters) {
   CvHaarFeature *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (CvHaarFeature *)new CvHaarFeature();
@@ -69887,7 +69887,7 @@ int _wrap_delete_CvHaarFeature(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarFeature, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -69910,7 +69910,7 @@ int _wrap_HaarStgClsf_count_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -69936,7 +69936,7 @@ int _wrap_HaarStgClsf_count_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -69960,7 +69960,7 @@ int _wrap_HaarStgClsf_threshold_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -69986,7 +69986,7 @@ int _wrap_HaarStgClsf_threshold_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70010,7 +70010,7 @@ int _wrap_HaarStgClsf_classifier_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70036,7 +70036,7 @@ int _wrap_HaarStgClsf_classifier_get(SWIG_GatewayParameters) {
   CvHaarClassifier *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70060,7 +70060,7 @@ int _wrap_HaarStgClsf_next_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70086,7 +70086,7 @@ int _wrap_HaarStgClsf_next_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70110,7 +70110,7 @@ int _wrap_HaarStgClsf_child_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70136,7 +70136,7 @@ int _wrap_HaarStgClsf_child_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70160,7 +70160,7 @@ int _wrap_HaarStgClsf_parent_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70186,7 +70186,7 @@ int _wrap_HaarStgClsf_parent_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70205,7 +70205,7 @@ int _wrap_new_HaarStgClsf(SWIG_GatewayParameters) {
   CvHaarStageClassifier *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (CvHaarStageClassifier *)new CvHaarStageClassifier();
@@ -70221,7 +70221,7 @@ int _wrap_delete_HaarStgClsf(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarStageClassifier, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -70244,7 +70244,7 @@ int _wrap_HaarClsfrCasd_flags_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70270,7 +70270,7 @@ int _wrap_HaarClsfrCasd_flags_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70294,7 +70294,7 @@ int _wrap_HaarClsfrCasd_count_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70320,7 +70320,7 @@ int _wrap_HaarClsfrCasd_count_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70344,7 +70344,7 @@ int _wrap_HaarClsfrCasd_orig_window_size_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70370,7 +70370,7 @@ int _wrap_HaarClsfrCasd_orig_window_size_get(SWIG_GatewayParameters) {
   CvSize *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70394,7 +70394,7 @@ int _wrap_HaarClsfrCasd_real_window_size_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70420,7 +70420,7 @@ int _wrap_HaarClsfrCasd_real_window_size_get(SWIG_GatewayParameters) {
   CvSize *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70444,7 +70444,7 @@ int _wrap_HaarClsfrCasd_scale_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70470,7 +70470,7 @@ int _wrap_HaarClsfrCasd_scale_get(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70494,7 +70494,7 @@ int _wrap_HaarClsfrCasd_stage_classifier_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70520,7 +70520,7 @@ int _wrap_HaarClsfrCasd_stage_classifier_get(SWIG_GatewayParameters) {
   CvHaarStageClassifier *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70544,7 +70544,7 @@ int _wrap_HaarClsfrCasd_hid_cascade_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70570,7 +70570,7 @@ int _wrap_HaarClsfrCasd_hid_cascade_get(SWIG_GatewayParameters) {
   CvHidHaarClassifierCascade *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70589,7 +70589,7 @@ int _wrap_new_HaarClsfrCasd(SWIG_GatewayParameters) {
   CvHaarClassifierCascade *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (CvHaarClassifierCascade *)new CvHaarClassifierCascade();
@@ -70605,7 +70605,7 @@ int _wrap_delete_HaarClsfrCasd(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -70628,7 +70628,7 @@ int _wrap_CvAvgComp_rect_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvAvgComp, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70654,7 +70654,7 @@ int _wrap_CvAvgComp_rect_get(SWIG_GatewayParameters) {
   CvRect *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvAvgComp, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70678,7 +70678,7 @@ int _wrap_CvAvgComp_neighbors_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvAvgComp, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70704,7 +70704,7 @@ int _wrap_CvAvgComp_neighbors_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvAvgComp, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70723,7 +70723,7 @@ int _wrap_new_CvAvgComp(SWIG_GatewayParameters) {
   CvAvgComp *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (CvAvgComp *)new CvAvgComp();
@@ -70739,7 +70739,7 @@ int _wrap_delete_CvAvgComp(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvAvgComp, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -70764,7 +70764,7 @@ int _wrap_cvLoadHaarClassifierCascade(SWIG_GatewayParameters) {
   CvHaarClassifierCascade *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SWIG_SciString_AsCharPtrAndSize(pvApiCtx, 1, &buf1, NULL, &alloc1, SWIG_Scilab_GetFuncName());
@@ -70797,7 +70797,7 @@ int _wrap_cvReleaseHaarClassifierCascade(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70838,7 +70838,7 @@ int _wrap_cvHaarDetectObjects(SWIG_GatewayParameters) {
   CvSeq *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -70924,7 +70924,7 @@ int _wrap_cvSetImagesForHaarClassifierCascade(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -70968,7 +70968,7 @@ int _wrap_cvRunHaarClassifierCascade(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvHaarClassifierCascade, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71010,7 +71010,7 @@ int _wrap_LSVMFilterPos_x_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterPosition, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71036,7 +71036,7 @@ int _wrap_LSVMFilterPos_x_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterPosition, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71060,7 +71060,7 @@ int _wrap_LSVMFilterPos_y_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterPosition, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71086,7 +71086,7 @@ int _wrap_LSVMFilterPos_y_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterPosition, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71110,7 +71110,7 @@ int _wrap_LSVMFilterPos_l_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterPosition, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71136,7 +71136,7 @@ int _wrap_LSVMFilterPos_l_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterPosition, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71155,7 +71155,7 @@ int _wrap_new_LSVMFilterPos(SWIG_GatewayParameters) {
   CvLSVMFilterPosition *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (CvLSVMFilterPosition *)new CvLSVMFilterPosition();
@@ -71171,7 +71171,7 @@ int _wrap_delete_LSVMFilterPos(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterPosition, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -71194,7 +71194,7 @@ int _wrap_LSVMFilterObj_V_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71220,7 +71220,7 @@ int _wrap_LSVMFilterObj_V_get(SWIG_GatewayParameters) {
   CvLSVMFilterPosition *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71242,7 +71242,7 @@ int _wrap_LSVMFilterObj_fineFunction_set(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71283,7 +71283,7 @@ int _wrap_LSVMFilterObj_fineFunction_get(SWIG_GatewayParameters) {
   float *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71307,7 +71307,7 @@ int _wrap_LSVMFilterObj_sizeX_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71333,7 +71333,7 @@ int _wrap_LSVMFilterObj_sizeX_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71357,7 +71357,7 @@ int _wrap_LSVMFilterObj_sizeY_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71383,7 +71383,7 @@ int _wrap_LSVMFilterObj_sizeY_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71407,7 +71407,7 @@ int _wrap_LSVMFilterObj_numFeatures_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71433,7 +71433,7 @@ int _wrap_LSVMFilterObj_numFeatures_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71457,7 +71457,7 @@ int _wrap_LSVMFilterObj_H_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71483,7 +71483,7 @@ int _wrap_LSVMFilterObj_H_get(SWIG_GatewayParameters) {
   float *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71502,7 +71502,7 @@ int _wrap_new_LSVMFilterObj(SWIG_GatewayParameters) {
   CvLSVMFilterObject *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (CvLSVMFilterObject *)new CvLSVMFilterObject();
@@ -71518,7 +71518,7 @@ int _wrap_delete_LSVMFilterObj(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLSVMFilterObject, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -71541,7 +71541,7 @@ int _wrap_LatentSvmDet_num_filters_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71567,7 +71567,7 @@ int _wrap_LatentSvmDet_num_filters_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71591,7 +71591,7 @@ int _wrap_LatentSvmDet_num_components_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71617,7 +71617,7 @@ int _wrap_LatentSvmDet_num_components_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71641,7 +71641,7 @@ int _wrap_LatentSvmDet_num_part_filters_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71667,7 +71667,7 @@ int _wrap_LatentSvmDet_num_part_filters_get(SWIG_GatewayParameters) {
   int *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71691,7 +71691,7 @@ int _wrap_LatentSvmDet_filters_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71717,7 +71717,7 @@ int _wrap_LatentSvmDet_filters_get(SWIG_GatewayParameters) {
   CvLSVMFilterObject **result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71741,7 +71741,7 @@ int _wrap_LatentSvmDet_b_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71767,7 +71767,7 @@ int _wrap_LatentSvmDet_b_get(SWIG_GatewayParameters) {
   float *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71791,7 +71791,7 @@ int _wrap_LatentSvmDet_score_threshold_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71817,7 +71817,7 @@ int _wrap_LatentSvmDet_score_threshold_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71836,7 +71836,7 @@ int _wrap_new_LatentSvmDet(SWIG_GatewayParameters) {
   CvLatentSvmDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (CvLatentSvmDetector *)new CvLatentSvmDetector();
@@ -71852,7 +71852,7 @@ int _wrap_delete_LatentSvmDet(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvLatentSvmDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -71874,7 +71874,7 @@ int _wrap_cvLoadLatentSvmDetector(SWIG_GatewayParameters) {
   CvLatentSvmDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SWIG_SciString_AsCharPtrAndSize(pvApiCtx, 1, &buf1, NULL, &alloc1, SWIG_Scilab_GetFuncName());
@@ -71896,7 +71896,7 @@ int _wrap_cvReleaseLatentSvmDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_p_CvLatentSvmDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -71946,7 +71946,7 @@ int _wrap_cvHaarDetectObjectsForROC__SWIG_0(SWIG_GatewayParameters) {
   CvSeq *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 11, 11);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -72061,7 +72061,7 @@ int _wrap_cvHaarDetectObjectsForROC__SWIG_1(SWIG_GatewayParameters) {
   CvSeq *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 10, 10);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -72168,7 +72168,7 @@ int _wrap_cvHaarDetectObjectsForROC__SWIG_2(SWIG_GatewayParameters) {
   CvSeq *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -72261,7 +72261,7 @@ int _wrap_cvHaarDetectObjectsForROC__SWIG_3(SWIG_GatewayParameters) {
   CvSeq *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -72340,7 +72340,7 @@ int _wrap_cvHaarDetectObjectsForROC__SWIG_4(SWIG_GatewayParameters) {
   CvSeq *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -72411,7 +72411,7 @@ int _wrap_cvHaarDetectObjectsForROC__SWIG_5(SWIG_GatewayParameters) {
   CvSeq *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -72474,7 +72474,7 @@ int _wrap_cvHaarDetectObjectsForROC__SWIG_6(SWIG_GatewayParameters) {
   CvSeq *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -72884,7 +72884,7 @@ int _wrap_new_SimilarRects(SWIG_GatewayParameters) {
   cv::SimilarRects *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -72910,7 +72910,7 @@ int _wrap_SimilarRects___funcall__(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimilarRects, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -72942,7 +72942,7 @@ int _wrap_SimilarRects_eps_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimilarRects, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -72968,7 +72968,7 @@ int _wrap_SimilarRects_eps_get(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimilarRects, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -72989,7 +72989,7 @@ int _wrap_delete_SimilarRects(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimilarRects, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -73015,7 +73015,7 @@ int _wrap_groupRectangles__SWIG_0(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode2 = SWIG_AsVal_int(1, &val2);
@@ -73068,7 +73068,7 @@ int _wrap_groupRectangles__SWIG_1(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode2 = SWIG_AsVal_int(1, &val2);
@@ -73122,7 +73122,7 @@ int _wrap_groupRectangles__SWIG_2(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -73186,7 +73186,7 @@ int _wrap_groupRectangles__SWIG_3(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -73251,7 +73251,7 @@ int _wrap_groupRectangles__SWIG_4(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode2 = SWIG_AsVal_int(1, &val2);
@@ -73323,7 +73323,7 @@ int _wrap_groupRectangles__SWIG_5(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -73398,7 +73398,7 @@ int _wrap_groupRectangles__SWIG_6(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -73629,7 +73629,7 @@ int _wrap_groupRectangles_meanshift__SWIG_0(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -73702,7 +73702,7 @@ int _wrap_groupRectangles_meanshift__SWIG_1(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -73769,7 +73769,7 @@ int _wrap_groupRectangles_meanshift__SWIG_2(SWIG_GatewayParameters) {
   
   arg1 = &vRect1;
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -73907,7 +73907,7 @@ int _wrap_delete_FeatureEvaluator(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -73931,7 +73931,7 @@ int _wrap_FeatureEvaluator_read(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -73961,7 +73961,7 @@ int _wrap_FeatureEvaluator_clone(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FeatureEvaluator > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -73983,7 +73983,7 @@ int _wrap_FeatureEvaluator_getFeatureType(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74009,7 +74009,7 @@ int _wrap_FeatureEvaluator_setImage(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74043,7 +74043,7 @@ int _wrap_FeatureEvaluator_setWindow(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74071,7 +74071,7 @@ int _wrap_FeatureEvaluator_calcOrd(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74101,7 +74101,7 @@ int _wrap_FeatureEvaluator_calcCat(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureEvaluator, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74128,7 +74128,7 @@ int _wrap_FeatureEvaluator_create(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FeatureEvaluator > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -74147,7 +74147,7 @@ int _wrap_new_FeatureEvaluator(SWIG_GatewayParameters) {
   cv::FeatureEvaluator *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::FeatureEvaluator *)new cv::FeatureEvaluator();
@@ -74161,7 +74161,7 @@ int _wrap_new_CascadeClassifier__SWIG_0(SWIG_GatewayParameters) {
   cv::CascadeClassifier *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::CascadeClassifier *)new cv::CascadeClassifier();
@@ -74177,7 +74177,7 @@ int _wrap_new_CascadeClassifier__SWIG_1(SWIG_GatewayParameters) {
   cv::CascadeClassifier *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -74229,7 +74229,7 @@ int _wrap_delete_CascadeClassifier(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -74250,7 +74250,7 @@ int _wrap_CascadeClassifier_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74274,7 +74274,7 @@ int _wrap_CascadeClassifier_load(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74311,7 +74311,7 @@ int _wrap_CascadeClassifier_read(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74355,7 +74355,7 @@ int _wrap_CascadeClassifier_detectMultiScale__SWIG_0(SWIG_GatewayParameters) {
   
   arg3 = &vRect3;
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74438,7 +74438,7 @@ int _wrap_CascadeClassifier_detectMultiScale__SWIG_1(SWIG_GatewayParameters) {
   
   arg3 = &vRect3;
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74517,7 +74517,7 @@ int _wrap_CascadeClassifier_detectMultiScale__SWIG_2(SWIG_GatewayParameters) {
   
   arg3 = &vRect3;
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74590,7 +74590,7 @@ int _wrap_CascadeClassifier_detectMultiScale__SWIG_3(SWIG_GatewayParameters) {
   
   arg3 = &vRect3;
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74655,7 +74655,7 @@ int _wrap_CascadeClassifier_detectMultiScale__SWIG_4(SWIG_GatewayParameters) {
   
   arg3 = &vRect3;
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74712,7 +74712,7 @@ int _wrap_CascadeClassifier_detectMultiScale__SWIG_5(SWIG_GatewayParameters) {
   
   arg3 = &vRect3;
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74963,7 +74963,7 @@ int _wrap_CascadeClassifier_isOldFormatCascade(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -74985,7 +74985,7 @@ int _wrap_CascadeClassifier_getOriginalWindowSize(SWIG_GatewayParameters) {
   cv::Size result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75007,7 +75007,7 @@ int _wrap_CascadeClassifier_getFeatureType(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75032,7 +75032,7 @@ int _wrap_CascadeClassifier_setImage(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75064,7 +75064,7 @@ int _wrap_CascadeClassifier_setMaskGenerator(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75096,7 +75096,7 @@ int _wrap_CascadeClassifier_getMaskGenerator(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::CascadeClassifier::MaskGenerator > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75117,7 +75117,7 @@ int _wrap_CascadeClassifier_setFaceDetectionMaskGenerator(SWIG_GatewayParameters
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__CascadeClassifier, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75140,7 +75140,7 @@ int _wrap_DetectionROI_scale_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DetectionROI, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75166,7 +75166,7 @@ int _wrap_DetectionROI_scale_get(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DetectionROI, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75190,7 +75190,7 @@ int _wrap_DetectionROI_locations_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DetectionROI, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75216,7 +75216,7 @@ int _wrap_DetectionROI_locations_get(SWIG_GatewayParameters) {
   cv::vector< cv::Point > *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DetectionROI, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75240,7 +75240,7 @@ int _wrap_DetectionROI_confidences_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DetectionROI, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75266,7 +75266,7 @@ int _wrap_DetectionROI_confidences_get(SWIG_GatewayParameters) {
   cv::vector< double > *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DetectionROI, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75285,7 +75285,7 @@ int _wrap_new_DetectionROI(SWIG_GatewayParameters) {
   cv::DetectionROI *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::DetectionROI *)new cv::DetectionROI();
@@ -75301,7 +75301,7 @@ int _wrap_delete_DetectionROI(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DetectionROI, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -75330,7 +75330,7 @@ int _wrap_findDataMatrix__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -75382,7 +75382,7 @@ int _wrap_findDataMatrix__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -75424,7 +75424,7 @@ int _wrap_findDataMatrix__SWIG_2(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -75526,7 +75526,7 @@ int _wrap_drawDataMatrixCodes(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pInOutMat1 = NULL;
@@ -75572,7 +75572,7 @@ int _wrap_cvFindDataMatrix(SWIG_GatewayParameters) {
   SwigValueWrapper< std::deque< CvDataMatrixCode > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvMat, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75596,7 +75596,7 @@ int _wrap_Feature_x_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75622,7 +75622,7 @@ int _wrap_Feature_x_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75646,7 +75646,7 @@ int _wrap_Feature_y_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75672,7 +75672,7 @@ int _wrap_Feature_y_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75696,7 +75696,7 @@ int _wrap_Feature_label_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75722,7 +75722,7 @@ int _wrap_Feature_label_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75741,7 +75741,7 @@ int _wrap_new_Feature__SWIG_0(SWIG_GatewayParameters) {
   cv::linemod::Feature *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::linemod::Feature *)new cv::linemod::Feature();
@@ -75764,7 +75764,7 @@ int _wrap_new_Feature__SWIG_1(SWIG_GatewayParameters) {
   cv::linemod::Feature *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -75833,7 +75833,7 @@ int _wrap_Feature_read(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75864,7 +75864,7 @@ int _wrap_Feature_write(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75892,7 +75892,7 @@ int _wrap_delete_Feature(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Feature, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -75915,7 +75915,7 @@ int _wrap_Template_width_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75941,7 +75941,7 @@ int _wrap_Template_width_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75965,7 +75965,7 @@ int _wrap_Template_height_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -75991,7 +75991,7 @@ int _wrap_Template_height_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76015,7 +76015,7 @@ int _wrap_Template_pyramid_level_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76041,7 +76041,7 @@ int _wrap_Template_pyramid_level_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76065,7 +76065,7 @@ int _wrap_Template_features_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76091,7 +76091,7 @@ int _wrap_Template_features_get(SWIG_GatewayParameters) {
   std::vector< cv::linemod::Feature,std::allocator< cv::linemod::Feature > > *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76115,7 +76115,7 @@ int _wrap_Template_read(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76146,7 +76146,7 @@ int _wrap_Template_write(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76172,7 +76172,7 @@ int _wrap_new_Template(SWIG_GatewayParameters) {
   cv::linemod::Template *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::linemod::Template *)new cv::linemod::Template();
@@ -76188,7 +76188,7 @@ int _wrap_delete_Template(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Template, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -76208,7 +76208,7 @@ int _wrap_delete_QuantizedPyramid(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__QuantizedPyramid, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -76231,7 +76231,7 @@ int _wrap_QuantizedPyramid_quantize(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__QuantizedPyramid, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76263,7 +76263,7 @@ int _wrap_QuantizedPyramid_extractTemplate(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__QuantizedPyramid, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76292,7 +76292,7 @@ int _wrap_QuantizedPyramid_pyrDown(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__QuantizedPyramid, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76312,7 +76312,7 @@ int _wrap_delete_Modality(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Modality, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -76339,7 +76339,7 @@ int _wrap_Modality_process__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::linemod::QuantizedPyramid > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Modality, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76380,7 +76380,7 @@ int _wrap_Modality_process__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::linemod::QuantizedPyramid > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Modality, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76456,7 +76456,7 @@ int _wrap_Modality_name(SWIG_GatewayParameters) {
   std::string result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Modality, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76480,7 +76480,7 @@ int _wrap_Modality_read(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Modality, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76511,7 +76511,7 @@ int _wrap_Modality_write(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Modality, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76539,7 +76539,7 @@ int _wrap_Modality_create__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::linemod::Modality > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -76568,7 +76568,7 @@ int _wrap_Modality_create__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::linemod::Modality > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FileNode,  0 , SWIG_Scilab_GetFuncName());
@@ -76620,7 +76620,7 @@ int _wrap_new_ColorGradient__SWIG_0(SWIG_GatewayParameters) {
   cv::linemod::ColorGradient *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::linemod::ColorGradient *)new cv::linemod::ColorGradient();
@@ -76643,7 +76643,7 @@ int _wrap_new_ColorGradient__SWIG_1(SWIG_GatewayParameters) {
   cv::linemod::ColorGradient *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -76723,7 +76723,7 @@ int _wrap_ColorGradient_name(SWIG_GatewayParameters) {
   std::string result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76747,7 +76747,7 @@ int _wrap_ColorGradient_read(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76778,7 +76778,7 @@ int _wrap_ColorGradient_write(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76809,7 +76809,7 @@ int _wrap_ColorGradient_weak_threshold_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76835,7 +76835,7 @@ int _wrap_ColorGradient_weak_threshold_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76859,7 +76859,7 @@ int _wrap_ColorGradient_num_features_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76885,7 +76885,7 @@ int _wrap_ColorGradient_num_features_get(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76909,7 +76909,7 @@ int _wrap_ColorGradient_strong_threshold_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76935,7 +76935,7 @@ int _wrap_ColorGradient_strong_threshold_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -76956,7 +76956,7 @@ int _wrap_delete_ColorGradient(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__ColorGradient, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -76974,7 +76974,7 @@ int _wrap_new_DepthNormal__SWIG_0(SWIG_GatewayParameters) {
   cv::linemod::DepthNormal *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::linemod::DepthNormal *)new cv::linemod::DepthNormal();
@@ -77000,7 +77000,7 @@ int _wrap_new_DepthNormal__SWIG_1(SWIG_GatewayParameters) {
   cv::linemod::DepthNormal *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -77078,7 +77078,7 @@ int _wrap_DepthNormal_name(SWIG_GatewayParameters) {
   std::string result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77102,7 +77102,7 @@ int _wrap_DepthNormal_read(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77133,7 +77133,7 @@ int _wrap_DepthNormal_write(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77164,7 +77164,7 @@ int _wrap_DepthNormal_distance_threshold_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77190,7 +77190,7 @@ int _wrap_DepthNormal_distance_threshold_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77214,7 +77214,7 @@ int _wrap_DepthNormal_difference_threshold_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77240,7 +77240,7 @@ int _wrap_DepthNormal_difference_threshold_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77264,7 +77264,7 @@ int _wrap_DepthNormal_num_features_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77290,7 +77290,7 @@ int _wrap_DepthNormal_num_features_get(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77314,7 +77314,7 @@ int _wrap_DepthNormal_extract_threshold_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77340,7 +77340,7 @@ int _wrap_DepthNormal_extract_threshold_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77361,7 +77361,7 @@ int _wrap_delete_DepthNormal(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__DepthNormal, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -77379,7 +77379,7 @@ int _wrap_new_Match__SWIG_0(SWIG_GatewayParameters) {
   cv::linemod::Match *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::linemod::Match *)new cv::linemod::Match();
@@ -77407,7 +77407,7 @@ int _wrap_new_Match__SWIG_1(SWIG_GatewayParameters) {
   cv::linemod::Match *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -77509,7 +77509,7 @@ int _wrap_Match___lt__(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77542,7 +77542,7 @@ int _wrap_Match___eq__(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77574,7 +77574,7 @@ int _wrap_Match_x_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77600,7 +77600,7 @@ int _wrap_Match_x_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77624,7 +77624,7 @@ int _wrap_Match_y_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77650,7 +77650,7 @@ int _wrap_Match_y_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77674,7 +77674,7 @@ int _wrap_Match_similarity_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77700,7 +77700,7 @@ int _wrap_Match_similarity_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77723,7 +77723,7 @@ int _wrap_Match_class_id_set(SWIG_GatewayParameters) {
   int res2 = SWIG_OLDOBJ ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77756,7 +77756,7 @@ int _wrap_Match_class_id_get(SWIG_GatewayParameters) {
   std::string *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77780,7 +77780,7 @@ int _wrap_Match_template_id_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77806,7 +77806,7 @@ int _wrap_Match_template_id_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -77827,7 +77827,7 @@ int _wrap_delete_Match(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__linemod__Match, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -77845,7 +77845,7 @@ int _wrap_getDefaultLINE(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::linemod::Detector > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = cv::linemod::getDefaultLINE();
@@ -77859,7 +77859,7 @@ int _wrap_getDefaultLINEMOD(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::linemod::Detector > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = cv::linemod::getDefaultLINEMOD();
@@ -77884,7 +77884,7 @@ int _wrap_inpaint(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -77950,7 +77950,7 @@ int _wrap_fastNlMeansDenoising__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78006,7 +78006,7 @@ int _wrap_fastNlMeansDenoising__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78054,7 +78054,7 @@ int _wrap_fastNlMeansDenoising__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78094,7 +78094,7 @@ int _wrap_fastNlMeansDenoising__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78250,7 +78250,7 @@ int _wrap_fastNlMeansDenoisingColored__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78314,7 +78314,7 @@ int _wrap_fastNlMeansDenoisingColored__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78370,7 +78370,7 @@ int _wrap_fastNlMeansDenoisingColored__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78418,7 +78418,7 @@ int _wrap_fastNlMeansDenoisingColored__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78458,7 +78458,7 @@ int _wrap_fastNlMeansDenoisingColored__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -78673,7 +78673,7 @@ int _wrap_fastNlMeansDenoisingMulti__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -78745,7 +78745,7 @@ int _wrap_fastNlMeansDenoisingMulti__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -78809,7 +78809,7 @@ int _wrap_fastNlMeansDenoisingMulti__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -78865,7 +78865,7 @@ int _wrap_fastNlMeansDenoisingMulti__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -79077,7 +79077,7 @@ int _wrap_fastNlMeansDenoisingColoredMulti__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -79157,7 +79157,7 @@ int _wrap_fastNlMeansDenoisingColoredMulti__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -79229,7 +79229,7 @@ int _wrap_fastNlMeansDenoisingColoredMulti__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -79293,7 +79293,7 @@ int _wrap_fastNlMeansDenoisingColoredMulti__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -79349,7 +79349,7 @@ int _wrap_fastNlMeansDenoisingColoredMulti__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrcImgs = NULL;
@@ -79605,7 +79605,7 @@ int _wrap_initModule_video(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (bool)cv::initModule_video();
@@ -79654,7 +79654,7 @@ int _wrap_cvCalcOpticalFlowPyrLK(SWIG_GatewayParameters) {
   int ecode13 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 13, 13);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -79779,7 +79779,7 @@ int _wrap_cvCalcAffineFlowPyrLK(SWIG_GatewayParameters) {
   int ecode14 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 14, 14);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, SWIG_as_voidptrptr(&arg1), 0, 0, SWIG_Scilab_GetFuncName());
@@ -79880,7 +79880,7 @@ int _wrap_cvCreateKalman(SWIG_GatewayParameters) {
   CvKalman *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -79913,7 +79913,7 @@ int _wrap_cvReleaseKalman(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_p_CvKalman, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -79937,7 +79937,7 @@ int _wrap_cvKalmanPredict(SWIG_GatewayParameters) {
   CvMat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvKalman, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -79969,7 +79969,7 @@ int _wrap_cvKalmanCorrect(SWIG_GatewayParameters) {
   CvMat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_CvKalman, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -80001,7 +80001,7 @@ int _wrap_updateMotionHistory(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsilhouette = NULL;
@@ -80063,7 +80063,7 @@ int _wrap_calcMotionGradient__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmhi = NULL;
@@ -80129,7 +80129,7 @@ int _wrap_calcMotionGradient__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmhi = NULL;
@@ -80271,7 +80271,7 @@ int _wrap_calcGlobalOrientation(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatorientation = NULL;
@@ -80344,7 +80344,7 @@ int _wrap_segmentMotion(SWIG_GatewayParameters) {
   
   arg3 = &vRect3;
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatmhi = NULL;
@@ -80416,7 +80416,7 @@ int _wrap_CamShift(SWIG_GatewayParameters) {
   cv::RotatedRect result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprobImage = NULL;
@@ -80463,7 +80463,7 @@ int _wrap_meanShift(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprobImage = NULL;
@@ -80504,7 +80504,7 @@ int _wrap_new_KalmFltr__SWIG_0(SWIG_GatewayParameters) {
   cv::KalmanFilter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::KalmanFilter *)new cv::KalmanFilter();
@@ -80530,7 +80530,7 @@ int _wrap_new_KalmFltr__SWIG_1(SWIG_GatewayParameters) {
   cv::KalmanFilter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -80573,7 +80573,7 @@ int _wrap_new_KalmFltr__SWIG_2(SWIG_GatewayParameters) {
   cv::KalmanFilter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -80608,7 +80608,7 @@ int _wrap_new_KalmFltr__SWIG_3(SWIG_GatewayParameters) {
   cv::KalmanFilter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -80719,7 +80719,7 @@ int _wrap_KalmFltr_init__SWIG_0(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -80768,7 +80768,7 @@ int _wrap_KalmFltr_init__SWIG_1(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -80809,7 +80809,7 @@ int _wrap_KalmFltr_init__SWIG_2(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -80928,7 +80928,7 @@ int _wrap_KalmFltr_predict__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -80958,7 +80958,7 @@ int _wrap_KalmFltr_predict__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81019,7 +81019,7 @@ int _wrap_KalmFltr_correct(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81051,7 +81051,7 @@ int _wrap_KalmFltr_statePre_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81077,7 +81077,7 @@ int _wrap_KalmFltr_statePre_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81104,7 +81104,7 @@ int _wrap_KalmFltr_statePost_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81130,7 +81130,7 @@ int _wrap_KalmFltr_statePost_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81157,7 +81157,7 @@ int _wrap_KalmFltr_transitionMatrix_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81183,7 +81183,7 @@ int _wrap_KalmFltr_transitionMatrix_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81210,7 +81210,7 @@ int _wrap_KalmFltr_controlMatrix_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81236,7 +81236,7 @@ int _wrap_KalmFltr_controlMatrix_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81263,7 +81263,7 @@ int _wrap_KalmFltr_measurMtx_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81289,7 +81289,7 @@ int _wrap_KalmFltr_measurMtx_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81316,7 +81316,7 @@ int _wrap_KalmFltr_processNoiseCov_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81342,7 +81342,7 @@ int _wrap_KalmFltr_processNoiseCov_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81369,7 +81369,7 @@ int _wrap_KalmFltr_measurementNoiseCov_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81395,7 +81395,7 @@ int _wrap_KalmFltr_measurementNoiseCov_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81422,7 +81422,7 @@ int _wrap_KalmFltr_errorCovPre_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81448,7 +81448,7 @@ int _wrap_KalmFltr_errorCovPre_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81475,7 +81475,7 @@ int _wrap_KalmFltr_gain_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81501,7 +81501,7 @@ int _wrap_KalmFltr_gain_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81528,7 +81528,7 @@ int _wrap_KalmFltr_errCovPost_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81554,7 +81554,7 @@ int _wrap_KalmFltr_errCovPost_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81581,7 +81581,7 @@ int _wrap_KalmFltr_temp1_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81607,7 +81607,7 @@ int _wrap_KalmFltr_temp1_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81634,7 +81634,7 @@ int _wrap_KalmFltr_temp2_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81660,7 +81660,7 @@ int _wrap_KalmFltr_temp2_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81687,7 +81687,7 @@ int _wrap_KalmFltr_temp3_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81713,7 +81713,7 @@ int _wrap_KalmFltr_temp3_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81740,7 +81740,7 @@ int _wrap_KalmFltr_temp4_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81766,7 +81766,7 @@ int _wrap_KalmFltr_temp4_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81793,7 +81793,7 @@ int _wrap_KalmFltr_temp5_set(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81819,7 +81819,7 @@ int _wrap_KalmFltr_temp5_get(SWIG_GatewayParameters) {
   cv::Mat *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -81843,7 +81843,7 @@ int _wrap_delete_KalmFltr(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KalmanFilter, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -81882,7 +81882,7 @@ int _wrap_buildOpticalFlowPyramid__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimg = NULL;
@@ -81960,7 +81960,7 @@ int _wrap_buildOpticalFlowPyramid__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimg = NULL;
@@ -82030,7 +82030,7 @@ int _wrap_buildOpticalFlowPyramid__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimg = NULL;
@@ -82092,7 +82092,7 @@ int _wrap_buildOpticalFlowPyramid__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimg = NULL;
@@ -82146,7 +82146,7 @@ int _wrap_buildOpticalFlowPyramid__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimg = NULL;
@@ -82414,7 +82414,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprevImg = NULL;
@@ -82536,7 +82536,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprevImg = NULL;
@@ -82650,7 +82650,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprevImg = NULL;
@@ -82756,7 +82756,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_3(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprevImg = NULL;
@@ -82848,7 +82848,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_4(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprevImg = NULL;
@@ -82934,7 +82934,7 @@ int _wrap_calcOpticalFlowPyrLK__SWIG_5(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 3, 3);
+  SWIG_CheckOutputArgument(pvApiCtx, 3, 4);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprevImg = NULL;
@@ -83339,7 +83339,7 @@ int _wrap_calcOpticalFlowFarneback(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 10, 10);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatprev = NULL;
@@ -83426,7 +83426,7 @@ int _wrap_estimateRigidTransform(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatsrc = NULL;
@@ -83489,7 +83489,7 @@ int _wrap_calcOpticalFlowSF__SWIG_0(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -83588,7 +83588,7 @@ int _wrap_calcOpticalFlowSF__SWIG_1(SWIG_GatewayParameters) {
   int ecode16 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 16, 16);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -83869,7 +83869,7 @@ int _wrap_createOptFlow_DualTVL1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::DenseOpticalFlow > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = cv::createOptFlow_DualTVL1();
@@ -83885,7 +83885,7 @@ int _wrap_delete_BackgrdSub(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractor, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -83913,7 +83913,7 @@ int _wrap_BackgrdSub___funcall____SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -83961,7 +83961,7 @@ int _wrap_BackgrdSub___funcall____SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84061,7 +84061,7 @@ int _wrap_BackgrdSub_getBackgroundImage(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84085,7 +84085,7 @@ int _wrap_new_BackgrdSub(SWIG_GatewayParameters) {
   cv::BackgroundSubtractor *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::BackgroundSubtractor *)new cv::BackgroundSubtractor();
@@ -84099,7 +84099,7 @@ int _wrap_new_BackgrdSubMOG__SWIG_0(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::BackgroundSubtractorMOG *)new cv::BackgroundSubtractorMOG();
@@ -84125,7 +84125,7 @@ int _wrap_new_BackgrdSubMOG__SWIG_1(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -84168,7 +84168,7 @@ int _wrap_new_BackgrdSubMOG__SWIG_2(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -84276,7 +84276,7 @@ int _wrap_delete_BackgrdSubMOG(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -84304,7 +84304,7 @@ int _wrap_BackgrdSubMOG_update__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84352,7 +84352,7 @@ int _wrap_BackgrdSubMOG_update__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84452,7 +84452,7 @@ int _wrap_BackgrdSubMOG_initialize(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84481,7 +84481,7 @@ int _wrap_BackgrdSubMOG_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84500,7 +84500,7 @@ int _wrap_new_BackgrdSubMOG2__SWIG_0(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG2 *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::BackgroundSubtractorMOG2 *)new cv::BackgroundSubtractorMOG2();
@@ -84523,7 +84523,7 @@ int _wrap_new_BackgrdSubMOG2__SWIG_1(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG2 *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -84558,7 +84558,7 @@ int _wrap_new_BackgrdSubMOG2__SWIG_2(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorMOG2 *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -84651,7 +84651,7 @@ int _wrap_delete_BackgrdSubMOG2(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG2, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -84679,7 +84679,7 @@ int _wrap_BackgrdSubMOG2_update__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG2, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84727,7 +84727,7 @@ int _wrap_BackgrdSubMOG2_update__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG2, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84827,7 +84827,7 @@ int _wrap_BackgrdSubMOG2_getBackgroundImage(SWIG_GatewayParameters) {
   arg2 = new cv::_OutputArray(*pOutMat2);
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG2, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84857,7 +84857,7 @@ int _wrap_BackgrdSubMOG2_initialize(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG2, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84886,7 +84886,7 @@ int _wrap_BackgrdSubMOG2_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorMOG2, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84905,7 +84905,7 @@ int _wrap_new_BackgrdSubGMG(SWIG_GatewayParameters) {
   cv::BackgroundSubtractorGMG *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::BackgroundSubtractorGMG *)new cv::BackgroundSubtractorGMG();
@@ -84921,7 +84921,7 @@ int _wrap_delete_BackgrdSubGMG(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -84942,7 +84942,7 @@ int _wrap_BackgrdSubGMG_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -84970,7 +84970,7 @@ int _wrap_BackgrdSubGMG_initialize(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85011,7 +85011,7 @@ int _wrap_BackgrdSubGMG_update__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85059,7 +85059,7 @@ int _wrap_BackgrdSubGMG_update__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new cv::_OutputArray(*pOutMat3);
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85155,7 +85155,7 @@ int _wrap_BackgrdSubGMG_release(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85178,7 +85178,7 @@ int _wrap_BackgrdSubGMG_maxFeatures_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85204,7 +85204,7 @@ int _wrap_BackgrdSubGMG_maxFeatures_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85228,7 +85228,7 @@ int _wrap_BackgrdSubGMG_learningRate_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85254,7 +85254,7 @@ int _wrap_BackgrdSubGMG_learningRate_get(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85278,7 +85278,7 @@ int _wrap_BackgrdSubGMG_numInitializationFrames_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85304,7 +85304,7 @@ int _wrap_BackgrdSubGMG_numInitializationFrames_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85328,7 +85328,7 @@ int _wrap_BackgrdSubGMG_quantizationLevels_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85354,7 +85354,7 @@ int _wrap_BackgrdSubGMG_quantizationLevels_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85378,7 +85378,7 @@ int _wrap_BackgrdSubGMG_backgroundPrior_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85404,7 +85404,7 @@ int _wrap_BackgrdSubGMG_backgroundPrior_get(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85428,7 +85428,7 @@ int _wrap_BackgrdSubGMG_decisionThreshold_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85454,7 +85454,7 @@ int _wrap_BackgrdSubGMG_decisionThreshold_get(SWIG_GatewayParameters) {
   double result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85478,7 +85478,7 @@ int _wrap_BackgrdSubGMG_smoothingRadius_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85504,7 +85504,7 @@ int _wrap_BackgrdSubGMG_smoothingRadius_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85528,7 +85528,7 @@ int _wrap_BackgrdSubGMG_updateBackgroundModel_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85554,7 +85554,7 @@ int _wrap_BackgrdSubGMG_updateBackgroundModel_get(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BackgroundSubtractorGMG, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -85573,7 +85573,7 @@ int _wrap_initModule_features2d(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (bool)cv::initModule_features2d();
@@ -85587,7 +85587,7 @@ int _wrap_new_KeyPoint__SWIG_0(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::KeyPoint *)new cv::KeyPoint();
@@ -85617,7 +85617,7 @@ int _wrap_new_KeyPoint__SWIG_1(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDouble_AsPoint2f(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -85672,7 +85672,7 @@ int _wrap_new_KeyPoint__SWIG_2(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDouble_AsPoint2f(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -85719,7 +85719,7 @@ int _wrap_new_KeyPoint__SWIG_3(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDouble_AsPoint2f(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -85758,7 +85758,7 @@ int _wrap_new_KeyPoint__SWIG_4(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDouble_AsPoint2f(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -85789,7 +85789,7 @@ int _wrap_new_KeyPoint__SWIG_5(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDouble_AsPoint2f(pvApiCtx, 1, &arg1, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -85832,7 +85832,7 @@ int _wrap_new_KeyPoint__SWIG_6(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -85899,7 +85899,7 @@ int _wrap_new_KeyPoint__SWIG_7(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -85958,7 +85958,7 @@ int _wrap_new_KeyPoint__SWIG_8(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -86009,7 +86009,7 @@ int _wrap_new_KeyPoint__SWIG_9(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -86052,7 +86052,7 @@ int _wrap_new_KeyPoint__SWIG_10(SWIG_GatewayParameters) {
   cv::KeyPoint *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -86574,7 +86574,7 @@ int _wrap_KeyPoint_hash(SWIG_GatewayParameters) {
   size_t result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -86601,7 +86601,7 @@ int _wrap_KeyPoint_convert__SWIG_0(SWIG_GatewayParameters) {
   arg1 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -86642,7 +86642,7 @@ int _wrap_KeyPoint_convert__SWIG_1(SWIG_GatewayParameters) {
   arg1 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -86687,7 +86687,7 @@ int _wrap_KeyPoint_convert__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -86749,7 +86749,7 @@ int _wrap_KeyPoint_convert__SWIG_3(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -86803,7 +86803,7 @@ int _wrap_KeyPoint_convert__SWIG_4(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -86849,7 +86849,7 @@ int _wrap_KeyPoint_convert__SWIG_5(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -86887,7 +86887,7 @@ int _wrap_KeyPoint_convert__SWIG_6(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -87094,7 +87094,7 @@ int _wrap_KeyPoint_overlap(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint,  0 , SWIG_Scilab_GetFuncName());
@@ -87130,7 +87130,7 @@ int _wrap_KeyPoint_pt_set(SWIG_GatewayParameters) {
   arg2 = &tmpPoint2f2;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87156,7 +87156,7 @@ int _wrap_KeyPoint_pt_get(SWIG_GatewayParameters) {
   cv::Point2f *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87180,7 +87180,7 @@ int _wrap_KeyPoint_size_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87206,7 +87206,7 @@ int _wrap_KeyPoint_size_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87230,7 +87230,7 @@ int _wrap_KeyPoint_angle_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87256,7 +87256,7 @@ int _wrap_KeyPoint_angle_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87280,7 +87280,7 @@ int _wrap_KeyPoint_response_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87306,7 +87306,7 @@ int _wrap_KeyPoint_response_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87330,7 +87330,7 @@ int _wrap_KeyPoint_octave_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87356,7 +87356,7 @@ int _wrap_KeyPoint_octave_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87380,7 +87380,7 @@ int _wrap_KeyPoint_class_id_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87406,7 +87406,7 @@ int _wrap_KeyPoint_class_id_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87427,7 +87427,7 @@ int _wrap_delete_KeyPoint(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPoint, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -87445,7 +87445,7 @@ int _wrap_new_KeyPointsFilter(SWIG_GatewayParameters) {
   cv::KeyPointsFilter *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::KeyPointsFilter *)new cv::KeyPointsFilter();
@@ -87465,7 +87465,7 @@ int _wrap_KeyPointsFilter_runByImageBorder(SWIG_GatewayParameters) {
   arg1 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SWIG_SciDoubleOrInt32_AsSize(pvApiCtx, 1, &arg2, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -87501,7 +87501,7 @@ int _wrap_KeyPointsFilter_runByKeypointSize__SWIG_0(SWIG_GatewayParameters) {
   arg1 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode2 = SWIG_AsVal_float(1, &val2);
@@ -87536,7 +87536,7 @@ int _wrap_KeyPointsFilter_runByKeypointSize__SWIG_1(SWIG_GatewayParameters) {
   arg1 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode2 = SWIG_AsVal_float(1, &val2);
@@ -87620,7 +87620,7 @@ int _wrap_KeyPointsFilter_runByPixelsMask(SWIG_GatewayParameters) {
   arg1 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res2 = SwigScilabPtrToObject(pvApiCtx, 1, &argp2, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -87650,7 +87650,7 @@ int _wrap_KeyPointsFilter_removeDuplicated(SWIG_GatewayParameters) {
   arg1 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::KeyPointsFilter::removeDuplicated(*arg1);
@@ -87675,7 +87675,7 @@ int _wrap_KeyPointsFilter_retainBest(SWIG_GatewayParameters) {
   arg1 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode2 = SWIG_AsVal_int(1, &val2);
@@ -87702,7 +87702,7 @@ int _wrap_delete_KeyPointsFilter(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__KeyPointsFilter, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -87722,7 +87722,7 @@ int _wrap_delete_FeatureDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -87749,7 +87749,7 @@ int _wrap_FeatureDetector_detect__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87791,7 +87791,7 @@ int _wrap_FeatureDetector_detect__SWIG_1(SWIG_GatewayParameters) {
   arg3 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87830,7 +87830,7 @@ int _wrap_FeatureDetector_detect__SWIG_2(SWIG_GatewayParameters) {
   int res4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -87880,7 +87880,7 @@ int _wrap_FeatureDetector_detect__SWIG_3(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88006,7 +88006,7 @@ int _wrap_FeatureDetector_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88027,7 +88027,7 @@ int _wrap_FeatureDetector_create(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::FeatureDetector > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -88055,7 +88055,7 @@ int _wrap_delete_DescriptorExtractor(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorExtractor, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -88082,7 +88082,7 @@ int _wrap_DescriptorExtractor_compute__SWIG_0(SWIG_GatewayParameters) {
   arg3 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88129,7 +88129,7 @@ int _wrap_DescriptorExtractor_compute__SWIG_1(SWIG_GatewayParameters) {
   int res4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88230,7 +88230,7 @@ int _wrap_DescriptorExtractor_descriptorSize(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88252,7 +88252,7 @@ int _wrap_DescriptorExtractor_descriptorType(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88274,7 +88274,7 @@ int _wrap_DescriptorExtractor_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88295,7 +88295,7 @@ int _wrap_DescriptorExtractor_create(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::DescriptorExtractor > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -88335,7 +88335,7 @@ int _wrap_Feature2D___funcall____SWIG_0(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Feature2D, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88406,7 +88406,7 @@ int _wrap_Feature2D___funcall____SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Feature2D, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88544,7 +88544,7 @@ int _wrap_Feature2D_compute(SWIG_GatewayParameters) {
   arg3 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Feature2D, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88582,7 +88582,7 @@ int _wrap_Feature2D_create(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::Feature2D > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -88610,7 +88610,7 @@ int _wrap_delete_Feature2D(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Feature2D, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -88637,7 +88637,7 @@ int _wrap_new_BRISK__SWIG_0(SWIG_GatewayParameters) {
   cv::BRISK *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -88672,7 +88672,7 @@ int _wrap_new_BRISK__SWIG_1(SWIG_GatewayParameters) {
   cv::BRISK *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -88699,7 +88699,7 @@ int _wrap_new_BRISK__SWIG_2(SWIG_GatewayParameters) {
   cv::BRISK *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -88718,7 +88718,7 @@ int _wrap_new_BRISK__SWIG_3(SWIG_GatewayParameters) {
   cv::BRISK *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::BRISK *)new cv::BRISK();
@@ -88734,7 +88734,7 @@ int _wrap_delete_BRISK(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -88755,7 +88755,7 @@ int _wrap_BRISK_descriptorSize(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88777,7 +88777,7 @@ int _wrap_BRISK_descriptorType(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88803,7 +88803,7 @@ int _wrap_BRISK___funcall____SWIG_0(SWIG_GatewayParameters) {
   arg4 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88866,7 +88866,7 @@ int _wrap_BRISK___funcall____SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -88937,7 +88937,7 @@ int _wrap_BRISK___funcall____SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -89094,7 +89094,7 @@ int _wrap_BRISK_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -89128,7 +89128,7 @@ int _wrap_new_BRISK__SWIG_4(SWIG_GatewayParameters) {
   cv::BRISK *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -89191,7 +89191,7 @@ int _wrap_new_BRISK__SWIG_5(SWIG_GatewayParameters) {
   cv::BRISK *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -89240,7 +89240,7 @@ int _wrap_new_BRISK__SWIG_6(SWIG_GatewayParameters) {
   cv::BRISK *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -89281,7 +89281,7 @@ int _wrap_new_BRISK__SWIG_7(SWIG_GatewayParameters) {
   cv::BRISK *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -89508,7 +89508,7 @@ int _wrap_BRISK_generateKernel__SWIG_0(SWIG_GatewayParameters) {
   int res6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -89577,7 +89577,7 @@ int _wrap_BRISK_generateKernel__SWIG_1(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -89632,7 +89632,7 @@ int _wrap_BRISK_generateKernel__SWIG_2(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -89679,7 +89679,7 @@ int _wrap_BRISK_generateKernel__SWIG_3(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BRISK, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -89886,7 +89886,7 @@ int _wrap_new_ORB__SWIG_0(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -89961,7 +89961,7 @@ int _wrap_new_ORB__SWIG_1(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -90028,7 +90028,7 @@ int _wrap_new_ORB__SWIG_2(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -90087,7 +90087,7 @@ int _wrap_new_ORB__SWIG_3(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -90138,7 +90138,7 @@ int _wrap_new_ORB__SWIG_4(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -90181,7 +90181,7 @@ int _wrap_new_ORB__SWIG_5(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -90216,7 +90216,7 @@ int _wrap_new_ORB__SWIG_6(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -90243,7 +90243,7 @@ int _wrap_new_ORB__SWIG_7(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -90262,7 +90262,7 @@ int _wrap_new_ORB__SWIG_8(SWIG_GatewayParameters) {
   cv::ORB *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::ORB *)new cv::ORB();
@@ -90549,7 +90549,7 @@ int _wrap_ORB_descriptorSize(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__ORB, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -90571,7 +90571,7 @@ int _wrap_ORB_descriptorType(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__ORB, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -90597,7 +90597,7 @@ int _wrap_ORB___funcall____SWIG_0(SWIG_GatewayParameters) {
   arg4 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__ORB, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -90660,7 +90660,7 @@ int _wrap_ORB___funcall____SWIG_1(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__ORB, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -90731,7 +90731,7 @@ int _wrap_ORB___funcall____SWIG_2(SWIG_GatewayParameters) {
   
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 2, 2);
+  SWIG_CheckOutputArgument(pvApiCtx, 2, 3);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__ORB, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -90888,7 +90888,7 @@ int _wrap_ORB_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__ORB, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -90909,7 +90909,7 @@ int _wrap_delete_ORB(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__ORB, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -90954,7 +90954,7 @@ int _wrap_new_MSER__SWIG_0(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91037,7 +91037,7 @@ int _wrap_new_MSER__SWIG_1(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91112,7 +91112,7 @@ int _wrap_new_MSER__SWIG_2(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91179,7 +91179,7 @@ int _wrap_new_MSER__SWIG_3(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91238,7 +91238,7 @@ int _wrap_new_MSER__SWIG_4(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91289,7 +91289,7 @@ int _wrap_new_MSER__SWIG_5(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91332,7 +91332,7 @@ int _wrap_new_MSER__SWIG_6(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91367,7 +91367,7 @@ int _wrap_new_MSER__SWIG_7(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91394,7 +91394,7 @@ int _wrap_new_MSER__SWIG_8(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -91413,7 +91413,7 @@ int _wrap_new_MSER__SWIG_9(SWIG_GatewayParameters) {
   cv::MSER *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::MSER *)new cv::MSER();
@@ -91809,7 +91809,7 @@ int _wrap_MSER___funcall____SWIG_0(SWIG_GatewayParameters) {
   int res4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MSER, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -91852,7 +91852,7 @@ int _wrap_MSER___funcall____SWIG_1(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MSER, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -91940,7 +91940,7 @@ int _wrap_MSER_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MSER, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -91961,7 +91961,7 @@ int _wrap_delete_MSER(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__MSER, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -91994,7 +91994,7 @@ int _wrap_new_StarDetector__SWIG_0(SWIG_GatewayParameters) {
   cv::StarDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92045,7 +92045,7 @@ int _wrap_new_StarDetector__SWIG_1(SWIG_GatewayParameters) {
   cv::StarDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92088,7 +92088,7 @@ int _wrap_new_StarDetector__SWIG_2(SWIG_GatewayParameters) {
   cv::StarDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92123,7 +92123,7 @@ int _wrap_new_StarDetector__SWIG_3(SWIG_GatewayParameters) {
   cv::StarDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92150,7 +92150,7 @@ int _wrap_new_StarDetector__SWIG_4(SWIG_GatewayParameters) {
   cv::StarDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92169,7 +92169,7 @@ int _wrap_new_StarDetector__SWIG_5(SWIG_GatewayParameters) {
   cv::StarDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::StarDetector *)new cv::StarDetector();
@@ -92300,7 +92300,7 @@ int _wrap_StarDetector___funcall__(SWIG_GatewayParameters) {
   arg3 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__StarDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -92331,7 +92331,7 @@ int _wrap_StarDetector_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__StarDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -92352,7 +92352,7 @@ int _wrap_delete_StarDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__StarDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -92379,7 +92379,7 @@ int _wrap_FAST__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -92427,7 +92427,7 @@ int _wrap_FAST__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -92534,7 +92534,7 @@ int _wrap_FASTX(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   cv::Mat *pMatimage = NULL;
@@ -92587,7 +92587,7 @@ int _wrap_new_FastFeatureDetector__SWIG_0(SWIG_GatewayParameters) {
   cv::FastFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92614,7 +92614,7 @@ int _wrap_new_FastFeatureDetector__SWIG_1(SWIG_GatewayParameters) {
   cv::FastFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92633,7 +92633,7 @@ int _wrap_new_FastFeatureDetector__SWIG_2(SWIG_GatewayParameters) {
   cv::FastFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::FastFeatureDetector *)new cv::FastFeatureDetector();
@@ -92695,7 +92695,7 @@ int _wrap_FastFeatureDetector_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FastFeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -92716,7 +92716,7 @@ int _wrap_delete_FastFeatureDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FastFeatureDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -92752,7 +92752,7 @@ int _wrap_new_GFTTDetector__SWIG_0(SWIG_GatewayParameters) {
   cv::GFTTDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92811,7 +92811,7 @@ int _wrap_new_GFTTDetector__SWIG_1(SWIG_GatewayParameters) {
   cv::GFTTDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92862,7 +92862,7 @@ int _wrap_new_GFTTDetector__SWIG_2(SWIG_GatewayParameters) {
   cv::GFTTDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92905,7 +92905,7 @@ int _wrap_new_GFTTDetector__SWIG_3(SWIG_GatewayParameters) {
   cv::GFTTDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92940,7 +92940,7 @@ int _wrap_new_GFTTDetector__SWIG_4(SWIG_GatewayParameters) {
   cv::GFTTDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92967,7 +92967,7 @@ int _wrap_new_GFTTDetector__SWIG_5(SWIG_GatewayParameters) {
   cv::GFTTDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -92986,7 +92986,7 @@ int _wrap_new_GFTTDetector__SWIG_6(SWIG_GatewayParameters) {
   cv::GFTTDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::GFTTDetector *)new cv::GFTTDetector();
@@ -93220,7 +93220,7 @@ int _wrap_GFTTDetector_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GFTTDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -93241,7 +93241,7 @@ int _wrap_delete_GFTTDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GFTTDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -93262,7 +93262,7 @@ int _wrap_new_SimpleBlobDetector__SWIG_0(SWIG_GatewayParameters) {
   cv::SimpleBlobDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimpleBlobDetector__Params,  0 , SWIG_Scilab_GetFuncName());
@@ -93284,7 +93284,7 @@ int _wrap_new_SimpleBlobDetector__SWIG_1(SWIG_GatewayParameters) {
   cv::SimpleBlobDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::SimpleBlobDetector *)new cv::SimpleBlobDetector();
@@ -93328,7 +93328,7 @@ int _wrap_SimpleBlobDetector_read(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimpleBlobDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -93359,7 +93359,7 @@ int _wrap_SimpleBlobDetector_write(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimpleBlobDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -93387,7 +93387,7 @@ int _wrap_delete_SimpleBlobDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SimpleBlobDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -93426,7 +93426,7 @@ int _wrap_new_DenseFeatureDetector__SWIG_0(SWIG_GatewayParameters) {
   cv::DenseFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -93493,7 +93493,7 @@ int _wrap_new_DenseFeatureDetector__SWIG_1(SWIG_GatewayParameters) {
   cv::DenseFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -93552,7 +93552,7 @@ int _wrap_new_DenseFeatureDetector__SWIG_2(SWIG_GatewayParameters) {
   cv::DenseFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -93603,7 +93603,7 @@ int _wrap_new_DenseFeatureDetector__SWIG_3(SWIG_GatewayParameters) {
   cv::DenseFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -93646,7 +93646,7 @@ int _wrap_new_DenseFeatureDetector__SWIG_4(SWIG_GatewayParameters) {
   cv::DenseFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -93681,7 +93681,7 @@ int _wrap_new_DenseFeatureDetector__SWIG_5(SWIG_GatewayParameters) {
   cv::DenseFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -93708,7 +93708,7 @@ int _wrap_new_DenseFeatureDetector__SWIG_6(SWIG_GatewayParameters) {
   cv::DenseFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_float(1, &val1);
@@ -93727,7 +93727,7 @@ int _wrap_new_DenseFeatureDetector__SWIG_7(SWIG_GatewayParameters) {
   cv::DenseFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::DenseFeatureDetector *)new cv::DenseFeatureDetector();
@@ -94018,7 +94018,7 @@ int _wrap_DenseFeatureDetector_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DenseFeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94039,7 +94039,7 @@ int _wrap_delete_DenseFeatureDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DenseFeatureDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -94069,7 +94069,7 @@ int _wrap_new_GridAdaptedFeatureDetector__SWIG_0(SWIG_GatewayParameters) {
   cv::GridAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__FeatureDetector_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94115,7 +94115,7 @@ int _wrap_new_GridAdaptedFeatureDetector__SWIG_1(SWIG_GatewayParameters) {
   cv::GridAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__FeatureDetector_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94153,7 +94153,7 @@ int _wrap_new_GridAdaptedFeatureDetector__SWIG_2(SWIG_GatewayParameters) {
   cv::GridAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__FeatureDetector_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94183,7 +94183,7 @@ int _wrap_new_GridAdaptedFeatureDetector__SWIG_3(SWIG_GatewayParameters) {
   cv::GridAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__FeatureDetector_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94205,7 +94205,7 @@ int _wrap_new_GridAdaptedFeatureDetector__SWIG_4(SWIG_GatewayParameters) {
   cv::GridAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::GridAdaptedFeatureDetector *)new cv::GridAdaptedFeatureDetector();
@@ -94304,7 +94304,7 @@ int _wrap_GridAdaptedFeatureDetector_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GridAdaptedFeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94326,7 +94326,7 @@ int _wrap_GridAdaptedFeatureDetector_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GridAdaptedFeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94347,7 +94347,7 @@ int _wrap_delete_GridAdaptedFeatureDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__GridAdaptedFeatureDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -94371,7 +94371,7 @@ int _wrap_new_PyramidAdaptedFeatureDetector__SWIG_0(SWIG_GatewayParameters) {
   cv::PyramidAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__FeatureDetector_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94401,7 +94401,7 @@ int _wrap_new_PyramidAdaptedFeatureDetector__SWIG_1(SWIG_GatewayParameters) {
   cv::PyramidAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__FeatureDetector_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94462,7 +94462,7 @@ int _wrap_PyramidAdaptedFeatureDetector_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PyramidAdaptedFeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94483,7 +94483,7 @@ int _wrap_delete_PyramidAdaptedFeatureDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PyramidAdaptedFeatureDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -94503,7 +94503,7 @@ int _wrap_delete_AdjusterAdapter(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__AdjusterAdapter, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -94529,7 +94529,7 @@ int _wrap_AdjusterAdapter_tooFew(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__AdjusterAdapter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94565,7 +94565,7 @@ int _wrap_AdjusterAdapter_tooMany(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__AdjusterAdapter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94596,7 +94596,7 @@ int _wrap_AdjusterAdapter_good(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__AdjusterAdapter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94618,7 +94618,7 @@ int _wrap_AdjusterAdapter_clone(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::AdjusterAdapter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__AdjusterAdapter, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94639,7 +94639,7 @@ int _wrap_AdjusterAdapter_create(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::AdjusterAdapter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -94677,7 +94677,7 @@ int _wrap_new_DynamicAdaptedFeatureDetector__SWIG_0(SWIG_GatewayParameters) {
   cv::DynamicAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__AdjusterAdapter_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94723,7 +94723,7 @@ int _wrap_new_DynamicAdaptedFeatureDetector__SWIG_1(SWIG_GatewayParameters) {
   cv::DynamicAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__AdjusterAdapter_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94761,7 +94761,7 @@ int _wrap_new_DynamicAdaptedFeatureDetector__SWIG_2(SWIG_GatewayParameters) {
   cv::DynamicAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__AdjusterAdapter_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94791,7 +94791,7 @@ int _wrap_new_DynamicAdaptedFeatureDetector__SWIG_3(SWIG_GatewayParameters) {
   cv::DynamicAdaptedFeatureDetector *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__AdjusterAdapter_t,  0 , SWIG_Scilab_GetFuncName());
@@ -94895,7 +94895,7 @@ int _wrap_DynamicAdaptedFeatureDetector_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DynamicAdaptedFeatureDetector, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -94916,7 +94916,7 @@ int _wrap_delete_DynamicAdaptedFeatureDetector(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DynamicAdaptedFeatureDetector, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -94946,7 +94946,7 @@ int _wrap_new_FastAdjuster__SWIG_0(SWIG_GatewayParameters) {
   cv::FastAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -94989,7 +94989,7 @@ int _wrap_new_FastAdjuster__SWIG_1(SWIG_GatewayParameters) {
   cv::FastAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -95024,7 +95024,7 @@ int _wrap_new_FastAdjuster__SWIG_2(SWIG_GatewayParameters) {
   cv::FastAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -95051,7 +95051,7 @@ int _wrap_new_FastAdjuster__SWIG_3(SWIG_GatewayParameters) {
   cv::FastAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -95070,7 +95070,7 @@ int _wrap_new_FastAdjuster__SWIG_4(SWIG_GatewayParameters) {
   cv::FastAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::FastAdjuster *)new cv::FastAdjuster();
@@ -95192,7 +95192,7 @@ int _wrap_FastAdjuster_tooFew(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FastAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95228,7 +95228,7 @@ int _wrap_FastAdjuster_tooMany(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FastAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95259,7 +95259,7 @@ int _wrap_FastAdjuster_good(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FastAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95281,7 +95281,7 @@ int _wrap_FastAdjuster_clone(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::AdjusterAdapter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FastAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95302,7 +95302,7 @@ int _wrap_delete_FastAdjuster(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__FastAdjuster, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -95329,7 +95329,7 @@ int _wrap_new_StarAdjuster__SWIG_0(SWIG_GatewayParameters) {
   cv::StarAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -95364,7 +95364,7 @@ int _wrap_new_StarAdjuster__SWIG_1(SWIG_GatewayParameters) {
   cv::StarAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -95391,7 +95391,7 @@ int _wrap_new_StarAdjuster__SWIG_2(SWIG_GatewayParameters) {
   cv::StarAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -95410,7 +95410,7 @@ int _wrap_new_StarAdjuster__SWIG_3(SWIG_GatewayParameters) {
   cv::StarAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::StarAdjuster *)new cv::StarAdjuster();
@@ -95526,7 +95526,7 @@ int _wrap_StarAdjuster_tooFew(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__StarAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95562,7 +95562,7 @@ int _wrap_StarAdjuster_tooMany(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__StarAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95593,7 +95593,7 @@ int _wrap_StarAdjuster_good(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__StarAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95615,7 +95615,7 @@ int _wrap_StarAdjuster_clone(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::AdjusterAdapter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__StarAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95636,7 +95636,7 @@ int _wrap_delete_StarAdjuster(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__StarAdjuster, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -95663,7 +95663,7 @@ int _wrap_new_SurfAdjuster__SWIG_0(SWIG_GatewayParameters) {
   cv::SurfAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -95698,7 +95698,7 @@ int _wrap_new_SurfAdjuster__SWIG_1(SWIG_GatewayParameters) {
   cv::SurfAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -95725,7 +95725,7 @@ int _wrap_new_SurfAdjuster__SWIG_2(SWIG_GatewayParameters) {
   cv::SurfAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_double(1, &val1);
@@ -95744,7 +95744,7 @@ int _wrap_new_SurfAdjuster__SWIG_3(SWIG_GatewayParameters) {
   cv::SurfAdjuster *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::SurfAdjuster *)new cv::SurfAdjuster();
@@ -95860,7 +95860,7 @@ int _wrap_SurfAdjuster_tooFew(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SurfAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95896,7 +95896,7 @@ int _wrap_SurfAdjuster_tooMany(SWIG_GatewayParameters) {
   int ecode3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SurfAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95927,7 +95927,7 @@ int _wrap_SurfAdjuster_good(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SurfAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95949,7 +95949,7 @@ int _wrap_SurfAdjuster_clone(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::AdjusterAdapter > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SurfAdjuster, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -95970,7 +95970,7 @@ int _wrap_delete_SurfAdjuster(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__SurfAdjuster, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -96000,7 +96000,7 @@ int _wrap_windowedMatchingMask(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__KeyPoint_std__allocatorT_cv__KeyPoint_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -96046,7 +96046,7 @@ int _wrap_new_OpponentColorDescriptorExtractor(SWIG_GatewayParameters) {
   cv::OpponentColorDescriptorExtractor *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__PtrT_cv__DescriptorExtractor_t,  0 , SWIG_Scilab_GetFuncName());
@@ -96073,7 +96073,7 @@ int _wrap_OpponentColorDescriptorExtractor_read(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__OpponentColorDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96104,7 +96104,7 @@ int _wrap_OpponentColorDescriptorExtractor_write(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__OpponentColorDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96133,7 +96133,7 @@ int _wrap_OpponentColorDescriptorExtractor_descriptorSize(SWIG_GatewayParameters
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__OpponentColorDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96155,7 +96155,7 @@ int _wrap_OpponentColorDescriptorExtractor_descriptorType(SWIG_GatewayParameters
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__OpponentColorDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96177,7 +96177,7 @@ int _wrap_OpponentColorDescriptorExtractor_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__OpponentColorDescriptorExtractor, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96198,7 +96198,7 @@ int _wrap_delete_OpponentColorDescriptorExtractor(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__OpponentColorDescriptorExtractor, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -96228,7 +96228,7 @@ int _wrap_Hamming___funcall__(SWIG_GatewayParameters) {
   cv::Hamming::ResultType result;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Hamming, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96262,7 +96262,7 @@ int _wrap_new_Hamming(SWIG_GatewayParameters) {
   cv::Hamming *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::Hamming *)new cv::Hamming();
@@ -96278,7 +96278,7 @@ int _wrap_delete_Hamming(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Hamming, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -96296,7 +96296,7 @@ int _wrap_new_DMatch__SWIG_0(SWIG_GatewayParameters) {
   cv::DMatch *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::DMatch *)new cv::DMatch();
@@ -96319,7 +96319,7 @@ int _wrap_new_DMatch__SWIG_1(SWIG_GatewayParameters) {
   cv::DMatch *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -96360,7 +96360,7 @@ int _wrap_new_DMatch__SWIG_2(SWIG_GatewayParameters) {
   cv::DMatch *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -96470,7 +96470,7 @@ int _wrap_DMatch_queryIdx_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96496,7 +96496,7 @@ int _wrap_DMatch_queryIdx_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96520,7 +96520,7 @@ int _wrap_DMatch_trainIdx_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96546,7 +96546,7 @@ int _wrap_DMatch_trainIdx_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96570,7 +96570,7 @@ int _wrap_DMatch_imgIdx_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96596,7 +96596,7 @@ int _wrap_DMatch_imgIdx_get(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96620,7 +96620,7 @@ int _wrap_DMatch_distance_set(SWIG_GatewayParameters) {
   int ecode2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96646,7 +96646,7 @@ int _wrap_DMatch_distance_get(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96671,7 +96671,7 @@ int _wrap_DMatch___lt__(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96700,7 +96700,7 @@ int _wrap_delete_DMatch(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DMatch, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -96720,7 +96720,7 @@ int _wrap_delete_DescriptorMatcher(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -96743,7 +96743,7 @@ int _wrap_DescriptorMatcher_add(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96772,7 +96772,7 @@ int _wrap_DescriptorMatcher_getTrainDescriptors(SWIG_GatewayParameters) {
   cv::vector< cv::Mat > *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96793,7 +96793,7 @@ int _wrap_DescriptorMatcher_clear(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96814,7 +96814,7 @@ int _wrap_DescriptorMatcher_empty(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96836,7 +96836,7 @@ int _wrap_DescriptorMatcher_isMaskSupported(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96857,7 +96857,7 @@ int _wrap_DescriptorMatcher_train(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96889,7 +96889,7 @@ int _wrap_DescriptorMatcher_match__SWIG_0(SWIG_GatewayParameters) {
   int res5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -96950,7 +96950,7 @@ int _wrap_DescriptorMatcher_match__SWIG_1(SWIG_GatewayParameters) {
   int res4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97012,7 +97012,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_0(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97089,7 +97089,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_1(SWIG_GatewayParameters) {
   int res6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97158,7 +97158,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_2(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97225,7 +97225,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_0(SWIG_GatewayParameters) {
   int ecode7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97302,7 +97302,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_1(SWIG_GatewayParameters) {
   int res6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97371,7 +97371,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_2(SWIG_GatewayParameters) {
   int ecode5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97429,7 +97429,7 @@ int _wrap_DescriptorMatcher_match__SWIG_2(SWIG_GatewayParameters) {
   int res4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97479,7 +97479,7 @@ int _wrap_DescriptorMatcher_match__SWIG_3(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97639,7 +97639,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_3(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97705,7 +97705,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_4(SWIG_GatewayParameters) {
   int res5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -97763,7 +97763,7 @@ int _wrap_DescriptorMatcher_knnMatch__SWIG_5(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98033,7 +98033,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_3(SWIG_GatewayParameters) {
   int ecode6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98099,7 +98099,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_4(SWIG_GatewayParameters) {
   int res5 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 5, 5);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98157,7 +98157,7 @@ int _wrap_DescriptorMatcher_radiusMatch__SWIG_5(SWIG_GatewayParameters) {
   int ecode4 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98451,7 +98451,7 @@ int _wrap_DescriptorMatcher_read(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98482,7 +98482,7 @@ int _wrap_DescriptorMatcher_write(SWIG_GatewayParameters) {
   int res2 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98514,7 +98514,7 @@ int _wrap_DescriptorMatcher_clone__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::DescriptorMatcher > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98541,7 +98541,7 @@ int _wrap_DescriptorMatcher_clone__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::DescriptorMatcher > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DescriptorMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98604,7 +98604,7 @@ int _wrap_DescriptorMatcher_create(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::DescriptorMatcher > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   {
@@ -98632,7 +98632,7 @@ int _wrap_delete_BFMatcher(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BFMatcher, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -98653,7 +98653,7 @@ int _wrap_BFMatcher_isMaskSupported(SWIG_GatewayParameters) {
   bool result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BFMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98678,7 +98678,7 @@ int _wrap_BFMatcher_clone__SWIG_0(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::DescriptorMatcher > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BFMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98705,7 +98705,7 @@ int _wrap_BFMatcher_clone__SWIG_1(SWIG_GatewayParameters) {
   SwigValueWrapper< cv::Ptr< cv::DescriptorMatcher > > result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BFMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98769,7 +98769,7 @@ int _wrap_BFMatcher_info(SWIG_GatewayParameters) {
   cv::AlgorithmInfo *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BFMatcher, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -98788,7 +98788,7 @@ int _wrap_new_DrawMatchesFlags(SWIG_GatewayParameters) {
   cv::DrawMatchesFlags *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 0, 0);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   result = (cv::DrawMatchesFlags *)new cv::DrawMatchesFlags();
@@ -98804,7 +98804,7 @@ int _wrap_delete_DrawMatchesFlags(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__DrawMatchesFlags, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -98833,7 +98833,7 @@ int _wrap_drawKeypoints__SWIG_0(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -98881,7 +98881,7 @@ int _wrap_drawKeypoints__SWIG_1(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -98922,7 +98922,7 @@ int _wrap_drawKeypoints__SWIG_2(SWIG_GatewayParameters) {
   arg2 = new std::vector<cv::KeyPoint>();
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
@@ -99052,7 +99052,7 @@ int _wrap_drawMatches__SWIG_0(SWIG_GatewayParameters) {
   int ecode10 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 10, 10);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99158,7 +99158,7 @@ int _wrap_drawMatches__SWIG_1(SWIG_GatewayParameters) {
   int res9 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99256,7 +99256,7 @@ int _wrap_drawMatches__SWIG_2(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar8 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99344,7 +99344,7 @@ int _wrap_drawMatches__SWIG_3(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar7 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99426,7 +99426,7 @@ int _wrap_drawMatches__SWIG_4(SWIG_GatewayParameters) {
   int res6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99514,7 +99514,7 @@ int _wrap_drawMatches__SWIG_5(SWIG_GatewayParameters) {
   int ecode10 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 10, 10);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99620,7 +99620,7 @@ int _wrap_drawMatches__SWIG_6(SWIG_GatewayParameters) {
   int res9 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99718,7 +99718,7 @@ int _wrap_drawMatches__SWIG_7(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar8 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99806,7 +99806,7 @@ int _wrap_drawMatches__SWIG_8(SWIG_GatewayParameters) {
   cv::Scalar tmpScalar7 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -99888,7 +99888,7 @@ int _wrap_drawMatches__SWIG_9(SWIG_GatewayParameters) {
   int res6 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 6, 6);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -100439,7 +100439,7 @@ int _wrap_evaluateFeatureDetector__SWIG_0(SWIG_GatewayParameters) {
   int res8 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -100530,7 +100530,7 @@ int _wrap_evaluateFeatureDetector__SWIG_1(SWIG_GatewayParameters) {
   int res7 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 7, 7);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -100697,7 +100697,7 @@ int _wrap_computeRecallPrecisionCurve(SWIG_GatewayParameters) {
   int res3 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_std__allocatorT_std__vectorT_cv__DMatch_std__allocatorT_cv__DMatch_t_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -100740,7 +100740,7 @@ int _wrap_getRecall(SWIG_GatewayParameters) {
   float result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -100773,7 +100773,7 @@ int _wrap_getNearestPoint(SWIG_GatewayParameters) {
   int result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_std__vectorT_cv__Point_T_float_t_std__allocatorT_cv__Point_T_float_t_t_t,  0 , SWIG_Scilab_GetFuncName());
@@ -100826,7 +100826,7 @@ int _wrap_evaluateGenericDescriptorMatcher__SWIG_0(SWIG_GatewayParameters) {
   int res9 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 9, 9);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -100928,7 +100928,7 @@ int _wrap_evaluateGenericDescriptorMatcher__SWIG_1(SWIG_GatewayParameters) {
   int res8 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 8, 8);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__Mat,  0 , SWIG_Scilab_GetFuncName());
@@ -101117,7 +101117,7 @@ int _wrap_new_BOWKMeansTrainer__SWIG_0(SWIG_GatewayParameters) {
   cv::BOWKMeansTrainer *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 4, 4);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -101163,7 +101163,7 @@ int _wrap_new_BOWKMeansTrainer__SWIG_1(SWIG_GatewayParameters) {
   cv::BOWKMeansTrainer *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 3, 3);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -101201,7 +101201,7 @@ int _wrap_new_BOWKMeansTrainer__SWIG_2(SWIG_GatewayParameters) {
   cv::BOWKMeansTrainer *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -101231,7 +101231,7 @@ int _wrap_new_BOWKMeansTrainer__SWIG_3(SWIG_GatewayParameters) {
   cv::BOWKMeansTrainer *result = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   ecode1 = SWIG_AsVal_int(1, &val1);
@@ -101331,7 +101331,7 @@ int _wrap_delete_BOWKMeansTrainer(SWIG_GatewayParameters) {
   int res1 = 0 ;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 0);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BOWKMeansTrainer, SWIG_POINTER_DISOWN |  0 , SWIG_Scilab_GetFuncName());
@@ -101352,7 +101352,7 @@ int _wrap_BOWKMeansTrainer_cluster__SWIG_0(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BOWKMeansTrainer, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -101380,7 +101380,7 @@ int _wrap_BOWKMeansTrainer_cluster__SWIG_1(SWIG_GatewayParameters) {
   cv::Mat result;
   
   SWIG_CheckInputArgument(pvApiCtx, 2, 2);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   res1 = SwigScilabPtrToObject(pvApiCtx, 1, &argp1, SWIGTYPE_p_cv__BOWKMeansTrainer, 0 |  0 , SWIG_Scilab_GetFuncName());
@@ -101450,7 +101450,7 @@ int _wrap_cvGetKeyPoints(SWIG_GatewayParameters) {
   arg2 = &tmpKeyPoints2;
   
   SWIG_CheckInputArgument(pvApiCtx, 1, 1);
-  SWIG_CheckOutputArgument(pvApiCtx, 0, 1);
+  SWIG_CheckOutputArgument(pvApiCtx, 0, 2);
   SWIG_Scilab_SetFuncName(fname);
   SWIG_Scilab_SetApiContext(pvApiCtx);
   if (SwigScilabPtrToObject(pvApiCtx, 1, (void**)&arg1, SWIG_Scilab_TypeQuery("KeyPoints *"), 0, SWIG_Scilab_GetFuncName()) != SWIG_OK) {
