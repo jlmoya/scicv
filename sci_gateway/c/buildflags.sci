@@ -15,8 +15,12 @@ function cflags = getCompilationFlags()
 
     if os <> "Windows" then
         cflags = cflags + " -g" + " -D_GLIBCXX_USE_CXX11_ABI=0";
+        if os == "Darwin" then
+            cflags = cflags + " -Wno-narrowing";
+        end
     end
 endfunction
+
 
 
 function ldflags = getLinkFlags()
