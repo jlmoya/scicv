@@ -1,5 +1,6 @@
 // Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
+// Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
 
 function [scicvlib] = startModule()
 
@@ -32,31 +33,26 @@ function [scicvlib] = startModule()
   [version, opts] = getversion();
   arch = opts(2);
 
-  opencv_libs = "opencv_" + ["core"; "imgproc"; "highgui"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "calib3d"; "ml"; "legacy"; "gpu"; "contrib"];
   os = getos();
 
   if os == "Windows" then
+      opencv_libs = "opencv_" + ["core"; "imgproc"; "highgui"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "calib3d"; "ml"; "legacy"; "gpu"; "contrib"] + "2413";
       bin_dir = fullfile(tlbx_root_dir, "thirdparty/Windows", arch, "bin");
       ffmpeg_libs = ["avutil-56"; "swscale-5"; "swresample-3"; "postproc-55"; "avcodec-58"; "avformat-58"; "avfilter-7"; "avdevice-58"];
       opencv_ffmpeg_libs = ["opencv_ffmpeg2413_64"];
-      opencv_libs = [opencv_libs + "2413"];
       // load debug library when needed
 			if grep(opts, "debug") then
         opencv_libs = opencv_libs + "d";
       end
       thirdparty_libs = [ffmpeg_libs; opencv_ffmpeg_libs; opencv_libs];
-      thirdparty_lib_paths = fullpath(bin_dir + "\" + thirdparty_libs + ".dll");
-  elseif os == "Linux"
-      lib_dir = fullfile(tlbx_root_dir, "thirdparty/Linux", arch, "lib");
-      image_codec_libs = ["png12"; "jpeg"];
+      thirdparty_lib_paths = fullpath(fullfile(bin_dir, thirdparty_libs + ".dll"));
+  else
+      opencv_libs = "opencv_world";
+      lib_dir = fullfile(tlbx_root_dir, "thirdparty", os, arch, "lib");
       video_codec_libs = ["openh264"];
-      ffmpeg_libs = ["avutil"; "swscale"; "avcodec"; "avformat"; "avfilter"; "avdevice"];
-      thirdparty_libs = [image_codec_libs; video_codec_libs; ffmpeg_libs; opencv_libs];
-      thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".so");
-  elseif os == "Darwin"
-      lib_dir = fullfile(tlbx_root_dir, "thirdparty/Mac/lib");
-      thirdparty_libs = opencv_libs;
-      thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + ".dylib");
+      ffmpeg_libs = ["avutil"; "swscale"; "swresample"; "avcodec"; "avformat"; "avfilter"; "avdevice"];
+      thirdparty_libs = [video_codec_libs; ffmpeg_libs; opencv_libs];
+      thirdparty_lib_paths = fullpath(fullfile(lib_dir, "lib" + thirdparty_libs + getdynlibext()));
   end
   try
     for thirdparty_lib_path = thirdparty_lib_paths'

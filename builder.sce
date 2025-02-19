@@ -1,5 +1,6 @@
 // Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
+// Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
 
 mode(-1);
 lines(0);
@@ -31,6 +32,15 @@ function main_builder()
         error(msprintf(gettext("%s module not installed."), "modules_manager"));
     end
 
+    // Get thirdparties
+    os = getos();
+    scicv_dir = get_absolute_file_path("builder.sce");
+    if ~isdir(fullfile(scicv_dir, "thirdparty", os)) then
+        cd("thirdparty");
+        exec("download-opencv.sce", -1);
+        cd("..");
+    end
+
     tbx_builder_macros(toolbox_dir);
     tbx_builder_gateway(toolbox_dir);
 
@@ -38,11 +48,10 @@ function main_builder()
 	// by default, OpenCV libs need to be in same folder as scicv lib
 	// -> change the path of dependecies in scicv lib (with install_name_tool) to look up in thirdparty folder
 	// Notice: relative paths must not be too long !!! otherwise error occurs suggesting use headerpad_max_install_names option, but it is ignored by libtool...)
-    scicv_dir = get_absolute_file_path("builder.sce");
-    if getos() == "Darwin" then
+    if os == "Darwin" then
         opencv_libs = "libopencv_" + ["core"; "imgproc"; "highgui"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "contrib"];
         for opencv_lib = opencv_libs'
-            unix_g(sprintf("install_name_tool -change %s.2.4.dylib @loader_path/../../thirdparty/Mac/lib/%s.dylib %s/sci_gateway/c/libscicv.dylib", opencv_lib, opencv_lib, scicv_dir));
+            unix_g(sprintf("install_name_tool -change %s.2.4.dylib @loader_path/../../thirdparty/Darwin/arm64/%s.dylib %s/sci_gateway/c/libscicv.dylib", opencv_lib, opencv_lib, scicv_dir));
         end
     end
 
