@@ -7,11 +7,32 @@ TARGET     = scicv
 INTERFACE  = scicv.i
 INCLUDES   = -I./include -I$(OPENCV_INC)
 
-build:
-	$(SWIG) -scilab -c++ -targetversion 6 -builder $(INCLUDES) -builderflagscript buildflags.sci -builderverbositylevel 2 $(INTERFACE)
+build: patch
+	$(SWIG) -scilab -c++ -builder $(INCLUDES) -builderflagscript buildflags.sci -builderverbositylevel 2 $(INTERFACE)
 	sed 's/builder/builder_gateway_c/' <builder.sce >builder_gateway_c.sce
 	mv builder_gateway_c.sce ..
 	mv $(TARGET)_wrap.cxx ..
+
+patch:
+	# const static not managed by SWIG (https://github.com/swig/swig/issues/241)
+	mkdir -p include/opencv2/contrib/
+	sed 's/const static Point3f allzero;/static const Point3f allzero;/g' $(OPENCV_INC)/opencv2/contrib/contrib.hpp >include/opencv2/contrib/contrib.hpp
+
+	# Issue in FlannBasedMatcher class parsing => commented out
+	mkdir -p include/opencv2/features2d/
+	sed '1228s/class CV_EXPORTS_W FlannBasedMatcher/\/*class CV_EXPORTS_W FlannBasedMatcher/' $(OPENCV_INC)/opencv2/features2d/features2d.hpp >include/opencv2/features2d/features2d.hpp
+	sed -i '1264s/};/};*\//' include/opencv2/features2d/features2d.hpp
+
+	# Issue in Matx class parsing => commented out
+	mkdir -p include/opencv2/core/
+	sed '455s/typedef Matx<_Tp, (m < n ? m : n), 1> diag_type;/\/\/typedef Matx<_Tp, (m < n ? m : n), 1> diag_type;/' $(OPENCV_INC)/opencv2/core/core.hpp >include/opencv2/core/core.hpp
+	# sciCV build error: 'cv::Mat::MStep& cv::Mat::MStep::operator=(const cv::Mat::MStep&)' is protected within this context => Commented out
+	sed -i '2015s/struct CV_EXPORTS MStep/\/*struct CV_EXPORTS MStep/' include/opencv2/core/core.hpp
+	sed -i '2028s/};/};*\//' include/opencv2/core/core.hpp
+	sed -i '2031s/MStep step;/\/\/MStep step;/' include/opencv2/core/core.hpp
+
+	# Issue with SWIG 4.3.0: CV_MAT_TYPE_MASK is not wrapped => Add parentheses to make it work
+	sed '667s/CV_DEPTH_MAX\*CV_CN_MAX/CV_DEPTH_MAX\*(CV_CN_MAX)/' $(OPENCV_INC)/opencv2/core/types_c.h >include/opencv2/core/types_c.h
 
 clean:
 	rm $(TARGET)_wrap.cxx lib$(TARGET).so
