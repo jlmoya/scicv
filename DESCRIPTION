@@ -1,14 +1,15 @@
 Toolbox: scicv
 Title: Scilab Computer Vision Module
 Summary: Interface to the Computer Vision library OpenCV
-Version: 0.6.2
+Version: 2.4.13
 Author: Simon Marchetto (simon.marchetto@scilab-enterprises.com) 
         Wael Elgazzah (wael.elgazzah@scilab-enterprises.com)
-Maintainer: Clement David (clement.david@esi-group.com)
+Maintainer: Clement David (clement.david@3ds.com)
+            Vincent Couvert (vincent.couvert@3ds.com)
 Category: Image Processing
-Entity: Scilab Enterprises
-WebSite: http://forge.scilab.org/index.php/p/scicv/
+Entity: Scilab Enterprises - Dassault Systemes S.E.
+WebSite: https://gitlab.com/scilab/forge/scicv/
 License: Creative Commons Attribution-ShareAlike 3.0
-ScilabVersion: >= 5.5
+ScilabVersion: >= 2025.0.0
 Depends: 
-Date: 2017-07-27
+Date: 2025-02-18

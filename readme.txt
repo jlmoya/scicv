@@ -1,5 +1,6 @@
 // Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
+// Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
 
 README of Scilab Computer Vision Module
 ----------------------------------------
@@ -7,7 +8,7 @@ README of Scilab Computer Vision Module
 This toolbox is a binding from the OpenCV library (in version 2.4.13).
 Please see www.opencv.org for further details on the OpenCV library.
 
-This toolbox is currently in version 0.4.
+This toolbox version is the same as OpenCV version.
 
 To load and initialize the toolbox:
 - cd <path to the toolbox folder>
