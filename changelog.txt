@@ -25,4 +25,6 @@ changelog of the Scilab Computer Vision Module
 2.4.13:
     - Swig: 4.3.0
     - Linux: OpenCV 2.4.13.6 / FFmpeg 3.4.9
+    - macOS: OpenCV 2.4.13.6 / FFmpeg 3.4.9
     - Windows: OpenCV 2.4.13.6 / FFmpeg 4.2.3
+

@@ -3,7 +3,7 @@ End User License
 
 The Scilab Computer Vision Module is licensed under the terms of the Creative Commons Attribution-ShareAlike 3.0 Unported License (full license text below).
 
-Third-party components - Credits
+*** Third-party components - Credits ***
 
 This toolbox uses Open Source components. You can find the source code of their open source projects along with license information below. We acknowledge and are grateful to these developers for their contributions to open source.
 
@@ -17,7 +17,7 @@ Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
 License 3-clause BSD.
 
 
-License
+*** License ***
 
 Creative Commons Attribution-ShareAlike 3.0 Unported License
 https://creativecommons.org/licenses/by-sa/3.0/legalcode

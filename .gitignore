@@ -10,6 +10,7 @@ jar/
 *.bin
 macros/lib
 macros/names
+inline/
 #
 # Generated files (Windows)
 #
