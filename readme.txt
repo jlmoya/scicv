@@ -5,7 +5,7 @@
 README of Scilab Computer Vision Module
 ----------------------------------------
 
-This toolbox is a binding from the OpenCV library (in version 2.4.13).
+This toolbox is a binding from the OpenCV library (in version 4.8.1).
 Please see www.opencv.org for further details on the OpenCV library.
 
 This toolbox version is the same as OpenCV version.
