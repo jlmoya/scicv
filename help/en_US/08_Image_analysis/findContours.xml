@@ -15,7 +15,7 @@
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
-    <synopsis>[img_out, contours] = findContours(img_in, mode, method[, offset])</synopsis>
+    <synopsis>[contours] = findContours(img_in, mode, method[, offset])</synopsis>
   </refsynopsisdiv>
   <refsection>
     <title>Parameters</title>
@@ -64,12 +64,6 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>img_out</term>
-        <listitem>
-          <para>Contour image (<link linkend="Mat">Mat</link>).</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
         <term>contours</term>
         <listitem>
           <para>List of detected contours (<link linkend="VecPoints">VecPoints</link>).</para>
@@ -94,14 +88,17 @@
     thresh = 100;
     img_canny = Canny(img_gray, thresh, thresh*2, 3);
 
-    [img_contours, contours] = findContours(img_canny, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
+    [contours] = findContours(img_canny, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, [0, 0]);
 
     subplot(1,2,2);
-    matplot(img_contours);
+    img_contours = new_Mat(size(img, 'c'), size(img, 'r'), CV_8UC1, 0);
+    img_contours_out = drawContours(img_contours, contours, -1, [255, 0, 0], -1);
+    matplot(img_contours_out);
+    title("contours");
 
     delete_Mat(img_gray);
     delete_Mat(img_canny);
-    //delete_Mat(img_contours);
+    delete_Mat(img_contours);
  ]]></programlisting>
   </refsection>
   <refsection>
@@ -111,5 +108,14 @@
         <link linkend="PtLists">PtLists</link>
       </member>
     </simplelist>
+  </refsection>
+  <refsection>
+      <title>History</title>
+      <revhistory>
+          <revision>
+              <revnumber>4.8.1</revnumber>
+              <revremark>findContours() no more returns image.</revremark>
+          </revision>
+      </revhistory>
   </refsection>
 </refentry>
