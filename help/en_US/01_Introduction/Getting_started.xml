@@ -40,7 +40,7 @@
 
     <para>About video, the toolbox supports video reading/writing as it includes the <ulink url="https://ffmpeg.org/">FFmpeg</ulink> component (in its LGPL version), with the h264 <ulink url="http://www.openh264.org/">openh264</ulink> open source codec.</para>
 
-    <para>The interface is the same (as much as possible) as the OpenCV API version 2, same function names and parameters, but adapted to Scilab. For example pointers are masked or their usage is avoided as much as possible. Argument passing is simplified, as Scilab support multi output argument.</para>
+    <para>The interface is the same (as much as possible) as the OpenCV API version 4, same function names and parameters, but adapted to Scilab. For example pointers are masked or their usage is avoided as much as possible. Argument passing is simplified, as Scilab support multi output argument.</para>
 
     <para>This interface is also designed to combine performance and convenience.
     Conversion to output Scilab objects is done only when it is necessary (i.e. without sacryfing performance).
