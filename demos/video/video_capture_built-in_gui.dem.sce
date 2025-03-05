@@ -30,7 +30,7 @@ while %t
     [ret, frame] = VideoCapture_read(videoCapture);
     if ret then
         if faceDetection then
-            faces = CascadeClassifier_detectMultiScale(clsf, frame, 1.3, 2, CV_HAAR_SCALE_IMAGE, [10 10]);
+            faces = CascadeClassifier_detectMultiScale(clsf, frame, 1.3, 2, CASCADE_SCALE_IMAGE, [10 10]);
             for i=1:size(faces)
                 face = faces(i);
                 leftTopPt = [face(1), face(2)];
