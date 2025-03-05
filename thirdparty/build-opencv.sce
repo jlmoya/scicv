@@ -95,7 +95,6 @@ if os == "Windows" then
 else    
     cmakeCmd($+1) = "-DCMAKE_SHARED_LINKER_FLAGS=""-Wl,-rpath," + THIRDPARTY + "/lib""";
     cmakeCmd($+1) = "-DCMAKE_INSTALL_RPATH=""" + THIRDPARTY + "/lib""";
-    cmakeCmd($+1) = "-DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-" + OPENCV_VERSION + "/modules";
     cmakeCmd($+1) = "-DBUILD_opencv_world:BOOL=ON";
     cmakeCmd($+1) = "-DBUILD_opencv_python2=OFF";
     // Under Linux, if libjpeg-dev and libpng-dev packages are installed
@@ -148,7 +147,7 @@ end
 // Create archive
 compress("opencv-" + OPENCV_VERSION + "-ffmpeg-" + FFMPEG_VERSION + "-" + os + "-" + arch + ".tar.gz", os);
 
-// Check error status (sometimes useful under MacOS)
+// Check error status (sometimes useful under macOS)
 [str, n, line, func] = lasterror();
 if n <> 0 then
     disp(str, n, line, func);
