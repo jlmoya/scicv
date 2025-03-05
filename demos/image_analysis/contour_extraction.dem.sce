@@ -15,21 +15,17 @@ img_gray = cvtColor(img, COLOR_BGR2GRAY);
 thresh = 90;
 img_canny = Canny(img_bw, thresh, thresh*2, 3);
 
-[img_contours_bmp, contours] = findContours(img_canny, CV_RETR_LIST, CV_CHAIN_APPROX_NONE, [0, 0]);
+contours = findContours(img_canny, CV_RETR_LIST, CV_CHAIN_APPROX_NONE, [0, 0]);
 
-subplot(2, 2, 1);
+subplot(1, 3, 1);
 matplot(img);
 title("image");
 
-subplot(2, 2, 2);
+subplot(1, 3, 2);
 matplot(img_canny);
 title("canny");
 
-subplot(2, 2, 3);
-matplot(img_contours_bmp);
-title("contour image");
-
-subplot(2, 2, 4);
+subplot(1, 3, 3);
 img_contours = new_Mat(size(img, 'c'), size(img, 'r'), CV_8UC1, 0);
 img_contours_out = drawContours(img_contours, contours, -1, [255, 0, 0], -1);
 matplot(img_contours_out);
