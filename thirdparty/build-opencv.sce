@@ -135,12 +135,12 @@ if os == "Windows" then
     
     rmdir(fullfile(os, arch, "x64"), "s");
 else
-    unix("mv -R " + THIRDPARTY + "/include/opencv4/opencv2 " + THIRDPARTY + "/include/");
+    unix("mv " + THIRDPARTY + "/include/opencv4/opencv2/ " + THIRDPARTY + "/include/");
     rmdir(fullfile(os, arch, "include", "opencv4"), "s");
     rmdir(fullfile(os, arch, "bin"), "s");
     rmdir(fullfile(os, arch, "lib", "cmake"), "s");
     rmdir(fullfile(os, arch, "lib", "pkgconfig"), "s");
-    rmdir(fullfile(os, arch, "lib", "python*"), "s");
+    rmdir(fullfile(os, arch, "lib", "python3.10"), "s");
     rmdir(fullfile(os, arch, "share"), "s");
 end
 
