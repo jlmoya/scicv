@@ -7,7 +7,11 @@ os = getos();
 [_, opts] = getversion();
 arch = opts(2);
 
-archive = "opencv-" + OPENCV_VERSION + "-ffmpeg-" + FFMPEG_VERSION + "-" + os + "-" + arch + ".tar.gz"
+if os == "Windows" then
+    archive = "opencv-" + OPENCV_VERSION + "-" + os + "-" + arch + ".tar.gz"
+else
+    archive = "opencv-" + OPENCV_VERSION + "-ffmpeg-" + FFMPEG_VERSION + "-" + os + "-" + arch + ".tar.gz"
+end
 
 [result, status, headers] = http_get("https://oos.eu-west-2.outscale.com/scilab-toolboxes/prerequirements/" + archive, archive);
 
