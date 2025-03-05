@@ -1,19 +1,20 @@
 // Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
+// Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
 
-// OpenCV OutputArray <= Scilab MList Mat or hypermat
+// OpenCV _InputOutputArray <= Scilab MList Mat or hypermat
 
 %include Mat_sciHypermat.swg
 
 %fragment("SWIG_SciMListMatOrHypermat_AsOutputArray", "header", fragment="SWIG_SciHypermat_AsMat") {
-int SWIG_SciMListMatOrHypermat_AsOutputArray(void *pvApiCtx, SwigSciObject iVar, cv::_OutputArray **pOutputArray, cv::Mat **pInOutMat, char *fname) {
+int SWIG_SciMListMatOrHypermat_AsOutputArray(void *pvApiCtx, SwigSciObject iVar, cv::_InputOutputArray **pInputOutputArray, cv::Mat **pInOutMat, char *fname) {
   if (SwigScilabPtrToObject(pvApiCtx, iVar, (void**)pInOutMat, SWIG_Scilab_TypeQuery("cv::Mat *"), 0, fname) == SWIG_OK) {
-    *pOutputArray = new cv::_OutputArray(*(*pInOutMat));
+    *pInputOutputArray = new cv::_InputOutputArray(*(*pInOutMat));
     return SWIG_OK;
   }
   else {
     if (SWIG_SciHypermat_AsMat(pvApiCtx, iVar, pInOutMat, fname) == SWIG_OK) {
-      *pOutputArray = new cv::_OutputArray(*(*pInOutMat));
+      *pInputOutputArray = new cv::_InputOutputArray(*(*pInOutMat));
       return SWIG_OK;
     }
     else {

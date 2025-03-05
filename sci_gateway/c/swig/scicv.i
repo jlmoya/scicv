@@ -1,7 +1,31 @@
 // Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
+// Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
 
 %module scicv
+
+// Force C++11 to avoid "OpenCV 4.x+ requires enabled C++11 support" error
+// See opencv2/core/cvdef.h
+#undef __cplusplus
+#define __cplusplus 201103
+
+// Needed to detect compatibility headers such as opencv2/core/core.hpp
+#define __OPENCV_BUILD
+
+// Force definition of types defined in mat.hpp as 'typedef of typedef'
+// Else generated code will not build (missing cast when calling methods with these types as input)
+namespace cv {
+    %typedef const _InputArray& InputArrayOfArrays;
+    %typedef const _OutputArray& OutputArrayOfArrays;
+    %typedef const _InputOutputArray& InputOutputArrayOfArrays;
+}
+
+// Needed for enum struct DrawMatchesFlags (error: cannot convert 'cv::DrawMatchesFlags' to 'double')
+%typemap(scilabconstcode, fragment=SWIG_CreateScilabVariable_frag(double)) double 
+%{
+if (SWIG_CreateScilabVariable_double(pvApiCtx, "$result", (double)$value) != SWIG_OK)
+    return SWIG_ERROR;
+%}
 
 %scilabconst(1);
 

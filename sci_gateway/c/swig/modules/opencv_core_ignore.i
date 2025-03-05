@@ -9,7 +9,7 @@
 %ignore GlArrays;
 %ignore GlCamera;
 %ignore GpuMat;
-%ignore  MatConstIterator;
+%ignore MatConstIterator;
 %ignore SparseMatConstIterator;
 %ignore Ptr;
 %ignore REAL;
@@ -32,6 +32,8 @@
 %ignore _InputArray;
 %ignore _OutputArray;
 %ignore MatIterator_;
+%ignore ImageCollection; // Compilation issues (Linux)
+%ignore seqPopMulti; // Link issue (Linux)
 
 // ignore some structures
 %ignore Param;
@@ -251,6 +253,8 @@
 %ignore dct;
 %ignore idct;
 %ignore norm;
+%ignore max;
+%ignore min;
 
 %ignore read(const FileNode& node, int& value, int default_value);
 %ignore read(const FileNode& node, bool& value, bool default_value);

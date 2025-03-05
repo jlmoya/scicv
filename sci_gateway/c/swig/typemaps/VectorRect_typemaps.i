@@ -1,13 +1,14 @@
 // Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
+// Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
 
 // OpenCV std::vector<Rect> => Scilab: list matrix[1,4]
 
-%typemap(in, numinputs=0, noblock=1) vector<cv::Rect_<int>>& (vector<cv::Rect_<int>> vRect) {
+%typemap(in, numinputs=0, noblock=1) std::vector<cv::Rect_<int>>& (vector<cv::Rect_<int>> vRect) {
   $1 = &vRect;
 }
 
-%typemap(argout, noblock=0) vector<cv::Rect_<int>>& {
+%typemap(argout, noblock=0) std::vector<cv::Rect_<int>>& {
   SciErr sciErr;
   int *piListAddr = NULL;
   int nbElements = (int) $1->size();

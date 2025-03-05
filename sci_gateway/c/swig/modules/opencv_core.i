@@ -1,5 +1,6 @@
 // Scilab Computer Vision Module
 // Copyright (C) 2017 - Scilab Enterprises
+// Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
 
 %{
 #undef SKIP_INCLUDES
@@ -7,15 +8,13 @@
 #undef Rhs
 #undef round
 #include  "opencv2/core/types_c.h"
-#include "opencv2/core/core.hpp"
-#include "opencv2/core/gpumat.hpp"
+#include "opencv2/core.hpp"
+#include "opencv2/core/cuda.hpp" // cv::cuda::GpuMat
 #include "opencv2/core/mat.hpp"
-#include "opencv2/core/opengl_interop_deprecated.hpp"
-#include "opencv2/core/opengl_interop.hpp"
+#include "opencv2/imgcodecs/legacy/constants_c.h"
 using namespace std;
 using namespace cv;
 using namespace ogl;
-using namespace cv::gpu;
 using namespace cv::ogl;
 %}
 
@@ -28,10 +27,19 @@ using namespace cv::ogl;
 
 using std::vector;
 
+#define OPENCV_FORCE_UNSAFE_XADD // Avoid error about CV_XADD macro definition
+%include "opencv2/core/hal/interface.h" // CV_8UC3, CV_16S, CV_CN_MAX, ... definition
+%include "opencv2/core/cvdef.h" // CV_INLINE definition
+%import "opencv2/core/cvstd.hpp" // cv::String (Needed to map cv::String as Scilab string)
+%include "opencv2/imgcodecs/legacy/constants_c.h" // CV_LOAD_IMAGE_* (Useful constants)
+%include "opencv2/core/types.hpp" // Point_, Size_, Rect, Scalar_, ...
+
 %include "opencv2/core/types_c.h"
 %include "opencv2/core/mat.hpp"
-%import "opencv2/core/opengl_interop_deprecated.hpp"
-%include "opencv2/core/core.hpp"
+%include "opencv2/core.hpp"
+%include "opencv2/core/base.hpp" // cubeRoot, ...
+%include "opencv2/core/utility.hpp" // getCPUTickCount, ...
+%include "opencv2/core/core_c.h" // cvarrToMatND, ...
 %import "opencv2/core/operations.hpp"
 
 %template() cv::Point_<int>;
@@ -39,6 +47,8 @@ using std::vector;
 %template() cv::Size_<int>;
 %template() cv::Rect_<int>;
 %template() cv::Scalar_<double>;
+
+%include "opencv2/imgcodecs.hpp" // imread, ...
 
 %include carrays.i
 

@@ -23,12 +23,13 @@ function ldflags = getLinkFlags()
     arch = opts(2);
     thirdparty_lib = fullpath(fullfile("../../thirdparty", os, arch, "lib"));
 
-    libs = "opencv_" + ["core"; "highgui"; "imgproc"; "photo"; "video"; "objdetect"; "flann"; "features2d"; "contrib"];
+    libs = "opencv_world";
 
     if os == "Windows" then
+        libs = [libs; "opencv_img_hash"];
         if findmsvccompiler() <> "unknown" then
             // Visual Studio
-            ldflags = strcat(fullfile(thirdparty_lib, libs + "2413.lib"), " ");
+            ldflags = strcat(fullfile(thirdparty_lib, libs + "481.lib"), " ");
         else
             // MinGW
             ldflags = "-L" + thirdparty_lib + " -l" + strcat(libs, " -l");
