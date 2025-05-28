@@ -255,6 +255,11 @@
 %ignore norm;
 %ignore max;
 %ignore min;
+%ignore sqrt;
+%ignore exp;
+%ignore log;
+%ignore kmeans;
+%ignore rotate;
 
 %ignore read(const FileNode& node, int& value, int default_value);
 %ignore read(const FileNode& node, bool& value, bool default_value);
