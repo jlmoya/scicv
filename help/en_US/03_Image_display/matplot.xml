@@ -11,7 +11,7 @@
   </info>
   <refnamediv>
     <refname>matplot</refname>
-    <refpurpose>Displays an image</refpurpose>
+    <refpurpose>Displays an image in a Scilab figure.</refpurpose>
   </refnamediv>
   <refsynopsisdiv>
     <title>Syntax</title>
@@ -30,7 +30,7 @@
   </refsection>
   <refsection>
     <title>Description</title>
-    <para><function>matplot</function> displays an image, which type can be:</para>
+    <para><function>matplot</function> displays (in a Scilab figure) an image, which type can be:</para>
     <itemizedlist>
         <member><literal>Mat</literal> type, containing a binary, grayscale or a color image.</member>
         <member>matrix (2D) of type <literal>double</literal>, <literal>int8</literal>, <literal>uint8</literal>, <literal>int16</literal>, <literal>uint16</literal>, <literal>int32</literal>, <literal>uint32</literal>, for a gray or a binary image.</member>

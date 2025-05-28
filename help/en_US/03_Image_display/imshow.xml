@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab Computer Vision Module
+ * Copyright (C) 2025 - Dassault Systèmes S.E. - Vncent COUVERT
+ *
+ -->
+<refentry xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg"  xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab"
+  xml:lang="fr" xml:id="imshow">
+  <info>
+    <pubdate>$LastChangedDate$</pubdate>
+  </info>
+  <refnamediv>
+    <refname>imshow</refname>
+    <refpurpose>Displays an image in an OpenCV window.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>Syntax</title>
+    <synopsis>imshow(windowName, image</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+      <varlistentry>
+        <term>windowName</term>
+        <listitem>
+          <para>Name of the OpenCV window.</para>
+        </listitem>
+      </varlistentry>
+    <variablelist>
+      <varlistentry>
+        <term>image</term>
+        <listitem>
+          <para>Image to be displayed (<link linkend="Mat">Mat</link>).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Description</title>
+    <para><function>imshow</function> displays an image in an OpenCV window (not a Scilab figure).</para>
+  </refsection>
+  <refsection>
+    <title>Examples</title>
+    <programlisting role="example"><![CDATA[
+    scicv_Init();
+
+    img_gray = imread(getSampleImage("shapes.png"), CV_LOAD_IMAGE_GRAYSCALE);
+
+    imshow(img_gray);
+
+    delete_Mat(img_gray);
+ ]]></programlisting>
+  </refsection>
+  <refsection>
+    <title>See also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="Matplot">Matplot</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>
