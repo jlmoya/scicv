@@ -33,3 +33,7 @@ changelog of the Scilab Computer Vision Module
     - Linux: OpenCV 4.8.1 / FFmpeg 7.1
     - macOS: OpenCV 4.8.1 / FFmpeg 7.1
     - Windows: OpenCV 4.8.1
+
+4.8.1-1:
+    - Issue #1 fixed: ìmshow() function was not documented.
+    - Issue #4 fixed: Some OpenCV functions overwritten Scilab functions (exp, log, rotate, sqrt, kmeans).
