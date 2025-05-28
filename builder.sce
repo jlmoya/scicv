@@ -32,6 +32,18 @@ function main_builder()
         error(msprintf(gettext("%s module not installed."), "modules_manager"));
     end
 
+    // Check symbols to be sure to not overwrite Scilab functions
+    txt = mgetl(fullfile("sci_gateway", "c", "builder_gateway_c.sce"));
+    iFirstTable = grep(txt, "table")(1);
+    iLastLine = grep(txt, "ierr = 0;");
+    txt = txt((iFirstTable-4):(iLastLine-1));
+    execstr(txt);
+    existingSymbols = find(exists(table(:,1)) == 1);
+    if existingSymbols <> [] then
+        error("Some wrapped functions already exist in Scilab: " + strcat(table(existingSymbols), ", ") + ".");
+    end
+    clear table ver
+
     // Get thirdparties
     os = getos();
     scicv_dir = get_absolute_file_path("builder.sce");
