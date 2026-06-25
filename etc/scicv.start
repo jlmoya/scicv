@@ -54,12 +54,16 @@ function [scicvlib] = startModule()
       thirdparty_libs = [video_codec_libs; ffmpeg_libs; opencv_libs];
       thirdparty_lib_paths = fullpath(lib_dir + "/" + "lib" + thirdparty_libs + getdynlibext());
   end
-  try
-    for thirdparty_lib_path = thirdparty_lib_paths'
-      link(thirdparty_lib_path);
+  // On macOS the OpenCV/ffmpeg libraries are Homebrew's and load automatically via
+  // libscicv's rpath, so skip the explicit thirdparty link (those bundled libs are absent).
+  if os <> "Darwin" then
+    try
+      for thirdparty_lib_path = thirdparty_lib_paths'
+        link(thirdparty_lib_path);
+      end
+    catch
+      error(msprintf("\tUnable to link %s", thirdparty_lib_path));
     end
-  catch
-    error(msprintf("\tUnable to link %s", thirdparty_lib_path));
   end
 
 // Load gateways
