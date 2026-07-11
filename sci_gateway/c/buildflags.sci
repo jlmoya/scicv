@@ -2,12 +2,35 @@
 // Copyright (C) 2017 - Scilab Enterprises
 // Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
 
+// macOS: resolve the Homebrew OpenCV pkg-config name at build time (opencv5.pc,
+// opencv4.pc, ... — Homebrew renames the .pc on every major), so a `brew upgrade
+// opencv` major bump keeps building instead of pointing at dead hardcoded paths.
+function pc = opencv_pkgconfig_name()
+    pcbin = "/opt/homebrew/bin/pkg-config";
+    if ~isfile(pcbin) then pcbin = "pkg-config"; end
+    names = ["opencv6" "opencv5" "opencv4" "opencv"];
+    for k = 1:size(names, "*")
+        if unix(pcbin + " --exists " + names(k) + " 2>/dev/null") == 0 then
+            pc = names(k);
+            return;
+        end
+    end
+    error("scicv: pkg-config found no OpenCV (.pc). Install it: brew install opencv");
+endfunction
+
+function out = opencv_pkgconfig(args)
+    pcbin = "/opt/homebrew/bin/pkg-config";
+    if ~isfile(pcbin) then pcbin = "pkg-config"; end
+    out = unix_g(pcbin + " " + args + " " + opencv_pkgconfig_name());
+    out = out(1);
+endfunction
+
 function cflags = getCompilationFlags()
     os = getos();
     if os == "Darwin" then
-        // macOS arm64: compile the SWIG wrapper against Homebrew OpenCV 4.x headers
-        // (the bundled thirdparty/<os> prebuilt is Windows/2.4-era). From `pkg-config --cflags opencv4`.
-        cflags = "-I/opt/homebrew/opt/opencv/include/opencv4 -std=c++17 -Wno-narrowing -D_GLIBCXX_USE_CXX11_ABI=1";
+        // macOS arm64: compile the SWIG wrapper against Homebrew OpenCV headers
+        // (the bundled thirdparty/<os> prebuilt is Windows/2.4-era).
+        cflags = opencv_pkgconfig("--cflags") + " -std=c++17 -Wno-narrowing -D_GLIBCXX_USE_CXX11_ABI=1";
         return;
     end
     [version, opts] = getversion();
@@ -26,9 +49,10 @@ endfunction
 function ldflags = getLinkFlags()
     os = getos();
     if os == "Darwin" then
-        // macOS arm64: link Homebrew OpenCV 4.x (individual modules — no opencv_world) + rpath.
-        // From `pkg-config --libs opencv4`.
-        ldflags = "-L/opt/homebrew/opt/opencv/lib -lopencv_gapi -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_mcc -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_signal -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_optflow -lopencv_surface_matching -lopencv_tracking -lopencv_highgui -lopencv_datasets -lopencv_text -lopencv_plot -lopencv_videostab -lopencv_videoio -lopencv_viz -lopencv_wechat_qrcode -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_dnn -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_imgproc -lopencv_core -Wl,-rpath,/opt/homebrew/opt/opencv/lib";
+        // macOS arm64: link Homebrew OpenCV (whatever module set the installed major
+        // ships — resolved via pkg-config, so removed/merged modules never go stale)
+        // + an rpath on its libdir.
+        ldflags = opencv_pkgconfig("--libs") + " -Wl,-rpath," + opencv_pkgconfig("--variable=libdir");
         return;
     end
     [version, opts] = getversion();
