@@ -4,29 +4,16 @@
 
 %{
 #undef SKIP_INCLUDES
+// OpenCV 5 removed highgui_c.h (cvGetWindowName & the cv* Qt helpers); the
+// modern C++ API covers the wrapped surface, and the classic CV_WINDOW_* /
+// CV_EVENT_* constant names come from scicv_legacy_constants.i.
 #include "opencv2/highgui.hpp"
-#include "opencv2/highgui/highgui_c.h" // cvGetWindowName
 using namespace cv;
 %}
-
-// Not available in pre-build OpenCV versions in thirdparty/
-%ignore cvFontQt;
-%ignore cvLoadWindowParameters;
-// Not available in pre-build OpenCV versions in thirdparty/ (Windows only)
-%ignore cvFontQt;
-%ignore cvAddText; 
-%ignore cvDisplayOverlay;
-%ignore cvDisplayStatusBar;
-%ignore cvSaveWindowParameters;
-%ignore cvStartLoop;
-%ignore cvStopLoop;
-%ignore cvCreateButton;
 
 %apply cv::Mat& matIn { const cv::Mat& image };
 %apply cv::Mat* matOut { cv::Mat& image };
 
-%import  "opencv2/core/types_c.h"
 %include "opencv2/highgui.hpp"
-%include "opencv2/highgui/highgui_c.h"
 
 

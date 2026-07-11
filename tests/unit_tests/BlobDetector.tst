@@ -8,12 +8,12 @@ scicv_Init();
 
 img = imread(getSampleImage("blobs.jpg"));
 
-detector = new_SimpleBlobDetector();
+detector = SimpleBlobDetector_create(); // OpenCV 5: ctor is factory-only
 
-keyPoints = FeatureDetector_detect(detector, img);
+keyPoints = SimpleBlobDetector_detect(detector, img); // OpenCV 5: create() smart ptr; class-own detect
 
-// TODO fix KeyPoints extract operator
-assert_checkfalse(isempty(cvGetKeyPoints(keyPoints)));
+// detect() returns the keypoints matrix directly (OpenCV-5 port)
+assert_checkfalse(isempty(keyPoints));
 
 delete_SimpleBlobDetector(detector);
 

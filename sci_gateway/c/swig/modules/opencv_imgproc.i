@@ -34,9 +34,19 @@ void HoughLinesP(cv::InputArray image, cv::OutputArray linesCartesianCoordinates
     double threshold1, double threshold2,
     bool L2gradient = false );
 
-%include "opencv2/imgproc/types_c.h"
+// calcHist: under OpenCV 5 headers none of the raw cv:: overloads dispatches
+// usefully from Scilab (the C-style pointer forms are uncallable and shadow the
+// vector form; the vector form rejects scalar channel/histSize). Ignore them all
+// and provide a single compat entry point in opencv_imgproc_helpers.i that keeps
+// scicv's documented calling convention:
+//   hist = calcHist(image, channel, mask, dims, histSize, ranges)
+%ignore cv::calcHist;
+
+// imgproc/types_c.h was removed in OpenCV 5; the classic CV_* imgproc constant
+// names (CV_BGR2GRAY, CV_THRESH_*, ...) come from scicv_legacy_constants.i.
+%ignore cv::fisheye; // its initUndistortRectifyMap & co collide with the cv:: ones
+                     // (OpenCV 5 moved the fisheye namespace into imgproc.hpp)
 %include "opencv2/imgproc.hpp"
-%ignore cv::fisheye; // initUndistortRectifyMap, ... are also defined in this namespace
 %include "opencv2/calib3d.hpp" // initUndistortRectifyMap, ...
 
 %include opencv_imgproc_helpers.i

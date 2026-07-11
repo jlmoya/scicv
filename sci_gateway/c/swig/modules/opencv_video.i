@@ -5,8 +5,10 @@
 %{
 #undef SKIP_INCLUDES
 #include "opencv2/optflow/motempl.hpp"
-#include "opencv2/videoio/legacy/constants_c.h"
+// videoio/legacy/constants_c.h was removed in OpenCV 5 (CV_CAP_* / CV_FOURCC
+// now come from scicv_legacy_constants.i); video/legacy survives.
 #include "opencv2/video/legacy/constants_c.h"
+#include "opencv2/videoio.hpp"
 #include "opencv2/bgsegm.hpp"
 #include "opencv2/optflow.hpp"
 #include "opencv2/video.hpp"
@@ -52,7 +54,6 @@ using namespace cv;
 %cv_ptr(cv::BackgroundSubtractorMOG2)
 
 %include "opencv2/optflow/motempl.hpp" // updateMotionHistory
-%include "opencv2/videoio/legacy/constants_c.h" // CV_FOURCC, ...
 %include "opencv2/video/legacy/constants_c.h" // CV_LKFLOW_PYR_A_READY, ...
 %include "opencv2/video/background_segm.hpp" // BackgroundSubtractorMOG2, ...
 %include "opencv2/bgsegm.hpp" // BackgroundSubtractorMOG, BackgroundSubtractorGMG, ...

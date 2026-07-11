@@ -1,0 +1,99 @@
+// Scilab Computer Vision Module
+// Copyright (C) 2025 - Dassault Systèmes S.E. - Vincent COUVERT
+
+// <-- CLI SHELL MODE -->
+// <-- NO CHECK REF -->
+
+// Check that all symbols (variable & functions) wrapped in sciCV 5.0.0 (OpenCV 5.0.0) are still mapped
+
+scicv_Init();
+
+// Functions
+exec(fullfile(get_scicv_path(), "tests", "unit_tests", "functions-5.0.0.txt"), -1);
+scicvFunctions = table;
+clear table
+
+ignored = [];
+ignoredPatterns = [];
+renamedFunctions = [];
+
+missing = 0;
+for iFunc=1:size(scicvFunctions, 1)
+    funcName = scicvFunctions(iFunc, 1);
+    if or(ignored == funcName) then
+        [flag, errmsg] = assert_checkequal(exists(funcName), 0);
+        if ~flag then
+            error("Function listed as ignored but exists: " + funcName);
+        end
+        continue
+    end
+    found = %F;
+    for pattern = ignoredPatterns
+        if strindex(funcName, pattern)<>[] then
+            found = %T;
+            break
+        end
+    end
+    if found then
+        [flag, errmsg] = assert_checkequal(exists(funcName), 0);
+        if ~flag then
+            error("Function listed as ignored pattern but exists: " + funcName);
+        end
+        continue;
+    end
+
+    if or(renamedFunctions(:,1) == funcName) then
+        [flag, errmsg] = assert_checkequal(exists(funcName), 0);
+        if ~flag then
+            error("Function listed as renamed but exists: " + funcName);
+        end
+        funcName = renamedFunctions(renamedFunctions(:,1) == funcName, 2);
+    end 
+
+    [flag, errmsg] = assert_checkequal(exists(funcName), 1);
+    if ~flag then
+        disp(funcName);
+        missing = missing + 1;
+    end
+end
+assert_checkequal(missing, 0);
+
+// Variables
+exec(fullfile(get_scicv_path(), "tests", "unit_tests", "variables-5.0.0.txt"), -1);
+
+ignoredVariables = [];
+removedVariables = [];
+renamedVariables = [];
+
+missing = 0;
+for iVar=1:size(scicvVariables, "*")
+    varName = scicvVariables(iVar);
+    if or(ignoredVariables == varName) then
+        [flag, errmsg] = assert_checkequal(exists(varName), 0);
+        if ~flag then
+            error("Variable listed as ignored but exists: " + varName);
+        end
+    end
+    if or(removedVariables == varName) then
+        [flag, errmsg] = assert_checkequal(exists(varName), 0);
+        if ~flag then
+            error("Variable listed as removed but exists: " + varName);
+        end
+        continue
+    end
+
+    if or(renamedVariables(:,1) == varName) then
+        [flag, errmsg] = assert_checkequal(exists(varName), 0);
+        if ~flag then
+            error("Variable listed as renamed but exists: " + varName);
+        end
+        varName = renamedVariables(renamedVariables(:,1) == varName, 2);
+    end 
+
+    [flag, errmsg] = assert_checkequal(exists(varName), 1);
+    if ~flag then
+        disp(varName);
+        missing = missing + 1;
+    end
+end
+assert_checkequal(missing, 0);

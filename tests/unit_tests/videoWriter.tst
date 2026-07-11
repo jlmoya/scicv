@@ -38,4 +38,5 @@ mp42 = fileinfo(fullfile(TMPDIR, "video_MP42.avi"));
 assert_checktrue(mp42(1) > 0);
 x264 = fileinfo(fullfile(TMPDIR, "video_X264.avi"));
 assert_checktrue(x264(1) > 0);
-assert_checktrue(x264(1) > mp42(1));
+// NOTE: no cross-codec size assertion — compression ratios are
+// codec/ffmpeg-version-dependent (the 5.x x264 outputs are smaller than MP42).

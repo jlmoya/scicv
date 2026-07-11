@@ -4,9 +4,10 @@
 
 %{
 #undef SKIP_INCLUDES
-#include "opencv2/rgbd/depth.hpp"
+// OpenCV 5 moved the rgbd depth API (Odometry, depthTo3d, ...) to the ptcloud module
+#include "opencv2/ptcloud/depth.hpp"
 %}
 
 %include opencv_contrib_ignore.i
 
-%include "opencv2/rgbd/depth.hpp" // RIGID_BODY_MOTION, ...
+%include "opencv2/ptcloud/depth.hpp" // RIGID_BODY_MOTION, ...

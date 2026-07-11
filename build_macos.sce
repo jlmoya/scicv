@@ -13,7 +13,16 @@
 // ----------------------------------------------------------------------------
 ilib_verbose(1);
 setenv("CPATH", "/opt/homebrew/opt/gettext/include");
-setenv("LIBRARY_PATH", "/opt/homebrew/opt/gettext/lib:/opt/homebrew/lib/gcc/current/gcc/aarch64-apple-darwin25/16:/opt/homebrew/lib/gcc/current");
+// LIBRARY_PATH: gettext + the CURRENT Homebrew gcc runtime dirs. Resolve the
+// versioned gcc subdir at build time — hardcoding it (".../darwin25/16") broke
+// on every gcc major bump, the same stale-path class as the old OpenCV flags.
+gcc_libdir = unix_g("ls -d /opt/homebrew/lib/gcc/current/gcc/*/[0-9]* 2>/dev/null | tail -1");
+lp = "/opt/homebrew/opt/gettext/lib";
+if gcc_libdir <> [] & gcc_libdir(1) <> "" then
+    lp = lp + ":" + gcc_libdir(1) + ":/opt/homebrew/lib/gcc/current";
+end
+setenv("LIBRARY_PATH", lp);
+clear gcc_libdir lp;
 
 root = get_absolute_file_path("build_macos.sce");
 
@@ -28,3 +37,7 @@ ie = execstr("tbx_build_macros(""scicv"", fullfile(root, ""macros""))", "errcatc
 mprintf("[2/3] macros                                            ierr=%d\n", ie);
 ie = execstr("tbx_build_loader(""scicv"", root)", "errcatch");
 mprintf("[3/3] loader                                            ierr=%d\n", ie);
+
+// Without this, `scilab-cli -f build_macos.sce` finishes the build and then sits
+// at an interactive prompt forever (the recurring "stalled build" symptom).
+quit

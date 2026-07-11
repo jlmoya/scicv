@@ -321,3 +321,8 @@
 %ignore tempfile;
 %ignore alignSize;
 %ignore Mutex;
+// OpenCV 5: Algorithm keeps a write(Ptr<FileStorage>, name) convenience overload,
+// but derived classes (DescriptorMatcher, ...) declare their own write() which
+// HIDES it in C++ — the flattened wrapper call would not compile. The
+// write(FileStorage&, ...) overloads remain wrapped.
+%ignore cv::Algorithm::write(const Ptr<FileStorage>& fs, const String& name) const;

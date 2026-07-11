@@ -8,6 +8,15 @@
 
 scicv_Init();
 
+// OpenCV 5 removed the legacy C API (IplImage/CvMat/cv* functions), so the
+// pre-5 surface inventories cannot be fully mapped anymore by design. The
+// current surface is tracked by symbols-5.0.0.tst.
+if exists("cvIplImage") == 0 then
+    mprintf("Skipped: pre-5 surface test (legacy C API absent, OpenCV >= 5).\n");
+    return
+end
+
+
 // Functions
 exec(fullfile(get_scicv_path(), "tests", "unit_tests", "functions-0.6.2.txt"), -1);
 scicvFunctions = table;

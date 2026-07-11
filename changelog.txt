@@ -4,6 +4,20 @@
 
 changelog of the Scilab Computer Vision Module
 
+
+scicv (5.0.0-1)
+    * Port to OpenCV 5: the legacy C API was removed upstream (core/types_c.h,
+      core_c.h, highgui_c.h, imgproc/types_c.h, imgcodecs/videoio legacy
+      headers). The SWIG interfaces now wrap the modern C++ surface only, and
+      the classic CV_* constant names are regenerated from the installed
+      OpenCV enums (sci_gateway/c/swig/generate_legacy_compat.sh) so existing
+      scripts keep working. rgbd depth moved to ptcloud; features2d.hpp ->
+      features.hpp; fisheye overloads ignored (moved into imgproc.hpp).
+      Legacy C types/functions (IplImage, CvMat, cv*) are gone by design —
+      pre-5 surface tests skip themselves; symbols-5.0.0.tst tracks the new
+      surface. Build flags resolve OpenCV via pkg-config (survives Homebrew
+      major bumps).
+
 0.1: initial version - prototype
 
 0.2: first release - alpha1 version
