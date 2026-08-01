@@ -1,0 +1,11 @@
+# Build artifacts for the hand-written camera-authorization gateway.
+# Unlike sci_gateway/c/ (SWIG-generated, so the wrapper itself is also
+# regenerable/ignorable) everything here except these artifacts is
+# hand-written source and must stay tracked -- so, unlike c/.gitignore's
+# "libscicv.*" glob, this does NOT blanket-ignore "libgw_scicv_camera.*"
+# (that would also swallow the tracked .h/.hxx/.cpp source files, which
+# happen to share the same basename prefix as the built dylib).
+libgw_scicv_camera.dylib
+libgw_scicv_camera.so
+*.o
+Makefile
