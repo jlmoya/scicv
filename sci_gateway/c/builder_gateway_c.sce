@@ -2276,6 +2276,241 @@ table = [table; ..
 "delete_BOWKMeansTrainer","_wrap_delete_BOWKMeansTrainer"; ..
 "BOWKMeansTrainer_cluster","_wrap_BOWKMeansTrainer_cluster"; ..
 "cvGetKeyPoints","_wrap_cvGetKeyPoints"; ..
+"modelFormatToString","_wrap_modelFormatToString"; ..
+];
+table = [table; ..
+"getAvailableBackends","_wrap_getAvailableBackends"; ..
+"getAvailableTargets","_wrap_getAvailableTargets"; ..
+"enableModelDiagnostics","_wrap_enableModelDiagnostics"; ..
+"delete_BackendWrapper","_wrap_delete_BackendWrapper"; ..
+"BackendWrapper_copyToHos","_wrap_BackendWrapper_copyToHost"; ..
+"BackendWrapper_setHostDi","_wrap_BackendWrapper_setHostDirty"; ..
+"BackendWrapper_getHostMa","_wrap_BackendWrapper_getHostMatDepth"; ..
+"BackendWrapper_backe_set","_wrap_BackendWrapper_backendId_set"; ..
+"BackendWrapper_backe_get","_wrap_BackendWrapper_backendId_get"; ..
+"BackendWrapper_targe_set","_wrap_BackendWrapper_targetId_set"; ..
+];
+table = [table; ..
+"BackendWrapper_targe_get","_wrap_BackendWrapper_targetId_get"; ..
+"new_Arg","_wrap_new_Arg"; ..
+"Arg_empty","_wrap_Arg_empty"; ..
+"Arg_cv_int","_wrap_Arg_cv_int"; ..
+"Arg_idx_set","_wrap_Arg_idx_set"; ..
+"Arg_idx_get","_wrap_Arg_idx_get"; ..
+"delete_Arg","_wrap_delete_Arg"; ..
+"argKindToString","_wrap_argKindToString"; ..
+"new_ArgData","_wrap_new_ArgData"; ..
+"ArgData_name_set","_wrap_ArgData_name_set"; ..
+];
+table = [table; ..
+"ArgData_name_get","_wrap_ArgData_name_get"; ..
+"ArgData_kind_set","_wrap_ArgData_kind_set"; ..
+"ArgData_kind_get","_wrap_ArgData_kind_get"; ..
+"ArgData_shape_set","_wrap_ArgData_shape_set"; ..
+"ArgData_shape_get","_wrap_ArgData_shape_get"; ..
+"ArgData_type_set","_wrap_ArgData_type_set"; ..
+"ArgData_type_get","_wrap_ArgData_type_get"; ..
+"delete_ArgData","_wrap_delete_ArgData"; ..
+"Graph_create","_wrap_Graph_create"; ..
+"delete_Graph","_wrap_delete_Graph"; ..
+];
+table = [table; ..
+"Graph_empty","_wrap_Graph_empty"; ..
+"Graph_clear","_wrap_Graph_clear"; ..
+"Graph_name","_wrap_Graph_name"; ..
+"Graph_dump","_wrap_Graph_dump"; ..
+"Graph_inputs","_wrap_Graph_inputs"; ..
+"Graph_outputs","_wrap_Graph_outputs"; ..
+"Graph_setOutputs","_wrap_Graph_setOutputs"; ..
+"Graph_prog","_wrap_Graph_prog"; ..
+"Graph_setProg","_wrap_Graph_setProg"; ..
+"new_Net","_wrap_new_Net"; ..
+];
+table = [table; ..
+"delete_Net","_wrap_delete_Net"; ..
+"Net_readFromModelOptimiz","_wrap_Net_readFromModelOptimizer"; ..
+"Net_empty","_wrap_Net_empty"; ..
+"Net_dump","_wrap_Net_dump"; ..
+"Net_dumpToFile","_wrap_Net_dumpToFile"; ..
+"Net_dumpToPbtxt","_wrap_Net_dumpToPbtxt"; ..
+"Net_dumpToStream","_wrap_Net_dumpToStream"; ..
+"Net_addLayer","_wrap_Net_addLayer"; ..
+"Net_addLayerToPrev","_wrap_Net_addLayerToPrev"; ..
+"Net_getLayerId","_wrap_Net_getLayerId"; ..
+];
+table = [table; ..
+"Net_getLayerNames","_wrap_Net_getLayerNames"; ..
+"Net_getLayer","_wrap_Net_getLayer"; ..
+"Net_getLayerInputs","_wrap_Net_getLayerInputs"; ..
+"Net_connect","_wrap_Net_connect"; ..
+"Net_registerOutput","_wrap_Net_registerOutput"; ..
+"Net_setInputsNames","_wrap_Net_setInputsNames"; ..
+"Net_setInputShape","_wrap_Net_setInputShape"; ..
+"Net_forward","_wrap_Net_forward"; ..
+"Net_setPreferableBackend","_wrap_Net_setPreferableBackend"; ..
+"Net_setPreferableTarget","_wrap_Net_setPreferableTarget"; ..
+];
+table = [table; ..
+"Net_finalizeNet","_wrap_Net_finalizeNet"; ..
+"Net_setTracingMode","_wrap_Net_setTracingMode"; ..
+"Net_getTracingMode","_wrap_Net_getTracingMode"; ..
+"Net_setProfilingMode","_wrap_Net_setProfilingMode"; ..
+"Net_getProfilingMode","_wrap_Net_getProfilingMode"; ..
+"Net_getModelFormat","_wrap_Net_getModelFormat"; ..
+"Net_setInput","_wrap_Net_setInput"; ..
+"Net_setParam","_wrap_Net_setParam"; ..
+"Net_getParam","_wrap_Net_getParam"; ..
+"Net_getUnconnectedOutLay","_wrap_Net_getUnconnectedOutLayers"; ..
+];
+table = [table; ..
+"Net_getUnconnectedOutLay","_wrap_Net_getUnconnectedOutLayersNames"; ..
+"Net_getLayersShapes","_wrap_Net_getLayersShapes"; ..
+"Net_getLayerShapes","_wrap_Net_getLayerShapes"; ..
+"Net_getFLOPS","_wrap_Net_getFLOPS"; ..
+"Net_getLayerTypes","_wrap_Net_getLayerTypes"; ..
+"Net_getLayersCount","_wrap_Net_getLayersCount"; ..
+"Net_getMemoryConsumption","_wrap_Net_getMemoryConsumption"; ..
+"Net_enableFusion","_wrap_Net_enableFusion"; ..
+"Net_enableWinograd","_wrap_Net_enableWinograd"; ..
+"Net_enableKVCache","_wrap_Net_enableKVCache"; ..
+];
+table = [table; ..
+"Net_disableKVCache","_wrap_Net_disableKVCache"; ..
+"Net_resetKVCache","_wrap_Net_resetKVCache"; ..
+"Net_getPerfProfile","_wrap_Net_getPerfProfile"; ..
+"Net_printPerfProfile","_wrap_Net_printPerfProfile"; ..
+"Net_getMainGraph","_wrap_Net_getMainGraph"; ..
+"Net_argData","_wrap_Net_argData"; ..
+"Net_argName","_wrap_Net_argName"; ..
+"Net_argKind","_wrap_Net_argKind"; ..
+"Net_getArg","_wrap_Net_getArg"; ..
+"Net_haveArg","_wrap_Net_haveArg"; ..
+];
+table = [table; ..
+"Net_isConstArg","_wrap_Net_isConstArg"; ..
+"Net_argTensor","_wrap_Net_argTensor"; ..
+"Net_findDim","_wrap_Net_findDim"; ..
+"Net_dumpArg","_wrap_Net_dumpArg"; ..
+"Net_dumpDim","_wrap_Net_dumpDim"; ..
+"Net_getImpl","_wrap_Net_getImpl"; ..
+"Net_getImplRef","_wrap_Net_getImplRef"; ..
+"readNetFromTensorflow","_wrap_readNetFromTensorflow"; ..
+"readNetFromTFLite","_wrap_readNetFromTFLite"; ..
+"readNet","_wrap_readNet"; ..
+];
+table = [table; ..
+"readNetFromModelOptimize","_wrap_readNetFromModelOptimizer"; ..
+"readNetFromONNX","_wrap_readNetFromONNX"; ..
+"readTensorFromONNX","_wrap_readTensorFromONNX"; ..
+"blobFromImage","_wrap_blobFromImage"; ..
+"blobFromImages","_wrap_blobFromImages"; ..
+"new_Image2BlobParams","_wrap_new_Image2BlobParams"; ..
+"Image2BlobParams_sca_set","_wrap_Image2BlobParams_scalefactor_set"; ..
+"Image2BlobParams_sca_get","_wrap_Image2BlobParams_scalefactor_get"; ..
+"Image2BlobParams_siz_set","_wrap_Image2BlobParams_size_set"; ..
+"Image2BlobParams_siz_get","_wrap_Image2BlobParams_size_get"; ..
+];
+table = [table; ..
+"Image2BlobParams_swa_set","_wrap_Image2BlobParams_swapRB_set"; ..
+"Image2BlobParams_swa_get","_wrap_Image2BlobParams_swapRB_get"; ..
+"Image2BlobParams_dde_set","_wrap_Image2BlobParams_ddepth_set"; ..
+"Image2BlobParams_dde_get","_wrap_Image2BlobParams_ddepth_get"; ..
+"Image2BlobParams_dat_set","_wrap_Image2BlobParams_datalayout_set"; ..
+"Image2BlobParams_dat_get","_wrap_Image2BlobParams_datalayout_get"; ..
+"Image2BlobParams_pad_set","_wrap_Image2BlobParams_paddingmode_set"; ..
+"Image2BlobParams_pad_get","_wrap_Image2BlobParams_paddingmode_get"; ..
+"Image2BlobParams_bor_set","_wrap_Image2BlobParams_borderValue_set"; ..
+"Image2BlobParams_bor_get","_wrap_Image2BlobParams_borderValue_get"; ..
+];
+table = [table; ..
+"Image2BlobParams_blobRec","_wrap_Image2BlobParams_blobRectToImageRect"; ..
+"delete_Image2BlobParams","_wrap_delete_Image2BlobParams"; ..
+"blobFromImageWithParams","_wrap_blobFromImageWithParams"; ..
+"blobFromImagesWithParams","_wrap_blobFromImagesWithParams"; ..
+"imagesFromBlob","_wrap_imagesFromBlob"; ..
+"writeTextGraph","_wrap_writeTextGraph"; ..
+"NMSBoxes","_wrap_NMSBoxes"; ..
+"NMSBoxesBatched","_wrap_NMSBoxesBatched"; ..
+"softNMSBoxes","_wrap_softNMSBoxes"; ..
+"Model___assign__","_wrap_Model___assign__"; ..
+];
+table = [table; ..
+"new_Model","_wrap_new_Model"; ..
+"Model_setInputSize","_wrap_Model_setInputSize"; ..
+"Model_setInputMean","_wrap_Model_setInputMean"; ..
+"Model_setInputScale","_wrap_Model_setInputScale"; ..
+"Model_setInputCrop","_wrap_Model_setInputCrop"; ..
+"Model_setInputSwapRB","_wrap_Model_setInputSwapRB"; ..
+"Model_setOutputNames","_wrap_Model_setOutputNames"; ..
+"Model_setInputParams","_wrap_Model_setInputParams"; ..
+"Model_predict","_wrap_Model_predict"; ..
+"Model_setPreferableBacke","_wrap_Model_setPreferableBackend"; ..
+];
+table = [table; ..
+"Model_setPreferableTarge","_wrap_Model_setPreferableTarget"; ..
+"Model_enableWinograd","_wrap_Model_enableWinograd"; ..
+"Model_getNetwork_","_wrap_Model_getNetwork_"; ..
+"Model_getImpl","_wrap_Model_getImpl"; ..
+"Model_getImplRef","_wrap_Model_getImplRef"; ..
+"delete_Model","_wrap_delete_Model"; ..
+"new_ClassificationModel","_wrap_new_ClassificationModel"; ..
+"ClassificationModel_setE","_wrap_ClassificationModel_setEnableSoftmaxPostProcessing"; ..
+"ClassificationModel_getE","_wrap_ClassificationModel_getEnableSoftmaxPostProcessing"; ..
+"ClassificationModel_clas","_wrap_ClassificationModel_classify"; ..
+];
+table = [table; ..
+"delete_ClassificationMod","_wrap_delete_ClassificationModel"; ..
+"new_KeypointsModel","_wrap_new_KeypointsModel"; ..
+"KeypointsModel_estimate","_wrap_KeypointsModel_estimate"; ..
+"delete_KeypointsModel","_wrap_delete_KeypointsModel"; ..
+"new_SegmentationModel","_wrap_new_SegmentationModel"; ..
+"SegmentationModel_segmen","_wrap_SegmentationModel_segment"; ..
+"delete_SegmentationModel","_wrap_delete_SegmentationModel"; ..
+"new_DetectionModel","_wrap_new_DetectionModel"; ..
+"DetectionModel_setNmsAcr","_wrap_DetectionModel_setNmsAcrossClasses"; ..
+"DetectionModel_getNmsAcr","_wrap_DetectionModel_getNmsAcrossClasses"; ..
+];
+table = [table; ..
+"DetectionModel_detect","_wrap_DetectionModel_detect"; ..
+"delete_DetectionModel","_wrap_delete_DetectionModel"; ..
+"new_TextRecognitionModel","_wrap_new_TextRecognitionModel"; ..
+"TextRecognitionModel_set","_wrap_TextRecognitionModel_setDecodeType"; ..
+"TextRecognitionModel_get","_wrap_TextRecognitionModel_getDecodeType"; ..
+"TextRecognitionModel_set","_wrap_TextRecognitionModel_setDecodeOptsCTCPrefixBeamSearch"; ..
+"TextRecognitionModel_set","_wrap_TextRecognitionModel_setVocabulary"; ..
+"TextRecognitionModel_get","_wrap_TextRecognitionModel_getVocabulary"; ..
+"TextRecognitionModel_rec","_wrap_TextRecognitionModel_recognize"; ..
+"delete_TextRecognitionMo","_wrap_delete_TextRecognitionModel"; ..
+];
+table = [table; ..
+"TextDetectionModel_detec","_wrap_TextDetectionModel_detect"; ..
+"TextDetectionModel_detec","_wrap_TextDetectionModel_detectTextRectangles"; ..
+"delete_TextDetectionMode","_wrap_delete_TextDetectionModel"; ..
+"new_TextDetectionModel_E","_wrap_new_TextDetectionModel_EAST"; ..
+"TextDetectionModel_EAST_","_wrap_TextDetectionModel_EAST_setConfidenceThreshold"; ..
+"TextDetectionModel_EAST_","_wrap_TextDetectionModel_EAST_getConfidenceThreshold"; ..
+"TextDetectionModel_EAST_","_wrap_TextDetectionModel_EAST_setNMSThreshold"; ..
+"TextDetectionModel_EAST_","_wrap_TextDetectionModel_EAST_getNMSThreshold"; ..
+"delete_TextDetectionMode","_wrap_delete_TextDetectionModel_EAST"; ..
+"new_TextDetectionModel_D","_wrap_new_TextDetectionModel_DB"; ..
+];
+table = [table; ..
+"TextDetectionModel_DB_se","_wrap_TextDetectionModel_DB_setBinaryThreshold"; ..
+"TextDetectionModel_DB_ge","_wrap_TextDetectionModel_DB_getBinaryThreshold"; ..
+"TextDetectionModel_DB_se","_wrap_TextDetectionModel_DB_setPolygonThreshold"; ..
+"TextDetectionModel_DB_ge","_wrap_TextDetectionModel_DB_getPolygonThreshold"; ..
+"TextDetectionModel_DB_se","_wrap_TextDetectionModel_DB_setUnclipRatio"; ..
+"TextDetectionModel_DB_ge","_wrap_TextDetectionModel_DB_getUnclipRatio"; ..
+"TextDetectionModel_DB_se","_wrap_TextDetectionModel_DB_setMaxCandidates"; ..
+"TextDetectionModel_DB_ge","_wrap_TextDetectionModel_DB_getMaxCandidates"; ..
+"delete_TextDetectionMode","_wrap_delete_TextDetectionModel_DB"; ..
+"new_Tokenizer","_wrap_new_Tokenizer"; ..
+];
+table = [table; ..
+"Tokenizer_load","_wrap_Tokenizer_load"; ..
+"Tokenizer_encode","_wrap_Tokenizer_encode"; ..
+"Tokenizer_decode","_wrap_Tokenizer_decode"; ..
+"delete_Tokenizer","_wrap_delete_Tokenizer"; ..
 ];
   
 else
@@ -4534,6 +4769,241 @@ table = [table; ..
 "delete_BOWKMeansTrainer","_wrap_delete_BOWKMeansTrainer"; ..
 "BOWKMeansTrainer_cluster","_wrap_BOWKMeansTrainer_cluster"; ..
 "cvGetKeyPoints","_wrap_cvGetKeyPoints"; ..
+"modelFormatToString","_wrap_modelFormatToString"; ..
+];
+table = [table; ..
+"getAvailableBackends","_wrap_getAvailableBackends"; ..
+"getAvailableTargets","_wrap_getAvailableTargets"; ..
+"enableModelDiagnostics","_wrap_enableModelDiagnostics"; ..
+"delete_BackendWrapper","_wrap_delete_BackendWrapper"; ..
+"BackendWrapper_copyToHost","_wrap_BackendWrapper_copyToHost"; ..
+"BackendWrapper_setHostDirty","_wrap_BackendWrapper_setHostDirty"; ..
+"BackendWrapper_getHostMatDepth","_wrap_BackendWrapper_getHostMatDepth"; ..
+"BackendWrapper_backendId_set","_wrap_BackendWrapper_backendId_set"; ..
+"BackendWrapper_backendId_get","_wrap_BackendWrapper_backendId_get"; ..
+"BackendWrapper_targetId_set","_wrap_BackendWrapper_targetId_set"; ..
+];
+table = [table; ..
+"BackendWrapper_targetId_get","_wrap_BackendWrapper_targetId_get"; ..
+"new_Arg","_wrap_new_Arg"; ..
+"Arg_empty","_wrap_Arg_empty"; ..
+"Arg_cv_int","_wrap_Arg_cv_int"; ..
+"Arg_idx_set","_wrap_Arg_idx_set"; ..
+"Arg_idx_get","_wrap_Arg_idx_get"; ..
+"delete_Arg","_wrap_delete_Arg"; ..
+"argKindToString","_wrap_argKindToString"; ..
+"new_ArgData","_wrap_new_ArgData"; ..
+"ArgData_name_set","_wrap_ArgData_name_set"; ..
+];
+table = [table; ..
+"ArgData_name_get","_wrap_ArgData_name_get"; ..
+"ArgData_kind_set","_wrap_ArgData_kind_set"; ..
+"ArgData_kind_get","_wrap_ArgData_kind_get"; ..
+"ArgData_shape_set","_wrap_ArgData_shape_set"; ..
+"ArgData_shape_get","_wrap_ArgData_shape_get"; ..
+"ArgData_type_set","_wrap_ArgData_type_set"; ..
+"ArgData_type_get","_wrap_ArgData_type_get"; ..
+"delete_ArgData","_wrap_delete_ArgData"; ..
+"Graph_create","_wrap_Graph_create"; ..
+"delete_Graph","_wrap_delete_Graph"; ..
+];
+table = [table; ..
+"Graph_empty","_wrap_Graph_empty"; ..
+"Graph_clear","_wrap_Graph_clear"; ..
+"Graph_name","_wrap_Graph_name"; ..
+"Graph_dump","_wrap_Graph_dump"; ..
+"Graph_inputs","_wrap_Graph_inputs"; ..
+"Graph_outputs","_wrap_Graph_outputs"; ..
+"Graph_setOutputs","_wrap_Graph_setOutputs"; ..
+"Graph_prog","_wrap_Graph_prog"; ..
+"Graph_setProg","_wrap_Graph_setProg"; ..
+"new_Net","_wrap_new_Net"; ..
+];
+table = [table; ..
+"delete_Net","_wrap_delete_Net"; ..
+"Net_readFromModelOptimizer","_wrap_Net_readFromModelOptimizer"; ..
+"Net_empty","_wrap_Net_empty"; ..
+"Net_dump","_wrap_Net_dump"; ..
+"Net_dumpToFile","_wrap_Net_dumpToFile"; ..
+"Net_dumpToPbtxt","_wrap_Net_dumpToPbtxt"; ..
+"Net_dumpToStream","_wrap_Net_dumpToStream"; ..
+"Net_addLayer","_wrap_Net_addLayer"; ..
+"Net_addLayerToPrev","_wrap_Net_addLayerToPrev"; ..
+"Net_getLayerId","_wrap_Net_getLayerId"; ..
+];
+table = [table; ..
+"Net_getLayerNames","_wrap_Net_getLayerNames"; ..
+"Net_getLayer","_wrap_Net_getLayer"; ..
+"Net_getLayerInputs","_wrap_Net_getLayerInputs"; ..
+"Net_connect","_wrap_Net_connect"; ..
+"Net_registerOutput","_wrap_Net_registerOutput"; ..
+"Net_setInputsNames","_wrap_Net_setInputsNames"; ..
+"Net_setInputShape","_wrap_Net_setInputShape"; ..
+"Net_forward","_wrap_Net_forward"; ..
+"Net_setPreferableBackend","_wrap_Net_setPreferableBackend"; ..
+"Net_setPreferableTarget","_wrap_Net_setPreferableTarget"; ..
+];
+table = [table; ..
+"Net_finalizeNet","_wrap_Net_finalizeNet"; ..
+"Net_setTracingMode","_wrap_Net_setTracingMode"; ..
+"Net_getTracingMode","_wrap_Net_getTracingMode"; ..
+"Net_setProfilingMode","_wrap_Net_setProfilingMode"; ..
+"Net_getProfilingMode","_wrap_Net_getProfilingMode"; ..
+"Net_getModelFormat","_wrap_Net_getModelFormat"; ..
+"Net_setInput","_wrap_Net_setInput"; ..
+"Net_setParam","_wrap_Net_setParam"; ..
+"Net_getParam","_wrap_Net_getParam"; ..
+"Net_getUnconnectedOutLayers","_wrap_Net_getUnconnectedOutLayers"; ..
+];
+table = [table; ..
+"Net_getUnconnectedOutLayersNames","_wrap_Net_getUnconnectedOutLayersNames"; ..
+"Net_getLayersShapes","_wrap_Net_getLayersShapes"; ..
+"Net_getLayerShapes","_wrap_Net_getLayerShapes"; ..
+"Net_getFLOPS","_wrap_Net_getFLOPS"; ..
+"Net_getLayerTypes","_wrap_Net_getLayerTypes"; ..
+"Net_getLayersCount","_wrap_Net_getLayersCount"; ..
+"Net_getMemoryConsumption","_wrap_Net_getMemoryConsumption"; ..
+"Net_enableFusion","_wrap_Net_enableFusion"; ..
+"Net_enableWinograd","_wrap_Net_enableWinograd"; ..
+"Net_enableKVCache","_wrap_Net_enableKVCache"; ..
+];
+table = [table; ..
+"Net_disableKVCache","_wrap_Net_disableKVCache"; ..
+"Net_resetKVCache","_wrap_Net_resetKVCache"; ..
+"Net_getPerfProfile","_wrap_Net_getPerfProfile"; ..
+"Net_printPerfProfile","_wrap_Net_printPerfProfile"; ..
+"Net_getMainGraph","_wrap_Net_getMainGraph"; ..
+"Net_argData","_wrap_Net_argData"; ..
+"Net_argName","_wrap_Net_argName"; ..
+"Net_argKind","_wrap_Net_argKind"; ..
+"Net_getArg","_wrap_Net_getArg"; ..
+"Net_haveArg","_wrap_Net_haveArg"; ..
+];
+table = [table; ..
+"Net_isConstArg","_wrap_Net_isConstArg"; ..
+"Net_argTensor","_wrap_Net_argTensor"; ..
+"Net_findDim","_wrap_Net_findDim"; ..
+"Net_dumpArg","_wrap_Net_dumpArg"; ..
+"Net_dumpDim","_wrap_Net_dumpDim"; ..
+"Net_getImpl","_wrap_Net_getImpl"; ..
+"Net_getImplRef","_wrap_Net_getImplRef"; ..
+"readNetFromTensorflow","_wrap_readNetFromTensorflow"; ..
+"readNetFromTFLite","_wrap_readNetFromTFLite"; ..
+"readNet","_wrap_readNet"; ..
+];
+table = [table; ..
+"readNetFromModelOptimizer","_wrap_readNetFromModelOptimizer"; ..
+"readNetFromONNX","_wrap_readNetFromONNX"; ..
+"readTensorFromONNX","_wrap_readTensorFromONNX"; ..
+"blobFromImage","_wrap_blobFromImage"; ..
+"blobFromImages","_wrap_blobFromImages"; ..
+"new_Image2BlobParams","_wrap_new_Image2BlobParams"; ..
+"Image2BlobParams_scalefactor_set","_wrap_Image2BlobParams_scalefactor_set"; ..
+"Image2BlobParams_scalefactor_get","_wrap_Image2BlobParams_scalefactor_get"; ..
+"Image2BlobParams_size_set","_wrap_Image2BlobParams_size_set"; ..
+"Image2BlobParams_size_get","_wrap_Image2BlobParams_size_get"; ..
+];
+table = [table; ..
+"Image2BlobParams_swapRB_set","_wrap_Image2BlobParams_swapRB_set"; ..
+"Image2BlobParams_swapRB_get","_wrap_Image2BlobParams_swapRB_get"; ..
+"Image2BlobParams_ddepth_set","_wrap_Image2BlobParams_ddepth_set"; ..
+"Image2BlobParams_ddepth_get","_wrap_Image2BlobParams_ddepth_get"; ..
+"Image2BlobParams_datalayout_set","_wrap_Image2BlobParams_datalayout_set"; ..
+"Image2BlobParams_datalayout_get","_wrap_Image2BlobParams_datalayout_get"; ..
+"Image2BlobParams_paddingmode_set","_wrap_Image2BlobParams_paddingmode_set"; ..
+"Image2BlobParams_paddingmode_get","_wrap_Image2BlobParams_paddingmode_get"; ..
+"Image2BlobParams_borderValue_set","_wrap_Image2BlobParams_borderValue_set"; ..
+"Image2BlobParams_borderValue_get","_wrap_Image2BlobParams_borderValue_get"; ..
+];
+table = [table; ..
+"Image2BlobParams_blobRectToImageRect","_wrap_Image2BlobParams_blobRectToImageRect"; ..
+"delete_Image2BlobParams","_wrap_delete_Image2BlobParams"; ..
+"blobFromImageWithParams","_wrap_blobFromImageWithParams"; ..
+"blobFromImagesWithParams","_wrap_blobFromImagesWithParams"; ..
+"imagesFromBlob","_wrap_imagesFromBlob"; ..
+"writeTextGraph","_wrap_writeTextGraph"; ..
+"NMSBoxes","_wrap_NMSBoxes"; ..
+"NMSBoxesBatched","_wrap_NMSBoxesBatched"; ..
+"softNMSBoxes","_wrap_softNMSBoxes"; ..
+"Model___assign__","_wrap_Model___assign__"; ..
+];
+table = [table; ..
+"new_Model","_wrap_new_Model"; ..
+"Model_setInputSize","_wrap_Model_setInputSize"; ..
+"Model_setInputMean","_wrap_Model_setInputMean"; ..
+"Model_setInputScale","_wrap_Model_setInputScale"; ..
+"Model_setInputCrop","_wrap_Model_setInputCrop"; ..
+"Model_setInputSwapRB","_wrap_Model_setInputSwapRB"; ..
+"Model_setOutputNames","_wrap_Model_setOutputNames"; ..
+"Model_setInputParams","_wrap_Model_setInputParams"; ..
+"Model_predict","_wrap_Model_predict"; ..
+"Model_setPreferableBackend","_wrap_Model_setPreferableBackend"; ..
+];
+table = [table; ..
+"Model_setPreferableTarget","_wrap_Model_setPreferableTarget"; ..
+"Model_enableWinograd","_wrap_Model_enableWinograd"; ..
+"Model_getNetwork_","_wrap_Model_getNetwork_"; ..
+"Model_getImpl","_wrap_Model_getImpl"; ..
+"Model_getImplRef","_wrap_Model_getImplRef"; ..
+"delete_Model","_wrap_delete_Model"; ..
+"new_ClassificationModel","_wrap_new_ClassificationModel"; ..
+"ClassificationModel_setEnableSoftmaxPostProcessing","_wrap_ClassificationModel_setEnableSoftmaxPostProcessing"; ..
+"ClassificationModel_getEnableSoftmaxPostProcessing","_wrap_ClassificationModel_getEnableSoftmaxPostProcessing"; ..
+"ClassificationModel_classify","_wrap_ClassificationModel_classify"; ..
+];
+table = [table; ..
+"delete_ClassificationModel","_wrap_delete_ClassificationModel"; ..
+"new_KeypointsModel","_wrap_new_KeypointsModel"; ..
+"KeypointsModel_estimate","_wrap_KeypointsModel_estimate"; ..
+"delete_KeypointsModel","_wrap_delete_KeypointsModel"; ..
+"new_SegmentationModel","_wrap_new_SegmentationModel"; ..
+"SegmentationModel_segment","_wrap_SegmentationModel_segment"; ..
+"delete_SegmentationModel","_wrap_delete_SegmentationModel"; ..
+"new_DetectionModel","_wrap_new_DetectionModel"; ..
+"DetectionModel_setNmsAcrossClasses","_wrap_DetectionModel_setNmsAcrossClasses"; ..
+"DetectionModel_getNmsAcrossClasses","_wrap_DetectionModel_getNmsAcrossClasses"; ..
+];
+table = [table; ..
+"DetectionModel_detect","_wrap_DetectionModel_detect"; ..
+"delete_DetectionModel","_wrap_delete_DetectionModel"; ..
+"new_TextRecognitionModel","_wrap_new_TextRecognitionModel"; ..
+"TextRecognitionModel_setDecodeType","_wrap_TextRecognitionModel_setDecodeType"; ..
+"TextRecognitionModel_getDecodeType","_wrap_TextRecognitionModel_getDecodeType"; ..
+"TextRecognitionModel_setDecodeOptsCTCPrefixBeamSearch","_wrap_TextRecognitionModel_setDecodeOptsCTCPrefixBeamSearch"; ..
+"TextRecognitionModel_setVocabulary","_wrap_TextRecognitionModel_setVocabulary"; ..
+"TextRecognitionModel_getVocabulary","_wrap_TextRecognitionModel_getVocabulary"; ..
+"TextRecognitionModel_recognize","_wrap_TextRecognitionModel_recognize"; ..
+"delete_TextRecognitionModel","_wrap_delete_TextRecognitionModel"; ..
+];
+table = [table; ..
+"TextDetectionModel_detect","_wrap_TextDetectionModel_detect"; ..
+"TextDetectionModel_detectTextRectangles","_wrap_TextDetectionModel_detectTextRectangles"; ..
+"delete_TextDetectionModel","_wrap_delete_TextDetectionModel"; ..
+"new_TextDetectionModel_EAST","_wrap_new_TextDetectionModel_EAST"; ..
+"TextDetectionModel_EAST_setConfidenceThreshold","_wrap_TextDetectionModel_EAST_setConfidenceThreshold"; ..
+"TextDetectionModel_EAST_getConfidenceThreshold","_wrap_TextDetectionModel_EAST_getConfidenceThreshold"; ..
+"TextDetectionModel_EAST_setNMSThreshold","_wrap_TextDetectionModel_EAST_setNMSThreshold"; ..
+"TextDetectionModel_EAST_getNMSThreshold","_wrap_TextDetectionModel_EAST_getNMSThreshold"; ..
+"delete_TextDetectionModel_EAST","_wrap_delete_TextDetectionModel_EAST"; ..
+"new_TextDetectionModel_DB","_wrap_new_TextDetectionModel_DB"; ..
+];
+table = [table; ..
+"TextDetectionModel_DB_setBinaryThreshold","_wrap_TextDetectionModel_DB_setBinaryThreshold"; ..
+"TextDetectionModel_DB_getBinaryThreshold","_wrap_TextDetectionModel_DB_getBinaryThreshold"; ..
+"TextDetectionModel_DB_setPolygonThreshold","_wrap_TextDetectionModel_DB_setPolygonThreshold"; ..
+"TextDetectionModel_DB_getPolygonThreshold","_wrap_TextDetectionModel_DB_getPolygonThreshold"; ..
+"TextDetectionModel_DB_setUnclipRatio","_wrap_TextDetectionModel_DB_setUnclipRatio"; ..
+"TextDetectionModel_DB_getUnclipRatio","_wrap_TextDetectionModel_DB_getUnclipRatio"; ..
+"TextDetectionModel_DB_setMaxCandidates","_wrap_TextDetectionModel_DB_setMaxCandidates"; ..
+"TextDetectionModel_DB_getMaxCandidates","_wrap_TextDetectionModel_DB_getMaxCandidates"; ..
+"delete_TextDetectionModel_DB","_wrap_delete_TextDetectionModel_DB"; ..
+"new_Tokenizer","_wrap_new_Tokenizer"; ..
+];
+table = [table; ..
+"Tokenizer_load","_wrap_Tokenizer_load"; ..
+"Tokenizer_encode","_wrap_Tokenizer_encode"; ..
+"Tokenizer_decode","_wrap_Tokenizer_decode"; ..
+"delete_Tokenizer","_wrap_delete_Tokenizer"; ..
 ];
   
 end

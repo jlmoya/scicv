@@ -50,6 +50,7 @@ if (SWIG_CreateScilabVariable_double(pvApiCtx, "$result", (double)$value) != SWI
 %include modules/opencv_photo.i
 %include modules/opencv_video.i
 %include modules/opencv_features2d.i
+%include modules/opencv_dnn.i
 
 // Classic OpenCV C-API constant names (CV_*), generated from the installed
 // modern enums by generate_legacy_compat.sh — OpenCV 5 removed the legacy
