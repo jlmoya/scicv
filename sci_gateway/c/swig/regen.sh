@@ -57,6 +57,34 @@ CV_VERSION_MINOR="$(echo "$OPENCV_VERSION" | cut -d. -f2)"
 echo "OpenCV: $OPENCV_VERSION ($OPENCV_PC) at $OPENCV_INC"
 echo "SWIG: $SWIG"
 
+# Guard: OPENCV_INC can come from a stale configure-time @OPENCV_INC@ (via
+# Makefile.in's env passthrough) rather than the pkg-config lookup above, so
+# it could name a different OpenCV major than CV_VERSION_MAJOR asserts to
+# SWIG -- the same failure class as the CAP_PROP_GIGA_FRAME_* bug: a
+# preprocessor macro describing one reality while the headers on disk are
+# another. Cross-check unconditionally, regardless of where OPENCV_INC came
+# from -- an override deserves this more than the default path does, not less.
+inc_version_hpp="$OPENCV_INC/opencv2/core/version.hpp"
+if [ ! -f "$inc_version_hpp" ]; then
+    echo "ERROR: OPENCV_INC=$OPENCV_INC does not look like an OpenCV include root" >&2
+    echo "       (missing opencv2/core/version.hpp)." >&2
+    exit 1
+fi
+inc_major="$(sed -nE 's/^#define[[:space:]]+CV_VERSION_MAJOR[[:space:]]+([0-9]+).*/\1/p' "$inc_version_hpp" | head -1)"
+if [ -z "$inc_major" ]; then
+    echo "ERROR: $inc_version_hpp has no '#define CV_VERSION_MAJOR <n>' line to check against." >&2
+    exit 1
+fi
+if [ "$inc_major" != "$CV_VERSION_MAJOR" ]; then
+    echo "ERROR: OpenCV version mismatch between pkg-config and OPENCV_INC." >&2
+    echo "       pkg-config ($OPENCV_PC, via --modversion) says major $CV_VERSION_MAJOR -- that is" >&2
+    echo "       what -DCV_VERSION_MAJOR will tell SWIG to assume." >&2
+    echo "       $inc_version_hpp says major $inc_major -- that is the headers SWIG will actually" >&2
+    echo "       parse. OPENCV_INC is stale (likely a configure-time @OPENCV_INC@); re-run configure" >&2
+    echo "       or unset OPENCV_INC so regen.sh derives it fresh from pkg-config." >&2
+    exit 1
+fi
+
 # Refresh the shadow from the installed headers. The target line is found by
 # CONTENT, not by number: Makefile.in hardcoded 45 and 479, and the 479 one had
 # already rotted silently.
