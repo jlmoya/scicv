@@ -60,6 +60,72 @@ using namespace cv::dnn;
 // SWIG_exception_fail on the same call instead returns a clean, catchable
 // Scilab error with the process alive and OpenCV's own message in
 // lasterror() -- see tests/unit_tests/dnn.tst's by-reference assertion.
+//
+// KNOWN, ACCEPTED GAP: catching the exception does not run this function's
+// argument cleanup, because SWIG_fail is a bare `return SWIG_ERROR;` with no
+// goto/cleanup label anywhere in the generated file, and several dnn
+// wrappers place their freearg cleanup (releasing a temporary cv::_InputArray
+// view, and the temporary cv::Mat it wraps when the caller passed a raw
+// numeric array rather than an existing Mat object) AFTER $action, in the
+// success tail only. On a caught exception that cleanup is skipped -- a
+// leak, not a crash and not a double-free (the freed objects are always
+// non-owning views or temporaries this wrapper allocated itself before the
+// try, never anything the OpenCV call being caught could have already freed;
+// re-verified for blobFromImage, Net_setInput, and Model_predict before
+// concluding this).
+//
+// SWIG's documented fix for exactly this is the $cleanup special variable in
+// %exception (it is supposed to expand to the same freearg code emitted in
+// the success tail). It DOES NOT WORK in this SWIG/Scilab combination: using
+// `$cleanup;` here regenerates as the literal, unexpanded 9-character token
+// "$cleanup;" at all ~714 catch sites in the generated file -- not empty,
+// not the freearg code, the raw special-variable text passed through
+// unsubstituted -- and fails to compile with `error: use of undeclared
+// identifier '$cleanup'` at every one of them. Confirmed this is a
+// -scilab-backend gap and not a misuse: SWIG's own docs describe $cleanup as
+// core, language-independent machinery with no documented placement
+// restriction, and grepping the entire installed Scilab SWIG library tree
+// (swig/4.4.1/scilab/) for "cleanup" -- any case -- returns zero hits.
+//
+// Measured cost of leaving this open: RSS climbed 48 KB -> 42,512 -> 43,984
+// -> 102,656 -> 240,880 KB (roughly linear, ~120 KB/call) over 2000
+// iterations of blobFromImage(rawNumericArray, ..., Size(-1,-1), ...) --
+// a call built specifically to throw a genuine OpenCV assertion
+// (resize.cpp: "inv_scale_x > 0", not a Scilab-side argument rejection) on
+// every iteration, with the image passed as a raw array each time so the
+// temporary-Mat-allocation path is exercised, not skipped. Controller-ruled
+// (2026-08-01) accepted rather than worked around: the failure mode here is
+// strictly better than what came before it on this same call path (process
+// abort -> segfault with published garbage results -> clean catchable error
+// with a leak bounded to the error path), the leak cannot accumulate in a
+// loop that does not throw, and the two alternatives are both worse --
+// hand-writing release/delete in each of ~200 %exception-guarded wrappers is
+// a lot of bespoke, easy-to-drift code that still would not resolve the
+// second gap below, and fixing it silently with no record risks it becoming
+// a mystery leak years from now instead of a documented, bounded one today.
+//
+// A second, smaller, related gap: blobFromImage's overloads that take an
+// explicit output cv::OutputArray parameter (7..13-arg forms) arginit-
+// allocate a fresh cv::Mat before the try and only hand it to Scilab
+// (transferring ownership) in the success-path argout step; freearg for
+// that typemap (typemaps/OutputArray_typemaps.i:69-71) deletes only the
+// _OutputArray view, never the Mat, by design -- deleting it there too
+// would double-free it on the SUCCESS path once Scilab already owns it. So
+// even a working $cleanup could not have closed this one: it needs the
+// typemap to behave differently depending on whether argout already ran,
+// which %exception's single $cleanup expansion has no way to express. Not
+// reachable through this task's required surface (plain blobFromImage
+// returns its Mat by value, no output parameter), so left alongside the
+// first gap rather than chased further.
+//
+// The real fix for both, for whoever picks this up: RAII in the typemaps --
+// hold the temporary _InputArray/Mat (and the arginit-allocated output Mat,
+// released only if argout never ran) in a guard object whose destructor
+// does the release/delete, so `return SWIG_ERROR` unwinds it automatically
+// with no cleanup hook needed at all. That fixes every module that ever
+// gains a %exception block, not just this one, and is the only mechanism
+// that composes with SWIG's generated control flow here. Typemap-layer
+// change, out of scope for this task.
 %exception {
   try {
     $action
