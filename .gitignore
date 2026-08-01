@@ -21,11 +21,15 @@ scilab_*_help
 #
 /.vscode/
 include/
-# Exception: the SWIG shadow header regen.sh depends on is hand-patched and
-# not reproducible from scratch, so it must be tracked despite the blanket
-# `include/` rule above. Git won't apply file-level negations inside a
-# directory an earlier pattern already excludes, so every path segment down
-# to the file needs its own negation.
+# Exception: sci_gateway/c/swig/include/opencv2/core/cvstd_wrapper.hpp is a
+# generated artifact -- regen.sh rewrites it from the installed OpenCV headers
+# on every run and never reads the tracked copy -- but it is tracked anyway as
+# a drift tripwire / audit record: `git diff` after running regen.sh shows
+# whether the upstream SFINAE declaration it patches around has moved or
+# changed, which would otherwise happen silently inside the ignored
+# directory. Git won't apply file-level negations inside a directory an
+# earlier pattern already excludes, so every path segment down to the file
+# needs its own negation.
 !sci_gateway/c/swig/include/
 !sci_gateway/c/swig/include/opencv2/
 !sci_gateway/c/swig/include/opencv2/core/

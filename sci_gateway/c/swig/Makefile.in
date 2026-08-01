@@ -8,10 +8,10 @@ INTERFACE  = scicv.i
 INCLUDES   = -I./include -I$(OPENCV_INC)
 
 build:
-	./regen.sh
+	SWIG="$(SWIG)" OPENCV_INC="$(OPENCV_INC)" ./regen.sh
 
 patch:
-	./regen.sh
+	SWIG="$(SWIG)" OPENCV_INC="$(OPENCV_INC)" ./regen.sh
 
 clean:
 	rm $(TARGET)_wrap.cxx lib$(TARGET).so
