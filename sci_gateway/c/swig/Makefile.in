@@ -7,18 +7,11 @@ TARGET     = scicv
 INTERFACE  = scicv.i
 INCLUDES   = -I./include -I$(OPENCV_INC)
 
-build: patch
-	$(SWIG) -scilab -c++ -builder $(INCLUDES) -builderflagscript buildflags.sci -builderverbositylevel 2 $(INTERFACE)
-	sed 's/builder/builder_gateway_c/' <builder.sce >builder_gateway_c.sce
-	mv builder_gateway_c.sce ..
-	mv $(TARGET)_wrap.cxx ..
+build:
+	./regen.sh
 
 patch:
-	# Issue with SWIG 4.3.0: CV_MAT_TYPE_MASK is not wrapped => Add parentheses to make it work
-	mkdir -p include/opencv2/core/
-	sed '479s/CV_DEPTH_MAX\*CV_CN_MAX/CV_DEPTH_MAX\*(CV_CN_MAX)/' $(OPENCV_INC)/opencv2/core/cvdef.h >include/opencv2/core/cvdef.h
-	# Parsing issue => Comment out
-	sed '45{s/^/\/\//}' $(OPENCV_INC)/opencv2/core/cvstd_wrapper.hpp >include/opencv2/core/cvstd_wrapper.hpp
+	./regen.sh
 
 clean:
 	rm $(TARGET)_wrap.cxx lib$(TARGET).so

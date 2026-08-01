@@ -21,3 +21,12 @@ scilab_*_help
 #
 /.vscode/
 include/
+# Exception: the SWIG shadow header regen.sh depends on is hand-patched and
+# not reproducible from scratch, so it must be tracked despite the blanket
+# `include/` rule above. Git won't apply file-level negations inside a
+# directory an earlier pattern already excludes, so every path segment down
+# to the file needs its own negation.
+!sci_gateway/c/swig/include/
+!sci_gateway/c/swig/include/opencv2/
+!sci_gateway/c/swig/include/opencv2/core/
+!sci_gateway/c/swig/include/opencv2/core/cvstd_wrapper.hpp
