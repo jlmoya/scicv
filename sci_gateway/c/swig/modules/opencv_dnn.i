@@ -29,26 +29,46 @@ using namespace cv::dnn;
 
 %include modules/opencv_dnn_ignore.i
 
-// No .i file anywhere in scicv installs a %exception handler (confirmed: zero
-// hits for "%exception" across the whole swig/ tree), so a thrown cv::Exception
-// -- e.g. readNet() on a path that doesn't exist -- propagates out of the
-// gateway function uncaught and calls std::terminate(), aborting the whole
-// Scilab process, not just the current statement. That is a real, observed
-// crash (verified directly: readNet on a missing file kills the interpreter
-// with "libc++abi: terminating due to uncaught exception of type
-// cv::Exception"), and dnn is the first module whose everyday, documented
-// failure mode (a bad model path) routes through it. Guard just this module's
-// declarations -- the fix stays scoped to what this task adds; retrofitting
-// every pre-existing module's C++-exception safety is a separate concern.
+// Before this block, no .i file anywhere in scicv installed a %exception
+// handler (confirmed: zero hits for "%exception" across the whole swig/ tree
+// before this addition), so a thrown cv::Exception -- e.g. readNet() on a
+// path that doesn't exist -- propagated out of the gateway function
+// uncaught and called std::terminate(), aborting the whole Scilab process,
+// not just the current statement. That is a real, observed crash (verified
+// directly: readNet on a missing file killed the interpreter with
+// "libc++abi: terminating due to uncaught exception of type cv::Exception"),
+// and dnn is the first module whose everyday, documented failure mode (a bad
+// model path) routes through it. Guard just this module's declarations --
+// the fix stays scoped to what this task adds; retrofitting every
+// pre-existing module's C++-exception safety is a separate concern.
+//
+// MUST be SWIG_exception_fail, not SWIG_exception: in this project's
+// generated code, SWIG_exception expands to bare SWIG_Scilab_Error(code,msg)
+// -- it does NOT return. SWIG_exception_fail additionally does SWIG_fail
+// (return SWIG_ERROR), which is what actually stops the wrapper. Using plain
+// SWIG_exception here was tried first and made things WORSE, not better: it
+// let the code fall through into the normal success path with a result that
+// was never assigned. For a function returning by value that is a leaked,
+// silently-wrong "empty" object; for one returning by reference/pointer to a
+// local (Net::argName -> std::string*, TextRecognitionModel::getDecodeType,
+// ...) the fall-through dereferences a null result pointer -- a SIGSEGV,
+// i.e. this block would have turned an abort() into a segfault for those.
+// Verified directly (dev-tree scilab-cli): Net_argName(n, Arg(99999)) on a
+// freshly constructed, argument-less Net crashed the whole interpreter with
+// "Signal: Segmentation fault: 11 ... Failing at address: 0x17" inside
+// _wrap_Net_argName, using the bare-SWIG_exception version of this file.
+// SWIG_exception_fail on the same call instead returns a clean, catchable
+// Scilab error with the process alive and OpenCV's own message in
+// lasterror() -- see tests/unit_tests/dnn.tst's by-reference assertion.
 %exception {
   try {
     $action
   }
   catch (const cv::Exception& e) {
-    SWIG_exception(SWIG_RuntimeError, e.what());
+    SWIG_exception_fail(SWIG_RuntimeError, e.what());
   }
   catch (const std::exception& e) {
-    SWIG_exception(SWIG_RuntimeError, e.what());
+    SWIG_exception_fail(SWIG_RuntimeError, e.what());
   }
 }
 

@@ -35,8 +35,39 @@ delete_Mat(blob);
 delete_Mat(img);
 
 // --- readNet on a missing file fails loudly rather than returning a bad Net --
+// readNet returns cv::dnn::Net BY VALUE: on a thrown cv::Exception the local
+// "result" is still a validly-default-constructed object (declared before
+// the try/catch runs), so this path is benign even under a %exception bug
+// that fails to stop the wrapper -- it only leaks, it does not crash. It is
+// not, on its own, evidence that %exception actually aborts on failure; see
+// the by-reference check below for that.
 ierr = execstr("bad = readNet(TMPDIR + ""/scicv-no-such-model.onnx"");", "errcatch");
 assert_checktrue(ierr <> 0);
+
+// --- a by-reference-returning wrapper also fails loudly, not just by-value --
+// Net_argName returns "const std::string&", marshaled through a local
+// "std::string *result = 0" that is only assigned inside the try. If
+// %exception's catch block does not itself stop the wrapper (SWIG_exception
+// alone does not, in this project's generated code -- it expands to bare
+// SWIG_Scilab_Error with no return; only SWIG_exception_fail adds the
+// SWIG_fail/return that actually aborts), execution falls through to
+// `*result` on that still-null pointer: a SIGSEGV that takes the whole
+// Scilab process down, not just this statement. Verified directly: with a
+// bare-SWIG_exception build this call crashed the interpreter
+// (Segmentation fault: 11 inside _wrap_Net_argName); with SWIG_exception_fail
+// it does not.
+//
+// idx=99999 is a real, correctly-typed Arg -- Scilab's own argument
+// typecheck accepts it, so any failure here is necessarily raised from
+// inside OpenCV itself, not a call rejected before OpenCV ever ran. Assert
+// on lasterror() content, not just ierr <> 0, so this test cannot pass for
+// that wrong reason.
+n2 = new_Net();
+badArg = new_Arg(99999);
+ierr = execstr("bad_name = Net_argName(n2, badArg);", "errcatch");
+assert_checktrue(ierr <> 0);
+assert_checktrue(strindex(lasterror(), "OpenCV") <> []);
+delete_Net(n2);
 
 // --- an empty Net reports itself empty --------------------------------------
 n = new_Net();
