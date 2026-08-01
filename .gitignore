@@ -21,6 +21,13 @@ scilab_*_help
 #
 /.vscode/
 include/
+#
+# Fetched, not committed (demos/camera_classify/fetch-model.sh)
+#
+# ~14 MB of binary model weights don't belong in git; fetch-model.sh
+# downloads them on demand and pins them by sha256 in models.sha256.
+demos/camera_classify/mobilenetv2-12.onnx
+demos/camera_classify/synset.txt
 # Exception: sci_gateway/c/swig/include/opencv2/core/cvstd_wrapper.hpp is a
 # generated artifact -- regen.sh rewrites it from the installed OpenCV headers
 # on every run and never reads the tracked copy -- but it is tracked anyway as
