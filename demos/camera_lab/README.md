@@ -1,9 +1,9 @@
 # Camera Lab
 
 A guided, runnable path from "does Scilab even see my camera" to live
-object *identification* from the camera feed, in five numbered files you
-run one at a time. Each file teaches as it runs -- read its console output,
-not just its source, to follow the lesson.
+object *identification* AND *detection* from the camera feed, in seven
+numbered files you run one at a time. Each file teaches as it runs -- read
+its console output, not just its source, to follow the lesson.
 
 ## What you will build
 
@@ -12,11 +12,22 @@ with a classification label (e.g. `coffee mug (0.87)`) drawn on top of it,
 updating frame by frame. lab5 adds the top-5 candidate labels and a
 measured frames-per-second number on top of that.
 
-**What this is not:** object *detection* with boxes around several things
-at once. Every lab in here uses an image *classifier* (MobileNetV2 /
-ImageNet): it looks at the whole frame and produces one label for it, the
-same way lab3 does for one still image. See lab3's and lab4's own output
-for why, and what it would take to go further.
+lab6 and lab7 go further: instead of one label for the whole frame, a
+*detector* (YOLOX / COCO) finds SEVERAL objects at once and draws a box
+with its own label around each one. By the end of lab7 you will have a
+live window with multiple labelled boxes moving with the objects they
+belong to, e.g. `person (0.87)` and `chair (0.62)` boxed in the same frame.
+
+**Classification vs. detection**, the distinction this lab teaches in two
+halves, lab1-5 then lab6-7: a classifier looks at the WHOLE frame and
+answers "what is this, mostly" with one label, the same way lab3 does for
+one still image. A detector looks for individual objects and answers "what
+things are here, and where" with a box per object -- zero, one, or several
+per frame, positioned and sized independently. Same camera plumbing
+(`new_VideoCapture`/`VideoCapture_read`/`scf()`/`matplot()`) and the same
+"still image first, then live" shape throughout both halves -- only the
+model and what you do with its output changes. See lab3's and lab6's own
+output for the chain each one runs.
 
 ## Prerequisites
 
@@ -25,13 +36,22 @@ for why, and what it would take to go further.
 - A camera attached, on macOS (`cvCameraAuthStatus`/`cvRequestCameraAccess`
   are a macOS-only gateway; on any other OS they report "authorized"
   unconditionally and every camera lab below just works).
-- The MobileNetV2 model and ImageNet labels, fetched once:
+- The MobileNetV2 model and ImageNet labels, fetched once, for lab3-5:
   ```bash
   cd demos/camera_classify
   ./fetch-model.sh
   ```
   lab3/lab4/lab5 load these through `classify_common.sce` in that same
   directory -- nothing under `camera_lab/` duplicates them.
+- The YOLOX model, 80 COCO class names, and a pinned multi-object test
+  photo, fetched once, for lab6-7 -- a SEPARATE download from the
+  classifier's above (detection uses a different model):
+  ```bash
+  cd demos/camera_detect
+  ./fetch-model.sh
+  ```
+  lab6/lab7 load these through `detect_common.sce` in that same directory,
+  the same way lab3-5 reuse `classify_common.sce`.
 
 ## Running order
 
@@ -46,6 +66,8 @@ scilab2027 -nb -f demos/camera_lab/lab2_one_frame.sce    # capture lifecycle, no
 scilab2027 -nb -f demos/camera_lab/lab3_classify_still.sce  # inference chain, no camera
 scilab2027 -nb -f demos/camera_lab/lab4_realtime.sce     # the payoff: live label overlay
 scilab2027 -nb -f demos/camera_lab/lab5_top5_fps.sce     # stretch: top-5 + fps
+scilab2027 -nb -f demos/camera_lab/lab6_detect_still.sce    # detection chain, no camera
+scilab2027 -nb -f demos/camera_lab/lab7_detect_realtime.sce # the payoff: live boxes + labels
 ```
 
 | File | Teaches | Needs camera? | Needs model? |
@@ -55,6 +77,8 @@ scilab2027 -nb -f demos/camera_lab/lab5_top5_fps.sce     # stretch: top-5 + fps
 | `lab3_classify_still.sce` | the classification chain (`imread` -> `blobFromImage` -> `Net_forward` -> label) on a file | no | yes |
 | `lab4_realtime.sce` | the two chains combined: live label overlay on the camera feed | yes | yes |
 | `lab5_top5_fps.sce` | top-5 ranking + measured per-frame fps on the live feed | yes | yes |
+| `lab6_detect_still.sce` | the detection chain (`imread` -> `yolox_decode` -> `yolox_nms` -> boxes) on a file, with the 8400-anchor/3-stride grid made visible | no | yes (YOLOX) |
+| `lab7_detect_realtime.sce` | live boxes + labels, several objects per frame | yes | yes (YOLOX) |
 
 If you already know `cvCameraAuthStatus()` returns 3 on your machine, you
 can skip straight to lab2 -- lab1 will just confirm it and exit 0.
@@ -76,7 +100,9 @@ it -- this is an index to jump back to, not the lesson itself.
 5. Every native object needs its own destructor (`delete_Mat`, `delete_Net`, `delete_VideoCapture`); `clear` only drops the Scilab variable and leaks the native memory -- lab2 onward.
 6. A camera left open stays open -- release on every path, including errors -- lab2 onward (`try`/`catch` around the capture, guaranteed cleanup after).
 7. Batch `.sce` files end with `exit(0)`/`exit(1)`; `quit` ignores its argument -- every lab file.
-8. The classifier answers "what is this whole frame", one label -- it is not detection. No boxes, no per-object locations -- lab3, restated in lab4.
+8. A classifier answers "what is this whole frame" with one label; a detector answers "what things are here, and where" with a box per object -- two different tasks, two different models (MobileNetV2 vs. YOLOX), not two settings of the same one -- lab3 vs. lab6.
+9. `Rect`/`Point` vectors are plain `[x, y, ...]`, NOT flipped like `Size` -- easy to get backwards by analogy with trap 3 above -- lab6.
+10. There is no ready-made detection call to reach for: `DetectionModel` fails to even construct on every ONNX detector tried, and `NMSBoxes` silently discards the boxes you pass it (a shared, unscoped SWIG typemap mix-up). lab6/lab7 decode YOLOX's raw tensor and run NMS by hand instead, in `demos/camera_detect/detect_common.sce` -- see that file's header for the full story.
 
 ## Troubleshooting
 
@@ -88,6 +114,7 @@ it -- this is an index to jump back to, not the lesson itself.
 | First `VideoCapture_read` calls return `ok = %f` or an empty frame | AVFoundation still settling exposure right after opening | expected -- every lab here retries a few times before giving up; do not treat one empty frame as failure |
 | Scilab aborts with `NSInternalInconsistencyException` / "NSWindow should only be instantiated on the main thread" | `imshow`/`namedWindow`/`waitKey` called from `-nw` mode | do not use them; every lab here uses `scf()`/`matplot()`, which is confirmed to work under this invocation |
 | A later run reports the camera is busy / will not open | a previous run did not release it (crash, forced kill, `clear` instead of `delete_VideoCapture`) | run `pgrep -fl scilab` and kill any leftover process; then re-run |
-| `scilab2027 -nb -f ...` exits 0 even though the script printed FAIL | the script (not one of these five) called `quit` instead of `exit` | not applicable to this lab -- every file here uses `exit(0)`/`exit(1)`; if you copy one as a starting point, keep that convention |
-| `FAIL: model missing` | `fetch-model.sh` was never run | `cd demos/camera_classify && ./fetch-model.sh` |
+| `scilab2027 -nb -f ...` exits 0 even though the script printed FAIL | the script (not one of these seven) called `quit` instead of `exit` | not applicable to this lab -- every file here uses `exit(0)`/`exit(1)`; if you copy one as a starting point, keep that convention |
+| `FAIL: model missing` (lab3/lab4/lab5) | the classifier's `fetch-model.sh` was never run | `cd demos/camera_classify && ./fetch-model.sh` |
+| `FAIL: model missing` (lab6/lab7) | the DETECTOR's `fetch-model.sh` was never run -- a separate download from the classifier's, different model | `cd demos/camera_detect && ./fetch-model.sh` |
 | Script dies instantly with a string-parsing error | an apostrophe inside a `"..."` string (a Scilab parser trap, not specific to this lab) | reword it, or double the quote (`it''s`) the way these lab files do |
