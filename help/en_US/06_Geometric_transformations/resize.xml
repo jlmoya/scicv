@@ -29,7 +29,8 @@
       <varlistentry>
         <term>size</term>
         <listitem>
-          <para>Output image dimensions (double matrix <literal>[width, height]</literal>).</para>
+          <para>Output image dimensions (double matrix <literal>[height, width]</literal>).
+          Note: this is the opposite of OpenCV's own C++ <literal>cv::Size(width, height)</literal> convention.</para>
         </listitem>
       </varlistentry>
       <varlistentry>

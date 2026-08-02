@@ -29,7 +29,8 @@
       <varlistentry>
         <term>ksize</term>
         <listitem>
-          <para>Kernel size (double 1x2 matrix).</para>
+          <para>Kernel size (double matrix <literal>[height, width]</literal>).
+          Note: this is the opposite of OpenCV's own C++ <literal>cv::Size(width, height)</literal> convention.</para>
         </listitem>
       </varlistentry>
       <varlistentry>

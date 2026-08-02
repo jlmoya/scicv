@@ -45,7 +45,7 @@
     <para>About functions, there are many available for the <literal>Mat</literal> type, following is a small list:</para>
     <itemizedlist>
       <member><literal>Mat_empty()</literal> to check an image is not empty. It is very useful since <link linkend="imread">imread</link> does not throw errors when it cannot find an image, but returns an empty image.</member>
-      <member><literal>size()</literal> to get the dimensions of an image, using the Scilab format, rows before columns <literal>[&lt;rows&gt;, &lt;cols&gt;]</literal> (note: every size argument, in every function, use this convention).</member>
+      <member><literal>size()</literal> to get the dimensions of an image, using the Scilab format, rows before columns <literal>[&lt;rows&gt;, &lt;cols&gt;]</literal>, i.e. <literal>[height, width]</literal> (note: every <literal>Size</literal> argument, in every function, uses this convention -- the opposite of OpenCV's own C++ <literal>cv::Size(width, height)</literal> convention, so do not assume OpenCV's order here).</member>
       <member><literal>Mat_rows_get()</literal> and <literal>Mat_cols_get()</literal> to get rows and columns of the image.</member>
       <member><literal>getImageType()</literal> to get a string (following the OpenCV convention <literal>CV_&lt;bit_depth&gt;{U|S|F}C&lt;number of channels&gt;</literal>) giving the bit depth, pixel type, the number of channels of the image.</member>
     </itemizedlist>

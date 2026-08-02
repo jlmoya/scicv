@@ -42,9 +42,10 @@
       <varlistentry>
         <term>frameSize</term>
         <listitem>
-          <para>Width and height of the frame (double 1x2).</para>          
+          <para>Size of the frame (double matrix <literal>[height, width]</literal>).
+          Note: this is the opposite of OpenCV's own C++ <literal>cv::Size(width, height)</literal> convention.</para>
         </listitem>
-      </varlistentry>      
+      </varlistentry>
       <varlistentry>
         <term>videoWriter</term>
         <listitem>
@@ -65,7 +66,8 @@
     scicv_Init();
 
     // Create a 640x480 MP4 file (20 FPS)
-    videoCapture = new_VideoWriter(getSampleVideo("video.mpg"), CV_FOURCC('M', 'P', '4', '2'), 20, [640, 480]);
+    // frameSize is [height, width]: 480 (height) then 640 (width).
+    videoCapture = new_VideoWriter(getSampleVideo("video.mpg"), CV_FOURCC('M', 'P', '4', '2'), 20, [480, 640]);
             
     delete_VideoWriter(videoCapture);    
  ]]></programlisting>
