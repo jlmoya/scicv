@@ -289,7 +289,176 @@ int SWIG_SciHypermat_AsMat(void *pvApiCtx, int iVarInput, cv::Mat **pMat, char *
       for (int j = 0; j<width; j++) \
         dst[(nbchannels-1-c)*size + j*height + i] = src[c + nbchannels*(i*width + j)]
 
+// N-D (pMat->dims > 2) row-major (OpenCV) -> column-major (Scilab hypermat)
+// copy. OpenCV keeps channel as the fastest-varying axis in memory (see the
+// 2-D macro above: c has coefficient 1, i.e. it is the innermost loop), then
+// the last logical dimension, then the next-to-last, ..., with axis 0
+// slowest. Scilab hypermats are column-major, so axis 0 is fastest there and
+// channel (when kept, see below) is slowest of all -- exactly reversed from
+// OpenCV's order. This is a genuine index transpose, not a reinterpretation
+// of the same flat order: each source element is decoded into its
+// (channel, axis[ndims-1], ..., axis[0]) tuple and that same tuple is
+// recombined into the column-major destination offset.
+//
+// ndims/nbchannels/ndDims/dstStride/channelStride/totalElems are locals of
+// SWIG_SciHypermat_FromMat's N-D branch below, in scope wherever this macro
+// is expanded -- same convention as the macro above (which likewise reaches
+// out to width/height/nbchannels/size).
+//
+// Unlike the 2-D macro, channel order is NOT reversed here: (nbchannels-1-c)
+// exists only to flip OpenCV's BGR into Scilab's RGB for images. An N-D
+// tensor (a dnn blob or output, ...) has no such colour semantics, and
+// reversing it would corrupt the data instead of correcting it.
+#define copy_row_major_nd_to_column_major_planar_data(src, dst) \
+  for (long long ndIdx = 0; ndIdx < totalElems; ndIdx++) { \
+    long long ndRem = ndIdx; \
+    int ndChannel = 0; \
+    if (nbchannels > 1) { \
+      ndChannel = (int)(ndRem % nbchannels); \
+      ndRem /= nbchannels; \
+    } \
+    long long ndDstOffset = (long long)ndChannel * channelStride; \
+    for (int ndK = ndims - 1; ndK >= 0; ndK--) { \
+      int ndAxisIdx = (int)(ndRem % ndDims[ndK]); \
+      ndRem /= ndDims[ndK]; \
+      ndDstOffset += (long long)ndAxisIdx * dstStride[ndK]; \
+    } \
+    dst[ndDstOffset] = src[ndIdx]; \
+  }
+
 int SWIG_SciHypermat_FromMat(void *pvApiCtx, SwigSciObject iVarOut, cv::Mat *pMat, char *fname) {
+  if (pMat->dims > 2) {
+    // OpenCV freezes rows/cols at -1 once a Mat has more than 2 dimensions
+    // (documented behaviour -- e.g. any dnn blob or Net_forward output with
+    // 3+ axes). That is what made the code below this branch silently
+    // compute size = (-1)*(-1) = 1 and hand back one uninitialised element
+    // described by negative dims. Read the real extents from pMat->size[]
+    // instead, and refuse a non-contiguous Mat rather than read past the
+    // end of pMat->data (pMat->step[] would be needed to walk it correctly;
+    // easier and safer for callers to surface a clear error and let them
+    // clone() first).
+    if (!pMat->isContinuous()) {
+      Scierror(999, _("%s: Cannot convert a non-contiguous N-D Mat (dims=%d) to a Scilab hypermatrix; call Mat_clone first.\n"), fname, pMat->dims);
+      return SWIG_ERROR;
+    }
+
+    int ndims = pMat->dims;
+    int nbchannels = pMat->channels();
+
+    // Scilab hypermat dims, in the SAME order as pMat->size[] -- this is
+    // what makes e.g. a blobFromImage() blob come back shaped
+    // "1 x 3 x H x W", matching what Mat_shape()/MatShape_str() reports on
+    // the source Mat, not reversed. Channel, only when there is more than
+    // one, is appended as an extra trailing dimension -- same convention as
+    // the 2-D path's dims = {height, width, nbchannels} below, and skipped
+    // entirely for the common dnn case (nbchannels == 1) so a caller never
+    // has to deal with a synthetic trailing singleton axis.
+    std::vector<int> ndDims(ndims);
+    long long channelStride = 1;
+    for (int k = 0; k < ndims; k++) {
+      ndDims[k] = pMat->size[k];
+      channelStride *= pMat->size[k];
+    }
+    if (nbchannels > 1) {
+      ndDims.push_back(nbchannels);
+    }
+    int outNdims = (int) ndDims.size();
+    long long totalElems = channelStride * nbchannels;
+
+    // Column-major stride for each spatial axis (axis 0 fastest); channel,
+    // when appended, is slowest of all, at channelStride == product(ndDims).
+    std::vector<long long> dstStride(ndims);
+    dstStride[0] = 1;
+    for (int k = 1; k < ndims; k++) {
+      dstStride[k] = dstStride[k - 1] * ndDims[k - 1];
+    }
+
+    SciErr sciErr;
+    switch (pMat->depth()) {
+      case CV_8U: {
+        uint8_t *dst = (uint8_t *) malloc((size_t)totalElems * sizeof(uint8_t));
+        uint8_t *src = (uint8_t *) pMat->data;
+        copy_row_major_nd_to_column_major_planar_data(src, dst);
+        sciErr = createHypermatOfUnsignedInteger8(pvApiCtx,
+          SWIG_NbInputArgument(pvApiCtx) + iVarOut,
+          ndDims.data(), outNdims, (const unsigned char *)dst);
+        free(dst);
+        break;
+      }
+      case CV_8S: {
+        int8_t *dst = (int8_t *) malloc((size_t)totalElems * sizeof(int8_t));
+        int8_t *src = (int8_t *) pMat->data;
+        copy_row_major_nd_to_column_major_planar_data(src, dst);
+        sciErr = createHypermatOfInteger8(pvApiCtx,
+          SWIG_NbInputArgument(pvApiCtx) + iVarOut,
+          ndDims.data(), outNdims, (const char *)dst);
+        free(dst);
+        break;
+      }
+      case CV_16U: {
+        uint16_t *dst = (uint16_t *) malloc((size_t)totalElems * sizeof(uint16_t));
+        uint16_t *src = (uint16_t *) pMat->data;
+        copy_row_major_nd_to_column_major_planar_data(src, dst);
+        sciErr = createHypermatOfUnsignedInteger16(pvApiCtx,
+          SWIG_NbInputArgument(pvApiCtx) + iVarOut,
+          ndDims.data(), outNdims, (const unsigned short *)dst);
+        free(dst);
+        break;
+      }
+      case CV_16S: {
+        int16_t *dst = (int16_t *) malloc((size_t)totalElems * sizeof(int16_t));
+        int16_t *src = (int16_t *) pMat->data;
+        copy_row_major_nd_to_column_major_planar_data(src, dst);
+        sciErr = createHypermatOfInteger16(pvApiCtx,
+          SWIG_NbInputArgument(pvApiCtx) + iVarOut,
+          ndDims.data(), outNdims, (const short *)dst);
+        free(dst);
+        break;
+      }
+      case CV_32S: {
+        int32_t *dst = (int32_t *) malloc((size_t)totalElems * sizeof(int32_t));
+        int32_t *src = (int32_t *) pMat->data;
+        copy_row_major_nd_to_column_major_planar_data(src, dst);
+        sciErr = createHypermatOfInteger32(pvApiCtx,
+          SWIG_NbInputArgument(pvApiCtx) + iVarOut,
+          ndDims.data(), outNdims, (const int *)dst);
+        free(dst);
+        break;
+      }
+      case CV_32F: {
+        double *dst = (double *) malloc((size_t)totalElems * sizeof(double));
+        float *src = (float *) pMat->data;
+        copy_row_major_nd_to_column_major_planar_data(src, dst);
+        sciErr = createHypermatOfDouble(pvApiCtx,
+          SWIG_NbInputArgument(pvApiCtx) + iVarOut,
+          ndDims.data(), outNdims, (const double *)dst);
+        free(dst);
+        break;
+      }
+      case CV_64F: {
+        double *dst = (double *) malloc((size_t)totalElems * sizeof(double));
+        double *src = (double *) pMat->data;
+        copy_row_major_nd_to_column_major_planar_data(src, dst);
+        sciErr = createHypermatOfDouble(pvApiCtx,
+          SWIG_NbInputArgument(pvApiCtx) + iVarOut,
+          ndDims.data(), outNdims, (const double *)dst);
+        free(dst);
+        break;
+      }
+      default: {
+        return SWIG_ERROR;
+      }
+      // TODO: implement other pixel types
+    }
+
+    if (sciErr.iErr) {
+      printError(&sciErr, 0);
+      return SWIG_ERROR;
+    }
+
+    return SWIG_OK;
+  }
+
   int width = pMat->cols;
   int height = pMat->rows;
   int nbchannels = pMat->channels();
