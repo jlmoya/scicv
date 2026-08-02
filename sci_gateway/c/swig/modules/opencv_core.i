@@ -31,6 +31,13 @@ using std::vector;
 #define OPENCV_FORCE_UNSAFE_XADD // Avoid error about CV_XADD macro definition
 %include "opencv2/core/hal/interface.h" // CV_8UC3, CV_16S, CV_CN_MAX, ... definition
 %include "opencv2/core/cvdef.h" // CV_INLINE definition
+
+// CV_VERSION_MAJOR / _MINOR / _REVISION. Not pulled in transitively: SWIG does not
+// recurse into #include, so without this the constants are invisible to Scilab AND
+// version-gated blocks in other headers evaluate against an undefined (=0) major.
+// regen.sh also passes -DCV_VERSION_MAJOR/-DCV_VERSION_MINOR for the guard case; this
+// %include is what makes the values reachable from Scilab code.
+%include "opencv2/core/version.hpp" // CV_VERSION_MAJOR, CV_VERSION_MINOR, CV_VERSION_REVISION
 %import "opencv2/core/cvstd.hpp" // cv::String (Needed to map cv::String as Scilab string)
 %include "opencv2/core/types.hpp" // Point_, Size_, Rect, Scalar_, ...
 

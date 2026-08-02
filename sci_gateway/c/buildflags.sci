@@ -25,6 +25,13 @@ function out = opencv_pkgconfig(args)
     out = out(1);
 endfunction
 
+// The version of the OpenCV that opencv_pkgconfig_name() resolved. This is the
+// truth for a macOS build; OPENCV_VERSION in thirdparty/versions.sce pins the
+// bundled Windows/Linux prebuilt instead.
+function v = getOpenCVVersion()
+    v = opencv_pkgconfig("--modversion");
+endfunction
+
 function cflags = getCompilationFlags()
     os = getos();
     if os == "Darwin" then

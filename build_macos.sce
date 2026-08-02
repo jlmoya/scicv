@@ -26,6 +26,11 @@ clear gcc_libdir lp;
 
 root = get_absolute_file_path("build_macos.sce");
 
+// Report the OpenCV actually resolved, so a Homebrew major bump is visible in
+// the build log instead of being discovered later from a linker error.
+exec(fullfile(root, "sci_gateway", "c", "buildflags.sci"), -1);
+mprintf("[0/3] OpenCV resolved via pkg-config: %s\n", getOpenCVVersion());
+
 ie = execstr("exec(fullfile(root, ""sci_gateway"", ""c"", ""builder_gateway_c.sce""), -1)", "errcatch");
 mprintf("[1/3] sci_gateway/c (libscicv, links Homebrew OpenCV)  ierr=%d\n", ie);
 if ie <> 0 then mprintf("      (configure can flake — re-run this script if so)\n"); end
