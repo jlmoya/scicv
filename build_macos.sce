@@ -45,4 +45,9 @@ mprintf("[3/3] loader                                            ierr=%d\n", ie)
 
 // Without this, `scilab-cli -f build_macos.sce` finishes the build and then sits
 // at an interactive prompt forever (the recurring "stalled build" symptom).
-quit
+// Only quit when this script IS the entry point. tbx_build sets
+// TBX_NESTED_BUILD before exec'ing us; quitting there would kill the
+// whole 54-toolbox rebuild loop, not just this build.
+if ~exists("TBX_NESTED_BUILD") then
+    quit;
+end
